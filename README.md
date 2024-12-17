@@ -1,5 +1,7 @@
 # Applications
 
+![riceSS](2024-12-15-190014_hyprshot.png)
+
 -   **Distro**: [Arch](https://archlinux.org)
 -   **Window manager**: [bspwm](https://github.com/baskerville/bspwm)
 -   **Top bar**: [HyprPanel](https://hyprpanel.com/)
