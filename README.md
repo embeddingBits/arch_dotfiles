@@ -1,6 +1,16 @@
 # Applications
 
-![riceSS](2024-12-15-190014_hyprshot.png)
+![riceSS](rice.png)
+
+
+![riceSS](neovide.png)
+
+
+![riceSS](application1.png)
+
+
+![riceSS](firefox.png)
+
 
 -   **Distro**: [Arch](https://archlinux.org)
 -   **Window manager**: [bspwm](https://github.com/baskerville/bspwm)
