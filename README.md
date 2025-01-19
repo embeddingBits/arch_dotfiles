@@ -1,6 +1,6 @@
 # Software
 -   **Distro**: [Arch](https://archlinux.org)
--   **Window manager**: [hyprland](https://hyprland.org/)
+-   **Window manager**: [Hyprland](https://hyprland.org/)
 -   **Top bar**: [HyprPanel](https://hyprpanel.com/)
 -   **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
 -   **Text editor**: [neovim](https://github.com/neovim/neovim) with [NvChad](https://nvchad.com)
