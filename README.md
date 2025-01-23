@@ -12,7 +12,7 @@
 
 # Applications
 
-![riceSS](rice.png)
+![riceSS](new_config.png)
 
 
 ![riceSS](neovide.png)
