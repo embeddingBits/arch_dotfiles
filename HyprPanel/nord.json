@@ -1,0 +1,71 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.bar.floating": true,
+  "theme.bar.buttons.enableBorders": true,
+  "theme.bar.buttons.workspaces.enableBorder": true,
+  "bar.workspaces.show_numbered": false,
+  "theme.bar.buttons.volume.enableBorder": false,
+  "theme.bar.transparent": true,
+  "theme.bar.location": "top",
+  "bar.layouts": {
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "*": {
+      "left": [
+        "dashboard",
+        "windowtitle",
+        "media"
+      ],
+      "middle": [
+        "workspaces"
+      ],
+      "right": [
+        "volume",
+        "battery",
+        "network",
+        "bluetooth",
+        "systray",
+        "clock"
+      ]
+    }
+  },
+  "scalingPriority": "gdk",
+  "menus.transition": "crossfade",
+  "theme.font.name": "CaskaydiaMono Nerd Font Mono Bold",
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "bar.workspaces.show_icons": false,
+  "wallpaper.pywal": false,
+  "wallpaper.enable": true,
+  "theme.bar.scaling": 100,
+  "bar.workspaces.spacing": 1,
+  "theme.bar.outer_spacing": "2em",
+  "theme.bar.buttons.spacing": "0.2em",
+  "menus.clock.time.hideSeconds": true,
+  "menus.clock.weather.unit": "imperial",
+  "menus.clock.weather.location": "Kolkata",
+  "theme.bar.buttons.monochrome": false,
+  "theme.bar.border_radius": "0.65em",
+  "theme.bar.buttons.innerRadiusMultiplier": "0.2",
+  "theme.bar.buttons.radius": "0.7em",
+  "theme.bar.buttons.windowtitle.enableBorder": false,
+  "bar.clock.format": "%b %a %d  %I:%M %p",
+  "theme.bar.border.location": "none",
+  "theme.bar.border.width": "0.09em",
+  "theme.bar.buttons.y_margins": "0.4em",
+  "theme.bar.buttons.padding_x": "1rem",
+  "theme.bar.buttons.padding_y": "0.2rem",
+  "theme.bar.layer": "top"
+}
