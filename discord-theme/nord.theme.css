@@ -1,0 +1,86 @@
+/**
+ * @name system24 - Nord Theme
+ * @description A tui-style discord theme with Nord theme customization.
+ * @author refact0r (modified by user request)
+ * @version 1.0.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/system24.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+ */
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/src/main.css'); /* main theme css. DO NOT REMOVE */
+@import url('https://refact0r.github.io/system24/src/unrounding.css'); /* gets rid of all rounded corners. remove if you want rounded corners. */
+
+/* customize things here */
+:root {
+	--font: 'CaskaydiaMono Nerd Font Propo'; /* UI font name. it must be installed on your system. */
+	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
+	font-weight: 300; /* UI font weight. */
+	--label-font-weight: 500; /* font weight for panel labels. */
+	--corner-text: 'system24'; /* custom text to display in the corner. only works on windows. */
+	--pad: 16px; /* padding between panels. */
+	--txt-pad: 10px; /* padding inside panels to prevent labels from clipping */
+	--panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
+
+	/* background colors (Polar Night shades) */
+	--bg-0: #2e3440; /* main background color. */
+	--bg-1: #3b4252; /* background color for secondary elements like code blocks, embeds, etc. */
+	--bg-2: #434c5e; /* color of neutral buttons. */
+	--bg-3: #4c566a; /* color of neutral buttons when hovered. */
+
+	/* state modifiers */
+	--hover: rgba(94, 129, 172, 0.1); /* color of hovered elements (Frost accent). */
+	--active: rgba(94, 129, 172, 0.2); /* color of elements when clicked. */
+	--selected: var(--active); /* color of selected elements. */
+
+	/* text colors (Nord theme) */
+	--txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
+	--txt-link: #88c0d0; /* Frost - color of links. */
+	--txt-0: #eceff4; /* brighter text. */
+	--txt-1: #d8dee9; /* main text color. */
+	--txt-2: #e5e9f0; /* secondary text like channel list. */
+	--txt-3: #81a1c1; /* muted text (Frost accent). */
+
+	/* accent colors (Nord Red and Frost) */
+	--acc-0: #bf616a; /* Nord Red - main accent color. */
+	--acc-1: #d08770; /* orange for hovered buttons. */
+	--acc-2: #5e81ac; /* Frost - clicked accent color. */
+
+	/* borders */
+	--border-width: 2px; /* panel border thickness. */
+	--border-color: var(--bg-3); /* panel border color. */
+	--border-hover-color: var(--acc-0); /* panel border color when hovered. */
+	--border-transition: 0.2s ease; /* panel border transition. */
+
+	/* status dot colors */
+	--online-dot: #a3be8c; /* Nord green - online. */
+	--dnd-dot: #bf616a; /* Nord red - do not disturb. */
+	--idle-dot: #ebcb8b; /* Nord yellow - idle. */
+	--streaming-dot: #b48ead; /* Nord purple - streaming. */
+
+	/* mention/ping and message colors */
+	--mention-txt: var(--acc-0); /* Nord Red - mention text. */
+	--mention-bg: rgba(191, 97, 106, 0.15); /* background highlight of mention text. */
+	--mention-overlay: rgba(191, 97, 106, 0.15); /* overlay color of messages that mention you. */
+	--mention-hover-overlay: rgba(191, 97, 106, 0.2); /* overlay color of messages that mention you when hovered. */
+	--reply-overlay: var(--active); /* overlay color of message you are replying to. */
+	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
+
+	/* color shades (Nord theme palette) */
+	--pink: #bf616a;
+	--pink-1: #d08770;
+	--pink-2: #ebcb8b;
+	--purple: #b48ead;
+	--purple-1: #a3be8c;
+	--purple-2: #88c0d0;
+	--cyan: #5e81ac;
+	--yellow: #ebcb8b;
+	--green: #a3be8c;
+	--green-1: #8fbcbb;
+	--green-2: #88c0d0;
+}
+
+
