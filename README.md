@@ -12,6 +12,8 @@
 
 # Applications
 
+![riceSS](config.mp4)
+
 ![riceSS](new_config.png)
 
 
