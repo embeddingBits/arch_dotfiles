@@ -18,8 +18,8 @@
 
 
 ![riceSS](neovide.png)
-
-
+![riceSS](hyprlock.png)
+![riceSS](neofetch.png)
 ![riceSS](application1.png)
 
 
