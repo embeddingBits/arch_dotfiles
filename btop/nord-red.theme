@@ -1,0 +1,83 @@
+# Btop theme with Nord Dark Blue and Nord Red accents
+# Box outlines in Nord Frost Blue (#88C0D0)
+# Adapted from Justin Zobel's Bashtop theme
+# Colors in 6-character hexadecimal format: "#RRGGBB"
+
+# Main background color (Nord Dark Blue)
+theme[main_bg]="#2E3440"
+
+# Main foreground text color (Nord Snow White)
+theme[main_fg]="#D8DEE9"
+
+# Title color for boxes (Nord Red accent)
+theme[title]="#BF616A"
+
+# Highlight color for keyboard shortcuts (Nord Red)
+theme[hi_fg]="#BF616A"
+
+# Background color of selected item in processes box (darker Nord blue)
+theme[selected_bg]="#4C566A"
+
+# Foreground color of selected item in processes box (Nord Snow White)
+theme[selected_fg]="#ECEFF4"
+
+# Inactive/disabled text color (muted Nord gray)
+theme[inactive_fg]="#4C566A"
+
+# Misc colors for processes box (Nord Red accent)
+theme[proc_misc]="#BF616A"
+
+# CPU box outline color (Nord Frost Blue)
+theme[cpu_box]="#88C0D0"
+
+# Memory/disks box outline color (Nord Frost Blue)
+theme[mem_box]="#88C0D0"
+
+# Network up/down box outline color (Nord Frost Blue)
+theme[net_box]="#88C0D0"
+
+# Processes box outline color (Nord Frost Blue)
+theme[proc_box]="#88C0D0"
+
+# Box divider line color (muted Nord gray)
+theme[div_line]="#4C566A"
+
+# Temperature graph colors (gradient with Nord Red accent)
+theme[temp_start]="#81A1C1"    # Nord Frost Blue
+theme[temp_mid]="#BF616A"      # Nord Red
+theme[temp_end]="#ECEFF4"      # Nord Snow White
+
+# CPU graph colors (gradient with Nord Red accent)
+theme[cpu_start]="#81A1C1"     # Nord Frost Blue
+theme[cpu_mid]="#BF616A"       # Nord Red
+theme[cpu_end]="#ECEFF4"       # Nord Snow White
+
+# Mem/Disk free meter (gradient with Nord Red accent)
+theme[free_start]="#81A1C1"    # Nord Frost Blue
+theme[free_mid]="#BF616A"      # Nord Red
+theme[free_end]="#ECEFF4"      # Nord Snow White
+
+# Mem/Disk cached meter (gradient with Nord Red accent)
+theme[cached_start]="#81A1C1"  # Nord Frost Blue
+theme[cached_mid]="#BF616A"    # Nord Red
+theme[cached_end]="#ECEFF4"    # Nord Snow White
+
+# Mem/Disk available meter (gradient with Nord Red accent)
+theme[available_start]="#81A1C1"  # Nord Frost Blue
+theme[available_mid]="#BF616A"    # Nord Red
+theme[available_end]="#ECEFF4"    # Nord Snow White
+
+# Mem/Disk used meter (gradient with Nord Red accent)
+theme[used_start]="#81A1C1"    # Nord Frost Blue
+theme[used_mid]="#BF616A"      # Nord Red
+theme[used_end]="#ECEFF4"      # Nord Snow White
+
+# Download graph colors (gradient with Nord Red accent)
+theme[download_start]="#81A1C1"  # Nord Frost Blue
+theme[download_mid]="#BF616A"    # Nord Red
+theme[download_end]="#ECEFF4"    # Nord Snow White
+
+# Upload graph colors (gradient with Nord Red accent)
+theme[upload_start]="#81A1C1"    # Nord Frost Blue
+theme[upload_mid]="#BF616A"      # Nord Red
+theme[upload_end]="#ECEFF4"      # Nord Snow White
