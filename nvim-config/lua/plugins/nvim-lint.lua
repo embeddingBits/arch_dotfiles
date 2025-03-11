@@ -1,18 +1,33 @@
 return {
   "mfussenegger/nvim-lint",
   config = function()
-    -- Configure linters by filetype
-    require('lint').linters_by_ft = {
-      go = { 'golangcilint' }, -- Correct for Go
-      c = { 'cppcheck' },      -- Better linter for C
-      cpp = { 'cppcheck' },    -- Linter for C++
+    local lint = require("lint")
+
+    -- Define linters for specific filetypes
+    lint.linters_by_ft = {
+      go = { "golangcilint" }, -- Go
+      c = { "clangtidy" }, -- C
+      cpp = { "clangtidy" }, -- C++
+      sh = { "shellcheck" }, -- Bash
+      python = { "flake8" }, -- Python
     }
 
-    -- Automatically run linters on certain events
-    vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
+    -- Optional: Configure how often linting runs
+    vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
       callback = function()
-        require("lint").try_lint()
+        lint.try_lint()
       end,
+    })
+
+    vim.diagnostic.config({
+      virtual_text = {
+        prefix = "●", -- Change the prefix for virtual text
+        source = "if_many", -- Show source only if there are multiple sources
+      },
+      signs = true, -- Show signs in the gutter
+      underline = true, -- Underline issues
+      update_in_insert = false, -- Don't update diagnostics while typing
+      severity_sort = true, -- Sort by severity (errors before warnings)
     })
   end,
 }
