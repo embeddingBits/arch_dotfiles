@@ -19,6 +19,7 @@ return {
     -- Keybindings for navigating buffers
     vim.api.nvim_set_keymap('n', '<Tab>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', '<S-Tab>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>x', '<Cmd>BufferClose<CR>', { noremap = true, silent = true })
   end,
 }
 

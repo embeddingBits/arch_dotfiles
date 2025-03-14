@@ -7,5 +7,5 @@ return {
     })
     vim.notify = require("notify")
     vim.api.nvim_set_hl(0, "NotifyINFOBorder", { fg = "#88C0D0" })
-  end
+  end,
 }
