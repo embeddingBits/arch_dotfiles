@@ -3,7 +3,7 @@ if status is-interactive
 end
 set fish_greeting
 starship init fish | source
-fastfetch -c ~/.config/fastfetch/6.jsonc -l arch3 --logo-color-1 blue --logo-color-2 blue
+fastfetch -c ~/.config/fastfetch/config.jsonc -l arch --logo-color-1 blue --logo-color-2 red
 
 fish_add_path /home/amiitesh/.spicetify
 
