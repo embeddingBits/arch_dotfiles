@@ -27,10 +27,10 @@
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-            "1": "",  // Terminal
-            "2": "",  // Browser
-            "3": "",  // Discord
-            "4": "󰓇",  // Spotify
+            "1": " ",  // Terminal
+            "2": " ",  // Browser
+            "3": " ",  // Discord
+            "4": "󰓇 ",  // Spotify
             "5": " ",  // Miscellaneous
             "urgent": "",
             "default": "○"
@@ -107,7 +107,7 @@
     },
     "clock": {
         "tooltip-format": "󰥔  <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "󰥔 {:%H:%M}"
+        "format": "󰥔  {:%H:%M}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -130,7 +130,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
+        "format": "{icon}  {capacity}%",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
