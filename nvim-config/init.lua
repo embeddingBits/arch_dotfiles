@@ -4,9 +4,9 @@ vim.opt.cursorline = true  -- Optional: Highlight the current line for better vi
 
 vim.cmd("set expandtab")
 vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+vim.cmd("set tabstop=6")
+vim.cmd("set softtabstop=6")
+vim.cmd("set shiftwidth=6")
 
 ------------------------------ Lazy Neovim Setup -------------------------------
 
@@ -34,7 +34,7 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set('n', '<leader>n', "<Cmd>enew<CR>", {})
 
 if vim.g.neovide then
-    vim.opt.guifont = "CaskaydiaMono Nerd Font:h14"
+    vim.opt.guifont = "Iosevka Nerd Font:h14"
     vim.g.neovide_cursor_animation_length = 0.05    
 end
 
