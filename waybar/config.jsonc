@@ -44,11 +44,14 @@
         }
     },
     "hyprland/window": {
-        "format": "{}",
-        "max-length": 50,
+        "format": "{class}",
+       "max-length": 50,
         "rewrite": {
-            "": "Desktop" // Display "Desktop" when no window is focused
-        }
+            "": "󰍹  Desktop", // Display "Desktop" when no window is focused
+            "firefox": "  Firefox",
+            "kitty": "󰄛  Kitty",
+            "discord": "  Discord"
+        } 
     },
     "keyboard-state": {
         "numlock": true,
