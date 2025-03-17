@@ -14,7 +14,7 @@ return {
 
         lualine.setup({
             options = {
-                theme = 'nord', -- Keep your preferred theme
+                theme = 'auto', -- Keep your preferred theme
                 section_separators = { left = '', right = '' }, -- Remove section separators to avoid interference
                 component_separators = { left = '', right = '' }, -- Remove default component separators
                 globalstatus = true, -- Enable global statusline (Neovim 0.7+ feature)
