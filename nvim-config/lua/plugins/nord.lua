@@ -1,7 +1,35 @@
-return { "gbprod/nord.nvim", 
-          priority = 1000,
-          config = function()
-            require("nord").setup()
-            vim.cmd.colorscheme("nord")
-          end
+return {
+      "gbprod/nord.nvim", 
+      lazy = false,
+      priority = 1000,
+      config = function()
+      end,
+      {
+            'AlexvZyl/nordic.nvim',
+            lazy = false,
+            priority = 1000,
+            config = function()
+            end
+      },
+      {
+            "rmehri01/onenord.nvim",
+            lazy = false,
+            priority = 1000,
+            config = function()
+            end
+      },
+      {
+            "sainnhe/everforest",
+            lazy = false,
+            priority = 1000,
+            config = function()
+            end
+      },
+      {
+            "sainnhe/gruvbox-material",
+            lazy = false,
+            priority = 1000,
+            config = function()
+            end
+      }
 }
