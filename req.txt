@@ -1,0 +1,7 @@
+Pacman Packages
+
+neovim hyprland wayland wayland-utils wev nano waybar cava ranger firefox btop rofi-wayland spotify-launcher kitty fish fastfetch github-cli git starship hyprlock hyprpaper swww ttf-iosevka-nerd
+
+AUR Packages
+
+waypaper dunst-wayland-git rofi-power-menu hyprshot
