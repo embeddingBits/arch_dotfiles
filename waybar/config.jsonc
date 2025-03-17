@@ -62,7 +62,9 @@
             "": "󰍹  Desktop", // Display "Desktop" when no window is focused
             "firefox": "  Firefox",
             "kitty": "󰄛  Kitty",
-            "discord": "  Discord"
+            "discord": "  Discord",
+            "neovide": "  Neovide",
+            "spotify": "  Spotify"
         } 
     },
     "keyboard-state": {
