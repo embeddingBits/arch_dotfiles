@@ -141,6 +141,17 @@ window#waybar {
     color: #2E3440; /* Polar Night for text */
 }
 
+#cava {
+      background-color: #2E3440; /* Frost blue for module background */
+      color: #81A1C1; /* Polar Night for text (consistent across modules) */
+      border-radius: 3px;
+      font-family: "Iosevka Nerd Font";
+      border: solid 3px;
+      border-color: #81A1C1;
+      padding: 2px 12px;
+      margin: 8px 4px;
+}
+
 @keyframes blink {
     to {
         background-color: #ECEFF4; /* Brightest Snow Storm for blink */
