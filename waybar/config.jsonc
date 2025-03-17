@@ -7,7 +7,7 @@
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window",
-        "custom/media"
+        "cava"
     ],
     "modules-center": [],
     "modules-right": [
@@ -22,6 +22,18 @@
         "clock"
     ],
     // Modules configuration
+    "cava": {
+        "framerate": 60,
+        "bars": 12,
+        "method": "pulse",
+        "source": "auto",
+        "bar_delimiter": 0,
+        "waves": true,
+        "noise_reduction": 0.77,
+        "input_delay": 4,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+      },
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -179,17 +191,6 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
     },
     "custom/power": {
         "format": "⏻ ",
