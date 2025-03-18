@@ -1,0 +1,65 @@
+[global]
+    ### Display ###
+    monitor = 0
+    font = Iosevka Nerd Font 15
+    follow = mouse
+    geometry = "300x5-30+20"
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    
+    ### Text ###
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    
+    ### Icons ###
+    enable_recursive_icon_lookup = true
+    icon_position = left
+    max_icon_size = 32
+    
+    ### Behavior ###
+    sticky_history = yes
+    history_length = 20
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+    
+    ### Frame ###
+    frame_width = 2
+    frame_color = "#272e33"  # Everforest Bg0 (Darkest)
+    separator_height = 2
+    separator_color = auto
+    
+    ### Misc ###
+    sort = yes
+    idle_threshold = 120
+    show_indicators = yes
+
+[urgency_low]
+    background = "#272e33"  # Everforest Bg0
+    foreground = "#d3c6aa"  # Everforest Fg
+    frame_color = "#374145" # Everforest Bg2
+    timeout = 5
+
+[urgency_normal]
+    background = "#2e383c"  # Everforest Bg1
+    foreground = "#d3c6aa"  # Everforest Fg
+    frame_color = "#7fbbb3" # Everforest Blue
+    timeout = 10
+
+[urgency_critical]
+    background = "#e67e80"  # Everforest Red
+    foreground = "#d3c6aa"  # Everforest Fg
+    frame_color = "#e69875" # Everforest Orange
+    timeout = 0
