@@ -1,0 +1,10 @@
+
+* {
+    background:     #272e33FF; /* Everforest Bg0 (Darkest gray-green) */
+    background-alt: #2e383cFF; /* Everforest Bg1 (Slightly lighter gray-green) */
+    foreground:     #d3c6aaFF; /* Everforest Fg (Warm off-white) */
+    selected:       #e67e80FF; /* Everforest Red (Muted red) */
+    selected1:      #7fbbb3FF; /* Everforest Blue (Soft blue) */
+    active:         #a7c080FF; /* Everforest Green (Forest green) */
+    urgent:         #e67e80FF; /* Everforest Red (Muted red) */
+}
