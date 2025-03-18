@@ -1,0 +1,169 @@
+* {
+    font-family: "Iosevka Nerd Font", sans-serif;
+    font-weight: Bold;
+    font-size: 20px;
+}
+
+window#waybar {
+    background: transparent; /* Transparent for floating effect */
+    color: #d3c6aa; /* Fg (warm off-white) for text outside modules */
+    border-radius: 9px; /* Rounded corners */
+    margin: 12px 100px; /* Increased top margin for lift */
+}
+
+/* Base floating module styling - Set default text color to #272e33 */
+#window,
+#custom-media,
+#mpd,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#keyboard-state,
+#sway-language,
+#battery,
+#battery#bat2,
+#clock,
+#tray,
+#custom-power 
+{
+    background-color: #7fbbb3; /* Blue for module background */
+    color: #272e33; /* Bg0 (darkest gray-green) for text */
+    border-radius: 3px;
+    border: solid 3px;
+    border-color: #272e33; /* Bg0 for border */
+    padding: 2px 12px;
+    margin: 8px 4px;
+} 
+
+/* Workspaces container (transparent, no background) */
+#workspaces {
+    background-color: transparent; /* No background for the container */
+    border: none; /* No border */
+    box-shadow: none; /* No shadow */
+    padding: 0; /* No padding */
+    margin: 8px 4px; /* Margin for spacing */
+}
+
+/* Workspaces buttons */
+#workspaces button {
+    padding: 0 8px;
+    border: solid 3px;
+    border-color: #272e33; /* Bg0 for border */
+    background-color: #7fbbb3; /* Blue for workspace buttons */
+    color: #272e33; /* Bg0 for text */
+    border-radius: 3px;
+    margin: 0 2px; /* Spacing between buttons */
+}
+
+#workspaces button:hover {
+    background: #83c092; /* Aqua (muted teal) for hover */
+    color: #272e33; /* Bg0 for text */
+}
+
+#workspaces button.focused, #workspaces button.active {
+    background-color: #83c092; /* Aqua for focused/active */
+    color: #4c3743; /* Red for text (accent) */
+}
+
+#workspaces button.urgent {
+    background-color: #e67e80; /* Red for urgent */
+    color: #d3c6aa; /* Fg (warm off-white) for text */
+}
+
+/* Specific module states */
+#battery.charging, #battery.plugged {
+    color: #272e33; /* Bg0 for text */
+    background-color: #a7c080; /* Green for charging/plugged */
+}
+
+#battery.critical:not(.charging) {
+    background-color: #e67e80; /* Red for critical */
+    color: #272e33; /* Bg0 for text */
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#temperature.critical {
+    background-color: #e67e80; /* Red for critical */
+    color: #272e33; /* Bg0 for text */
+}
+
+#network.disconnected {
+    background-color: #e67e80; /* Red for disconnected */
+    color: #272e33; /* Bg0 for text */
+}
+
+#pulseaudio.muted {
+    background-color: #374145; /* Bg2 (medium gray) for muted */
+    color: #272e33; /* Bg0 for text */
+}
+
+#mpd.disconnected {
+    background-color: #e67e80; /* Red for disconnected */
+    color: #272e33; /* Bg0 for text */
+}
+
+#mpd.stopped {
+    background-color: #374145; /* Bg2 (medium gray) for stopped */
+    color: #272e33; /* Bg0 for text */
+}
+
+#mpd.paused {
+    background-color: #83c092; /* Aqua for paused */
+    color: #272e33; /* Bg0 for text */
+}
+
+#idle_inhibitor.activated {
+    background-color: #a7c080; /* Green for activated */
+    color: #272e33; /* Bg0 for text */
+}
+
+#power-profiles-daemon.performance {
+    background-color: #e67e80; /* Red for performance */
+    color: #272e33; /* Bg0 for text */
+}
+
+#power-profiles-daemon.balanced {
+    background-color: #7fbbb3; /* Blue for balanced (matches default) */
+    color: #272e33; /* Bg0 for text */
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #a7c080; /* Green for power-saver */
+    color: #272e33; /* Bg0 for text */
+}
+
+#cava {
+    background-color: #272e33; /* Bg0 for module background */
+    color: #7fbbb3; /* Blue for text */
+    border-radius: 3px;
+    font-family: "Iosevka Nerd Font";
+    border: solid 3px;
+    border-color: #7fbbb3; /* Blue for border */
+    padding: 2px 12px;
+    margin: 8px 4px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #d3c6aa; /* Fg (warm off-white) for blink */
+        color: #272e33; /* Bg0 for text */
+    }
+}
+
+/* Remove margins for edge modules */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
