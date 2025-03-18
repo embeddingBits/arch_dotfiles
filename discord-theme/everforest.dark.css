@@ -1,0 +1,84 @@
+/**
+ * @name system24 - Everforest Dark Hard Theme
+ * @description A tui-style discord theme with Everforest Dark Hard customization.
+ * @author refact0r (modified by user request)
+ * @version 1.0.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/system24.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+ */
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/src/main.css'); /* main theme css. DO NOT REMOVE */
+@import url('https://refact0r.github.io/system24/src/unrounding.css'); /* gets rid of all rounded corners. remove if you want rounded corners. */
+
+/* customize things here */
+:root {
+	--font: 'Iosevka Nerd Font Mono'; /* UI font name. it must be installed on your system. */
+	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
+	font-weight: 600; /* UI font weight. */
+	--label-font-weight: 500; /* font weight for panel labels. */
+	--corner-text: 'system24'; /* custom text to display in the corner. only works on windows. */
+	--pad: 16px; /* padding between panels. */
+	--txt-pad: 10px; /* padding inside panels to prevent labels from clipping */
+	--panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
+
+	/* background colors (Everforest Dark Hard shades) */
+	--bg-0: #272e33; /* main background color (Bg0). */
+	--bg-1: #2e383c; /* background color for secondary elements like code blocks, embeds (Bg1). */
+	--bg-2: #374145; /* color of neutral buttons (Bg2). */
+	--bg-3: #414b50; /* color of neutral buttons when hovered (Bg3). */
+
+	/* state modifiers */
+	--hover: rgba(127, 187, 179, 0.1); /* color of hovered elements (Blue with transparency). */
+	--active: rgba(127, 187, 179, 0.2); /* color of elements when clicked (Blue). */
+	--selected: var(--active); /* color of selected elements. */
+
+	/* text colors (Everforest Dark Hard theme) */
+	--txt-dark: var(--bg-0); /* color of dark text on colored backgrounds (Bg0). */
+	--txt-link: #83c092; /* Aqua - color of links. */
+	--txt-0: #d3c6aa; /* brighter text (Fg). */
+	--txt-1: #d3c6aa; /* main text color (Fg). */
+	--txt-2: #a7c080; /* secondary text like channel list (Green). */
+	--txt-3: #7fbbb3; /* muted text (Blue). */
+
+	/* accent colors (Everforest Dark Hard) */
+	--acc-0: #e67e80; /* Red - main accent color. */
+	--acc-1: #e69875; /* Orange - hovered buttons. */
+	--acc-2: #7fbbb3; /* Blue - clicked accent color. */
+
+	/* borders */
+	--border-width: 2px; /* panel border thickness. */
+	--border-color: var(--bg-3); /* panel border color (Bg3). */
+	--border-hover-color: var(--acc-0); /* panel border color when hovered (Red). */
+	--border-transition: 0.2s ease; /* panel border transition. */
+
+	/* status dot colors */
+	--online-dot: #a7c080; /* Green - online. */
+	--dnd-dot: #e67e80; /* Red - do not disturb. */
+	--idle-dot: #dbbc7f; /* Yellow - idle. */
+	--streaming-dot: #d699b6; /* Purple - streaming. */
+
+	/* mention/ping and message colors */
+	--mention-txt: var(--acc-0); /* Red - mention text. */
+	--mention-bg: rgba(230, 126, 128, 0.15); /* background highlight of mention text (Red). */
+	--mention-overlay: rgba(230, 126, 128, 0.15); /* overlay color of messages that mention you (Red). */
+	--mention-hover-overlay: rgba(230, 126, 128, 0.2); /* overlay color of messages that mention you when hovered (Red). */
+	--reply-overlay: var(--active); /* overlay color of message you are replying to (Blue). */
+	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered (Blue). */
+
+	/* color shades (Everforest Dark Hard palette) */
+	--pink: #e67e80;    /* Red */
+	--pink-1: #e69875;  /* Orange */
+	--pink-2: #dbbc7f;  /* Yellow */
+	--purple: #d699b6;  /* Purple */
+	--purple-1: #a7c080; /* Green */
+	--purple-2: #83c092; /* Aqua */
+	--cyan: #7fbbb3;    /* Blue */
+	--yellow: #dbbc7f;  /* Yellow */
+	--green: #a7c080;   /* Green */
+	--green-1: #83c092; /* Aqua */
+	--green-2: #7fbbb3; /* Blue */
+}
