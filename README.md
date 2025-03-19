@@ -10,13 +10,16 @@
 -   **Spotify**: [Spicetify](https://github.com/spicetify)
 -   **Discord**: [Discord](https://betterdiscord.app/)
 
-# Applications
 
-![riceSS](config.mp4)
+# Everforest Theme
 
-![riceSS](new_config.png)
+![riceSS](everforest_main.png)
+![riceSS](kitty.png)
+![riceSS](applications_everforest.png)
+![riceSS](spotify_everforest.png)
+![riceSS](ff_everforest.png)
 
-
+# Nord Theme
 ![riceSS](neovide.png)
 ![riceSS](hyprlock.png)
 ![riceSS](neofetch.png)
