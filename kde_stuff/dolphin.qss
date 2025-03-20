@@ -1,0 +1,5 @@
+* {
+    font-family: "Iosevka Nerd Font";
+    font-size: 11pt;
+    font-weight: bold;
+}
