@@ -20,11 +20,8 @@
 ![riceSS](ff_everforest.png)
 
 # Nord Theme
-![riceSS](neovide.png)
 ![riceSS](hyprlock.png)
 ![riceSS](neofetch.png)
-![riceSS](application1.png)
 
 
-![riceSS](firefox.png)
 
