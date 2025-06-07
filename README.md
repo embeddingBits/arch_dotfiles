@@ -11,18 +11,8 @@
 -   **Discord**: [Discord](https://betterdiscord.app/)
 
 
-# Everforest Theme
 
-![riceSS](everforest_main.png)
-![riceSS](kitty.png)
-![riceSS](applications_everforest.png)
-![riceSS](spotify_everforest.png)
-![riceSS](ff_everforest.png)
-
-# Nord Theme
-![riceSS](hyprlock.png)
-![riceSS](neofetch.png)
-![riceSS](application1.png)
-
-
+![riceSS](applications.png)
+![riceSS](cava.png)
+![riceSS](main.png)
 
