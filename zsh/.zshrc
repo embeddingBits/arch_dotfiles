@@ -40,6 +40,17 @@ zstyle ':completion:*' group-name ''                 # disable groupings (e.g. -
 zstyle ':completion:*' format ''                     # disable section titles
 zstyle ':completion:*' list-colors 'fi=34'
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Use Bash-style word movement
+autoload -U select-word-style
+select-word-style bash
+
+# Shift + Left → move one word back
+bindkey "^[[1;2D" backward-word
+
+# Shift + Right → move one word forward
+bindkey "^[[1;2C" forward-word
+
 # ---------------------------------------
 # Plugins via Zinit
 # ---------------------------------------
