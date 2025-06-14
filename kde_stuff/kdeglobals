@@ -105,11 +105,11 @@ TerminalApplication=kitty
 TerminalService=kitty.desktop
 XftHintStyle=hintslight
 XftSubPixel=rgb
-fixed=Iosevka Nerd Font,11,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,SemiBold
-font=Iosevka Nerd Font Propo,11,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
-menuFont=Iosevka Nerd Font,11,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
-smallestReadableFont=Iosevka Nerd Font Propo,8,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,SemiBold
-toolBarFont=Iosevka Nerd Font,11,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+fixed=JetBrainsMono Nerd Font,11,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,SemiBold
+font=JetBrainsMono Nerd Font Propo,11,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+menuFont=JetBrainsMono Nerd Font,11,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+smallestReadableFont=JetBrainsMono Nerd Font Propo,8,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,SemiBold
+toolBarFont=JetBrainsMono Nerd Font,11,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
 
 [UiSettings]
 ColorScheme=colors
@@ -147,7 +147,7 @@ SceneGraphBackend=software
 [WM]
 activeBackground=47,56,62
 activeBlend=47,56,62
-activeFont=Iosevka Nerd Font,11,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+activeFont=JetBrainsMono Nerd Font,11,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
 activeForeground=211,198,170
 frame=61,174,233
 inactiveBackground=47,56,62
