@@ -6,6 +6,10 @@ return {
                   local dashboard = require("alpha.themes.dashboard")
 
                   dashboard.section.header.val = {
+                        [[                                                                                                            ]],
+                        [[                                                                                                            ]],
+                        [[                                                                                                            ]],
+                        [[                                                                                                            ]],
                         [[    ▓█████  ███▄ ▄███▓ ▄▄▄▄   ▓█████ ▓█████▄ ▓█████▄  ██▓ ███▄    █   ▄████  ▄▄▄▄    ██▓▄▄▄█████▓  ██████   ]],
                         [[    ▓█   ▀ ▓██▒▀█▀ ██▒▓█████▄ ▓█   ▀ ▒██▀ ██▌▒██▀ ██▌▓██▒ ██ ▀█   █  ██▒ ▀█▒▓█████▄ ▓██▒▓  ██▒ ▓▒▒██    ▒   ]],
                         [[    ▒███   ▓██    ▓██░▒██▒ ▄██▒███   ░██   █▌░██   █▌▒██▒▓██  ▀█ ██▒▒██░▄▄▄░▒██▒ ▄██▒██▒▒ ▓██░ ▒░░ ▓██▄     ]],
@@ -17,7 +21,8 @@ return {
                         [[       ░  ░       ░    ░         ░  ░   ░       ░     ░           ░       ░  ░       ░                 ░  ]],
                         [[                            ░         ░       ░                                   ░                       ]],
                         [[                                                                                                          ]],
-                        [[                  "Engineers aren’t boring people. We just get excited about boring things."]]
+                        [[                  “One man's magic is another man's engineering, 'Supernatural' is a null word”           ]],
+                        [[                                                                                             - Robert Heinlein]]
                   }
 
                   dashboard.section.buttons.val = {
@@ -29,8 +34,9 @@ return {
                   }
 
                   dashboard.section.footer.val = {
-                        "I still write code, but now it runs closer to the hardware because the Embedded Chose Me"
+                                    "Engineers aren’t boring people. We just get excited about boring things."
                   }
+
 
                   alpha.setup(dashboard.opts)
             end
