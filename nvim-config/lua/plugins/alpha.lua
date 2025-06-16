@@ -6,10 +6,6 @@ return {
       local dashboard = require("alpha.themes.dashboard")
 
       dashboard.section.header.val = {
-        [[                                                                                                            ]],
-        [[                                                                                                            ]],
-        [[                                                                                                            ]],
-        [[                                                                                                            ]],
         [[    ▓█████  ███▄ ▄███▓ ▄▄▄▄   ▓█████ ▓█████▄ ▓█████▄  ██▓ ███▄    █   ▄████  ▄▄▄▄    ██▓▄▄▄█████▓  ██████   ]],
         [[    ▓█   ▀ ▓██▒▀█▀ ██▒▓█████▄ ▓█   ▀ ▒██▀ ██▌▒██▀ ██▌▓██▒ ██ ▀█   █  ██▒ ▀█▒▓█████▄ ▓██▒▓  ██▒ ▓▒▒██    ▒   ]],
         [[    ▒███   ▓██    ▓██░▒██▒ ▄██▒███   ░██   █▌░██   █▌▒██▒▓██  ▀█ ██▒▒██░▄▄▄░▒██▒ ▄██▒██▒▒ ▓██░ ▒░░ ▓██▄     ]],
@@ -25,7 +21,7 @@ return {
       }
 
       dashboard.section.footer.val = {
-        "I still write code. But now, it runs closer to hardware — where every bit counts because the Embedded Chose me"
+        "I still write code, but now it runs closer to the hardware because the Embedded Chose Me"
       }
 
       alpha.setup(dashboard.opts)

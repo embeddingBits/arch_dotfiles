@@ -1,61 +1,61 @@
 return {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-        local lualine = require('lualine')
+      'nvim-lualine/lualine.nvim',
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
+      config = function()
 
-        -- Custom function to get filetype icon (logo) using nvim-web-devicons
-        local function filetype_icon()
-            local devicons = require('nvim-web-devicons')
-            local filetype = vim.bo.filetype
-            local icon, _ = devicons.get_icon_by_filetype(filetype, { default = true })
-            return icon or '' -- Fallback icon if no specific filetype icon is found
-        end
+            local nord = require('lualine.themes.nord')
 
-        lualine.setup({
-            options = {
-                theme = 'auto', -- Keep your preferred theme
-                section_separators = { left = '', right = '' }, -- Remove section separators to avoid interference
-                component_separators = { left = '', right = '' }, -- Remove default component separators
-                globalstatus = true, -- Enable global statusline (Neovim 0.7+ feature)
-                disabled_filetypes = { 'NvimTree', 'dashboard' }, -- Disable on certain filetypes
-            },
-            sections = {
-                lualine_a = { 
-                    -- Combine filetype icon and mode into a single pill for better alignment
-                    { 
-                        function() return filetype_icon() .. ' ' .. require('lualine.utils.mode').get_mode() end, 
-                        separator = { left = '', right = '' }, 
-                        padding = { left = 1, right = 1 } 
-                    },
-                },
-                lualine_b = { 
-                    { 'branch', icon = '', separator = { left = '', right = '' }, padding = { left = 1, right = 1 } }, -- Branch as a pill
-                    { 'diff', symbols = { added = ' ', modified = '柳 ', removed = ' ' }, separator = { left = '', right = '' }, padding = { left = 1, right = 1 } }, -- Diff as a pill
-                },
-                lualine_c = { 
-                    { 'filename', path = 1, symbols = { modified = ' [+]', readonly = ' [-]' }, separator = { left = '', right = '' }, padding = { left = 1, right = 1 } }, -- Filename as a pill
-                },
-                lualine_x = { },
-                lualine_y = { 
-                    { 'progress', separator = { left = '', right = '' }, padding = { left = 1, right = 1 } }, -- Progress as a pill
-                },
-                lualine_z = { 
-                    { 'location', separator = { left = '', right = '' }, padding = { left = 1, right = 1 } }, -- Location as a pill
-                },
-            },
-            inactive_sections = { -- Define inactive window sections
-                lualine_a = {},
-                lualine_b = {},
-                lualine_c = { 
-                    { 'filename', separator = { left = '', right = '' }, padding = { left = 1, right = 1 } }, -- Keep filename as a pill
-                },
-                lualine_x = { 
-                    { 'location', separator = { left = '', right = '' }, padding = { left = 1, right = 1 } }, -- Keep location as a pill
-                },
-                lualine_y = {},
-                lualine_z = {},
-            },
-        })
-    end,
+            -- Only override the 'normal' mode (you can tweak these)
+            nord.normal.a.bg = '#5E81AC'  -- new background color for normal mode
+            nord.normal.a.fg = '#2E3440'  -- new foreground color (text)
+            nord.normal.a.gui = 'bold'
+            nord.insert.a.bg = '#BF616A'  -- new background color for normal mode
+            nord.insert.a.fg = '#2E3440'  -- new foreground color (text)
+            nord.insert.a.gui = 'bold'
+
+
+            require('lualine').setup {
+                  options = {
+                        icons_enabled = true,
+                        theme = nord,
+                        component_separators = { left = '|', right = '|'},
+                        section_separators = { left = '', right = ''},
+                        disabled_filetypes = {
+                              statusline = {},
+                              winbar = {},
+                        },
+                        ignore_focus = {},
+                        always_divide_middle = true,
+                        always_show_tabline = true,
+                        globalstatus = false,
+                        refresh = {
+                              statusline = 1000,
+                              tabline = 1000,
+                              winbar = 1000,
+                              refresh_time = 16, -- ~60fps
+                              events = {
+                                    'WinEnter',
+                                    'BufEnter',
+                                    'BufWritePost',
+                                    'SessionLoadPost',
+                                    'FileChangedShellPost',
+                                    'VimResized',
+                                    'Filetype',
+                                    'CursorMoved',
+                                    'CursorMovedI',
+                                    'ModeChanged',
+                              },
+                        }
+                  },
+                  sections = {
+                        lualine_a = {'mode'},
+                        lualine_b = {'branch', 'diff'},
+                        lualine_c = {'filename'},
+                        lualine_x = {'filetype'},
+                        lualine_y = {'progress'},
+                        lualine_z = {'location'}
+                  },
+            }
+      end
 }
+
