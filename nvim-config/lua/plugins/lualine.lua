@@ -5,13 +5,19 @@ return {
 
             local nord = require('lualine.themes.nord')
 
-            -- Only override the 'normal' mode (you can tweak these)
-            nord.normal.a.bg = '#5E81AC'  -- new background color for normal mode
-            nord.normal.a.fg = '#2E3440'  -- new foreground color (text)
+            nord.normal.a.bg = '#81a1c1' 
+            nord.normal.a.fg = '#2E3440'  
             nord.normal.a.gui = 'bold'
-            nord.insert.a.bg = '#BF616A'  -- new background color for normal mode
-            nord.insert.a.fg = '#2E3440'  -- new foreground color (text)
+            nord.insert.a.bg = '#ba6a72'  
+            nord.insert.a.fg = '#2E3440'  
             nord.insert.a.gui = 'bold'
+            nord.command = {
+                  a = {
+                        fg = '#2E3440',
+                        bg = '#D08770',
+                        gui = 'bold',
+                  }
+            }
 
 
             require('lualine').setup {
@@ -48,7 +54,12 @@ return {
                         }
                   },
                   sections = {
-                        lualine_a = {'mode'},
+                        lualine_a = {
+                              {
+                                    'mode',
+                                    icon = ' ',  -- before the mode text (use any Nerd Font icon)
+                              }
+                        },
                         lualine_b = {'branch', 'diff'},
                         lualine_c = {'filename'},
                         lualine_x = {'filetype'},

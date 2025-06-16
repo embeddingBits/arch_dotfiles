@@ -34,10 +34,9 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set('n', '<leader>n', "<Cmd>enew<CR>", {})
 
 if vim.g.neovide then
-    vim.opt.guifont = "Iosevka Nerd Font:h14"
+    vim.opt.guifont = "JetBrainsMono Nerd Font:h14:b"
     vim.g.neovide_cursor_animation_length = 0.05    
 end
-
 require("lazy").setup("plugins")
 
 
