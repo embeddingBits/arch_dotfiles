@@ -38,6 +38,8 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to below window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to above window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
+
+
 if vim.g.neovide then
     vim.opt.guifont = "JetBrainsMono Nerd Font:h14:b"
     vim.g.neovide_cursor_animation_length = 0.05    
