@@ -15,4 +15,4 @@
 ![riceSS](applications.png)
 ![riceSS](cava.png)
 ![riceSS](main.png)
-![riceSS](neovim.png)
+![riceSS](nvim.png)
