@@ -11,10 +11,8 @@ return {
                   { "gbprod/nord.nvim" },
                   { "AlexvZyl/nordic.nvim" },
                   { "rmehri01/onenord.nvim" },
-                  { "sainnhe/gruvbox-material" },
                   { "sainnhe/everforest" },
                   { "EdenEast/nightfox.nvim" },
-                  { "RRethy/base16-nvim" },
 
             })
 

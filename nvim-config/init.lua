@@ -38,6 +38,18 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to below window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to above window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
+vim.cmd([[
+  highlight NordGrad1 guifg=#2E3440
+  highlight NordGrad2 guifg=#3B4252
+  highlight NordGrad3 guifg=#434C5E
+  highlight NordGrad4 guifg=#4C566A
+  highlight NordGrad5 guifg=#5E81AC
+  highlight NordGrad6 guifg=#81A1C1
+  highlight NordGrad7 guifg=#88C0D0
+  highlight NordGrad8 guifg=#8FBCBB
+  highlight NordGrad9 guifg=#A3BE8C
+  highlight NordGrad10 guifg=#ECEFF4
+]])
 
 
 if vim.g.neovide then
