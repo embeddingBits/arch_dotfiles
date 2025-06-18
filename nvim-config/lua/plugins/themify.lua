@@ -13,6 +13,7 @@ return {
                   { "rmehri01/onenord.nvim" },
                   { "sainnhe/everforest" },
                   { "EdenEast/nightfox.nvim" },
+                  { "RRethy/base16-nvim" },
 
             })
 
