@@ -1,0 +1,132 @@
+{
+  "options": {
+    "showOptionsButton": true
+  },
+  "user": {
+    "name": "EmbeddingBits"
+  },
+  "title": {
+    "defaultTitle": "eBits",
+    "dynamic": {
+      "enabled": true
+    },
+    "faviconType": "default"
+  },
+  "message": {
+    "enabled": true,
+    "font": {
+      "type": "default",
+      "custom": ""
+    },
+    "textColor": "#ffffff",
+    "textSize": 3.75,
+    "type": "afternoon-morning",
+    "customText": "your custom text",
+    "weather": {
+      "unitsType": "f"
+    }
+  },
+  "wallpaper": {
+    "type": "fileUpload",
+    "enabled": true,
+    "url": "./wallpapers/default.png",
+    "filters": {
+      "brightness": "1",
+      "blur": "0px"
+    }
+  },
+  "ui": {
+    "style": "glass",
+    "glassColor": "#ffffff20",
+    "blurStrength": "32px",
+    "foregroundColor": "#262626",
+    "backgroundColor": "#171717",
+    "highlightColor": "#ffffff20",
+    "cornerStyle": "round",
+    "customCSS": "/* input custom css... */"
+  },
+  "animations": {
+    "enabled": true,
+    "bookmarkTiming": "left",
+    "initialType": "animate-up-bouncy",
+    "searchType": "animate-page-shrink",
+    "bookmarkType": "animate-page-up"
+  },
+  "search": {
+    "enabled": true,
+    "font": {
+      "type": "default",
+      "custom": ""
+    },
+    "textColor": "#ffffff",
+    "placeholderText": "search...",
+    "bookmarkPlaceholderText": "find bookmark...",
+    "placeholderTextColor": "#a1a1aa",
+    "searchIconColor": "#14b8a6",
+    "bookmarkIconColor": "#3b82f6",
+    "selectIconColor": "#f59e0b",
+    "engine": "duckduckgo",
+    "useCustomEngine": false,
+    "customEngineURL": "",
+    "focusedBorderColor": "#0ea5e9",
+    "assist": {
+      "date": true,
+      "math": true,
+      "definitions": true,
+      "conversions": true
+    }
+  },
+  "hotkeys": {
+    "enabled": true,
+    "activationKey": " ",
+    "closePageKey": "x",
+    "searchBookmarksKey": "b"
+  },
+  "bookmarks": {
+    "type": "user-defined",
+    "showBookmarkNames": false,
+    "numberKeys": false,
+    "lineOrientation": "top",
+    "defaultFolderIconType": "ri-folder-fill",
+    "userDefinedCols": 4,
+    "userDefined": [
+      {
+        "type": "bookmark",
+        "name": "github",
+        "url": "https://github.com/EmbeddingBits",
+        "color": "#6366f1",
+        "iconType": "nf-md-github",
+        "iconColor": "#ffffff",
+        "fill": ""
+      },
+      {
+        "type": "bookmark",
+        "name": "Reddit",
+        "url": "https://reddit.com",
+        "color": "#ffffff",
+        "iconType": "nf-md-reddit",
+        "iconColor": "#ffffff",
+        "fill": ""
+      },
+      {
+        "type": "bookmark",
+        "name": "Youtube",
+        "url": "https://youtube.com",
+        "color": "#ffffff",
+        "iconType": "nf-fa-youtube",
+        "iconColor": "#ffffff",
+        "fill": ""
+      }
+    ],
+    "defaultBlockyCols": 4,
+    "defaultBlockyColorType": "custom",
+    "defaultBlockyColor": "#ffffff",
+    "bookmarksLocationFirefox": "toolbar",
+    "defaultFaviconSource": "duckduckgo"
+  },
+  "extras": {
+    "snow": {
+      "enabled": "on"
+    }
+  }
+}
