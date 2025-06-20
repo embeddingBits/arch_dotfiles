@@ -54,7 +54,7 @@ vim.cmd([[
 
 if vim.g.neovide then
     vim.opt.guifont = "JetBrainsMono Nerd Font:h14:b"
-    vim.g.neovide_cursor_animation_length = 0.05    
+    vim.g.neovide_cursor_animation_length = 0.05   
 end
 require("lazy").setup("plugins")
 
