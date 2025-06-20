@@ -20,9 +20,6 @@ return {
         ]])
                   -- ASCII Art split with highlight per line
                   local header = {
-                        { type = "text", val = [[                                                                                          ]], opts = { hl = "Grad6", position = "center" } },
-                        { type = "text", val = [[                                                                                          ]], opts = { hl = "Grad6", position = "center" } },
-                        { type = "text", val = [[                                                                                          ]], opts = { hl = "Grad6", position = "center" } },
                         { type = "text", val = [[▓█████  ███▄ ▄███▓ ▄▄▄▄   ▓█████ ▓█████▄ ▓█████▄  ██▓ ███▄    █   ▄████  ▄▄▄▄    ██▓▄▄▄█████▓  ██████ ]], opts = { hl = "Grad1", position = "center" } },
                         { type = "text", val = [[▓█   ▀ ▓██▒▀█▀ ██▒▓█████▄ ▓█   ▀ ▒██▀ ██▌▒██▀ ██▌▓██▒ ██ ▀█   █  ██▒ ▀█▒▓█████▄ ▓██▒▓  ██▒ ▓▒▒██    ▒ ]], opts = { hl = "Grad2", position = "center" } },
                         { type = "text", val = [[▒███   ▓██    ▓██░▒██▒ ▄██▒███   ░██   █▌░██   █▌▒██▒▓██  ▀█ ██▒▒██░▄▄▄░▒██▒ ▄██▒██▒▒ ▓██░ ▒░░ ▓██▄   ]], opts = { hl = "Grad3", position = "center" } },
@@ -44,19 +41,6 @@ return {
                               { type = "padding", val = 1 },
                         }, header),
                         opts = {},
-                  }
-
-                  -- Quote
-                  dashboard.section.footer = {
-                        type = "group",
-                        val = {
-                              { type = "padding", val = 1 },
-                              {
-                                    type = "text",
-                                    val = "Engineers aren’t boring people. We just get excited about boring things.",
-                                    opts = { position = "center", hl = "Grad5" },
-                              },
-                        },
                   }
 
                   -- Buttons
