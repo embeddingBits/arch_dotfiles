@@ -1,0 +1,203 @@
+/* ================================ */
+/*            Common CSS            */
+/* ================================ */
+* {
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+  border-radius: 0;
+  border: none;
+  text-shadow: none;
+  transition: none;
+  box-shadow: none;
+}
+
+window#waybar {
+  color: #eceff4;
+  background: none;
+}
+
+window#waybar.hidden {
+  opacity: 1;
+}
+
+#custom-rofi,
+#workspaces button,
+#workspaces button:hover,
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover,
+#workspaces button.urgent,
+#window,
+#tray,
+#disk,
+#cpu,
+#temperature,
+#temperature.critical,
+#backlight,
+#memory,
+#cava,
+#network,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#clock {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2e3440;
+  background: #2e3440;
+  border: 3px solid #2e3440;
+  border-radius: 3px;
+  min-height: 20px;
+}
+
+#window,
+#tray,
+#disk,
+#cpu,
+#temperature,
+#temperature.critical,
+#backlight,
+#memory,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#clock {
+  padding-right: 4px;
+}
+
+#custom-rofi {
+  background: #5e81ac;
+  padding: 0 6px;
+}
+
+/* ================================ */
+/*          Workspaces              */
+/* ================================ */
+#workspaces {
+  margin: 0px;
+}
+
+#workspaces button {
+  color: #eceff4;
+  padding: 0px 10px;
+  padding-right: 12px;
+  margin: 0px 4px;
+  min-width: 28px;
+}
+
+#workspaces button:hover {
+  background: #b48ead;
+}
+
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover {
+  background: #5e81ac;
+}
+
+#workspaces button.urgent {
+  background: #bf616a;
+}
+
+/* ================================ */
+/*            Window                */
+/* ================================ */
+#window {
+  color: #b48ead;
+}
+
+/* ================================ */
+/*            Tray                  */
+/* ================================ */
+#tray {
+  padding: 0 6px;
+}
+
+/* ================================ */
+/*            Disk                  */
+/* ================================ */
+#disk {
+  color: #bf616a;
+}
+
+/* ================================ */
+/*            CPU                   */
+/* ================================ */
+#cpu {
+  color: #d08770;
+}
+
+/* ================================ */
+/*            Temperature           */
+/* ================================ */
+#temperature {
+  color: #ebcb8b;
+}
+
+#temperature.critical {
+  color: #bf616a;
+}
+
+/* ================================ */
+/*            Backlight             */
+/* ================================ */
+#backlight {
+  color: #ebcb8b;
+}
+
+/* ================================ */
+/*            Memory                */
+/* ================================ */
+#memory {
+  color: #5e81ac;
+}
+
+/* ================================ */
+/*         Pulseaudio               */
+/* ================================ */
+#pulseaudio {
+  color: #5e81ac;
+}
+#network {
+  color: #bf616a;
+}
+#cava {
+      font-family: monospace;
+      color: #5e81ac;
+      padding: 0 8px;
+}
+
+#pulseaudio.muted {
+  color: #bf616a;
+}
+
+/* ================================ */
+/*            Battery               */
+/* ================================ */
+#battery {
+  color: #a3be8c;
+}
+
+#battery.critical {
+  color: #bf616a;
+}
+
+#battery.warning {
+  color: #d08770;
+}
+
+/* ================================ */
+/*            Clock                 */
+/* ================================ */
+#clock {
+  color: #bf616a;
+}
+

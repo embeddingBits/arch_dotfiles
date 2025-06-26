@@ -1,0 +1,389 @@
+info_begin
+format: 2
+mpd_version: 0.24.3
+fs_charset: UTF-8
+tag: Artist
+tag: ArtistSort
+tag: Album
+tag: AlbumSort
+tag: AlbumArtist
+tag: AlbumArtistSort
+tag: Title
+tag: TitleSort
+tag: Track
+tag: Name
+tag: Genre
+tag: Mood
+tag: Date
+tag: OriginalDate
+tag: Composer
+tag: ComposerSort
+tag: Performer
+tag: Conductor
+tag: Work
+tag: Movement
+tag: MovementNumber
+tag: ShowMovement
+tag: Ensemble
+tag: Location
+tag: Grouping
+tag: Disc
+tag: Label
+tag: MUSICBRAINZ_ARTISTID
+tag: MUSICBRAINZ_ALBUMID
+tag: MUSICBRAINZ_ALBUMARTISTID
+tag: MUSICBRAINZ_TRACKID
+tag: MUSICBRAINZ_RELEASETRACKID
+tag: MUSICBRAINZ_WORKID
+tag: MUSICBRAINZ_RELEASEGROUPID
+info_end
+song_begin: Freaking Out the Neighborhood.mp3
+Time: 173.888
+Artist: Mac DeMarco
+Title: Freaking Out the Neighborhood
+Album: 2
+Date: 2012
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: My Kind of Woman.mp3
+Time: 190.845
+Artist: Mac DeMarco
+Title: My Kind of Woman
+Album: 2
+Date: 2012
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Alternative Outro.mp3
+Time: 290.09000000000003
+Artist: LUCKI
+Title: Alternative Outro
+Album: Alternative Trap
+Date: 2013
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Heartbeat.mp3
+Time: 269.84000000000003
+Artist: Childish Gambino
+Title: Heartbeat
+Album: Camp
+Date: 2011
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Telephones.mp3
+Time: 212.454
+Artist: Vacations
+Title: Telephones
+Album: Changes
+Date: 2018
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Swim.mp3
+Time: 228.786
+Artist: Chase Atlantic
+Title: Swim
+Album: Chase Atlantic
+Date: 2017
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Apocalypse.mp3
+Time: 290.146
+Artist: Cigarettes After Sex
+Title: Apocalypse
+Album: Cigarettes After Sex
+Date: 2017
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Eventually.mp3
+Time: 327.053
+Artist: Tame Impala
+Title: Eventually
+Album: Currents
+Date: 2015
+Format: 48000:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: New Person, Same Old Mistakes.mp3
+Time: 363.238
+Artist: Tame Impala
+Title: New Person, Same Old Mistakes
+Album: Currents
+Date: 2015
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: The Less I Know The Better.mp3
+Time: 216.318
+Artist: Tame Impala
+Title: The Less I Know The Better
+Album: Currents
+Date: 2015
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Lovers Rock.mp3
+Time: 213.92000000000002
+Artist: TV Girl
+Title: Lovers Rock
+Album: French Exit
+Date: 2014
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Bad Habit.mp3
+Time: 232.114
+Artist: Steve Lacy
+Title: Bad Habit
+Album: Gemini Rights
+Date: 2022
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Good Looking.mp3
+Time: 214.8
+Artist: Suki Waterhouse
+Title: Good Looking
+Album: Good Looking
+Date: 2022
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Reflections.mp3
+Time: 244.013
+Artist: The Neighbourhood
+Title: Reflections
+Album: Hard To Imagine The Neighbourhood Ever Changing
+Date: 2018
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Heart To Heart.mp3
+Time: 211.14000000000001
+Artist: Mac DeMarco
+Title: Heart To Heart
+Album: Here Comes The Cowboy
+Date: 2019
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Husk.mp3
+Time: 204.651
+Artist: Men I Trust
+Title: Husk
+Album: Husk
+Date: 2024
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: I Hope to Be Around.mp3
+Time: 205.554
+Artist: Men I Trust
+Title: I Hope to Be Around
+Album: I Hope to Be Around
+Date: 2017
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Swing Lynn.mp3
+Time: 321.438
+Artist: Harmless
+Title: Swing Lynn
+Album: I'm Sure
+Date: 2012
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Feels Like We Only Go Backwards.mp3
+Time: 192.96
+Artist: Tame Impala
+Title: Feels Like We Only Go Backwards
+Album: Lonerism
+Date: 2012
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Neverender.mp3
+Time: 266.493
+Artist: Justice/Tame Impala
+Title: Neverender
+Album: Neverender
+Date: 2024
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Notion.mp3
+Time: 195.12
+Artist: The Rare Occasions
+Title: Notion
+Album: Notion
+Date: 2021
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Money.mp3
+Time: 233.639
+Artist: The Drums
+Title: Money
+Album: Portamento
+Date: 2011
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Tek It.mp3
+Time: 191.823
+Artist: Cafuné
+Title: Tek It
+Album: Running
+Date: 2021
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Show Me How.mp3
+Time: 215.11
+Artist: Men I Trust
+Title: Show Me How
+Album: Show Me How
+Date: 2018
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Shut up My Moms Calling.mp3
+Time: 164.571
+Artist: Hotel Ugly
+Title: Shut up My Moms Calling
+Album: Shut up My Moms Calling
+Date: 2020
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Feeling Like The End.mp3
+Time: 102.48
+Artist: Joji
+Title: Feeling Like The End
+Album: SMITHEREENS
+Date: 2022
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Solo.mp3
+Time: 227.971
+Artist: RiveR
+Title: Solo
+Album: Solo
+Date: 2018
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Tek It - Sped Up.mp3
+Time: 166.859
+Artist: Cafuné
+Title: Tek It - Sped Up
+Album: Tek It (I Watch the Moon)
+Date: 2019
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Borderline.mp3
+Time: 237.8
+Artist: Tame Impala
+Title: Borderline
+Album: The Slow Rush
+Date: 2020
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Breathe Deeper.mp3
+Time: 372.866
+Artist: Tame Impala
+Title: Breathe Deeper
+Album: The Slow Rush
+Date: 2020
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Instant Destiny.mp3
+Time: 194.70600000000002
+Artist: Tame Impala
+Title: Instant Destiny
+Album: The Slow Rush
+Date: 2020
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: One More Hour.mp3
+Time: 432.56
+Artist: Tame Impala
+Title: One More Hour
+Album: The Slow Rush
+Date: 2020
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: For the First Time.mp3
+Time: 182.306
+Artist: Mac DeMarco
+Title: For the First Time
+Album: This Old Dog
+Date: 2017
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
+song_begin: Moonlight on the River.mp3
+Time: 422.613
+Artist: Mac DeMarco
+Title: Moonlight on the River
+Album: This Old Dog
+Date: 2017
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839118
+song_end
+song_begin: Young.mp3
+Time: 189.16
+Artist: Vacations
+Title: Young
+Album: Vibes
+Date: 2016
+Format: 44100:16:2
+mtime: 1750816678
+added: 1750839117
+song_end
