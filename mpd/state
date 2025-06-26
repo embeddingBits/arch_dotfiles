@@ -1,0 +1,29 @@
+sw_volume: 55
+audio_device_state:1:MPD Audio
+state: stop
+current: 2
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: 
+playlist_begin
+0:Alternative Outro.mp3
+1:Apocalypse.mp3
+2:Bad Habit.mp3
+3:Money.mp3
+4:Moonlight on the River.mp3
+5:My Kind of Woman.mp3
+6:Neverender.mp3
+7:New Person, Same Old Mistakes.mp3
+8:Notion.mp3
+9:One More Hour.mp3
+10:Reflections.mp3
+11:Show Me How.mp3
+12:Shut up My Moms Calling.mp3
+13:Solo.mp3
+14:Alternative Outro.mp3
+playlist_end

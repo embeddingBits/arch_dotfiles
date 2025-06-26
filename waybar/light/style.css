@@ -1,12 +1,12 @@
 * {
     font-family: "JetBrainsMono Nerd Font", sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 20px;
 }
 
 window#waybar {
-    background: transparent; /* Solid Polar Night color for opaque bar */
-    color: #D8DEE9; /* Snow Storm for text outside modules */
+    background: transparent;
+    color: #2e3440; /* Snow Storm for text outside modules */
     border-radius: 9px; /* Rounded corners for floating effect */
     margin: 12px 100px; /* Increased top margin to 12px for more lift */
 }
@@ -31,22 +31,22 @@ window#waybar {
 #custom-launcher,
 #custom-power
 {
-    background-color: #2E3440; /* Polar Night (swapped from border) */
-    color: #bf616a; /* Snow Storm (changed for better contrast) */
+    background-color: #5e81ac; /* Polar Night (swapped from border) */
+    color: #2e3440; /* Snow Storm (changed for better contrast) */
     border-radius: 3px;
-    border: solid 2px;
-    border-color: #81A1C1; /* Frost blue (swapped from background) */
+    border: solid 3px;
+    border-color: #2e3440; /* Frost blue (swapped from background) */
     padding: 5px 10px;
     margin: 8px 4px;
 }
 
 /* Specific styling for custom/launcher to match other modules */
 #custom-launcher {
-    background-color: #2E3440; /* Polar Night (swapped from border) */
-    color: #bf616a; /* Snow Storm (changed for better contrast) */
+    background-color: #5e81ac; /* Polar Night (swapped from border) */
+    color: #2e3440; /* Snow Storm (changed for better contrast) */
     border-radius: 3px;
-    border: solid 2px;
-    border-color: #81A1C1; /* Frost blue (swapped from background) */
+    border: solid 3px;
+    border-color: #2e3440; /* Frost blue (swapped from background) */
     padding: 5px 12px;
     margin: 8px 4px;
 }
@@ -63,10 +63,10 @@ window#waybar {
 /* Workspaces buttons (apply background only to numbers/icons) */
 #workspaces button {
     padding: 0 8px;
-    border: solid 2px;
-    border-color: #81A1C1; /* Frost blue (swapped from background) */
-    background-color: #2E3440; /* Polar Night (swapped from border) */
-    color: #5e81ac; /* Snow Storm (changed for better contrast) */
+    border: solid 3px;
+    border-color: #2e3440; /* Frost blue (swapped from background) */
+    background-color: #5e81ac; /* Polar Night (swapped from border) */
+    color: #2e3440; /* Snow Storm (changed for better contrast) */
     border-radius: 3px;
     margin: 0 2px; /* Small margin between buttons for spacing */
 }
@@ -87,18 +87,18 @@ window#waybar {
 }
 
 #backlight {
-      background-color: #2e3440;
-      color: #a3be8c;
+      background-color: #5e81ac;
+      color: #2e3440;
 }
 
 #memory {
-      background-color: #2e3440;
-      color: #d08770;
+      background-color: #5e81ac;
+      color: #2e3440;
 }
 
 #battery {
-      background-color: #2e3440;
-      color: #b48ead;
+      background-color: #5e81ac;
+      color: #2e3440;
 }
 /* Specific module states - Ensure text color is consistent */
 #battery.charging, #battery.plugged {
@@ -117,13 +117,13 @@ window#waybar {
 }
 
 #network {
-    background-color: #2e3440; /* Aurora Red for disconnected */
-    color: #ebcb8b; /* Snow Storm for text */
+    background-color: #5e81ac; /* Aurora Red for disconnected */
+    color: #2e3440; /* Snow Storm for text */
 }
 
 #pulseaudio {
-      background-color: #2e3440;
-      color: #a3be8c;
+      background-color: #5e81ac;
+      color: #2e3440;
 }
 
 #pulseaudio.muted {

@@ -5,41 +5,46 @@
     "height": 40, // Waybar height
     "spacing": 6, // Gaps between modules
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window",
-        "cava"
+        "custom/launcher",    
+        "clock",
+        "cava",
     ],
-    "modules-center": [],
+    "modules-center": [
+        "hyprland/workspaces",
+      ],
     "modules-right": [
-        "mpd",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
         "memory",
         "backlight",
         "battery",
         "battery#bat2",
-        "clock"
     ],
     // Modules configuration
     "cava": {
         "framerate": 60,
         "bars": 12,
-        "method": "pulse",
+        "method": "pipewire",
         "source": "auto",
-        "bar_delimiter": 0,
-        "waves": true,
-        "noise_reduction": 0.77,
-        "input_delay": 4,
-        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+            "bar_delimiter": 0,
+            "waves": true,
+            "noise_reduction": 0.77,
+            "input_delay": 4,
+            "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
       },
 
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
+      "custom/launcher":{
+            "format": " ",
+            "on-click": "rofi -show drun",
+            "on-click-right": "killall rofi"
+      },
+
+      "hyprland/workspaces": {
+            "disable-scroll": true,
+            "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-            "1": " ",  // Terminal
+            "1": "",  // Terminal
             "2": " ",  // Browser
             "3": " ",  // Discord
             "4": "󰓇 ",  // Spotify
@@ -123,15 +128,15 @@
         "spacing": 10
     },
     "clock": {
-        "tooltip-format": "󰥔  <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "󰥔  {:%H:%M}"
+        "tooltip-format": "󰥔 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "󰥔 {:%I:%M %a %d}"
     },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
     "memory": {
-        "format": "  {}%"
+        "format": "󰍛 {}%"
     },
     "temperature": {
         "critical-threshold": 80,
@@ -178,15 +183,13 @@
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
-            "headset": "",
+            "headset": " ",
             "phone": "",
             "portable": "",
             "car": "",

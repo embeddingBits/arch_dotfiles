@@ -14,7 +14,7 @@
         {
             "type": "custom",
             "outputColor": "red",
-            "format": "┌───{$1} BitsExploited {$1}────┐",
+            "format": "┌───{$1} EmbeddingBits {$1}────┐",
             "outputColor": "red"
         },
         {
@@ -22,7 +22,7 @@
             "keyIcon": "",
             "key": "Title",
             "keyColor": "blue",
-            "format": "BitsExploited"
+            "format": "EmbeddingBits"
         },
         {
             "type": "custom",
