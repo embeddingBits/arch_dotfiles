@@ -1,7 +1,7 @@
 sw_volume: 55
 audio_device_state:1:MPD Audio
 state: stop
-current: 2
+current: 14
 random: 0
 repeat: 1
 single: 0
@@ -26,4 +26,5 @@ playlist_begin
 12:Shut up My Moms Calling.mp3
 13:Solo.mp3
 14:Alternative Outro.mp3
+15:My Kind of Woman.mp3
 playlist_end
