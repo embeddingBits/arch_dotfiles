@@ -19,10 +19,7 @@ M.ui = {
       },
       telescope = {
             style = "bordered"
-      },
-      cmp = {
-            style = "default"
-      },
+      }
 }
 
 return M

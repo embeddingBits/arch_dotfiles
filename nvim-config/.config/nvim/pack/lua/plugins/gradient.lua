@@ -1,3 +1,0 @@
-return {
-  'oleksiiluchnikov/gradient.nvim',
-}
