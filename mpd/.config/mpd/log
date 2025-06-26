@@ -211,3 +211,489 @@
 2025-06-25T16:59:34 player: played "Solo.mp3"
 2025-06-25T16:59:34 exception: No such song
 2025-06-25T16:59:34 exception: No such song
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Apocalypse.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Bad Habit.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Money.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Neverender.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Notion.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "One More Hour.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Reflections.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Show Me How.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Solo.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:49 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:49 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Bad Habit.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Money.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Neverender.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Notion.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "One More Hour.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Reflections.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Show Me How.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Solo.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:50 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:50 player: played "Apocalypse.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Money.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Neverender.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Notion.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "One More Hour.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Reflections.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Show Me How.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Solo.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Apocalypse.mp3"
+2025-06-26T06:28:51 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:51 player: played "Bad Habit.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Neverender.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Notion.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "One More Hour.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Reflections.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Show Me How.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Solo.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Apocalypse.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Bad Habit.mp3"
+2025-06-26T06:28:52 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:52 player: played "Money.mp3"
+2025-06-26T06:28:52 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Apocalypse.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Bad Habit.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Money.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Neverender.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Notion.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "One More Hour.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Reflections.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Show Me How.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Solo.mp3"
+2025-06-26T06:28:53 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:53 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Neverender.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Notion.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "One More Hour.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Reflections.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Show Me How.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Solo.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Apocalypse.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Bad Habit.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Money.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Neverender.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Neverender.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Notion.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "One More Hour.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Reflections.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Show Me How.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Solo.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Apocalypse.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Bad Habit.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Money.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Notion.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "One More Hour.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Reflections.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Show Me How.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Solo.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Apocalypse.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Bad Habit.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Money.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Neverender.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Notion.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "One More Hour.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Reflections.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Show Me How.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Solo.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Apocalypse.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Bad Habit.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Money.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Neverender.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "One More Hour.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Reflections.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Show Me How.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Solo.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Apocalypse.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Bad Habit.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Money.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Neverender.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:55 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:55 player: played "Notion.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Reflections.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Show Me How.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Solo.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Apocalypse.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Bad Habit.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Money.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Neverender.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Notion.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "One More Hour.mp3"
+2025-06-26T06:28:56 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:56 player: played "Reflections.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Show Me How.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Solo.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Apocalypse.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Bad Habit.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Money.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Neverender.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Notion.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "One More Hour.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Reflections.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Show Me How.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Solo.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Apocalypse.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Bad Habit.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Money.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Neverender.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Notion.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "One More Hour.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Reflections.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Show Me How.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Solo.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Apocalypse.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Bad Habit.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Money.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Neverender.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Notion.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "One More Hour.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Reflections.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Show Me How.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Alternative Outro.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Apocalypse.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Apocalypse.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Apocalypse.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Bad Habit.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Bad Habit.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Bad Habit.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Money.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Money.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Money.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Moonlight on the River.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Moonlight on the River.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/embeddingbits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "My Kind of Woman.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Neverender.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Neverender.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Neverender.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3"; Failed to open "/home/embeddingbits/Music/Indie/New Person, Same Old Mistakes.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "New Person, Same Old Mistakes.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Notion.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Notion.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Notion.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/One More Hour.mp3"; Failed to open "/home/embeddingbits/Music/Indie/One More Hour.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "One More Hour.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Reflections.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Reflections.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Reflections.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Show Me How.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Show Me How.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Show Me How.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Shut up My Moms Calling.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Shut up My Moms Calling.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Solo.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Solo.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Solo.mp3"
+2025-06-26T06:28:57 exception: Failed to decode "/home/embeddingbits/Music/Indie/Alternative Outro.mp3"; Failed to open "/home/embeddingbits/Music/Indie/Alternative Outro.mp3": No such file or directory
+2025-06-26T06:28:57 player: played "Alternative Outro.mp3"

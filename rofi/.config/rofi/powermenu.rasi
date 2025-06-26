@@ -149,7 +149,7 @@ element {
     cursor:                      pointer;
 }
 element-text {
-    font:                        "Iosevka Nerd Font Bold 15";
+    font:                        "JetBrainsMono Nerd Font Bold 15";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
