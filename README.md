@@ -16,3 +16,6 @@
 ![riceSS](cava.png)
 ![riceSS](main.png)
 ![riceSS](nvim.png)
+![riceSS](spotify.png)
+![riceSS](discord.png)
+
