@@ -1,0 +1,6 @@
+pipes.sh
+rofi-power-menu
+spicetify-cli
+spotify
+waybar-cava
+waypaper
