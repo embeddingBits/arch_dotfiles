@@ -4,3 +4,5 @@ spicetify-cli
 spotify
 waybar-cava
 waypaper
+yay-bin
+yay-bin-debug

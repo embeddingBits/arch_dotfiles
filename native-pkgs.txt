@@ -21,6 +21,7 @@ fastfetch
 fd
 firefox
 fish
+fzf
 git
 github-cli
 go
@@ -32,6 +33,7 @@ hyprland
 hyprlock
 hyprpicker
 hyprshot
+imagemagick
 intel-ucode
 iwd
 kate
@@ -55,6 +57,7 @@ neovim
 network-manager-applet
 networkmanager
 nodejs
+npm
 nvidia-dkms
 nwg-look
 obsidian
@@ -78,6 +81,7 @@ smartmontools
 sof-firmware
 starship
 stow
+sway
 swww
 tree
 ttf-jetbrains-mono-nerd
@@ -88,6 +92,7 @@ wireless_tools
 wireplumber
 wl-clipboard
 wlr-randr
+xdg-desktop-portal-hyprland
 xdg-utils
 xorg-xinit
 zig
