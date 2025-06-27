@@ -126,7 +126,7 @@
       },
 
       "clock": {
-            "format": "<span color='#2e3440' bgcolor='#bf616a' size='17000'>  </span> {:%a %d %b %H:%M}",
+            "format": "<span color='#2e3440' bgcolor='#bf616a' size='17000'>  </span> {:%a %d %b %I:%M %p}",
             "tooltip": false,
             "interval": 1
       }
