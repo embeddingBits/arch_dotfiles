@@ -12,6 +12,7 @@
 
 
 
+![riceSS](kitty.png)
 ![riceSS](applications.png)
 ![riceSS](cava.png)
 ![riceSS](main.png)
