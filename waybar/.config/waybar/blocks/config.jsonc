@@ -25,7 +25,7 @@
       ],
 
       "custom/rofi": {
-            "format": "<span size='18000'> </span>",
+            "format": "<span size='18000'>󰣇 </span>",
             "on-click": "rofi -show drun -disable-history -show-icons",
             "on-click-right": "~/.config/custom_scripts/power.sh",
             "escape": true,
