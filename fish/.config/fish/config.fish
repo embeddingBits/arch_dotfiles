@@ -3,9 +3,17 @@ if status is-interactive
 end
 set fish_greeting
 starship init fish | source
-fastfetch -c ~/.config/fastfetch/config.jsonc --logo-color-1 blue --logo-color-2 red
+fastfetch -c ~/.config/fastfetch/small.jsonc --logo-color-1 blue --logo-color-2 red
 set -x BAT_THEME Nord
 fish_add_path /home/amiitesh/.spicetify
+
+function fastfetch_big
+      fastfetch -c ~/.config/fastfetch/large.jsonc --logo-color-1 blue --logo-color-2 red
+end
+
+function fastfetch_small
+      fastfetch -c ~/.config/fastfetch/small.jsonc --logo-color-1 blue --logo-color-2 red
+end
 
 function ls
     set -l exa_args
