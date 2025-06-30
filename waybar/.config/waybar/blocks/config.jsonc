@@ -87,7 +87,8 @@
       },
 
       "memory": {
-            "format": "<span color='#2e3440' bgcolor='#5e81ac' size='17000'>   </span> {used:0.2f} GiB "
+            "format": "<span color='#2e3440' bgcolor='#5e81ac' size='17000'>   </span> {used:0.2f} GiB ",
+            "interval": 2
       },
 
       "pulseaudio": {
