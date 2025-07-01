@@ -749,3 +749,8 @@
 2025-06-27T21:40:58 player: played "I Hope to Be Around.mp3"
 2025-06-27T21:41:57 player: played "I Hope to Be Around.mp3"
 2025-06-28T10:18:22 player: played "I Hope to Be Around.mp3"
+2025-06-30T21:21:32 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-06-30T21:30:24 player: played "Neverender.mp3"
+2025-06-30T21:32:12 player: played "Show Me How.mp3"
+2025-06-30T21:32:30 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-06-30T21:34:26 player: played "Lovers Rock.mp3"

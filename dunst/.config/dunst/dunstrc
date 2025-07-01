@@ -10,6 +10,9 @@
     progress_bar_min_width = 150
     progress_bar_max_width = 300
     corner_radius = 5
+    enable_markup = yes
+    allow_markup = yes
+    actions = true
 
     ### Text ###
     line_height = 0
