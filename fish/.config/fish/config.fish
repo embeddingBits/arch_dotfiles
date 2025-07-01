@@ -15,6 +15,10 @@ function fastfetch_small
       fastfetch -c ~/.config/fastfetch/small.jsonc --logo-color-1 blue --logo-color-2 red
 end
 
+function swww-sh
+      sh ~/dwl-configuration/scripts/swww-sh
+end
+
 function ls
     set -l exa_args
 

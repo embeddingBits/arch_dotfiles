@@ -18,6 +18,7 @@
 
       "modules-right": [
             "pulseaudio",
+            "tray",
             "network",
             "memory",
             "backlight",
@@ -30,6 +31,11 @@
             "on-click-right": "~/.config/custom_scripts/power.sh",
             "escape": true,
             "tooltip": false
+      },
+
+      "tray": {
+            "icon-size": 18,
+            "spacing": 5
       },
 
       "hyprland/workspaces": {
