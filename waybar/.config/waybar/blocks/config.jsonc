@@ -36,9 +36,6 @@
       "tray": {
             "icon-size": 18,
             "spacing": 5,
-            "icons": {
-                  "NetworkManager": "󰤨",
-            },
       },
 
       "hyprland/workspaces": {
