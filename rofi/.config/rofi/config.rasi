@@ -12,7 +12,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          ".config/rofi/nord.rasi"
+@import                          ".config/rofi/catppuccin.rasi"
 @import                          ".config/rofi/fonts.rasi"
 
 * {

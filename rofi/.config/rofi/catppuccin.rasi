@@ -1,0 +1,10 @@
+* {
+    background:     #1E1E2EFF; /* base */
+    background-alt: #302D41FF; /* surface0 */
+    foreground:     #D9E0EEFF; /* text */
+    selected:       #F38BA8FF; /* red */
+    selected1:      #89B4FAFF; /* blue */
+    active:         #A6E3A1FF; /* green */
+    urgent:         #F38BA8FF; /* red (same as selected) */
+}
+
