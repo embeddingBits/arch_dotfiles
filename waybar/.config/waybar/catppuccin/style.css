@@ -6,7 +6,7 @@
 
 window#waybar {
     background: transparent;
-    color: #c0caf5;
+    color: #cdd6f4; /* text */
     border-radius: 9px;
     margin: 12px 100px;
 }
@@ -30,11 +30,11 @@ window#waybar {
 #tray,
 #custom-launcher,
 #custom-power {
-    background-color: #1a1b26;
-    color: #f7768e;
+    background-color: #1e1e2e; /* base */
+    color: #f38ba8; /* red */
     border-radius: 3px;
     border: solid 2px;
-    border-color: #7aa2f7;
+    border-color: #89b4fa; /* blue */
     padding: 5px 10px;
     margin: 8px 4px;
 }
@@ -55,54 +55,54 @@ window#waybar {
 #workspaces button {
     padding: 0 8px;
     border: solid 2px;
-    border-color: #7aa2f7;
-    background-color: #1a1b26;
-    color: #7aa2f7;
+    border-color: #89b4fa;
+    background-color: #1e1e2e;
+    color: #89b4fa;
     border-radius: 3px;
     margin: 0 2px;
 }
 
 #workspaces button:hover {
-    background: #7aa2f7;
-    color: #c0caf5;
+    background: #89b4fa;
+    color: #1e1e2e;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: #1a1b26;
-    color: #f7768e;
+    background-color: #1e1e2e;
+    color: #f38ba8;
 }
 
 #workspaces button.urgent {
-    background-color: #f7768e;
-    color: #c0caf5;
+    background-color: #f38ba8;
+    color: #1e1e2e;
 }
 
 /* Module-specific coloring */
 #backlight {
-    background-color: #1a1b26;
-    color: #9ece6a;
+    background-color: #1e1e2e;
+    color: #a6e3a1; /* green */
 }
 
 #memory {
-    background-color: #1a1b26;
-    color: #e0af68;
+    background-color: #1e1e2e;
+    color: #f9e2af; /* yellow */
 }
 
 #battery {
-    background-color: #1a1b26;
-    color: #bb9af7;
+    background-color: #1e1e2e;
+    color: #cba6f7; /* mauve */
 }
 
 #battery.charging,
 #battery.plugged {
-    color: #c0caf5;
-    background-color: #9ece6a;
+    color: #1e1e2e;
+    background-color: #a6e3a1; /* green */
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f7768e;
-    color: #c0caf5;
+    background-color: #f38ba8;
+    color: #1e1e2e;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -111,36 +111,36 @@ window#waybar {
 }
 
 #network {
-    background-color: #1a1b26;
-    color: #7dcfff;
+    background-color: #1e1e2e;
+    color: #89dceb; /* sky */
 }
 
 #pulseaudio {
-    background-color: #1a1b26;
-    color: #9ece6a;
+    background-color: #1e1e2e;
+    color: #a6e3a1;
 }
 
 #pulseaudio.muted {
-    background-color: #565f89;
-    color: #c0caf5;
+    background-color: #45475a; /* surface1 */
+    color: #cdd6f4;
 }
 
 /* Optional visualizer (cava) */
 #cava {
-    background-color: #1a1b26;
-    color: #7aa2f7;
+    background-color: #1e1e2e;
+    color: #89b4fa;
     border-radius: 3px;
     font-family: "Iosevka Nerd Font";
     border: solid 2px;
-    border-color: #7aa2f7;
+    border-color: #89b4fa;
     padding: 2px 12px;
     margin: 8px 4px;
 }
 
 @keyframes blink {
     to {
-        background-color: #c0caf5;
-        color: #1a1b26;
+        background-color: #cdd6f4;
+        color: #1e1e2e;
     }
 }
 
