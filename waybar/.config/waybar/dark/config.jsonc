@@ -22,8 +22,8 @@
     ],
     // Modules configuration
     "cava": {
-        "framerate": 60,
-        "bars": 12,
+        "framerate": 144,
+        "bars": 9,
         "method": "pipewire",
         "source": "auto",
             "bar_delimiter": 0,
