@@ -13,7 +13,9 @@ calc
 cava
 chromium
 clang
+cmake
 cmus
+cpio
 discord
 dkms
 dolphin
@@ -42,7 +44,6 @@ hyprsunset
 imagemagick
 intel-ucode
 iwd
-kanshi
 kate
 kcalc
 kdeconnect
@@ -71,6 +72,7 @@ nodejs
 npm
 nvidia-dkms
 nwg-look
+obs-studio
 obsidian
 os-prober
 pamixer
