@@ -1,7 +1,7 @@
 sw_volume: 55
 audio_device_state:1:MPD Audio
 state: stop
-current: 4
+current: 1
 random: 0
 repeat: 1
 single: 0
