@@ -9,11 +9,8 @@ return {
             themify.setup({
                   -- Plugins (these get loaded automatically)
                   { "gbprod/nord.nvim" },
-                  { "AlexvZyl/nordic.nvim" },
-                  { "rmehri01/onenord.nvim" },
-                  { "sainnhe/everforest" },
                   { "EdenEast/nightfox.nvim" },
-                  { "RRethy/base16-nvim" },
+                  { "catppuccin/nvim" },
                   { "folke/tokyonight.nvim"}
 
             })
