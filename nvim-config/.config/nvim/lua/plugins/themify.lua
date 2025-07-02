@@ -14,6 +14,7 @@ return {
                   { "sainnhe/everforest" },
                   { "EdenEast/nightfox.nvim" },
                   { "RRethy/base16-nvim" },
+                  { "folke/tokyonight.nvim"}
 
             })
 
