@@ -13,60 +13,90 @@ window#waybar {
 
 /* Base module styling */
 #window,
-#custom-media,
 #mpd,
 #idle_inhibitor,
 #pulseaudio,
 #network,
-#power-profiles-daemon,
 #cpu,
 #memory,
 #temperature,
 #backlight,
-#keyboard-state,
-#sway-language,
 #battery,
 #clock,
 #tray,
+#custom-speed,
 #custom-launcher,
 #custom-power {
-    background-color: #1e1e2e; /* base */
-    color: #f38ba8; /* red */
-    border-radius: 3px;
-    border: solid 2px;
-    border-color: #89b4fa; /* blue */
+    background-color: transparent;
+    color: inherit;
     padding: 5px 10px;
-    margin: 8px 4px;
-}
+    margin: 0;
+    border: none;
+    border-radius: 0;}
 
 #custom-launcher {
-    padding: 5px 12px;
+    background-color: #1e1e2e;
+    color: #f38ba8;
+    border: 2px solid #89b4fa;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 6px 4px;
+}
+
+.modules-center {
+    background-color: #1e1e2e;
+    color: #f38ba8;
+    border: 2px solid #89b4fa;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 6px 4px;
+}
+
+
+.modules-right {
+    background-color: #1e1e2e;
+    border: 2px solid #89b4fa;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 6px 4px;
 }
 
 /* Workspaces container */
 #workspaces {
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
+    background-color: #1e1e2e;
+    border: 2px solid #89b4fa;
+    border-radius: 6px;
     padding: 0;
     margin: 8px 4px;
 }
 
+/* Workspace buttons with NO margins or borders */
 #workspaces button {
-    padding: 0 8px;
-    border: solid 2px;
-    border-color: #89b4fa;
-    background-color: #1e1e2e;
+    padding: 4px 12px;
+    margin: 0; /* remove spacing between buttons */
+    border: none;
+    background-color: transparent;
     color: #89b4fa;
-    border-radius: 3px;
-    margin: 0 2px;
+    border-radius: 0; /* no rounded edges between buttons */
 }
 
+/* Round only outer edges */
+#workspaces button:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+#workspaces button:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* Hover effect */
 #workspaces button:hover {
-    background: #89b4fa;
+    background-color: #89b4fa;
     color: #1e1e2e;
 }
 
+/* Focused/active/urgent styles */
 #workspaces button.focused,
 #workspaces button.active {
     background-color: #1e1e2e;
