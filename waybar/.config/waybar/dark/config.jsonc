@@ -2,18 +2,18 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 40, // Waybar height
-    "spacing": 6, // Gaps between modules
+    "height": 35, // Waybar height
+    "spacing": 2, // Gaps between modules
     "modules-left": [
         "custom/launcher",    
-        "clock",
-        "cava",
+        "hyprland/workspaces",
     ],
     "modules-center": [
-        "hyprland/workspaces",
+            "clock"
       ],
     "modules-right": [
         "pulseaudio",
+        "custom/speed",
         "network",
         "memory",
         "backlight",
@@ -34,7 +34,7 @@
       },
 
       "custom/launcher":{
-            "format": " ",
+            "format": " ",
             "on-click": "rofi -show drun",
             "on-click-right": "killall rofi"
       },
@@ -44,11 +44,11 @@
             "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-            "1": "",  // Terminal
-            "2": " ",  // Browser
-            "3": " ",  // Discord
-            "4": "󰓇 ",  // Spotify
-            "5": " ",  // Miscellaneous
+            "1": "1",  
+            "2": "2",  
+            "3": "3",  
+            "4": "4",  
+            "5": "5",  
             "urgent": "",
             "default": "○"
         },
@@ -136,7 +136,8 @@
         "tooltip": false
     },
     "memory": {
-        "format": "󰍛 {}%"
+        "format": "󰍛{used: 0.2f} GB",
+        "interval": 2,
     },
     "temperature": {
         "critical-threshold": 80,
@@ -153,7 +154,7 @@
             "critical": 15
         },
         "format": "{icon}  {capacity}%",
-        "format-full": "{capacity}% {icon}",
+        "format-full": "{icon} {capacity}%",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
@@ -174,12 +175,11 @@
         }
     },
     "network": {
-        "format-wifi": "  {essid}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-wifi": "{icon} {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "interval": 5,
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
@@ -210,3 +210,4 @@
         }
     }
 }
+
