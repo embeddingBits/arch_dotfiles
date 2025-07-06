@@ -1,0 +1,61 @@
+# Btop theme with Catppuccin Mocha accents
+
+theme[main_bg]="#1E1E2E"         # Mocha base
+theme[main_fg]="#CDD6F4"         # Mocha text
+
+theme[title]="#F38BA8"           # Mocha red
+theme[hi_fg]="#F38BA8"           # Mocha red
+
+theme[selected_bg]="#313244"     # Mocha surface0
+theme[selected_fg]="#CDD6F4"     # Mocha text
+
+theme[inactive_fg]="#6C7086"     # Mocha overlay0
+theme[proc_misc]="#F38BA8"       # Mocha red
+
+theme[cpu_box]="#89B4FA"         # Mocha blue
+theme[mem_box]="#89B4FA"
+theme[net_box]="#89B4FA"
+theme[proc_box]="#89B4FA"
+
+theme[div_line]="#6C7086"        # Mocha overlay0
+
+# Temperature graph colors (gradient)
+theme[temp_start]="#89DCEB"      # Mocha sky
+theme[temp_mid]="#F38BA8"        # Mocha red
+theme[temp_end]="#CDD6F4"        # Mocha text
+
+# CPU graph colors
+theme[cpu_start]="#89DCEB"
+theme[cpu_mid]="#F38BA8"
+theme[cpu_end]="#CDD6F4"
+
+# Memory/Disk free meter
+theme[free_start]="#89DCEB"
+theme[free_mid]="#F38BA8"
+theme[free_end]="#CDD6F4"
+
+# Cached meter
+theme[cached_start]="#89DCEB"
+theme[cached_mid]="#F38BA8"
+theme[cached_end]="#CDD6F4"
+
+# Available meter
+theme[available_start]="#89DCEB"
+theme[available_mid]="#F38BA8"
+theme[available_end]="#CDD6F4"
+
+# Used meter
+theme[used_start]="#89DCEB"
+theme[used_mid]="#F38BA8"
+theme[used_end]="#CDD6F4"
+
+# Download graph
+theme[download_start]="#89DCEB"
+theme[download_mid]="#F38BA8"
+theme[download_end]="#CDD6F4"
+
+# Upload graph
+theme[upload_start]="#89DCEB"
+theme[upload_mid]="#F38BA8"
+theme[upload_end]="#CDD6F4"
+
