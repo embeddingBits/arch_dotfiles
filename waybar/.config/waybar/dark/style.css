@@ -5,13 +5,13 @@
 }
 
 window#waybar {
-    background: transparent; /* Solid Polar Night color for opaque bar */
-    color: #D8DEE9; /* Snow Storm for text outside modules */
-    border-radius: 9px; /* Rounded corners for floating effect */
-    margin: 12px 100px; /* Increased top margin to 12px for more lift */
+    background: transparent;
+    color: #D8DEE9; /* Snow Storm text */
+    border-radius: 9px;
+    margin: 12px 100px;
 }
 
-/* Base floating module styling - Set default text color to #2E3440 */
+/* Base module styling */
 #window,
 #custom-media,
 #mpd,
@@ -29,86 +29,118 @@ window#waybar {
 #clock,
 #tray,
 #custom-launcher,
-#custom-power
-{
-    background-color: #2E3440; /* Polar Night (swapped from border) */
-    color: #bf616a; /* Snow Storm (changed for better contrast) */
-    border-radius: 3px;
-    border: solid 2px;
-    border-color: #81A1C1; /* Frost blue (swapped from background) */
+#custom-power {
+    background-color: transparent; /* Polar Night */
+    color: inherit; /* Aurora Red */
     padding: 5px 10px;
-    margin: 8px 4px;
+    margin: 0;
+    border: none; /* Frost blue */
+    border-radius: 0;
 }
 
-/* Specific styling for custom/launcher to match other modules */
+/* Specific styling for launcher (a bit more padding) */
 #custom-launcher {
-    background-color: #2E3440; /* Polar Night (swapped from border) */
-    color: #bf616a; /* Snow Storm (changed for better contrast) */
-    border-radius: 3px;
-    border: solid 2px;
-    border-color: #81A1C1; /* Frost blue (swapped from background) */
-    padding: 5px 12px;
+    background-color: #2e3440;
+    color: #bf616a;
+    border: 2px solid #81a1c1;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 6px 4px;
+
+}
+
+/* Center module container */
+.modules-center {
+    background-color: #2E3440;
+    color: #BF616A;
+    border: 2px solid #81A1C1;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 6px 4px;
+}
+
+/* Right-aligned modules */
+.modules-right {
+    background-color: #2E3440;
+    border: 2px solid #81A1C1;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 6px 4px;
+}
+
+/* Workspaces container */
+#workspaces {
+    background-color: #2E3440;
+    border: 2px solid #81a1c1;
+    border-radius: 6px;
+    padding: 0;
     margin: 8px 4px;
 }
 
-/* Workspaces container (transparent, no background) */
-#workspaces {
-    background-color: transparent; /* No background for the container */
-    border: none; /* No border for the container */
-    box-shadow: none; /* No shadow for the container */
-    padding: 0; /* Remove padding to avoid extra space */
-    margin: 8px 4px; /* Keep margin for spacing within the bar */
-}
-
-/* Workspaces buttons (apply background only to numbers/icons) */
+/* Workspace buttons */
 #workspaces button {
-    padding: 0 8px;
-    border: solid 2px;
-    border-color: #81A1C1; /* Frost blue (swapped from background) */
-    background-color: #2E3440; /* Polar Night (swapped from border) */
-    color: #5e81ac; /* Snow Storm (changed for better contrast) */
-    border-radius: 3px;
-    margin: 0 2px; /* Small margin between buttons for spacing */
+    padding: 4px 12px;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    color: #81a1c1;
+    border-radius: 0;
 }
 
+/* Round outer buttons only */
+#workspaces button:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+#workspaces button:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* Hover */
 #workspaces button:hover {
-    background: #5E81AC; /* Darker Frost blue for hover */
-    color: #D8DEE9; /* Snow Storm for text */
+    background-color: #5E81AC;
+    color: #D8DEE9;
 }
 
-#workspaces button.focused, #workspaces button.active { /* Support both Sway (focused) and Hyprland (active) */
-    background-color: #2e3440; /* Darker Frost blue for focused/active */
-    color: #BF616A; /* Aurora Red for text */
+/* Focused/active */
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: #2E3440;
+    color: #BF616A;
 }
 
+/* Urgent workspace */
 #workspaces button.urgent {
-    background-color: #BF616A; /* Aurora Red for urgent */
-    color: #ECEFF4; /* Brightest Snow Storm for text (contrast for visibility) */
+    background-color: #BF616A;
+    color: #ECEFF4;
 }
 
+/* Module-specific coloring */
 #backlight {
-      background-color: #2e3440;
-      color: #a3be8c;
+    background-color: #2E3440;
+    color: #A3BE8C;
 }
 
 #memory {
-      background-color: #2e3440;
-      color: #d08770;
+    background-color: #2E3440;
+    color: #D08770;
 }
 
 #battery {
-      background-color: #2e3440;
-      color: #b48ead;
+    background-color: #2E3440;
+    color: #B48EAD;
 }
-/* Specific module states - Ensure text color is consistent */
-#battery.charging, #battery.plugged {
-    color: #D8DEE9; /* Snow Storm for text */
-    background-color: #A3BE8C; /* Aurora Green for charging/plugged */
+
+#battery.charging,
+#battery.plugged {
+    color: #D8DEE9;
+    background-color: #A3BE8C;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #BF616A; /* Aurora Red for critical */
-    color: #D8DEE9; /* Snow Storm for text */
+    background-color: #BF616A;
+    color: #D8DEE9;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -117,45 +149,44 @@ window#waybar {
 }
 
 #network {
-    background-color: #2e3440; /* Aurora Red for disconnected */
-    color: #ebcb8b; /* Snow Storm for text */
+    background-color: #2E3440;
+    color: #EBCB8B;
 }
 
 #pulseaudio {
-      background-color: #2e3440;
-      color: #a3be8c;
+    background-color: #2E3440;
+    color: #A3BE8C;
 }
 
 #pulseaudio.muted {
-    background-color: #4C566A; /* Darkest Polar Night for muted */
-    color: #D8DEE9; /* Snow Storm for text */
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
-
-
+/* Cava Visualizer */
 #cava {
-    background-color: #2E3440; /* Polar Night (unchanged) */
-    color: #5e81ac; /* Frost blue (unchanged) */
+    background-color: #2E3440;
+    color: #5E81AC;
     border-radius: 3px;
     font-family: "Iosevka Nerd Font";
     border: solid 2px;
-    border-color: #81A1C1; /* Frost blue (unchanged) */
+    border-color: #81A1C1;
     padding: 2px 12px;
     margin: 8px 4px;
 }
 
 @keyframes blink {
     to {
-        background-color: #ECEFF4; /* Brightest Snow Storm for blink */
-        color: #2E3440; /* Polar Night for text */
+        background-color: #ECEFF4;
+        color: #2E3440;
     }
 }
 
-/* Remove margins for edge modules */
+/* Edge fixes */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
-
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
+
