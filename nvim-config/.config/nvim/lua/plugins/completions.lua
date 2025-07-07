@@ -14,8 +14,8 @@ return {
             "hrsh7th/nvim-cmp",
             config = function()
                   vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#5e81ac" }) -- Border color
-                  vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE", fg = "#cdd6f4" }) -- Background and foreground
-                  vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#f38ba8", fg = "#11111b" }) -- Selected item
+                  vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE", fg = "#d8dee9" }) -- Background and foreground
+                  vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#bf616a", fg = "#2e3440" }) -- Selected item
                   vim.api.nvim_set_hl(0, "CmpItemKindInterface", { fg = "#BF616A", bg = "NONE" })
 
                   local cmp = require'cmp'
