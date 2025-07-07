@@ -760,3 +760,21 @@
 2025-07-02T18:36:47 player: played "New Person, Same Old Mistakes.mp3"
 2025-07-02T18:37:43 player: played "New Person, Same Old Mistakes.mp3"
 2025-07-02T18:43:34 player: played "New Person, Same Old Mistakes.mp3"
+2025-07-07T08:02:48 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T08:03:55 player: played "Telephones.mp3"
+2025-07-07T08:08:48 update: added /SpotiDownloader.com - What Would I Do_ - Strawberry Guy.mp3
+2025-07-07T08:08:48 update: added /SpotiDownloader.com - On the Level - Mac DeMarco.mp3
+2025-07-07T08:08:48 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T08:08:48 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T08:08:55 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T08:13:00 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T08:13:58 exception: No such song
+2025-07-07T08:13:58 exception: No such song
+2025-07-07T08:13:58 exception: No such song
+2025-07-07T08:13:58 exception: No such song
+2025-07-07T08:13:58 exception: No such song
+2025-07-07T08:13:58 exception: No such song
+2025-07-07T08:13:58 exception: No such song
+2025-07-07T08:13:58 exception: No such song
+2025-07-07T08:13:59 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T08:16:16 player: played "SpotiDownloader.com - What Would I Do_ - Strawberry Guy.mp3"
