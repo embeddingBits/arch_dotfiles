@@ -12,25 +12,25 @@
       modal_background_color: None,
       tab_bar: (
             enabled: true,
-            active_style: (fg: "#2e3440", bg: "#5e81ac", modifiers: "Bold"),
+            active_style: (fg: "#2e3440", bg: "#81a1c1", modifiers: "Bold"),
             inactive_style: (),
       ),
       highlighted_item_style: (fg: "#bf616a", modifiers: "Bold"),
-      current_item_style: (fg: "#2e3440", bg: "#5e81ac", modifiers: "Bold"),
-      borders_style: (fg: "#5e81ac"),
+      current_item_style: (fg: "#2e3440", bg: "#81a1c1", modifiers: "Bold"),
+      borders_style: (fg: "#81a1c1"),
       highlight_border_style: (fg: "#bf616a"),
       symbols: (song: "S", dir: "D", marker: "M", ellipsis: "..."),
       progress_bar: (
             symbols: ["█", "", " "],
             track_style: (fg: "#1e2030"),
-            elapsed_style: (fg: "#5e81ac"),
-            thumb_style: (fg: "#5e81ac"),
+            elapsed_style: (fg: "#81a1c1"),
+            thumb_style: (fg: "#81a1c1"),
       ),
       scrollbar: (
             symbols: ["│", "█", "▲", "▼"],
             track_style: (),
             ends_style: (),
-            thumb_style: (fg: "#5e81ac"),
+            thumb_style: (fg: "#81a1c1"),
       ),
       song_table_format: [
       (
@@ -97,7 +97,7 @@
                               )
                         ],
                         right: [
-                        (kind: Property(Widget(Volume)), style: (fg: "#5e81ac"))
+                        (kind: Property(Widget(Volume)), style: (fg: "#81a1c1"))
                         ]
                   ),
             (

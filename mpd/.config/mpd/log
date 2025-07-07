@@ -778,3 +778,16 @@
 2025-07-07T08:13:58 exception: No such song
 2025-07-07T08:13:59 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
 2025-07-07T08:16:16 player: played "SpotiDownloader.com - What Would I Do_ - Strawberry Guy.mp3"
+2025-07-07T18:39:29 player: played "SpotiDownloader.com - On the Level - Mac DeMarco.mp3"
+2025-07-07T18:40:24 player: played "For the First Time.mp3"
+2025-07-07T18:43:29 player: played "For the First Time.mp3"
+2025-07-07T18:45:38 player: played "Moonlight on the River.mp3"
+2025-07-07T18:47:15 player: played "For the First Time.mp3"
+2025-07-07T18:49:48 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T18:49:49 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T18:51:11 player: played "SpotiDownloader.com - What Would I Do_ - Strawberry Guy.mp3"
+2025-07-07T18:51:48 player: played "SpotiDownloader.com - What Would I Do_ - Strawberry Guy.mp3"
+2025-07-07T18:53:21 player: played "Moonlight on the River.mp3"
+2025-07-07T19:34:04 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T19:34:49 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-07T19:42:50 player: played "Lovers Rock.mp3"
