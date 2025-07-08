@@ -1,7 +1,8 @@
 sw_volume: 60
 audio_device_state:1:MPD Audio
-state: stop
-current: 0
+state: play
+current: 2
+time: 63.713
 random: 0
 repeat: 1
 single: 0
@@ -12,4 +13,6 @@ mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
 0:Lovers Rock.mp3
+1:Eventually.mp3
+2:Good Looking.mp3
 playlist_end
