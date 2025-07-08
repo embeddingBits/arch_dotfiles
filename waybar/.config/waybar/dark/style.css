@@ -148,8 +148,8 @@ window#waybar {
 
 #battery.charging,
 #battery.plugged {
-    color: #D8DEE9;
-    background-color: #A3BE8C;
+    color: #A3BE8C;
+    background-color: #2E3440;
 }
 
 #battery.critical:not(.charging) {
@@ -169,12 +169,12 @@ window#waybar {
 
 #pulseaudio {
     background-color: #2E3440;
-    color: #A3BE8C;
+    color: #88c0d0;
 }
 
 #pulseaudio.muted {
-    background-color: #4C566A;
-    color: #D8DEE9;
+    background-color: #2e3440;
+    color: #bf616a;
 }
 
 /* Cava Visualizer */
