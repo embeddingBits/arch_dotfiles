@@ -19,7 +19,6 @@
         "memory",
         "backlight",
         "battery",
-        "battery#bat2",
     ],
     // Modules configuration
     "cava": {
@@ -128,13 +127,10 @@
         },
         "format": "{icon}  {capacity}%",
         "format-full": "{icon} {capacity}%",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}%  ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
     },
     "power-profiles-daemon": {
         "format": "{icon}",
@@ -156,9 +152,10 @@
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  {volume}%",
         "format-bluetooth": "{icon} {volume}%",
         "format-bluetooth-muted": " {volume}%",
-        "format-source-muted": "",
+        "format-source-muted": "󰝟 ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
