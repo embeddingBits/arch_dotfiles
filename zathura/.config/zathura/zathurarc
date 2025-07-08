@@ -1,0 +1,46 @@
+# Font
+set font "JetBrainsMono Nerd Font 10"
+
+# Color scheme - Nord
+set default-bg              "#2E3440"
+set default-fg              "#D8DEE9"
+set statusbar-bg            "#3B4252"
+set statusbar-fg            "#D8DEE9"
+set inputbar-bg             "#3B4252"
+set inputbar-fg             "#D8DEE9"
+set notification-bg         "#3B4252"
+set notification-fg         "#D8DEE9"
+set notification-error-bg   "#BF616A"
+set notification-error-fg   "#ECEFF4"
+set notification-warning-bg "#EBCB8B"
+set notification-warning-fg "#2E3440"
+
+# Highlight colors
+set highlight-color         "#88C0D0"
+set highlight-active-color  "#81A1C1"
+
+# Completion
+set completion-bg           "#3B4252"
+set completion-fg           "#D8DEE9"
+set completion-highlight-fg "#2E3440"
+set completion-highlight-bg "#88C0D0"
+set completion-group-bg     "#3B4252"
+set completion-group-fg     "#81A1C1"
+
+# Recolor (invert) PDF content with Nord colors
+set recolor                 true
+set recolor-keephue         true
+set recolor-darkcolor       "#2E3440"
+set recolor-lightcolor      "#D8DEE9"
+
+# Smooth scrolling
+set scroll-step             50
+
+# Enable page cache
+set page-cache              true
+
+# Hide UI elements
+set show-scrollbars         false
+set statusbar-h-padding     5
+set statusbar-v-padding     2
+

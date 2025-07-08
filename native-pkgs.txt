@@ -1,4 +1,5 @@
 acpi
+aquamarine
 ark
 at
 awesome-terminal-fonts
@@ -9,7 +10,6 @@ blueman
 bluez-utils
 brightnessctl
 btop
-calc
 cava
 chromium
 clang
@@ -47,6 +47,7 @@ iwd
 kate
 kcalc
 kdeconnect
+kid3
 kitty
 konsole
 kvantum
@@ -69,6 +70,7 @@ neovim
 network-manager-applet
 networkmanager
 nodejs
+noto-fonts-cjk
 npm
 nvidia-dkms
 nwg-look
@@ -90,12 +92,12 @@ qt5ct
 qt6ct
 ranger
 rmpc
+rofi-emoji
 rofi-wayland
 smartmontools
 sof-firmware
 starship
 stow
-sway
 swww
 tmux
 tree
@@ -109,10 +111,14 @@ wireless_tools
 wireplumber
 wl-clipboard
 wlr-randr
+wlroots0.19
+wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdg-utils
 xorg-xinit
+zathura
+zathura-pdf-mupdf
 zip
 zram-generator
