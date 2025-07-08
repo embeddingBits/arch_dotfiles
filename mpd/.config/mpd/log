@@ -791,3 +791,4 @@
 2025-07-07T19:34:04 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
 2025-07-07T19:34:49 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
 2025-07-07T19:42:50 player: played "Lovers Rock.mp3"
+2025-07-08T08:54:55 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
