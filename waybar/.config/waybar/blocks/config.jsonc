@@ -9,7 +9,7 @@
       "modules-left": [
             "custom/rofi",
             "clock",
-            "cava"
+            "hyprland/window"
       ],
 
       "modules-center": [
@@ -18,7 +18,6 @@
 
       "modules-right": [
             "pulseaudio",
-            "tray",
             "network",
             "memory",
             "backlight",
@@ -60,17 +59,27 @@
       },
 
 
-      "hyprland/window": {
-            "format": "<span color='#2e3440' bgcolor='#b48ead' size='17000'> 󰣆 </span> {class}",
-            "separate-outputs": true,
-            "icon": false
-      },
+    "hyprland/window": {
+        "format": "{class}",
+       "max-length": 50,
+        "rewrite": {
+            "": "<span size='17000' color='#2e3440' bgcolor='#b48ead'> 󰍹  </span> Desktop", // Display "Desktop" when no window is focused
+            "firefox": "<span size='17000' color='#2e3440' bgcolor='#b48ead'>  </span> Firefox",
+            "kitty": "<span size='17000' color='#2e3440' bgcolor='#b48ead'> 󰄛 </span> Kitty",
+            "discord": "<span size='17000' color='#2e3440' bgcolor='#b48ead'>  </span> Discord",
+            "neovide": "<span size='17000' color='#2e3440' bgcolor='#b48ead'>  </span> Neovide",
+            "spotify": "<span size='17000' color='#2e3440' bgcolor='#b48ead'>  </span> Spotify",
+            "foot": " 󰽒 foot", 
+            "obsidian": "<span size='17000' color='#2e3440' bgcolor='#b48ead'>  </span> Obsidian",
+            "org.pwmt.zathura": "<span size='17000' color='#2e3440' bgcolor='#b48ead'>  </span> Zathura"
+        } 
+    },
 
-    "cava": {
-        "framerate": 144,
-        "bars": 12,
-        "method": "pipewire",
-        "source": "auto",
+      "cava": {
+            "framerate": 144,
+            "bars": 12,
+            "method": "pipewire",
+            "source": "auto",
             "bar_delimiter": 0,
             "waves": true,
             "noise_reduction": 0.77,
