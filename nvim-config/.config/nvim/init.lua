@@ -1,6 +1,11 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true  -- Optional: Highlight the current line for better visibility
+vim.cmd [[highlight CursorLine cterm=underline gui=underline]]
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
 vim.cmd("set expandtab")
 vim.cmd("set expandtab")

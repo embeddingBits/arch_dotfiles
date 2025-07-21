@@ -7,7 +7,7 @@
     "modules-left": [
         "custom/launcher",    
         "hyprland/workspaces",
-        "mpd"
+        "hyprland/window"
     ],
     "modules-center": [
             "clock"
@@ -69,7 +69,11 @@
             "kitty": "󰄛  Kitty",
             "discord": "  Discord",
             "neovide": "  Neovide",
-            "spotify": "  Spotify"
+            "spotify": "  Spotify",
+            "foot": "󰽒 foot", 
+            "obsidian": " Obsidian",
+            "org.pwmt.zathura": " Zathura",
+            "uv4.exe": " Keil"
         } 
     },
 
@@ -101,7 +105,7 @@
     },
     "clock": {
         "tooltip-format": "󰥔 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "󰥔 {:%I:%M %a %d}"
+        "format": "󰥔 {:%I:%M %p %a %d}"
     },
     "cpu": {
         "format": "{usage}% ",

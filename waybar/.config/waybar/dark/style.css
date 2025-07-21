@@ -58,6 +58,34 @@ window#waybar {
     margin: 6px 4px;
 }
 
+#window {
+    background-color: #2e3440;
+    color: #bf616a;
+    border: 2px solid #81a1c1;
+    border-radius: 6px;
+    padding: 2px 7px;
+    margin: 6px 4px;
+}
+
+/* Center module container */
+.modules-center {
+    background-color: #2E3440;
+    color: #BF616A;
+    border: 2px solid #81A1C1;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 6px 4px;
+}
+
+/* Right-aligned modules */
+.modules-right {
+    background-color: #2E3440;
+    border: 2px solid #81A1C1;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 6px 4px;
+}
+
 /* Center module container */
 .modules-center {
     background-color: #2E3440;
@@ -134,6 +162,11 @@ window#waybar {
 #mpd {
     background-color: #2E3440;
     color: #A3BE8C;
+}
+
+#window {
+    background-color: #2E3440;
+    color: #81a1c1;
 }
 
 #memory {
