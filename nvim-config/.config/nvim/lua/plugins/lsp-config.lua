@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "zls", "gopls", "verible", "asm_lsp" }
+        ensure_installed = { "jdtls", "lua_ls", "clangd", "zls", "gopls", "verible", "asm_lsp" }
       })
       end
   },
@@ -22,7 +22,7 @@ return {
         capabilities = capabilities
     })
       lspconfig.clangd.setup({ capabilities = capabilities })
-      lspconfig.asm_lsp.setup({ capabilities = capabilities })
+      lspconfig.jdtls.setup({ capabilities = capabilities })
       lspconfig.zls.setup({ capabilities = capabilities })
       lspconfig.gopls.setup({ capabilities = capabilities })
       lspconfig.verible.setup({ capabilities = capabilities })
