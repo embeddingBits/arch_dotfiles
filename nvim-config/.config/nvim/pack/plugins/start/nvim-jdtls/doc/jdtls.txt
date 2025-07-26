@@ -1,0 +1,282 @@
+==============================================================================
+LSP extensions for Neovim and eclipse.jdt.ls                             *jdtls*
+
+                                                         *jdtls.start_or_attach*
+M.start_or_attach({config}, {opts?}, {start_opts?})
+     Start the language server (if not started), and attach the current buffer.
+
+
+    Parameters: ~
+        {config}       (table<string,any>)  configuration. See |vim.lsp.start_client|
+        {opts?}        (jdtls.start.opts)
+        {start_opts?}  (lsp.StartOpts)      options passed to vim.lsp.start
+
+    Returns: ~
+        (integer|nil)  client_id
+
+
+M.organize_imports()                                    *jdtls.organize_imports*
+     Organize the imports in the current buffer
+
+
+M.compile({type})                                                *jdtls.compile*
+     Compile the Java workspace
+     If there are compile errors they'll be shown in the quickfix list.
+
+    Parameters: ~
+        {type}  (string|nil)  |"full"
+                              |"incremental"
+	{on_compile_result?}  (fun(result: table[]): nil)  Callback to be called when the compile result is received.
+
+
+M.build_projects({opts})                                  *jdtls.build_projects*
+     Trigger a rebuild of one or more projects.
+
+
+    Parameters: ~
+        {opts}  (JdtBuildProjectOpts|nil)  optional configuration options
+
+
+JdtBuildProjectOpts                                        *JdtBuildProjectOpts*
+
+    Fields: ~
+        {select_mode?}  (JdtProjectSelectMode)  Show prompt to select projects or select all. Defaults to "prompt"
+        {full_build?}   (boolean)               full rebuild or incremental build. Defaults to true (full build)
+	{on_compile_result?}  (fun(result: table[]): nil)  Callback to be called when the compile result is received.
+
+
+M.update_project_config()                          *jdtls.update_project_config*
+     Update the project configuration (from Gradle or Maven).
+     In a multi-module project this will only update the configuration of the
+     module of the current buffer.
+
+
+M.update_projects_config({opts})                  *jdtls.update_projects_config*
+     Process changes made to the Gradle or Maven configuration of one or more projects.
+     Requires eclipse.jdt.ls >= 1.13.0
+
+
+    Parameters: ~
+        {opts}  (JdtUpdateProjectsOpts|nil)  configuration options
+
+
+JdtUpdateProjectsOpts                                    *JdtUpdateProjectsOpts*
+
+    Fields: ~
+        {select_mode?}  (JdtProjectSelectMode)  show prompt to select projects or select all. Defaults to "prompt"
+
+
+JdtProjectSelectMode                                      *JdtProjectSelectMode*
+
+    Type: ~
+        string
+
+
+jdtls.extract.opts                                          *jdtls.extract.opts*
+    |"all"
+    |"prompt"
+
+    Type: ~
+        {visual?:boolean,name?:string|fun():string}
+
+
+M.extract_constant({opts?})                             *jdtls.extract_constant*
+     Extract a constant from the expression under the cursor
+
+    Parameters: ~
+        {opts?}  (jdtls.extract.opts)
+
+
+M.extract_variable({opts?})                             *jdtls.extract_variable*
+     Extract a variable from the expression under the cursor
+
+    Parameters: ~
+        {opts?}  (jdtls.extract.opts)
+
+
+M.extract_variable_all({opts?})                     *jdtls.extract_variable_all*
+     Extract a local variable from the expression under the cursor and replace all occurrences
+
+    Parameters: ~
+        {opts?}  (jdtls.extract.opts)
+
+
+M.extract_method({opts?})                                 *jdtls.extract_method*
+     Extract a method
+
+    Parameters: ~
+        {opts?}  (jdtls.extract.opts)
+
+
+M.super_implementation()                            *jdtls.super_implementation*
+     Jump to the super implementation of the method under the cursor
+
+
+M.javap()                                                          *jdtls.javap*
+     Run the `javap` tool in a terminal buffer.
+     Sets the classpath based on the current project.
+
+
+M.jshell()                                                        *jdtls.jshell*
+     Run the `jshell` tool in a terminal buffer.
+     Sets the classpath based on the current project.
+
+
+M.jol({mode?}, {classname?})                                         *jdtls.jol*
+     Run the `jol` tool in a terminal buffer to print the class layout
+     You must configure `jol_path` to point to the `jol` jar file:
+
+     ```
+     require('jdtls').jol_path = '/absolute/path/to/jol.jar`
+     ```
+
+     https://github.com/openjdk/jol
+
+     Must be called from a regular java source file.
+
+     Examples:
+     ```
+     lua require('jdtls').jol()
+     ```
+
+     ```
+     lua require('jdtls').jol(nil, "java.util.ImmutableCollections$List12")
+     ```
+
+    Parameters: ~
+        {mode?}       (string)  |"estimates"
+                                |"footprint"
+                                |"externals"
+                                |"internals"
+        {classname?}  (string)  fully qualified class name. Defaults to the current class.
+
+
+M.open_classfile({fname})                                 *jdtls.open_classfile*
+     Open `jdt://` uri or decompile class contents and load them into the buffer
+
+     nvim-jdtls by defaults configures a `BufReadCmd` event which uses this function.
+     You shouldn't need to call this manually.
+
+
+    Parameters: ~
+        {fname}  (string)
+
+
+M.set_runtime({runtime})                                     *jdtls.set_runtime*
+     Change the Java runtime.
+     This requires a `settings.java.configuration.runtimes` configuration.
+
+
+    Parameters: ~
+        {runtime}  (nil|string)  Java runtime. Prompts for runtime if nil
+
+
+==============================================================================
+nvim-dap support for jdtls                                           *jdtls.dap*
+
+M.test_class()                                            *jdtls.dap.test_class*
+     Debug the test class in the current buffer
+     @param opts JdtTestOpts|nil
+
+
+M.test_nearest_method()                          *jdtls.dap.test_nearest_method*
+     Debug the nearest test method in the current buffer
+     @param opts nil|JdtTestOpts
+
+
+M.pick_test({opts})                                        *jdtls.dap.pick_test*
+     Prompt for a test method from the current buffer to run
+
+    Parameters: ~
+        {opts}  (nil|JdtTestOpts)
+
+
+M.fetch_main_configs({opts}, {callback})          *jdtls.dap.fetch_main_configs*
+     Discover executable main functions in the project
+
+    Parameters: ~
+        {opts}      (nil|JdtMainConfigOpts)        See |JdtMainConfigOpts|
+        {callback}  (fun(configurations:table[]))
+
+
+JdtMainConfigOpts                                            *JdtMainConfigOpts*
+
+    Fields: ~
+        {config_overrides}  (nil|JdtDapConfig)  Overrides for the |dap-configuration|, see |JdtDapConfig|
+
+
+M.setup_dap_main_class_configs({opts})  *jdtls.dap.setup_dap_main_class_configs*
+     Discover main classes in the project and setup |dap-configuration| entries for Java for them.
+
+    Parameters: ~
+        {opts}  (nil|JdtSetupMainConfigOpts)  See |JdtSetupMainConfigOpts|
+
+
+                                                        *JdtSetupMainConfigOpts*
+JdtSetupMainConfigOpts : JdtMainConfigOpts
+
+    Fields: ~
+        {verbose}   (nil|boolean)   Print notifications on start and once finished. Default is false.
+        {on_ready}  (nil|function)  Callback called when the configurations got updated
+
+
+M.setup_dap({opts})                                        *jdtls.dap.setup_dap*
+     Register a |dap-adapter| for java. Requires nvim-dap
+
+    Parameters: ~
+        {opts}  (nil|JdtSetupDapOpts)  See |JdtSetupDapOpts|
+
+
+JdtSetupDapOpts                                                *JdtSetupDapOpts*
+
+    Fields: ~
+        {config_overrides}  (JdtDapConfig)  These will be used as default overrides for |jdtls.dap.test_class|, |jdtls.dap.test_nearest_method| and discovered main classes
+        {hotcodereplace?}   (string)        "auto"
+
+
+JdtDapContext                                                    *JdtDapContext*
+
+    Fields: ~
+        {bufnr}  (number)
+        {win}    (number)
+        {uri}    (string)  uri equal to vim.uri_from_bufnr(bufnr)
+
+
+JdtDapConfig                                                      *JdtDapConfig*
+
+    Fields: ~
+        {cwd}      (string|nil)   working directory for the test
+        {vmArgs}   (string|nil)   vmArgs for the test
+        {noDebug}  (boolean|nil)  If the test should run in debug mode
+
+
+JdtTestOpts                                                        *JdtTestOpts*
+
+    Fields: ~
+        {config}            (nil|table)         Skeleton used for the |dap-configuration|
+        {config_overrides}  (nil|JdtDapConfig)  Overrides for the |dap-configuration|, see |JdtDapConfig|
+        {until_error}       (number|nil)        Number of times the test should be repeated if it doesn't fail
+        {after_test}        (nil|function)      Callback triggered after test run
+        {bufnr?}            (number)            Buffer that contains the test
+        {lnum?}             (number)            1-indexed line number. Used to find nearest test. Defaults to cursor position of the current window.
+
+
+==============================================================================
+Functions which require vscode-java-test                           *jdtls.tests*
+
+M.generate()                                              *jdtls.tests.generate*
+     Generate tests for the current class
+     @param opts? {bufnr: integer}
+
+
+M.goto_subjects()                                    *jdtls.tests.goto_subjects*
+     Go to the related subjects
+     If in a test file, this will jump to classes the test might cover
+     If in a non-test file, this will jump to related tests.
+
+     If no candidates are found, this calls `generate()`
+
+     @param opts? {goto_tests: boolean}
+
+
+vim:tw=78:ts=8:noet:ft=help:norl:

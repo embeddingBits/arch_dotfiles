@@ -22,7 +22,6 @@ return {
         capabilities = capabilities
     })
       lspconfig.clangd.setup({ capabilities = capabilities })
-      lspconfig.jdtls.setup({ capabilities = capabilities })
       lspconfig.zls.setup({ capabilities = capabilities })
       lspconfig.gopls.setup({ capabilities = capabilities })
       lspconfig.verible.setup({ capabilities = capabilities })
