@@ -43,7 +43,7 @@ window#waybar {
 #custom-launcher {
     background-color: #2e3440;
     color: #bf616a;
-    border: 2px solid #81a1c1;
+    /*border: 2px solid #81a1c1;*/
     border-radius: 6px;
     padding: 2px 6px;
     margin: 6px 4px;
@@ -52,7 +52,7 @@ window#waybar {
 #mpd {
     background-color: #2e3440;
     color: #bf616a;
-    border: 2px solid #81a1c1;
+    /*border: 2px solid #81a1c1;*/
     border-radius: 6px;
     padding: 2px 7px;
     margin: 6px 4px;
@@ -61,7 +61,7 @@ window#waybar {
 #window {
     background-color: #2e3440;
     color: #bf616a;
-    border: 2px solid #81a1c1;
+    /*border: 2px solid #81a1c1;*/
     border-radius: 6px;
     padding: 2px 7px;
     margin: 6px 4px;
@@ -71,7 +71,7 @@ window#waybar {
 .modules-center {
     background-color: #2E3440;
     color: #BF616A;
-    border: 2px solid #81A1C1;
+    /*border: 2px solid #81a1c1;*/
     border-radius: 6px;
     padding: 2px 6px;
     margin: 6px 4px;
@@ -80,7 +80,7 @@ window#waybar {
 /* Right-aligned modules */
 .modules-right {
     background-color: #2E3440;
-    border: 2px solid #81A1C1;
+    /*border: 2px solid #81a1c1;*/
     border-radius: 6px;
     padding: 2px 6px;
     margin: 6px 4px;
@@ -90,7 +90,7 @@ window#waybar {
 .modules-center {
     background-color: #2E3440;
     color: #BF616A;
-    border: 2px solid #81A1C1;
+    /*border: 2px solid #81a1c1;*/
     border-radius: 6px;
     padding: 2px 6px;
     margin: 6px 4px;
@@ -99,7 +99,7 @@ window#waybar {
 /* Right-aligned modules */
 .modules-right {
     background-color: #2E3440;
-    border: 2px solid #81A1C1;
+    /*border: 2px solid #81a1c1;*/
     border-radius: 6px;
     padding: 2px 6px;
     margin: 6px 4px;
@@ -108,7 +108,7 @@ window#waybar {
 /* Workspaces container */
 #workspaces {
     background-color: #2E3440;
-    border: 2px solid #81a1c1;
+    /*border: 2px solid #81a1c1;*/
     border-radius: 6px;
     padding: 0;
     margin: 8px 4px;
@@ -217,7 +217,7 @@ window#waybar {
     border-radius: 3px;
     font-family: "Iosevka Nerd Font";
     border: solid 2px;
-    border-color: #81A1C1;
+    /*border-color: #81a1c1;*/
     padding: 2px 12px;
     margin: 8px 4px;
 }

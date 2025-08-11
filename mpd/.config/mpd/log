@@ -919,3 +919,97 @@
 2025-07-10T21:36:46 player: played "No Pole.mp3"
 2025-07-14T20:00:15 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
 2025-07-14T20:00:47 player: played "Pink + White.mp3"
+2025-07-27T12:07:12 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-27T12:07:20 player: played "After Hours.mp3"
+2025-07-31T21:02:24 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-31T21:03:30 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-31T21:04:41 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-31T21:04:47 player: played "Pink + White.mp3"
+2025-07-31T21:08:07 event: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+2025-07-31T21:08:07 state_file: Loading state file /home/embeddingbits/.config/mpd/state
+2025-07-31T21:08:09 state_file: Saving state file /home/embeddingbits/.config/mpd/state
+2025-07-31T21:12:50 update: added /Reflections.mp3
+2025-07-31T21:12:50 update: added /Swing Lynn.mp3
+2025-07-31T21:12:50 update: added /Instant Destiny.mp3
+2025-07-31T21:12:50 update: added /Tek It.mp3
+2025-07-31T21:12:50 update: added /Feels Like We Only Go Backwards.mp3
+2025-07-31T21:12:50 update: updating /Swim.mp3
+2025-07-31T21:12:50 update: added /Breathe Deeper.mp3
+2025-07-31T21:12:50 update: added /Alternative Outro.mp3
+2025-07-31T21:12:50 update: added /Tek It - Sped Up.mp3
+2025-07-31T21:12:50 update: added /For the First Time.mp3
+2025-07-31T21:12:50 update: added /My Kind of Woman.mp3
+2025-07-31T21:12:50 update: added /The Less I Know The Better.mp3
+2025-07-31T21:12:50 update: added /New Person, Same Old Mistakes.mp3
+2025-07-31T21:12:50 update: added /Freaking Out the Neighborhood.mp3
+2025-07-31T21:12:50 update: added /Good Looking.mp3
+2025-07-31T21:12:50 update: added /Moonlight on the River.mp3
+2025-07-31T21:12:50 update: added /Feeling Like The End.mp3
+2025-07-31T21:12:50 update: added /Lovers Rock.mp3
+2025-07-31T21:12:50 update: added /Apocalypse.mp3
+2025-07-31T21:12:50 update: added /Notion.mp3
+2025-07-31T21:12:50 update: added /Borderline.mp3
+2025-07-31T21:12:50 update: added /I Hope to Be Around.mp3
+2025-07-31T21:12:50 update: updating /Shut up My Moms Calling.mp3
+2025-07-31T21:12:50 update: added /Heart To Heart.mp3
+2025-07-31T21:12:50 update: added /Young.mp3
+2025-07-31T21:12:50 update: added /Husk.mp3
+2025-07-31T21:12:50 update: added /SpotiDownloader.com - What Would I Do_ - Strawberry Guy.mp3
+2025-07-31T21:12:50 update: added /One More Hour.mp3
+2025-07-31T21:12:50 update: added /Eventually.mp3
+2025-07-31T21:12:50 update: added /Telephones.mp3
+2025-07-31T21:12:50 update: added /In My Head - Bedroom.mp3
+2025-07-31T21:12:50 update: added /SpotiDownloader.com - On the Level - Mac DeMarco.mp3
+2025-07-31T21:12:50 update: added /Money.mp3
+2025-07-31T21:12:50 update: added /Solo.mp3
+2025-07-31T21:12:50 update: added /Heartbeat.mp3
+2025-07-31T21:12:50 update: added /Bad Habit.mp3
+2025-07-31T21:12:50 update: added /Show Me How.mp3
+2025-07-31T21:12:50 update: added /Neverender.mp3
+2025-07-31T21:12:50 update: removing Feel It.mp3
+2025-07-31T21:12:50 update: removing We Still Don't Trust You.mp3
+2025-07-31T21:12:50 update: removing NIGHTS LIKE THIS.mp3
+2025-07-31T21:12:50 update: removing SpotiDownloader.com - Out of My League - Fitz and The Tantrums.mp3
+2025-07-31T21:12:50 update: removing I Was Never There.mp3
+2025-07-31T21:12:50 update: removing Call Out My Name.mp3
+2025-07-31T21:12:50 update: removing No Pole.mp3
+2025-07-31T21:12:50 update: removing Love For You.mp3
+2025-07-31T21:12:50 update: removing SpotiDownloader.com - Lost in the Fire (feat. The Weeknd) - Gesaffelstein.mp3
+2025-07-31T21:12:50 update: removing Timeless (feat Playboi Carti).mp3
+2025-07-31T21:12:50 update: removing The Abyss (feat. Lana Del Rey).mp3
+2025-07-31T21:12:50 update: removing São Paulo (feat. Anitta).mp3
+2025-07-31T21:12:50 update: removing Open Hearts.mp3
+2025-07-31T21:12:50 update: removing Niagara Falls.mp3
+2025-07-31T21:12:50 update: removing Hurry Up Tomorrow.mp3
+2025-07-31T21:12:50 update: removing Give Me Mercy.mp3
+2025-07-31T21:12:50 update: removing Cry For Me.mp3
+2025-07-31T21:12:50 update: removing Baptized In Fear.mp3
+2025-07-31T21:12:50 update: removing Too Many Nights (feat. Don Toliver & with Future).mp3
+2025-07-31T21:12:50 update: removing NEW DROP.mp3
+2025-07-31T21:12:50 update: removing Money Trees.mp3
+2025-07-31T21:12:50 update: removing Is There Someone Else?.mp3
+2025-07-31T21:12:50 update: removing Like Him (feat. Lola Young).mp3
+2025-07-31T21:12:50 update: removing Pink + White.mp3
+2025-07-31T21:12:50 update: removing All The Stars (with SZA) - From "Black Panther: The Album".mp3
+2025-07-31T21:12:50 update: removing After Hours.mp3
+2025-07-31T21:12:56 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-07-31T21:17:52 player: played "In My Head - Bedroom.mp3"
+2025-08-01T22:39:37 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-01T22:45:37 player: played "In My Head - Bedroom.mp3"
+2025-08-01T22:52:14 player: played "In My Head - Bedroom.mp3"
+2025-08-01T22:56:32 player: played "SpotiDownloader.com - What Would I Do_ - Strawberry Guy.mp3"
+2025-08-03T12:12:22 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-03T12:20:37 player: played "In My Head - Bedroom.mp3"
+2025-08-08T13:51:53 player: played "In My Head - Bedroom.mp3"
+2025-08-08T18:09:08 player: played "In My Head - Bedroom.mp3"
+2025-08-08T19:03:32 player: played "In My Head - Bedroom.mp3"
+2025-08-08T20:05:09 player: played "In My Head - Bedroom.mp3"
+2025-08-09T15:14:43 player: played "In My Head - Bedroom.mp3"
+2025-08-10T12:28:22 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-10T12:43:24 player: played "In My Head - Bedroom.mp3"
+2025-08-10T12:54:58 player: played "New Person, Same Old Mistakes.mp3"
+2025-08-10T16:23:20 player: played "New Person, Same Old Mistakes.mp3"
+2025-08-10T19:26:46 player: played "New Person, Same Old Mistakes.mp3"
+2025-08-10T22:29:57 player: played "New Person, Same Old Mistakes.mp3"
+2025-08-11T06:08:02 player: played "New Person, Same Old Mistakes.mp3"
+                                                                       

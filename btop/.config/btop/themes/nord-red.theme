@@ -4,7 +4,7 @@
 # Colors in 6-character hexadecimal format: "#RRGGBB"
 
 # Main background color (Nord Dark Blue)
-theme[main_bg]="#2E3440"
+theme[main_bg]=""
 
 # Main foreground text color (Nord Snow White)
 theme[main_fg]="#D8DEE9"
@@ -81,3 +81,4 @@ theme[download_end]="#ECEFF4"    # Nord Snow White
 theme[upload_start]="#81A1C1"    # Nord Frost Blue
 theme[upload_mid]="#BF616A"      # Nord Red
 theme[upload_end]="#ECEFF4"      # Nord Snow White
+
