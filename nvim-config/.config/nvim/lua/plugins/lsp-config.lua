@@ -24,7 +24,7 @@ return {
       lspconfig.clangd.setup({ capabilities = capabilities })
       lspconfig.zls.setup({ capabilities = capabilities })
       lspconfig.gopls.setup({ capabilities = capabilities })
-      lspconfig.verible.setup({ capabilities = capabilities })
+      lspconfig.svlangserver.setup({ capabilities = capabilities })
     end
   }
 }
