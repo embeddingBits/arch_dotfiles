@@ -1,13 +1,13 @@
 
 
 # Background Blur
-background_opacity 0.8
+background_opacity 1
 background_blur 1
 update_check_interval 0
 # Cursor Trail
-#cursor_trail 10
+cursor_trail 10
 cursor_blink_interval 0
-#cursor_trail_decay 0.1 0.4
+cursor_trail_decay 0.1 0.4
 cursor_shape beam
 # Window Padding
 window_padding_width 15 15
@@ -22,6 +22,6 @@ bold_italic_font family='JetBrainsMono Nerd Font' postscript_name=JetBrainsMonoN
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Nord
 include current-theme.conf
 # END_KITTY_THEME

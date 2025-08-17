@@ -1012,4 +1012,819 @@
 2025-08-10T19:26:46 player: played "New Person, Same Old Mistakes.mp3"
 2025-08-10T22:29:57 player: played "New Person, Same Old Mistakes.mp3"
 2025-08-11T06:08:02 player: played "New Person, Same Old Mistakes.mp3"
-                                                                       
+                                                                       2025-08-13T17:22:35 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-13T17:22:56 player: played "SpotiDownloader.com - What Would I Do_ - Strawberry Guy.mp3"
+2025-08-13T17:48:49 update: updating /Reflections.mp3
+2025-08-13T17:48:49 update: updating /Swing Lynn.mp3
+2025-08-13T17:48:49 update: added /We Are The People.mp3
+2025-08-13T17:48:49 update: added /Headlock.mp3
+2025-08-13T17:48:49 update: added /Golden Brown.mp3
+2025-08-13T17:48:49 update: updating /Instant Destiny.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Tek It.mp3
+2025-08-13T17:48:49 update: updating /Feels Like We Only Go Backwards.mp3
+2025-08-13T17:48:49 update: added /Sex, Drugs, Etc..mp3
+2025-08-13T17:48:49 update: added /What Would I Do?.mp3
+2025-08-13T17:48:49 update: updating /Swim.mp3
+2025-08-13T17:48:49 update: updating /Breathe Deeper.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Alternative Outro.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Tek It - Sped Up.mp3
+2025-08-13T17:48:49 update: added /Let Down.mp3
+2025-08-13T17:48:49 update: updating /For the First Time.mp3
+2025-08-13T17:48:49 update: updating /My Kind of Woman.mp3
+2025-08-13T17:48:49 update: updating /The Less I Know The Better.mp3
+2025-08-13T17:48:49 update: updating /New Person, Same Old Mistakes.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Freaking Out the Neighborhood.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Good Looking.mp3
+2025-08-13T17:48:49 update: added /My Love Mine All Mine.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Moonlight on the River.mp3
+2025-08-13T17:48:49 update: updating /Feeling Like The End.mp3
+2025-08-13T17:48:49 update: updating /Lovers Rock.mp3
+2025-08-13T17:48:49 update: updating /Apocalypse.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Notion.mp3
+2025-08-13T17:48:49 update: updating /Borderline.mp3
+2025-08-13T17:48:49 update: updating /I Hope to Be Around.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Shut up My Moms Calling.mp3
+2025-08-13T17:48:49 update: updating /Heart To Heart.mp3
+2025-08-13T17:48:49 update: updating /Young.mp3
+2025-08-13T17:48:49 update: updating /Husk.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /One More Hour.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Eventually.mp3
+2025-08-13T17:48:49 update: updating /Telephones.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Money.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Solo.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: added /Babydoll.mp3
+2025-08-13T17:48:49 update: updating /Heartbeat.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:48:49 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:48:49 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:48:49 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:48:49 update: updating /Bad Habit.mp3
+2025-08-13T17:48:49 update: updating /Show Me How.mp3
+2025-08-13T17:48:49 update: updating /Neverender.mp3
+2025-08-13T17:48:49 update: removing One More Hour.mp3
+2025-08-13T17:48:49 update: removing Instant Destiny.mp3
+2025-08-13T17:48:49 update: removing Breathe Deeper.mp3
+2025-08-13T17:48:49 update: removing Solo.mp3
+2025-08-13T17:48:49 update: removing Money.mp3
+2025-08-13T17:48:49 update: removing I Hope to Be Around.mp3
+2025-08-13T17:48:49 update: removing Husk.mp3
+2025-08-13T17:48:49 update: removing Alternative Outro.mp3
+2025-08-13T17:48:49 update: removing Freaking Out the Neighborhood.mp3
+2025-08-13T17:48:51 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-13T17:49:18 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-13T17:50:00 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:50:52 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:50:52 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:50:52 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Reflections.mp3
+2025-08-13T17:51:25 update: updating /Swing Lynn.mp3
+2025-08-13T17:51:25 update: updating /We Are The People.mp3
+2025-08-13T17:51:25 update: updating /Headlock.mp3
+2025-08-13T17:51:25 update: updating /Golden Brown.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Tek It.mp3
+2025-08-13T17:51:25 update: updating /Feels Like We Only Go Backwards.mp3
+2025-08-13T17:51:25 update: updating /Sex, Drugs, Etc..mp3
+2025-08-13T17:51:25 update: updating /What Would I Do?.mp3
+2025-08-13T17:51:25 update: updating /Swim.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Tek It - Sped Up.mp3
+2025-08-13T17:51:25 update: updating /Let Down.mp3
+2025-08-13T17:51:25 update: updating /For the First Time.mp3
+2025-08-13T17:51:25 update: updating /My Kind of Woman.mp3
+2025-08-13T17:51:25 update: updating /The Less I Know The Better.mp3
+2025-08-13T17:51:25 update: updating /New Person, Same Old Mistakes.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Good Looking.mp3
+2025-08-13T17:51:25 update: updating /My Love Mine All Mine.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Moonlight on the River.mp3
+2025-08-13T17:51:25 update: updating /Feeling Like The End.mp3
+2025-08-13T17:51:25 update: updating /Lovers Rock.mp3
+2025-08-13T17:51:25 update: updating /Apocalypse.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Notion.mp3
+2025-08-13T17:51:25 update: updating /Borderline.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Shut up My Moms Calling.mp3
+2025-08-13T17:51:25 update: updating /Heart To Heart.mp3
+2025-08-13T17:51:25 update: updating /Young.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /SpotiDownloader.com - What Would I Do_ - Strawberry Guy.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Eventually.mp3
+2025-08-13T17:51:25 update: updating /Telephones.mp3
+2025-08-13T17:51:25 update: updating /In My Head - Bedroom.mp3
+2025-08-13T17:51:25 update: updating /SpotiDownloader.com - On the Level - Mac DeMarco.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Babydoll.mp3
+2025-08-13T17:51:25 update: updating /Heartbeat.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:25 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:25 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:25 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:25 update: updating /Bad Habit.mp3
+2025-08-13T17:51:25 update: updating /Show Me How.mp3
+2025-08-13T17:51:25 update: updating /Neverender.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:51:30 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:51:30 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:51:30 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:51:37 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-13T17:51:53 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-13T17:53:17 exception: Access to local files via TCP is not allowed
+2025-08-13T17:53:20 exception: Access to local files via TCP is not allowed
+2025-08-13T17:53:30 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-13T17:53:35 player: played "My Kind of Woman.mp3"
+2025-08-13T17:55:33 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-13T17:56:50 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104801.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104798.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 137527.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 94544.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 234843.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 245504.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 132252.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 156233.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 104795.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 112743.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 122647.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 187689.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 42753.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-08-13T17:57:10 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-08-13T17:57:10 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-08-13T17:57:10 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-08-13T17:57:37 exception: No such directory
+2025-08-13T18:01:27 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-13T18:02:53 player: played "Babydoll.mp3"
+2025-08-16T18:20:42 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-17T17:53:41 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-17T17:53:49 player: played "SpotiDownloader.com - On the Level - Mac DeMarco.mp3"
+2025-08-17T17:55:22 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-17T17:55:55 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-17T17:55:59 player: played "My Kind of Woman.mp3"
+2025-08-17T17:56:34 player: played "Golden Brown.mp3"
+2025-08-17T17:57:04 player: played "Golden Brown.mp3"
+2025-08-17T19:25:40 player: played "Golden Brown.mp3"
+2025-08-17T19:25:40 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-08-17T19:25:46 player: played "Let Down.mp3"

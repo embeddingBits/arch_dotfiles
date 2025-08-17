@@ -10,7 +10,15 @@
 -   **Spotify**: [Spicetify](https://github.com/spicetify)
 -   **Discord**: [Discord](https://betterdiscord.app/)
 
+# Gruvbox Rice
 
+![riceSS](terminal_gruv.png)
+![riceSS](main_gruv.png)
+![riceSS](music_gruv.png)
+![riceSS](nvim_gruv.png)
+![riceSS](discord_gruv.png)
+
+# Nord Rice
 
 ![riceSS](kitty.png)
 ![riceSS](applications.png)

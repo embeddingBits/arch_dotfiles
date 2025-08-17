@@ -216,14 +216,16 @@
 
 gradient = 1
 
-gradient_color_1 = '#83a598'  # Bright Blue
-gradient_color_2 = '#8ec07c'  # Bright Green
-gradient_color_3 = '#fabd2f'  # Bright Yellow
-gradient_color_4 = '#fe8019'  # Bright Orange
-gradient_color_5 = '#fb4934'  # Bright Red
-gradient_color_6 = '#d3869b'  # Bright Purple
-gradient_color_7 = '#b8bb26'  # Bright Lime
-gradient_color_8 = '#ebdbb2'  # Light Cream (highlight)
+gradient_color_1 = '#8FBCBB'  # Nord Frost: Polar Night
+gradient_color_2 = '#88C0D0'  # Nord Frost: Glacier
+gradient_color_3 = '#81A1C1'  # Nord Frost: Arctic Ocean
+gradient_color_4 = '#5E81AC'  # Nord Frost: Deep Water
+gradient_color_5 = '#D08770'  # Nord Aurora: Sunset
+gradient_color_6 = '#EBCB8B'  # Nord Aurora: Golden Mist
+gradient_color_7 = '#A3BE8C'  # Nord Aurora: Mountain Moss
+gradient_color_8 = '#B48EAD'  # Nord Aurora: Heather
+
+
 
 
 [smoothing]

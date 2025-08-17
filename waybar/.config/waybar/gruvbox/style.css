@@ -6,25 +6,29 @@
 
 window#waybar {
     background: transparent;
-    color: #cdd6f4; /* text */
+    color: #ebdbb2; /* Gruvbox light text */
     border-radius: 9px;
     margin: 12px 100px;
 }
 
 /* Base module styling */
 #window,
+#custom-media,
 #mpd,
 #idle_inhibitor,
 #pulseaudio,
 #network,
+#power-profiles-daemon,
 #cpu,
+#mpd,
 #memory,
 #temperature,
 #backlight,
+#keyboard-state,
+#sway-language,
 #battery,
 #clock,
 #tray,
-#custom-speed,
 #custom-launcher,
 #custom-power {
     background-color: transparent;
@@ -32,30 +36,50 @@ window#waybar {
     padding: 5px 10px;
     margin: 0;
     border: none;
-    border-radius: 0;}
+    border-radius: 0;
+}
 
+/* Specific styling for launcher */
 #custom-launcher {
-    background-color: #1e1e2e;
-    color: #f38ba8;
-    border: 2px solid #89b4fa;
+    background-color: #282828;
+    color: #cc241d;
     border-radius: 6px;
+    border: solid 2px #83a598;
     padding: 2px 6px;
     margin: 6px 4px;
 }
 
+#mpd {
+    background-color: #282828;
+    color: #cc241d;
+    border-radius: 6px;
+    padding: 2px 7px;
+    margin: 6px 4px;
+}
+
+#window {
+    background-color: #282828;
+    border: solid 2px #83a598;
+    color: #cc241d;
+    border-radius: 6px;
+    padding: 2px 7px;
+    margin: 6px 4px;
+}
+
+/* Center module container */
 .modules-center {
-    background-color: #1e1e2e;
-    color: #f38ba8;
-    border: 2px solid #89b4fa;
+    background-color: #282828;
+    border: solid 2px #83a598;
+    color: #cc241d;
     border-radius: 6px;
     padding: 2px 6px;
     margin: 6px 4px;
 }
 
-
+/* Right-aligned modules */
 .modules-right {
-    background-color: #1e1e2e;
-    border: 2px solid #89b4fa;
+    background-color: #282828;
+    border: solid 2px #83a598;
     border-radius: 6px;
     padding: 2px 6px;
     margin: 6px 4px;
@@ -63,24 +87,24 @@ window#waybar {
 
 /* Workspaces container */
 #workspaces {
-    background-color: #1e1e2e;
-    border: 2px solid #89b4fa;
+    background-color: #282828;
     border-radius: 6px;
+    border: solid 2px #83a598;
     padding: 0;
     margin: 8px 4px;
 }
 
-/* Workspace buttons with NO margins or borders */
+/* Workspace buttons */
 #workspaces button {
     padding: 4px 12px;
-    margin: 0; /* remove spacing between buttons */
+    margin: 0;
     border: none;
     background-color: transparent;
-    color: #89b4fa;
-    border-radius: 0; /* no rounded edges between buttons */
+    color: #458588;
+    border-radius: 0;
 }
 
-/* Round only outer edges */
+/* Round outer buttons only */
 #workspaces button:first-child {
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
@@ -90,49 +114,60 @@ window#waybar {
     border-bottom-right-radius: 6px;
 }
 
-/* Hover effect */
+/* Hover */
 #workspaces button:hover {
-    background-color: #89b4fa;
-    color: #1e1e2e;
+    background-color: #3c3836;
+    color: #ebdbb2;
 }
 
-/* Focused/active/urgent styles */
+/* Focused/active */
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: #1e1e2e;
-    color: #f38ba8;
+    background-color: #282828;
+    color: #cc241d;
 }
 
+/* Urgent workspace */
 #workspaces button.urgent {
-    background-color: #f38ba8;
-    color: #1e1e2e;
+    background-color: #cc241d;
+    color: #fbf1c7;
 }
 
 /* Module-specific coloring */
 #backlight {
-    background-color: #1e1e2e;
-    color: #a6e3a1; /* green */
+    background-color: #282828;
+    color: #98971a;
+}
+
+#mpd {
+    background-color: #282828;
+    color: #98971a;
+}
+
+#window {
+    background-color: #282828;
+    color: #458588;
 }
 
 #memory {
-    background-color: #1e1e2e;
-    color: #f9e2af; /* yellow */
+    background-color: #282828;
+    color: #d65d0e;
 }
 
 #battery {
-    background-color: #1e1e2e;
-    color: #cba6f7; /* mauve */
+    background-color: #282828;
+    color: #b16286;
 }
 
 #battery.charging,
 #battery.plugged {
-    color: #1e1e2e;
-    background-color: #a6e3a1; /* green */
+    color: #98971a;
+    background-color: #282828;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f38ba8;
-    color: #1e1e2e;
+    background-color: #cc241d;
+    color: #ebdbb2;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -141,43 +176,42 @@ window#waybar {
 }
 
 #network {
-    background-color: #1e1e2e;
-    color: #89dceb; /* sky */
+    background-color: #282828;
+    color: #d79921;
 }
 
 #pulseaudio {
-    background-color: #1e1e2e;
-    color: #a6e3a1;
+    background-color: #282828;
+    color: #458588;
 }
 
 #pulseaudio.muted {
-    background-color: #45475a; /* surface1 */
-    color: #cdd6f4;
+    background-color: #282828;
+    color: #cc241d;
 }
 
-/* Optional visualizer (cava) */
+/* Cava Visualizer */
 #cava {
-    background-color: #1e1e2e;
-    color: #89b4fa;
+    background-color: #282828;
+    color: #689d6a;
     border-radius: 3px;
     font-family: "Iosevka Nerd Font";
     border: solid 2px;
-    border-color: #89b4fa;
     padding: 2px 12px;
     margin: 8px 4px;
 }
 
 @keyframes blink {
     to {
-        background-color: #cdd6f4;
-        color: #1e1e2e;
+        background-color: #fbf1c7;
+        color: #282828;
     }
 }
 
+/* Edge fixes */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
-
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }

@@ -14,6 +14,9 @@ function fastfetch_small
       fastfetch -c ~/.config/fastfetch/small.jsonc --logo-color-1 blue --logo-color-2 red
 end
 
+function swww-sh
+     waypaper --wallpaper ~/Pictures/Wallpapers/Nord/a_planet_in_the_sky.jpg 
+end
 
 function ls
     set -l exa_args
@@ -43,3 +46,6 @@ end
 
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+# Add CUDA paths
+set -gx PATH /opt/cuda/bin $PATH
+set -gx LD_LIBRARY_PATH /opt/cuda/lib64 $LD_LIBRARY_PATH
