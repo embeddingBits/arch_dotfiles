@@ -17,7 +17,7 @@ body {
     /* font, change to '' for default discord font */
     --font: 'JetBrainsMono Nerd Font'; /* change to '' for default discord font */
     --code-font: 'Iosevka'; /* change to '' for default discord font */
-    font-weight: 600; /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
+    font-weight: 400; /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
     letter-spacing: -0.05ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
 
     /* sizes */
@@ -82,34 +82,35 @@ body {
 }
 
 /* color options */
+/* color options */
 :root {
-    --colors: on;
+    --colors: on; /* off: discord default colors, on: midnight custom colors */
 
     /* text colors */
-    --text-0: var(--bg-3);
-    --text-1: #cdd6f4;
-    --text-2: #bac2de;
-    --text-3: #a6adc8;
-    --text-4: #9399b2;
-    --text-5: #6c7086;
+    --text-0: var(--bg-3); /* text on colored elements */
+    --text-1: #fbf1c7; /* bright white (light0) */
+    --text-2: #ebdbb2; /* softer white (light1) */
+    --text-3: #d5c4a1; /* normal text (light2) */
+    --text-4: #a89984; /* muted text */
+    --text-5: #928374; /* very muted (gray) */
 
     /* background and dark colors */
-    --bg-1: #1e1e2e; /* darker hover */
-    --bg-2: #181825;
-    --bg-3: #11111b;
-    --bg-4: #1e1e2e; /* main background */
-    --hover: hsla(249, 15%, 75%, 0.07);
-    --active: hsla(249, 15%, 75%, 0.15);
-    --active-2: hsla(249, 15%, 75%, 0.25);
-    --message-hover: hsla(249, 15%, 90%, 0.05);
+    --bg-1: #3c3836; /* dark buttons when clicked */
+    --bg-2: #32302f; /* dark buttons */
+    --bg-3: #282828; /* spacing, secondary elements */
+    --bg-4: #1d2021; /* main background color */
+    --hover: hsla(40, 30%, 60%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(40, 30%, 60%, 0.2); /* clicked/selected */
+    --active-2: hsla(40, 30%, 60%, 0.3);
+    --message-hover: hsla(0, 0%, 100%, 0.05);
 
     /* accent colors */
-    --accent-1: var(--blue-1);
-    --accent-2: var(--red-2);
-    --accent-3: var(--blue-3);
-    --accent-4: var(--blue-4);
-    --accent-5: var(--blue-5);
-    --accent-new: var(--accent-2);
+    --accent-1: var(--yellow-2); /* links and accent text */
+    --accent-2: var(--red-2);    /* small accent elements */
+    --accent-3: var(--yellow-3); /* accent buttons */
+    --accent-4: var(--yellow-4); /* accent buttons hover */
+    --accent-5: var(--yellow-5); /* accent buttons active */
+    --accent-new: var(--accent-2); 
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent);
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
@@ -123,40 +124,46 @@ body {
     --offline: var(--text-4);
 
     /* border colors */
-    --border-light: hsla(249, 15%, 75%, 0.05);
-    --border: hsla(249, 15%, 75%, 0.1);
+    --border-light: hsla(40, 30%, 60%, 0.05);
+    --border: hsla(40, 30%, 60%, 0.1);
     --border-hover: var(--accent-2);
-    --button-border: hsl(249, 15%, 75%, 0.1);
+    --button-border: hsla(0, 0%, 100%, 0.1);
 
-    /* base colors (Catppuccin Mocha) */
-    --red-1: hsl(0, 70%, 70%);
-    --red-2: #f38ba8;
-    --red-3: #f38ba8;
-    --red-4: hsl(0, 70%, 60%);
-    --red-5: hsl(0, 70%, 55%);
+    /* base Gruvbox colors */
+    --red-1: #fb4934;
+    --red-2: #cc241d;
+    --red-3: #cc241d;
+    --red-4: #9d0006;
+    --red-5: #7c0000;
 
-    --green-1: hsl(134, 40%, 70%);
-    --green-2: #a6e3a1;
-    --green-3: #a6e3a1;
-    --green-4: hsl(134, 40%, 60%);
-    --green-5: hsl(134, 40%, 55%);
+    --green-1: #b8bb26;
+    --green-2: #98971a;
+    --green-3: #98971a;
+    --green-4: #79740e;
+    --green-5: #5a5a0a;
 
-    --blue-1: hsl(220, 80%, 75%);
-    --blue-2: #89b4fa;
-    --blue-3: #89b4fa;
-    --blue-4: hsl(220, 80%, 65%);
-    --blue-5: hsl(220, 80%, 60%);
+    --yellow-1: #fabd2f;
+    --yellow-2: #d79921;
+    --yellow-3: #d79921;
+    --yellow-4: #b57614;
+    --yellow-5: #a87d00;
 
-    --yellow-1: hsl(43, 95%, 75%);
-    --yellow-2: #f9e2af;
-    --yellow-3: #f9e2af;
-    --yellow-4: hsl(43, 95%, 65%);
-    --yellow-5: hsl(43, 95%, 60%);
+    --blue-1: #83a598;
+    --blue-2: #458588;
+    --blue-3: #458588;
+    --blue-4: #076678;
+    --blue-5: #005f5f;
 
-    --purple-1: hsl(267, 65%, 75%);
-    --purple-2: #cba6f7;
-    --purple-3: #cba6f7;
-    --purple-4: hsl(267, 65%, 65%);
-    --purple-5: hsl(267, 65%, 60%);
+    --purple-1: #d3869b;
+    --purple-2: #b16286;
+    --purple-3: #b16286;
+    --purple-4: #8f3f71;
+    --purple-5: #7c2f5d;
+
+    --aqua-1: #8ec07c;
+    --aqua-2: #689d6a;
+    --aqua-3: #689d6a;
+    --aqua-4: #427b58;
+    --aqua-5: #365836;
 }
 

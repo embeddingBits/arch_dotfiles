@@ -1,0 +1,18 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Gruvbox Dark Port
+ * 
+ * Colors
+ **/
+
+* {
+    background:     #282828FF;
+    background-alt: #3c3836FF;
+    foreground:     #ebdbb2FF;
+    selected:       #cc241dFF;
+    selected1:      #d79921FF;
+    active:         #98971aFF;
+    urgent:         #cc241dFF;
+}
+

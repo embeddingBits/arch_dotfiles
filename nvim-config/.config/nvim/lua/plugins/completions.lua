@@ -13,10 +13,15 @@ return {
       {
             "hrsh7th/nvim-cmp",
             config = function()
-                  vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#5e81ac" }) -- Border color
-                  vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE", fg = "#d8dee9" }) -- Background and foreground
-                  vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#bf616a", fg = "#2e3440" }) -- Selected item
-                  vim.api.nvim_set_hl(0, "CmpItemKindInterface", { fg = "#BF616A", bg = "NONE" })
+              --    vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#5e81ac" }) -- Border color
+              --    vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE", fg = "#d8dee9" }) -- Background and foreground
+              --    vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#bf616a", fg = "#2e3440" }) -- Selected item
+              --    vim.api.nvim_set_hl(0, "CmpItemKindInterface", { fg = "#BF616A", bg = "NONE" })
+
+
+                  vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#b8bb26" }) -- Border color
+                  vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE", fg = "#d5c4a1" }) -- Background and foreground
+                  vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#cc241d", fg = "#0D1117" }) -- Selected item
 
                   local cmp = require'cmp'
                   require("luasnip.loaders.from_vscode").lazy_load()

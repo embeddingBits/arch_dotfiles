@@ -7,6 +7,7 @@
     "modules-left": [
         "custom/launcher",    
         "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
             "clock"
@@ -18,7 +19,6 @@
         "memory",
         "backlight",
         "battery",
-        "battery#bat2",
     ],
     // Modules configuration
     "cava": {
@@ -69,32 +69,20 @@
             "kitty": "󰄛  Kitty",
             "discord": "  Discord",
             "neovide": "  Neovide",
-            "spotify": "  Spotify"
+            "spotify": "  Spotify",
+            "foot": "󰽒 foot", 
+            "obsidian": " Obsidian",
+            "Google-chrome": " Chrome",
+            "org.pwmt.zathura": " Zathura",
+            "uv4.exe": " Keil",
+            "thunderbird": "  ThunderBird"
         } 
     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
+
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format": "{stateIcon} {singleIcon}{artist} - {title} ({elapsedTime:%M:%S})",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{stateIcon}Stopped",
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {
@@ -117,19 +105,9 @@
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "tray": {
-        "spacing": 10
-    },
     "clock": {
         "tooltip-format": "󰥔 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "󰥔 {:%I:%M %a %d}"
+        "format": "󰥔 {:%I:%M %p %a %d}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -155,13 +133,10 @@
         },
         "format": "{icon}  {capacity}%",
         "format-full": "{icon} {capacity}%",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}%  ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
     },
     "power-profiles-daemon": {
         "format": "{icon}",
@@ -175,7 +150,7 @@
         }
     },
     "network": {
-        "format-wifi": "{icon} {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "format-wifi": "{icon} {essid}",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "interval": 5,
@@ -183,16 +158,13 @@
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  {volume}%",
         "format-bluetooth": "{icon} {volume}%",
         "format-bluetooth-muted": " {volume}%",
-        "format-source-muted": "",
+        "format-source-muted": "󰝟 ",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
             "headset": " ",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
@@ -210,3 +182,4 @@
         }
     }
 }
+
