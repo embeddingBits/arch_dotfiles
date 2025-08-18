@@ -1,11 +1,9 @@
 acpi
 aquamarine
 ark
-at
-awesome-terminal-fonts
+waybar
 base
 base-devel
-bemenu-wayland
 blueman
 bluez-utils
 brightnessctl
@@ -17,7 +15,6 @@ cmake
 cmus
 cpio
 discord
-dkms
 dolphin
 dosfstools
 dunst
@@ -47,7 +44,6 @@ iwd
 kate
 kcalc
 kdeconnect
-kid3
 kitty
 konsole
 kvantum
@@ -102,9 +98,7 @@ swww
 tmux
 tree
 ttf-jetbrains-mono-nerd
-ueberzugpp
 unzip
-vim
 wf-recorder
 wget
 wireless_tools
@@ -117,7 +111,6 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdg-utils
-xorg-xinit
 zathura
 zathura-pdf-mupdf
 zip
