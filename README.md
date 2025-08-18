@@ -12,11 +12,11 @@
 
 # Gruvbox Rice
 
-![riceSS](images/terminal_gruv.png)
-![riceSS](images/main_gruv.png)
-![riceSS](images/music_gruv.png)
-![riceSS](images/nvim_gruv.png)
-![riceSS](images/discord_gruv.png)
+![riceSS](images/gruv_terminal.png)
+![riceSS](images/gruv_main.png)
+![riceSS](images/gruv_music.png)
+![riceSS](images/gruv_nvim.png)
+![riceSS](images/gruv_discord.png)
 
 # Nord Rice
 
