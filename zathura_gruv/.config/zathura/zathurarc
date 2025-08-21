@@ -1,6 +1,8 @@
 # Font
 set font "JetBrainsMono Nerd Font 12"
 
+# History
+set show-recent 3
 # Color scheme - Gruvbox Dark
 set default-bg              "#282828"
 set default-fg              "#ebdbb2"

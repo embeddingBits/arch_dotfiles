@@ -1,7 +1,7 @@
-sw_volume: 95
+sw_volume: 40
 audio_device_state:1:MPD Audio
 state: stop
-current: 2
+current: 0
 random: 0
 repeat: 0
 single: 0
@@ -12,6 +12,5 @@ mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
 0:Golden Brown.mp3
-1:Notion.mp3
-2:Let Down.mp3
+1:Let Down.mp3
 playlist_end

@@ -39,6 +39,7 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set('n', '<leader>n', "<Cmd>enew<CR>", {})
 vim.keymap.set('n', '<TAB>', "<Cmd>bnext<CR>", {})
 vim.keymap.set('n', '<leader>x', "<Cmd>bd!<CR>", {})
+vim.keymap.set('n', '<leader>t', "<Cmd>ToggleTerm direction=float<CR>", {})
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to below window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to above window" })
