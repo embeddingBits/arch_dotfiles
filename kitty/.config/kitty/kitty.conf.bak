@@ -10,7 +10,7 @@ cursor_blink_interval 0
 cursor_trail_decay 0.1 0.4
 cursor_shape beam
 # Window Padding
-window_padding_width 15 15
+window_padding_width 16 16 
 
 # Font Related
 font_size 14
@@ -22,6 +22,6 @@ bold_italic_font family='JetBrainsMono Nerd Font' postscript_name=JetBrainsMonoN
 
 
 # BEGIN_KITTY_THEME
-# Nord
+# Tokyo Night Moon
 include current-theme.conf
 # END_KITTY_THEME

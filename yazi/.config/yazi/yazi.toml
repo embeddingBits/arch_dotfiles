@@ -1,0 +1,28 @@
+[mgr]
+border_style = "rounded"
+show_hidden = true
+ratio = [2, 4, 6]
+
+[preview]
+max_height = 900
+max_width = 700
+cache_dir = "/home/embeddingbits/.cache/yazi"
+
+[opener]
+pdf = [
+      { run = 'zathura "$@"', desc = "Open with Zathura", block = true, for = "unix" }
+]
+edit = [
+{ run = 'nvim "$@"', desc = "Open with Neovim", block = true, for = "unix" }
+]
+img = [
+{ run = 'feh "$@"', desc = "Open with feh", block = true, for = "unix" }
+]
+
+[open]
+prepend_rules = [
+{ name = "*.pdf", use = "pdf" },
+{ name = "*.png", use = "img" },
+{ name = "*.jpg", use = "img" },
+{ name = "*.jpeg", use = "img" }
+]
