@@ -6,4 +6,3 @@ spicetify-cli
 spotify
 waypaper
 yay-bin
-yay-bin-debug

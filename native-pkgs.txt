@@ -9,7 +9,6 @@ bluez-utils
 brightnessctl
 btop
 cava
-chromium
 clang
 cmake
 cmus

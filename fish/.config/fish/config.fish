@@ -4,6 +4,7 @@ end
 set fish_greeting
 starship init fish | source
 set -x BAT_THEME Nord
+set -x EDITOR nvim
 fish_add_path /home/amiitesh/.spicetify
 
 function fastfetch_big
