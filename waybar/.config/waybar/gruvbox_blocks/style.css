@@ -1,0 +1,208 @@
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+window#waybar {
+    background: #1d2021;
+    color: #ebdbb2; /* Gruvbox light text */
+}
+
+/* Base module styling */
+#window,
+#custom-media,
+#mpd,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#power-profiles-daemon,
+#cpu,
+#mpd,
+#memory,
+#temperature,
+#backlight,
+#keyboard-state,
+#sway-language,
+#battery,
+#clock,
+#tray,
+#custom-launcher,
+#custom-power {
+    background-color: transparent;
+    color: inherit;
+    padding: 0px 10px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+/* Specific styling for launcher */
+#custom-launcher {
+    background-color: #282828;
+    color: #cc241d;
+    border-radius: 0px;
+    border: solid 2px #504945;
+    padding: 2px 6px;
+    margin: 8px 4px;
+}
+
+#window {
+    background-color: #282828;
+    border: solid 2px #504945;
+    color: #cc241d;
+    border-radius: 0px;
+    padding: 2px 7px;
+    margin: 8px 4px;
+}
+
+/* Center module container */
+.modules-center {
+    background-color: #282828;
+    border: solid 2px #504945;
+    color: #cc241d;
+    border-radius: 0px;
+    padding: 0px 6px;
+    margin: 8px 4px;
+}
+
+/* Right-aligned modules */
+.modules-right {
+    background-color: #282828;
+    border: solid 2px #504945;
+    border-radius: 0px;
+    padding: 0px 6px;
+    margin: 8px 4px;
+}
+
+/* Workspaces container */
+#workspaces {
+    background-color: #282828;
+    border-radius: 0px;
+    border: solid 2px #504945;
+    padding: 0;
+    margin: 8px 4px;
+}
+
+/* Workspace buttons */
+#workspaces button {
+    padding: 4px 10px;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    color: #83a598;
+    border-radius: 0;
+}
+
+/* Round outer buttons only */
+#workspaces button:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+#workspaces button:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* Hover */
+#workspaces button:hover {
+    background-color: #504945;
+    color: #ebdbb2;
+}
+
+/* Focused/active */
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: #282828;
+    color: #cc241d;
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+    background-color: #cc241d;
+    color: #fbf1c7;
+}
+
+/* Module-specific coloring */
+#backlight {
+    background-color: #282828;
+    color: #98971a;
+}
+
+#mpd {
+    background-color: #282828;
+    color: #98971a;
+}
+
+#window {
+    background-color: #282828;
+    color: #83a598;
+}
+
+#memory {
+    background-color: #282828;
+    color: #d65d0e;
+}
+
+#battery {
+    background-color: #282828;
+    color: #b16286;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #98971a;
+    background-color: #282828;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #cc241d;
+    color: #ebdbb2;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network {
+    background-color: #282828;
+    color: #d79921;
+}
+
+#pulseaudio {
+    background-color: #282828;
+    color: #83a598;
+}
+
+#pulseaudio.muted {
+    background-color: #282828;
+    color: #cc241d;
+}
+
+/* Cava Visualizer */
+#cava {
+    background-color: #282828;
+    color: #689d6a;
+    border-radius: 3px;
+    font-family: "Iosevka Nerd Font";
+    border: solid 2px;
+    padding: 2px 12px;
+    margin: 8px 4px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #fbf1c7;
+        color: #282828;
+    }
+}
+
+/* Edge fixes */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+

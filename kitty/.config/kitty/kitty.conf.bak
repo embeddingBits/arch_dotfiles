@@ -14,14 +14,22 @@ window_padding_width 16 16
 
 # Font Related
 font_size 14
-font_family      family='JetBrainsMono Nerd Font' postscript_name=JetBrainsMonoNF-SemiBold
-bold_font        family='JetBrainsMono Nerd Font' style=Bold
-italic_font      auto
-bold_italic_font family='JetBrainsMono Nerd Font' postscript_name=JetBrainsMonoNF-BoldItalic
+# font_family      family='JetBrainsMono Nerd Font' postscript_name=JetBrainsMonoNF-SemiBold
+# bold_font        family='JetBrainsMono Nerd Font' style=Bold
+# italic_font      auto
+# bold_italic_font family='JetBrainsMono Nerd Font' postscript_name=JetBrainsMonoNF-BoldItalic
 
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night Moon
+# Gruvbox Material Dark Hard
 include current-theme.conf
 # END_KITTY_THEME
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="JetBrainsMono Nerd Font"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS

@@ -9,7 +9,8 @@ return {
             themify.setup({
                   { "gbprod/nord.nvim" },
                   { "ellisonleao/gruvbox.nvim" },
-                  { "RRethy/base16-nvim" }
+                  { "RRethy/base16-nvim" },
+                  { "sainnhe/gruvbox-material" }
 
             })
 
