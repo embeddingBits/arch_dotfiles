@@ -13,7 +13,7 @@
 
 # Gruvbox Rice
 
-![riceSS](images/main-river.png)
+![riceSS](images/river-main.png)
 ![riceSS](images/music-river.png)
 ![riceSS](images/nvim-river.png)
 ![riceSS](images/discord-river.png)
