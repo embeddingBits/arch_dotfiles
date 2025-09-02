@@ -1,23 +1,23 @@
 // -*- mode: jsonc -*-
 {
-      "layer": "top", // Waybar at top layer
       "position": "top", // Waybar position (top|bottom|left|right)
       "height": 20, // Waybar height
-      "spacing": 2, // Gaps between modules
+      "spacing": 1, // Gaps between modules
       "margin-left": 5,
       "margin-right": 5,
       "margin-top": 5,
       "modules-left": [
             "custom/launcher",    
+            "river/tags",
             "hyprland/workspaces",
-            "hyprland/window"
+            "hyprland/window",
+            "cava"
       ],
       "modules-center": [
             "clock"
       ],
       "modules-right": [
             "pulseaudio",
-            "custom/speed",
             "network",
             "memory",
             "backlight",
@@ -26,7 +26,7 @@
       // Modules configuration
       "cava": {
             "framerate": 144,
-            "bars": 9,
+            "bars": 12,
             "method": "pipewire",
             "source": "auto",
             "bar_delimiter": 0,
@@ -40,6 +40,10 @@
             "format": " ",
             "on-click": "rofi -show drun",
             "on-click-right": "killall rofi"
+      },
+
+      "river/tags": {
+            "num-tags": 5,
       },
 
       "hyprland/workspaces": {
@@ -143,7 +147,7 @@
       },
       "power-profiles-daemon": {
             "format": "{icon}",
-            "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+            "tooltip-format": "Power profile: {profile}\nDhyprland: {dhyprland}",
             "tooltip": true,
             "format-icons": {
                   "default": "",
