@@ -1834,3 +1834,9 @@ Note: Hit end of (available) data during resync.
 2025-08-18T20:56:31 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
 2025-08-18T20:56:54 player: played "Let Down.mp3"
 2025-08-19T05:45:11 player: played "Golden Brown.mp3"
+2025-09-05T20:11:52 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-05T20:12:09 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-05T20:12:26 player: played "My Kind of Woman.mp3"
+2025-09-10T18:39:35 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-10T18:39:41 player: played "My Kind of Woman.mp3"
+2025-09-12T08:24:26 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory

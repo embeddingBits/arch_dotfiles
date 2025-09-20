@@ -1,11 +1,6 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true  -- Optional: Highlight the current line for better visibility
-vim.cmd [[highlight CursorLine cterm=underline gui=underline]]
-
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
 vim.cmd("set expandtab")
 vim.cmd("set expandtab")
@@ -48,7 +43,10 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
 
 if vim.g.neovide then
-    vim.opt.guifont = "JetBrainsMono Nerd Font:h14:b"
+    vim.opt.guifont = "IosevkaTerm Nerd Font:h14:b"
     vim.g.neovide_cursor_animation_length = 0.05   
 end
 require("lazy").setup("plugins")
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
