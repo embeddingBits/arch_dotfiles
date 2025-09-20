@@ -1,5 +1,6 @@
 // -*- mode: jsonc -*-
 {
+      "layer": "top",
       "position": "top", // Waybar position (top|bottom|left|right)
       "height": 20, // Waybar height
       "spacing": 1, // Gaps between modules

@@ -7,7 +7,11 @@ TERMINAL="kitty"
 FILE_MANAGER="dolphin -stylesheet ~/archhypr_dotfiles/kde_stuff/dolphin.qss"
 MENU="rofi -show drun"
 
+riverctl rule-add ssd
+riverctl rule-add -app-id com.mitchellh.ghostty ssd
+
 ### AUTOSTART ###
+kanshi &
 hypridle &
 swww-daemon &
 nm-applet --indicator &
@@ -34,7 +38,7 @@ MOD="Super"
 
 # Launch applications
 riverctl map normal $MOD Q spawn $TERMINAL
-riverctl map normal $MOD G spawn "ghostty"
+riverctl map normal $MOD G spawn kitty
 riverctl map normal $MOD E spawn $FILE_MANAGER
 riverctl map normal $MOD R spawn "$MENU"
 riverctl map normal $MOD W spawn "firefox"
