@@ -12,25 +12,25 @@
       modal_background_color: None,
       tab_bar: (
             enabled: true,
-            active_style: (fg: "#282828", bg: "#458588", modifiers: "Bold"),   // Gruvbox blue
+            active_style: (fg: "#282828", bg: "#458588", modifiers: "Bold"),  
             inactive_style: (),
       ),
-      highlighted_item_style: (fg: "#cc241d", modifiers: "Bold"),              // Gruvbox red
-      current_item_style: (fg: "#282828", bg: "#458588", modifiers: "Bold"),   // Blue selection
-      borders_style: (fg: "#d79921"),                                          // Yellow borders
-      highlight_border_style: (fg: "#cc241d"),                                 // Red highlight border
+      highlighted_item_style: (fg: "#cc241d", modifiers: "Bold"),             
+      current_item_style: (fg: "#282828", bg: "#458588", modifiers: "Bold"),  
+      borders_style: (fg: "#d79921"),                                         
+      highlight_border_style: (fg: "#cc241d"),                                
       symbols: (song: "S", dir: "D", marker: "M", ellipsis: "..."),
       progress_bar: (
             symbols: ["█", "━", " "],
-            track_style: (fg: "#3c3836"),                                      // bg1
-            elapsed_style: (fg: "#d79921"),                                    // Yellow progress
-            thumb_style: (fg: "#b16286"),                                      // Purple thumb
+            track_style: (fg: "#3c3836"),                                     
+            elapsed_style: (fg: "#d79921"),                                   
+            thumb_style: (fg: "#b16286"),                                     
       ),
       scrollbar: (
             symbols: ["│", "█", "▲", "▼"],
             track_style: (),
             ends_style: (),
-            thumb_style: (fg: "#689d6a"),                                      // Aqua scrollbar thumb
+            thumb_style: (fg: "#689d6a"),                                     
       ),
       song_table_format: [
       (
@@ -148,3 +148,18 @@
       ],
 )
 
+cava: (
+    bar_symbols: [' ', '▂', '▃', '▄', '▅', '▆', '▇', '█'],
+    inverted_bar_symbols: ['▔', '🮂', '🮃', '▀', '🮄', '🮅', '🮆', '█'],
+    bg_color: "black",
+    bar_width: 6,
+    bar_spacing: 1,
+    orientation: Bottom,
+
+      bar_color: Gradient({
+          0: "#cc241d",
+          50: "#d79921",
+          100: "#458588",
+    })
+
+),

@@ -1840,3 +1840,108 @@ Note: Hit end of (available) data during resync.
 2025-09-10T18:39:35 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
 2025-09-10T18:39:41 player: played "My Kind of Woman.mp3"
 2025-09-12T08:24:26 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:41:07 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:41:11 player: played "My Kind of Woman.mp3"
+2025-09-21T15:42:18 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:42:38 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:43:24 player: played "What Would I Do?.mp3"
+2025-09-21T15:43:29 update: updating /Reflections.mp3
+2025-09-21T15:43:29 update: added /Homage.mp3
+2025-09-21T15:43:29 update: updating /Swing Lynn.mp3
+2025-09-21T15:43:29 update: added /Loser.mp3
+2025-09-21T15:43:29 update: updating /We Are The People.mp3
+2025-09-21T15:43:29 update: updating /Headlock.mp3
+2025-09-21T15:43:29 update: updating /Golden Brown.mp3
+2025-09-21T15:43:29 update: added /Instant Destiny.mp3
+2025-09-21T15:43:29 update: updating /Tek It.mp3
+2025-09-21T15:43:29 update: updating /Feels Like We Only Go Backwards.mp3
+2025-09-21T15:43:29 update: updating /Sex, Drugs, Etc..mp3
+2025-09-21T15:43:29 update: updating /What Would I Do?.mp3
+2025-09-21T15:43:29 update: updating /Swim.mp3
+2025-09-21T15:43:29 update: added /Breathe Deeper.mp3
+2025-09-21T15:43:29 update: added /Confess Your Love.mp3
+2025-09-21T15:43:29 update: added /Where'd All the Time Go?.mp3
+2025-09-21T15:43:29 update: added /Alternative Outro.mp3
+2025-09-21T15:43:29 update: updating /Tek It - Sped Up.mp3
+2025-09-21T15:43:29 update: updating /Let Down.mp3
+2025-09-21T15:43:29 update: updating /For the First Time.mp3
+2025-09-21T15:43:29 update: updating /My Kind of Woman.mp3
+2025-09-21T15:43:29 update: updating /The Less I Know The Better.mp3
+2025-09-21T15:43:29 update: updating /New Person, Same Old Mistakes.mp3
+2025-09-21T15:43:29 update: added /i love u..mp3
+2025-09-21T15:43:29 update: added /Freaking Out the Neighborhood.mp3
+2025-09-21T15:43:29 update: updating /Good Looking.mp3
+2025-09-21T15:43:29 update: updating /My Love Mine All Mine.mp3
+2025-09-21T15:43:29 update: added /On the Level.mp3
+2025-09-21T15:43:29 update: updating /Moonlight on the River.mp3
+2025-09-21T15:43:29 update: updating /Feeling Like The End.mp3
+2025-09-21T15:43:29 update: updating /Lovers Rock.mp3
+2025-09-21T15:43:29 update: updating /Apocalypse.mp3
+2025-09-21T15:43:29 update: added /Mrs Magic.mp3
+2025-09-21T15:43:29 update: updating /Notion.mp3
+2025-09-21T15:43:29 update: updating /Borderline.mp3
+2025-09-21T15:43:29 update: added /I Hope to Be Around.mp3
+2025-09-21T15:43:29 update: updating /Shut up My Moms Calling.mp3
+2025-09-21T15:43:29 update: updating /Heart To Heart.mp3
+2025-09-21T15:43:29 update: updating /Young.mp3
+2025-09-21T15:43:29 update: added /Husk.mp3
+2025-09-21T15:43:29 update: added /One More Hour.mp3
+2025-09-21T15:43:29 update: updating /Eventually.mp3
+2025-09-21T15:43:29 update: updating /Telephones.mp3
+2025-09-21T15:43:29 update: added /Ghostride.mp3
+2025-09-21T15:43:29 update: added /Money.mp3
+2025-09-21T15:43:29 update: added /Solo.mp3
+2025-09-21T15:43:29 update: updating /Babydoll.mp3
+2025-09-21T15:43:29 update: updating /Heartbeat.mp3
+2025-09-21T15:43:29 update: added /Something About You.mp3
+2025-09-21T15:43:29 update: added /In My Head.mp3
+2025-09-21T15:43:29 update: updating /Bad Habit.mp3
+2025-09-21T15:43:29 update: updating /Show Me How.mp3
+2025-09-21T15:43:29 update: updating /Neverender.mp3
+2025-09-21T15:43:33 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:45:03 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:45:20 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:47:30 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:47:31 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:48:27 player: played "Mrs Magic.mp3"
+2025-09-21T15:48:51 exception: Failed to open /home/embeddingbits/.config/mpd/playlists: No such file or directory
+2025-09-21T15:50:11 player: played "Let Down.mp3"
+2025-09-21T15:51:06 player: played "Let Down.mp3"
+2025-09-21T15:51:22 player: played "Let Down.mp3"
+2025-09-21T15:58:38 player: played "Let Down.mp3"
+2025-09-21T16:02:19 player: played "What Would I Do?.mp3"
+2025-09-21T16:04:18 player: played "Let Down.mp3"
+2025-09-21T16:10:18 player: played "What Would I Do?.mp3"
+2025-09-21T16:10:37 player: played "Let Down.mp3"
+2025-09-21T16:12:53 player: played "Heartbeat.mp3"
+2025-09-21T16:12:57 player: played "Heartbeat.mp3"
+2025-09-21T16:15:24 player: played "Let Down.mp3"
+2025-09-21T16:17:08 player: played "Babydoll.mp3"
+2025-09-21T16:18:28 player: played "Babydoll.mp3"
+2025-09-21T16:24:04 player: played "Babydoll.mp3"
+2025-09-21T16:26:04 player: played "Husk.mp3"
+2025-09-21T16:30:03 player: played "Bad Habit.mp3"
+2025-09-21T16:33:38 player: played "Good Looking.mp3"
+2025-09-21T16:37:42 player: played "Reflections.mp3"
+2025-09-21T16:41:13 player: played "Heart To Heart.mp3"
+2025-09-21T16:44:37 player: played "Husk.mp3"
+2025-09-21T16:48:03 player: played "I Hope to Be Around.mp3"
+2025-09-21T16:50:05 player: played "i love u..mp3"
+2025-09-21T17:01:36 player: played "I Hope to Be Around.mp3"
+2025-09-21T17:03:38 player: played "i love u..mp3"
+2025-09-21T17:05:47 player: played "i love u..mp3"
+2025-09-21T17:07:35 player: played "Babydoll.mp3"
+2025-09-21T17:11:08 player: played "Lovers Rock.mp3"
+2025-09-21T17:15:01 player: played "Bad Habit.mp3"
+2025-09-21T17:15:19 player: played "Good Looking.mp3"
+2025-09-21T17:38:24 player: played "Heart To Heart.mp3"
+2025-09-21T19:02:32 player: played "Reflections.mp3"
+2025-09-21T19:05:43 player: played "Reflections.mp3"
+2025-09-21T19:12:41 player: played "Freaking Out the Neighborhood.mp3"
+2025-09-21T19:24:53 player: played "Reflections.mp3"
+2025-09-21T19:27:26 player: played "Reflections.mp3"
+2025-09-21T19:33:06 player: played "Reflections.mp3"
+2025-09-21T19:43:20 player: played "Reflections.mp3"
+2025-09-21T20:27:17 player: played "Freaking Out the Neighborhood.mp3"
+2025-09-21T20:28:27 player: played "Reflections.mp3"
+2025-09-21T20:29:05 player: played "Reflections.mp3"
