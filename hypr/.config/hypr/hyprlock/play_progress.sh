@@ -20,7 +20,7 @@ if command -v playerctl >/dev/null 2>&1; then
         if [ "$status" = "Playing" ] || [ "$status" = "Paused" ]; then
             # Get position and length in a human-readable format and combine them
             progress=$(playerctl -p "$p" metadata --format \
-                "{{ duration(position) }}  /   {{ duration(mpris:length) }}" 2>/dev/null)
+                "{{ duration(position) }} / {{ duration(mpris:length) }}" 2>/dev/null)
             if [ -n "$progress" ]; then
                 echo "$progress"
                 exit
@@ -29,4 +29,4 @@ if command -v playerctl >/dev/null 2>&1; then
     done
 fi
 
-echo "Not Playing"
+echo "0:00 / 0:00"
