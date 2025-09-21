@@ -13,18 +13,12 @@
 
 # Gruvbox Rice
 
-![riceSS](images/river-main.png)
-![riceSS](images/music-river.png)
-![riceSS](images/nvim-river.png)
-![riceSS](images/discord-river.png)
-
-# Gruvbox Rice
-
 ![riceSS](images/gruv_terminal.png)
 ![riceSS](images/gruv_main.png)
 ![riceSS](images/gruv_music.png)
 ![riceSS](images/gruv_nvim.png)
 ![riceSS](images/gruv_discord.png)
+![riceSS](images/hyprlock.png)
 
 # Nord Rice
 
