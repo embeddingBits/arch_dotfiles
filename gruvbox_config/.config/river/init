@@ -1,0 +1,97 @@
+#!/bin/sh
+
+# This script is designed to replicate the Hyprland configuration for the River window manager.
+
+### MY PROGRAMS ###
+TERMINAL="foot"
+FILE_MANAGER="dolphin -stylesheet ~/archhypr_dotfiles/kde_stuff/dolphin.qss"
+MENU="rofi -show drun"
+
+riverctl rule-add ssd
+riverctl rule-add -app-id com.mitchellh.ghostty ssd
+
+### AUTOSTART ###
+kanshi &
+swww-daemon &
+waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
+dunst &
+
+### ENVIRONMENT VARIABLES ###
+source "$HOME/.config/river/env.sh"
+
+### LOOK AND FEEL ###
+riverctl background-color 0x1d2021
+riverctl border-color-focused 0x458588
+riverctl border-color-unfocused 0x1d2021
+riverctl border-width 3
+riverctl view-padding 5
+riverctl outer-padding 9
+riverctl focus-follows-cursor normal
+
+# Set the default layout to rivertile and start it
+riverctl default-layout rivertile
+rivertile -main-ratio 0.5 -main-count 1 &
+### KEYBINDINGS ###
+MOD="Super"
+
+# Launch applications
+riverctl map normal $MOD Q spawn $TERMINAL
+riverctl map normal $MOD G spawn foot
+riverctl map normal $MOD E spawn $FILE_MANAGER
+riverctl map normal $MOD R spawn "$MENU"
+riverctl map normal $MOD W spawn "firefox"
+riverctl map normal $MOD B spawn "rofi-bluetooth"
+riverctl map normal $MOD U spawn "rofi -show emoji"
+riverctl map normal "$MOD+Shift" K spawn "wine ~/.wine/drive_c/Keil_v5/UV4/UV4.exe"
+riverctl map normal "$MOD+Shift" W spawn "sh ~/.config/rofi/rofi-wifi-menu.sh"
+
+# Window management
+riverctl map normal $MOD C close
+riverctl map normal "$MOD+Shift" M exit
+riverctl map normal $MOD V toggle-float
+riverctl map normal $MOD J toggle-split
+riverctl map normal $MOD L spawn "hyprlock"
+riverctl map normal $MOD S spawn "hyprshot -m region -o ~/Pictures/Screenshots/"
+
+# Move focus
+riverctl map normal $MOD K focus-view previous
+riverctl map normal $MOD J focus-view next
+
+# Switch workspaces (tags in River)
+for i in $(seq 1 9); do
+    tags=$((1 << ($i - 1)))
+    riverctl map normal $MOD $i set-focused-tags $tags
+done
+riverctl map normal $MOD 0 set-focused-tags $(( (1 << 9) )) # Workspace 10 on tag 9
+
+# Move active window to a workspace
+for i in $(seq 1 9); do
+    tags=$((1 << ($i - 1)))
+    riverctl map normal "$MOD+Shift" $i set-view-tags $tags
+done
+riverctl map normal "$MOD+Shift" 0 set-view-tags $(( (1 << 9) )) # Workspace 10 on tag 9
+
+# Mouse bindings
+riverctl map-pointer normal $MOD BTN_LEFT move-view
+riverctl map-pointer normal $MOD BTN_RIGHT resize-view
+
+### Multimedia Keys ###
+# Requires playerctl
+riverctl map normal None XF86AudioNext spawn "playerctl next"
+riverctl map normal None XF86AudioPause spawn "playerctl play-pause"
+riverctl map normal None XF86AudioPlay spawn "playerctl play-pause"
+riverctl map normal None XF86AudioPrev spawn "playerctl previous"
+
+# Volume and Brightness
+riverctl map normal None XF86AudioRaiseVolume spawn "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+riverctl map normal None XF86AudioLowerVolume spawn "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+riverctl map normal None XF86AudioMute spawn "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+riverctl map normal None XF86AudioMicMute spawn "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+riverctl map normal None XF86MonBrightnessUp spawn "brightnessctl set 10%+"
+riverctl map normal None XF86MonBrightnessDown spawn "brightnessctl set 10%-"
+
+### WINDOW RULES ###
+# Float rules for specific applications
+riverctl rule-add -app-id 'waypaper' float
+riverctl rule-add -app-id 'nwg-look' float
+riverctl rule-add -app-id 'feh' float
