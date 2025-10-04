@@ -6,7 +6,7 @@ ratio = [2, 4, 6]
 [preview]
 max_height = 1920
 max_width = 1080
-cache_dir = "/home/embeddingbits/.cache/yazi"
+cache_dir = "/home/ebits/.cache/yazi"
 
 [opener]
 pdf = [
@@ -16,7 +16,7 @@ edit = [
 { run = 'nvim "$@"', desc = "Open with Neovim", block = true, for = "unix" }
 ]
 img = [
-{ run = 'feh "$@"', desc = "Open with feh", block = true, for = "unix" }
+{ run = 'feh --zoom 75 "$@"', desc = "Open with feh", block = true, for = "unix" }
 ]
 
 [open]

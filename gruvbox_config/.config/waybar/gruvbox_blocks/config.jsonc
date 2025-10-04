@@ -10,6 +10,7 @@
       "modules-left": [
             "custom/launcher",    
             "river/tags",
+            //"river/window",
             "hyprland/workspaces",
             "hyprland/window",
       ],
@@ -44,6 +45,11 @@
 
       "river/tags": {
             "num-tags": 5,
+            "tag-labels": [" ", "󰈹 "," "," "," "],
+      },
+
+      "river/window": {
+            "format": "{}",
       },
 
       "hyprland/workspaces": {
@@ -51,11 +57,11 @@
             "all-outputs": true,
             "format": "{icon}",
             "format-icons": {
-                  "1": "1",  
-                  "2": "2",  
-                  "3": "3",  
-                  "4": "4",  
-                  "5": "5",  
+                  "1": "",  
+                  "2": "󰈹",  
+                  "3": "",  
+                  "4": "",  
+                  "5": "",  
                   "urgent": "",
                   "default": "○"
             },
@@ -122,8 +128,15 @@
       },
       "memory": {
             "format": "󰍛{used: 0.2f} GB",
-            "interval": 2,
+            "interval": 1,
       },
+
+      "custom/memory": {
+            "exec": "~/.config/waybar/gruvbox_blocks/scripts/memory.sh",
+            "interval": 1,
+            "return-type": "json",
+      },
+
       "temperature": {
             "critical-threshold": 80,
             "format": "{temperatureC}°C {icon}",

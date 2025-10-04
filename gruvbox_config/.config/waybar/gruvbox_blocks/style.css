@@ -181,6 +181,10 @@ window#waybar {
     color: #d65d0e;
 }
 
+#custom-memory {
+    background-color: #282828;
+    color: #d65d0e;
+}
 #battery {
     background-color: #282828;
     color: #b16286;
