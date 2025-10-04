@@ -1,8 +1,0 @@
-downgrade
-gowall
-pipes.sh
-rofi-power-menu
-spicetify-cli
-spotify
-waypaper
-yay-bin

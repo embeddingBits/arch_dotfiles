@@ -32,6 +32,11 @@ set completion-group-fg     "#458588"
 # Smooth scrolling
 set scroll-step             50
 
+set recolor                 true
+set recolor-keephue         true
+set recolor-darkcolor       "#ebdbb2"
+set recolor-lightcolor      "#1d2021"
+
 # Enable page cache
 set page-cache              true
 
@@ -40,4 +45,3 @@ set show-scrollbars         false
 set statusbar-h-padding     5
 set statusbar-v-padding     2
 set selection-clipboard clipboard
-

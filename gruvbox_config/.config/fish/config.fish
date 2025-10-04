@@ -47,7 +47,3 @@ end
 
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
-# Add CUDA paths
-set -gx PATH /opt/cuda/bin $PATH
-set -gx LD_LIBRARY_PATH /opt/cuda/lib64 $LD_LIBRARY_PATH
-source /home/embeddingbits/.config/fish/completions/inLimbo.fish
