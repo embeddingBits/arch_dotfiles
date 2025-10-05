@@ -45,3 +45,5 @@ set show-scrollbars         false
 set statusbar-h-padding     5
 set statusbar-v-padding     2
 set selection-clipboard clipboard
+
+set guioptions none

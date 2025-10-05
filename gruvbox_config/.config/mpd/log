@@ -1990,3 +1990,192 @@ Note: Hit end of (available) data during resync.
 2025-09-27T20:21:02 player: played "SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"
 2025-09-27T20:21:08 player: played "SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"
 2025-09-28T09:34:50 player: played "SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"
+2025-10-05T14:23:35 exception: Failed to decode "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"; Failed to open "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3": No such file or directory
+2025-10-05T14:23:35 player: played "SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"
+2025-10-05T14:23:35 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:35 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:37 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:37 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:37 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:38 exception: Failed to decode "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"; Failed to open "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3": No such file or directory
+2025-10-05T14:23:38 player: played "SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"
+2025-10-05T14:23:38 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:38 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:38 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:38 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:39 exception: Failed to decode "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"; Failed to open "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3": No such file or directory
+2025-10-05T14:23:39 player: played "SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"
+2025-10-05T14:23:39 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:39 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:39 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:39 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:39 exception: Failed to decode "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"; Failed to open "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3": No such file or directory
+2025-10-05T14:23:39 player: played "SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"
+2025-10-05T14:23:39 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:39 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:40 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:40 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:40 exception: Failed to decode "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"; Failed to open "/home/ebits/Music/Indie/SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3": No such file or directory
+2025-10-05T14:23:40 player: played "SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3"
+2025-10-05T14:23:40 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:40 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:41 exception: Failed to open /home/ebits/Music/Indie: No such file or directory
+2025-10-05T14:23:42 exception: Failed to decode "/home/ebits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/ebits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-10-05T14:23:42 player: played "My Kind of Woman.mp3"
+2025-10-05T14:23:43 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:23:43 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:23:43 exception: Failed to decode "/home/ebits/Music/Indie/My Kind of Woman.mp3"; Failed to open "/home/ebits/Music/Indie/My Kind of Woman.mp3": No such file or directory
+2025-10-05T14:23:43 player: played "My Kind of Woman.mp3"
+2025-10-05T14:24:38 exception: Failed to open /home/ebits/Music/Indie: No such file or directory
+2025-10-05T14:24:38 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:24:38 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:24:40 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:24:40 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:24:40 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:24:40 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:24:40 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:24:40 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:24:41 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:24:41 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:24:41 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:24:41 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:24:41 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:24:41 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:24:41 exception: Failed to decode "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Freaking Out the Neighborhood.mp3": No such file or directory
+2025-10-05T14:24:41 player: played "Freaking Out the Neighborhood.mp3"
+2025-10-05T14:24:59 exception: Failed to open /home/ebits/Music/Indie: No such file or directory
+2025-10-05T14:28:58 update: updating /My Kind of Woman.mp3
+2025-10-05T14:28:58 update: updating /My Love Mine All Mine.mp3
+2025-10-05T14:28:58 update: added /Stephanie.mp3
+2025-10-05T14:28:58 update: updating /Money.mp3
+2025-10-05T14:28:58 update: updating /Headlock.mp3
+2025-10-05T14:28:58 update: updating /Confess Your Love.mp3
+2025-10-05T14:28:58 update: updating /Tek It.mp3
+2025-10-05T14:28:58 update: updating /Golden Brown.mp3
+2025-10-05T14:28:58 update: updating /Eventually.mp3
+2025-10-05T14:28:58 update: updating /Husk.mp3
+2025-10-05T14:28:58 update: updating /i love u..mp3
+2025-10-05T14:28:58 update: updating /Tek It - Sped Up.mp3
+2025-10-05T14:28:58 update: updating /Homage.mp3
+2025-10-05T14:28:58 update: updating /Ghostride.mp3
+2025-10-05T14:28:58 update: updating /I Hope to Be Around.mp3
+2025-10-05T14:28:58 update: updating /Shut up My Moms Calling.mp3
+2025-10-05T14:28:58 update: updating /Heart To Heart.mp3
+2025-10-05T14:28:58 update: updating /Bad Habit.mp3
+2025-10-05T14:28:58 update: updating /Young.mp3
+2025-10-05T14:28:58 update: updating /On the Level.mp3
+2025-10-05T14:28:58 update: updating /Something About You.mp3
+2025-10-05T14:28:58 update: updating /Instant Destiny.mp3
+2025-10-05T14:28:58 update: updating /Babydoll.mp3
+2025-10-05T14:28:58 update: updating /In My Head.mp3
+2025-10-05T14:28:58 update: updating /For the First Time.mp3
+2025-10-05T14:28:58 update: updating /The Less I Know The Better.mp3
+2025-10-05T14:28:58 update: updating /Lovers Rock.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Swim.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Show Me How.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/For the First Time.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Moonlight on the River.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Telephones.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Young.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Heart To Heart.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/The Less I Know The Better.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Feels Like We Only Go Backwards.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Eventually.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/One More Hour.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Breathe Deeper.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Instant Destiny.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Apocalypse.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Heartbeat.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Money.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Feeling Like The End.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Shut up My Moms Calling.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Notion.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Reflections.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Tek It.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Husk.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Bad Habit.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Alternative Outro.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Neverender.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Borderline.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Tek It - Sped Up.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Swing Lynn.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Lovers Rock.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Good Looking.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-10-05T14:28:58 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-10-05T14:28:58 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-10-05T14:28:58 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/I Hope to Be Around.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Solo.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Mrs Magic.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/On the Level.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Let Down.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Sex, Drugs, Etc..mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Babydoll.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/My Love Mine All Mine.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Ghostride.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/In My Head.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Headlock.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Golden Brown.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/i love u..mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Confess Your Love.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Homage.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Something About You.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Loser.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/All I Need.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/(dream).mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/welcome and goodbye.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Messages from the Stars.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/Stephanie.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/New Person, Same Old Mistakes.mp3
+2025-10-05T14:28:58 update: added SpotiDownloader.com - Indie.zip/We Are The People.mp3
+2025-10-05T14:28:58 update: updating /Mrs Magic.mp3
+2025-10-05T14:28:58 update: updating /We Are The People.mp3
+2025-10-05T14:28:58 update: updating /Sex, Drugs, Etc..mp3
+2025-10-05T14:28:58 update: updating /Freaking Out the Neighborhood.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-10-05T14:28:58 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 118581.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-10-05T14:28:58 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-10-05T14:28:58 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-10-05T14:28:58 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-10-05T14:28:58 update: updating /Neverender.mp3
+2025-10-05T14:28:58 update: updating /New Person, Same Old Mistakes.mp3
+2025-10-05T14:28:58 update: updating /Swing Lynn.mp3
+2025-10-05T14:28:58 update: updating /Telephones.mp3
+2025-10-05T14:28:58 update: added /(dream).mp3
+2025-10-05T14:28:58 update: updating /Apocalypse.mp3
+2025-10-05T14:28:58 update: updating /Good Looking.mp3
+2025-10-05T14:28:58 update: updating /Show Me How.mp3
+2025-10-05T14:28:58 update: added /welcome and goodbye.mp3
+2025-10-05T14:28:58 update: updating /Alternative Outro.mp3
+2025-10-05T14:28:58 update: updating /Feels Like We Only Go Backwards.mp3
+2025-10-05T14:28:58 update: updating /Notion.mp3
+2025-10-05T14:28:58 update: updating /Borderline.mp3
+2025-10-05T14:28:58 update: added /All I Need.mp3
+2025-10-05T14:28:58 update: added /Messages from the Stars.mp3
+2025-10-05T14:28:58 update: updating /Breathe Deeper.mp3
+2025-10-05T14:28:58 update: updating /Feeling Like The End.mp3
+2025-10-05T14:28:58 update: updating /Where'd All the Time Go?.mp3
+2025-10-05T14:28:58 update: updating /Swim.mp3
+2025-10-05T14:28:58 update: updating /One More Hour.mp3
+2025-10-05T14:28:58 update: updating /Moonlight on the River.mp3
+2025-10-05T14:28:58 update: updating /Solo.mp3
+2025-10-05T14:28:58 update: updating /Let Down.mp3
+2025-10-05T14:28:58 update: updating /Reflections.mp3
+2025-10-05T14:28:58 update: updating /Loser.mp3
+2025-10-05T14:28:58 update: updating /Heartbeat.mp3
+2025-10-05T14:28:58 update: updating /What Would I Do?.mp3
+2025-10-05T14:28:58 update: removing Freaking Out the Neighborhood.mp3
+2025-10-05T14:28:58 update: removing SpotiDownloader.com - Stephanie - Nafeesisboujee.mp3
+2025-10-05T14:29:06 player: played "My Kind of Woman.mp3"
+2025-10-05T14:33:37 player: played "We Are The People.mp3"
+2025-10-05T14:35:51 player: played "(dream).mp3"
+2025-10-05T14:36:00 player: played "(dream).mp3"
