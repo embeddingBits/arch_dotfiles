@@ -9,23 +9,24 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "jdtls", "lua_ls", "clangd", "zls", "gopls", "verible" }
+        ensure_installed = { "lua_ls", "clangd", "zls", "gopls", "verible" }
       })
-      end
+    end
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities
-    })
-      lspconfig.clangd.setup({ capabilities = capabilities })
-      lspconfig.zls.setup({ capabilities = capabilities })
-      lspconfig.gopls.setup({ capabilities = capabilities })
-      lspconfig.svlangserver.setup({ capabilities = capabilities })
+      vim.lsp.config('*', {
+        capabilities = capabilities,
+      })
+
+      vim.lsp.enable('lua_ls')
+      vim.lsp.enable('clangd')
+      vim.lsp.enable('zls')
+      vim.lsp.enable('gopls')
+      vim.lsp.enable('verible')
+      vim.lsp.enable('svlangserver')
     end
   }
 }
-

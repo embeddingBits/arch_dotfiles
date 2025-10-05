@@ -1,0 +1,112 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "display": {
+        "separator": "    ",
+        "constants": [
+            "─────────────────"
+        ],
+        "key": {
+            "type": "icon",
+            "paddingLeft": 2
+        }
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "outputColor": "red",
+            "format": "┌───{$1} EmbeddingBits {$1}────┐",
+            "outputColor": "red"
+        },
+        {
+            "type": "title",
+            "keyIcon": "",
+            "key": "Title",
+            "keyColor": "blue",
+            "format": "EmbeddingBits"
+        },
+        {
+            "type": "custom",
+            "format": "└{$1}──────────────────────{$1}┘"
+        },
+        {
+            "type": "custom",
+            "format": "┌{$1} Hardware Information {$1}┐",
+            "color": "red"
+        },
+         {
+            "type": "host",
+            "key": "╭─󰌢",
+            "keyColor": "blue"
+        },
+        {
+            "type": "cpu",
+            "key": "├─󰻠",
+            "keyColor": "blue"
+        },
+        {
+            "type": "gpu",
+            "key": "├─󰍛",
+            "keyColor": "blue"
+        },
+        {
+            "type": "disk",
+            "key": "├─",
+            "keyColor": "blue"
+        },
+        {
+            "type": "memory",
+            "key": "├─󰑭",
+            "keyColor": "blue"
+        },
+        {
+            "type": "custom",
+            "format": "├{$1} Software Information {$1}┤",
+            "color": "red"
+        },
+        {
+            "type": "os",
+            "keyIcon": "󰣇", // Just get your distro's logo off nerdfonts.com
+            "keyColor": "blue"
+        },
+        {
+            "type": "kernel",
+            "keyIcon": "",
+            "keyColor": "blue"
+        },
+    {
+            "type": "de",
+            "key": "├─",
+            "keyColor": "blue"
+        },
+        {
+            "type": "wm",
+            "key": "├─",
+            "keyColor": "blue"
+        },
+     {
+            "type": "shell",
+            "key": "╭─",
+            "keyColor": "blue"
+        },
+        {
+            "type": "terminal",
+            "key": "├─",
+            "keyColor": "blue"
+        },
+        {
+            "type": "packages",
+            "key": "├─󰏖",
+            "keyColor": "blue"
+        },
+        {
+            "type": "custom",
+            "format": "└{$1}──────────────────────{$1}┘"
+        },
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        }
+    ]
+}
+
