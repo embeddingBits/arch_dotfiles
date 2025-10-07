@@ -3,7 +3,7 @@
     "showOptionsButton": true
   },
   "user": {
-    "name": "EmbeddingBits"
+    "name": "eBits"
   },
   "title": {
     "defaultTitle": "eBits",
@@ -18,7 +18,7 @@
       "type": "default",
       "custom": ""
     },
-    "textColor": "#ffffff",
+    "textColor": "#cc241d",
     "textSize": 3.75,
     "type": "afternoon-morning",
     "customText": "your custom text",
@@ -36,7 +36,7 @@
     }
   },
   "ui": {
-    "style": "glass",
+    "style": "solid",
     "glassColor": "#ffffff20",
     "blurStrength": "32px",
     "foregroundColor": "#262626",
@@ -58,17 +58,17 @@
       "type": "default",
       "custom": ""
     },
-    "textColor": "#ffffff",
+    "textColor": "#ebdbb2",
     "placeholderText": "search...",
     "bookmarkPlaceholderText": "find bookmark...",
-    "placeholderTextColor": "#a1a1aa",
-    "searchIconColor": "#14b8a6",
+    "placeholderTextColor": "#ebdbb2",
+    "searchIconColor": "#b8bb26",
     "bookmarkIconColor": "#3b82f6",
-    "selectIconColor": "#f59e0b",
+    "selectIconColor": "#83a598",
     "engine": "duckduckgo",
     "useCustomEngine": false,
     "customEngineURL": "",
-    "focusedBorderColor": "#0ea5e9",
+    "focusedBorderColor": "#83A598",
     "assist": {
       "date": true,
       "math": true,
@@ -94,28 +94,37 @@
         "type": "bookmark",
         "name": "github",
         "url": "https://github.com/EmbeddingBits",
-        "color": "#6366f1",
+        "color": "#282828",
         "iconType": "nf-md-github",
-        "iconColor": "#ffffff",
-        "fill": ""
+        "iconColor": "#ebdbb2",
+        "fill": "#1d2021"
       },
       {
         "type": "bookmark",
         "name": "Reddit",
         "url": "https://reddit.com",
-        "color": "#ffffff",
+        "color": "#d65d01",
         "iconType": "nf-md-reddit",
-        "iconColor": "#ffffff",
-        "fill": ""
+        "iconColor": "#d65d01",
+        "fill": "#1d2021"
       },
       {
         "type": "bookmark",
         "name": "Youtube",
         "url": "https://youtube.com",
-        "color": "#ffffff",
+        "color": "#cc241d",
         "iconType": "nf-fa-youtube",
-        "iconColor": "#ffffff",
-        "fill": ""
+        "iconColor": "#cc241d",
+        "fill": "#1d2021"
+      },
+      {
+        "type": "bookmark",
+        "name": "Whatsapp",
+        "url": "https://web.whatsapp.com/",
+        "color": "#b8bb26",
+        "iconType": "nf-fa-whatsapp",
+        "iconColor": "#b8bb26",
+        "fill": "#1d2021"
       }
     ],
     "defaultBlockyCols": 4,
@@ -126,7 +135,7 @@
   },
   "extras": {
     "snow": {
-      "enabled": "on"
+      "enabled": "off"
     }
   }
 }
