@@ -27,6 +27,10 @@ function mus
       systemctl --user enable --now mpd.service && rmpc && systemctl --user stop mpd.service && systemctl --user disable mpd.service
 end
 
+function moto
+	wlr-randr --output eDP-1 --scale 1.7
+end
+
 function ls
     set -l exa_args
 
