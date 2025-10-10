@@ -3,7 +3,7 @@
 # This script is designed to replicate the Hyprland configuration for the River window manager.
 
 ### MY PROGRAMS ###
-TERMINAL="foot"
+TERMINAL="kitty"
 FILE_MANAGER="dolphin -stylesheet ~/archhypr_dotfiles/kde_stuff/dolphin.qss"
 MENU="rofi -show drun"
 
@@ -11,7 +11,6 @@ riverctl rule-add ssd
 riverctl rule-add -app-id com.mitchellh.ghostty ssd
 
 ### AUTOSTART ###
-kanshi &
 swww-daemon &
 waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
 dunst &
