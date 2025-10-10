@@ -11,7 +11,6 @@ riverctl rule-add ssd
 riverctl rule-add -app-id com.mitchellh.ghostty ssd
 
 ### AUTOSTART ###
-kanshi &
 swww-daemon &
 waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
 dunst &
