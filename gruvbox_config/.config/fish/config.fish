@@ -11,24 +11,16 @@ function fastfetch_big
       fastfetch -c ~/.config/fastfetch/large.jsonc --logo-color-1 blue --logo-color-2 red
 end
 
-function fastfetch_small
+function fetch
       fastfetch -c ~/.config/fastfetch/small.jsonc --logo-color-1 blue --logo-color-2 red
-end
-
-function fasitty
-      fastfetch -c ~/.config/fastfetch/kitty.jsonc
-end
-
-function swww-sh
-     waypaper --wallpaper ~/Pictures/Wallpapers/Nord/a_planet_in_the_sky.jpg 
 end
 
 function mus
       systemctl --user enable --now mpd.service && rmpc && systemctl --user stop mpd.service && systemctl --user disable mpd.service
 end
 
-function moto
-	wlr-randr --output eDP-1 --scale 1.7
+function nv
+      nvim $argv
 end
 
 function ls
