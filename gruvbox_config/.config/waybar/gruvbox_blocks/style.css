@@ -39,7 +39,7 @@ window#waybar {
 /* Specific styling for launcher */
 #custom-launcher {
     background-color: #282828;
-    color: #cc241d;
+    color: #EA6962;
     border-radius: 0px;
     border: solid 2px #504945;
     padding: 2px 6px;
@@ -49,7 +49,7 @@ window#waybar {
 #window {
     background-color: #282828;
     border: solid 2px #504945;
-    color: #cc241d;
+    color: #EA6962;
     border-radius: 0px;
     padding: 2px 7px;
     margin: 8px 4px;
@@ -59,7 +59,7 @@ window#waybar {
 .modules-center {
     background-color: #282828;
     border: solid 2px #504945;
-    color: #cc241d;
+    color: #EA6962;
     border-radius: 0px;
     padding: 0px 6px;
     margin: 8px 4px;
@@ -108,11 +108,11 @@ window#waybar {
 #workspaces button.focused,
 #workspaces button.active {
     background-color: #282828;
-    color: #cc241d;
+    color: #EA6962;
 }
 
 #workspaces button.urgent {
-    background-color: #cc241d;
+    background-color: #EA6962;
     color: #fbf1c7;
 }
 
@@ -152,18 +152,18 @@ window#waybar {
 #tags button.focused,
 #tags button.active {
     background-color: #282828;
-    color: #cc241d;
+    color: #EA6962;
 }
 
 #tags button.urgent {
-    background-color: #cc241d;
+    background-color: #EA6962;
     color: #fbf1c7;
 }
 
 /* Module-specific coloring */
 #backlight {
     background-color: #282828;
-    color: #98971a;
+    color: #a9b665;
 }
 
 #mpd {
@@ -178,26 +178,22 @@ window#waybar {
 
 #memory {
     background-color: #282828;
-    color: #d65d0e;
+    color: #e78a4e;
 }
 
-#custom-memory {
-    background-color: #282828;
-    color: #d65d0e;
-}
 #battery {
     background-color: #282828;
-    color: #b16286;
+    color: #D3869B;
 }
 
 #battery.charging,
 #battery.plugged {
-    color: #98971a;
+    color: #a9b665;
     background-color: #282828;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #cc241d;
+    background-color: #EA6962;
     color: #ebdbb2;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -208,7 +204,7 @@ window#waybar {
 
 #network {
     background-color: #282828;
-    color: #d79921;
+    color: #d8a657;
 }
 
 #pulseaudio {
@@ -218,7 +214,7 @@ window#waybar {
 
 #pulseaudio.muted {
     background-color: #282828;
-    color: #cc241d;
+    color: #EA6962;
 }
 
 /* Cava Visualizer */
