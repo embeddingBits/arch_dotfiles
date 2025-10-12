@@ -1,0 +1,30 @@
+# Background and Opacity
+background-opacity = 1
+background-blur = 1
+
+# Cursor Settings
+cursor-style = block
+cursor-style-blink = false
+
+# Window Decorations
+window-padding-x = 15, 15
+window-padding-y = 15, 0
+window-padding-balance = true
+window-decoration = none
+gtk-single-instance = true
+
+# Misc
+confirm-close-surface = false
+shell-integration-features = no-cursor
+
+# Font Settings
+font-size = 14
+
+font-family = JetBrainsMono NF SemiBold
+font-family-bold = "JetBrainsMono NF ExtraBold" 
+font-family-italic = "JetBrainsMono NF Semibold"
+font-family-bold-italic = "JetBrainsMono NF ExtraBold"
+
+# Theme
+theme = /home/ebits/.config/ghostty/themes/gruvbox.conf
+bold-is-bright = true
