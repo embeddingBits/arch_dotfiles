@@ -3,7 +3,7 @@
 # This script is designed to replicate the Hyprland configuration for the River window manager.
 
 ### MY PROGRAMS ###
-TERMINAL="kitty"
+TERMINAL="ghostty"
 FILE_MANAGER="dolphin -stylesheet ~/archhypr_dotfiles/kde_stuff/dolphin.qss"
 MENU="rofi -show drun"
 
@@ -20,7 +20,7 @@ source "$HOME/.config/river/env.sh"
 
 ### LOOK AND FEEL ###
 riverctl background-color 0x1d2021
-riverctl border-color-focused 0x458588
+riverctl border-color-focused 0xD79921
 riverctl border-color-unfocused 0x1d2021
 riverctl border-width 3
 riverctl view-padding 5
