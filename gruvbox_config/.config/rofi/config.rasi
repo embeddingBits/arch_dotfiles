@@ -1,7 +1,7 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,filebrowser,window";
+	modi:                       "drun,filebrowser";
     show-icons:                 true;
     display-drun:               " ";
     display-run:                " ";
@@ -28,7 +28,7 @@ configuration {
     urgent-foreground:           var(background);
     active-background:           var(active);
     active-foreground:           var(background);
-    selected-normal-background:  var(selected);
+    selected-normal-background:  var(selected1);
     selected-normal-foreground:  var(background);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
@@ -78,12 +78,12 @@ mainbox {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     30px;
+    padding:                     20px;
     border:                      3px solid;
-    border-radius:               5px 5px 5px 5px;
+    border-radius:               0px 0px 0px 0px;
     border-color:                @border;
     background-color:            transparent;
-    children:                    [ "inputbar", "message", "listview" ];
+    children:                    [ "inputbar", "listview" ];
 }
 
 /*****----- Inputbar -----*****/
@@ -92,35 +92,33 @@ inputbar {
     spacing:                     10px;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
+    border:                      2px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
+    border-color:                @border;
     background-color:            transparent;
     text-color:                  @foreground-colour;
-    children:                    [ "textbox-prompt-colon", "entry", "mode-switcher" ];
+    children:                    [ "textbox-prompt-colon", "entry" ];
 }
 
-prompt {
-    enabled:                     true;
-    background-color:            inherit;
-    text-color:                  inherit;
-}
 textbox-prompt-colon {
     enabled:                     true;
-    padding:                     5px 0px;
+    padding:                     5px 10px;
+    margin:                      2px;
     expand:                      false;
-    str:                         " ";
+    str:                         " Apps: ";
+    border:                      2px solid;
+    border-color:                @border;
     background-color:            inherit;
     text-color:                  inherit;
 }
 entry {
     enabled:                     true;
     padding:                     5px 0px;
+    margin:                       2px;
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Search...";
-    placeholder-color:           inherit;
+    placeholder-color:           #1d2021;
 }
 num-filtered-rows {
     enabled:                     true;
@@ -154,7 +152,7 @@ listview {
     lines:                       8;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   true;
+    scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
@@ -165,16 +163,10 @@ listview {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
+    border-color:                @border;
     background-color:            transparent;
-    text-color:                  @foreground-colour;
+    text-color:                  #d7991a;
     cursor:                      "default";
-}
-scrollbar {
-    handle-width:                5px ;
-    handle-color:                @border;
-    border-radius:               10px;
-    background-color:            @alternate-background;
 }
 
 /*****----- Elements -----*****/
@@ -184,7 +176,7 @@ element {
     margin:                      0px;
     padding:                     5px 10px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               0px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
