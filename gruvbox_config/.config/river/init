@@ -12,7 +12,6 @@ riverctl rule-add -app-id com.mitchellh.ghostty ssd
 
 ### AUTOSTART ###
 swww-daemon &
- wlr-randr --output eDP-1 --scale 1.7
 waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
 dunst &
 

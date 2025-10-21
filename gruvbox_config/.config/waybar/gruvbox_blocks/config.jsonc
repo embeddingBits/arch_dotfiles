@@ -2,10 +2,10 @@
 {
       "layer": "top",
       "position": "top", // Waybar position (top|bottom|left|right)
-      "height": 20, // Waybar height
-      "spacing": 1, // Gaps between modules
-      "margin-left": 5,
-      "margin-right": 5,
+      "height": 15, // Waybar height
+      "spacing": 2, // Gaps between modules
+      "margin-left": 10,
+      "margin-right": 10,
       "margin-top": 5,
       "modules-left": [
             "custom/launcher",    
@@ -88,7 +88,8 @@
                   "Google-chrome": " Chrome",
                   "org.pwmt.zathura": " Zathura",
                   "uv4.exe": " Keil",
-                  "thunderbird": "  ThunderBird"
+                  "thunderbird": "  ThunderBird",
+                  "com.mitchellh.ghostty": "󰊠  Ghostty"
             } 
       },
 

@@ -18,12 +18,12 @@ confirm-close-surface = false
 shell-integration-features = no-cursor
 
 # Font Settings
-font-size = 14
+font-size = 15
 
-font-family = JetBrainsMono NF SemiBold
-font-family-bold = "JetBrainsMono NF ExtraBold" 
-font-family-italic = "JetBrainsMono NF Semibold"
-font-family-bold-italic = "JetBrainsMono NF ExtraBold"
+font-family = IosevkaTerm NF SemiBold
+font-family-bold = "IosevkaTerm NFP Semibold" 
+font-family-italic = "IosevkaTerm NFP Semibold"
+font-family-bold-italic = "IosevkaTerm NFP ExtraBold"
 
 # Theme
 theme = /home/ebits/.config/ghostty/themes/gruvbox.conf

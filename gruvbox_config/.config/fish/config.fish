@@ -3,7 +3,7 @@ if status is-interactive
 end
 set fish_greeting
 starship init fish | source
-set -x BAT_THEME Nord
+set -x BAT_THEME Gruvbox
 set -x EDITOR nvim
 fish_add_path /home/amiitesh/.spicetify
 
@@ -17,6 +17,18 @@ end
 
 function mus
       systemctl --user enable --now mpd.service && rmpc && systemctl --user stop mpd.service && systemctl --user disable mpd.service
+end
+
+function mirrorOut
+      wlr-randr --output HDMI-A-1 --mode 1920x1080 --pos 0,0
+end
+
+function dual
+      wlr-randr --output HDMI-A-1 --pos 0,0 --output eDP-1 --pos 1920,0
+end
+
+function f
+      feh --scale-down --auto-zoom --geometry 1100x800 --no-menus --image-bg black $argv
 end
 
 function nv

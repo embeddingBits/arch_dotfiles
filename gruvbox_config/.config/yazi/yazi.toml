@@ -4,9 +4,13 @@ show_hidden = true
 ratio = [2, 4, 6]
 
 [preview]
-max_height = 1920
-max_width = 1080
-cache_dir = "/home/ebits/.cache/yazi"
+tab_size = 2
+max_height = 1080
+max_width = 900
+cache_dir = ""
+iamge_quality = 75
+ueberzug_scale = 1
+ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 pdf = [
@@ -16,7 +20,7 @@ edit = [
 { run = 'nvim "$@"', desc = "Open with Neovim", block = true, for = "unix" }
 ]
 img = [
-{ run = 'feh --zoom 75 "$@"', desc = "Open with feh", block = true, for = "unix" }
+{ run = 'feh --scale-down --auto-zoom --geometry 1100x800 --no-menus --image-bg black', desc = "Open with feh", block = true, for = "unix" }
 ]
 
 [open]
