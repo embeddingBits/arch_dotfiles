@@ -1,13 +1,22 @@
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
-    font-size: 16px;
+      font-family: "IosevkaTerm Nerd Font Propo";
+      font-weight: bold;
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+      min-height: 0;
+      border-radius: 0;
+      border: none;
+      text-shadow: none;
+      transition: none;
+      box-shadow: none;
 }
 
 window#waybar {
-    background: #1d2021;
-    color: #ebdbb2; /* Gruvbox light text */
-    margin: 10px 10px;
+      background: #1d2021;
+      color: #ebdbb2; /* Gruvbox light text */
+      margin: 10px 10px;
+      min-height: 0;
 }
 
 /* Base module styling */
@@ -30,214 +39,214 @@ window#waybar {
 #tray,
 #custom-launcher,
 #custom-power {
-    background-color: transparent;
-    color: inherit;
-    padding: 0px 10px;
-    margin: 0;
+      background-color: transparent;
+      color: inherit;
+      padding: 0px 10px;
+      margin: 0;
 }
 
 /* Specific styling for launcher */
 #custom-launcher {
-    background-color: #282828;
-    color: #EA6962;
-    border-radius: 0px;
-    border: solid 2px #504945;
-    padding: 2px 6px;
-    margin: 8px 4px;
+      background-color: #282828;
+      color: #EA6962;
+      border-radius: 0px;
+      border: solid 2px #504945;
+      padding: 2px 6px;
+      margin: 8px 4px;
 }
 
 #window {
-    background-color: #282828;
-    border: solid 2px #504945;
-    color: #EA6962;
-    border-radius: 0px;
-    padding: 2px 7px;
-    margin: 8px 4px;
+      background-color: #282828;
+      border: solid 2px #504945;
+      color: #EA6962;
+      border-radius: 0px;
+      padding: 2px 7px;
+      margin: 8px 4px;
 }
 
 /* Center module container */
 .modules-center {
-    background-color: #282828;
-    border: solid 2px #504945;
-    color: #EA6962;
-    border-radius: 0px;
-    padding: 0px 6px;
-    margin: 8px 4px;
+      background-color: #282828;
+      border: solid 2px #504945;
+      color: #EA6962;
+      border-radius: 0px;
+      padding: 0px 6px;
+      margin: 8px 4px;
 }
 
 /* Right-aligned modules */
 .modules-right {
-    background-color: #282828;
-    border: solid 2px #504945;
-    border-radius: 0px;
-    padding: 0px 6px;
-    margin: 8px 4px;
+      background-color: #282828;
+      border: solid 2px #504945;
+      border-radius: 0px;
+      padding: 0px 6px;
+      margin: 8px 4px;
 }
 
 #workspaces {
-    background-color: #282828;
-    border-radius: 0px;
-    border: solid 2px #504945;
-    padding: 0;
-    margin: 8px 4px;
+      background-color: #282828;
+      border-radius: 0px;
+      border: solid 2px #504945;
+      padding: 0;
+      margin: 8px 4px;
 }
 
 #workspaces button {
-    padding: 4px 10px;
-    margin: 0;
-    border: none;
-    background-color: transparent;
-    color: #83a598;
-    border-radius: 0;
+      padding: 4px 10px;
+      margin: 0;
+      border: none;
+      background-color: transparent;
+      color: #83a598;
+      border-radius: 0;
 }
 
 #workspaces button:first-child {
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
 }
 #workspaces button:last-child {
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
 }
 
 #workspaces button:hover {
-    background-color: #504945;
-    color: #ebdbb2;
+      background-color: #504945;
+      color: #ebdbb2;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: #282828;
-    color: #EA6962;
+      background-color: #282828;
+      color: #EA6962;
 }
 
 #workspaces button.urgent {
-    background-color: #EA6962;
-    color: #fbf1c7;
+      background-color: #EA6962;
+      color: #fbf1c7;
 }
 
 /* River Tags container */
 #tags {
-    background-color: #282828;
-    border-radius: 0px;
-    border: solid 2px #504945;
-    padding: 0;
-    margin: 8px 4px;
+      background-color: #282828;
+      border-radius: 0px;
+      border: solid 2px #504945;
+      padding: 0;
+      margin: 8px 4px;
 }
 
 /* Tag buttons */
 #tags button {
-    padding: 4px 3px;
-    margin: 0;
-    border: none;
-    background-color: transparent;
-    color: #83a598;
-    border-radius: 0;
+      padding: 4px 3px;
+      margin: 0;
+      border: none;
+      background-color: transparent;
+      color: #83a598;
+      border-radius: 0;
 }
 
 #tags button:first-child {
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
 }
 #tags button:last-child {
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
 }
 
 #tags button:hover {
-    background-color: #504945;
-    color: #ebdbb2;
+      background-color: #504945;
+      color: #ebdbb2;
 }
 
 #tags button.focused,
 #tags button.active {
-    background-color: #282828;
-    color: #EA6962;
+      background-color: #282828;
+      color: #EA6962;
 }
 
 #tags button.urgent {
-    background-color: #EA6962;
-    color: #fbf1c7;
+      background-color: #EA6962;
+      color: #fbf1c7;
 }
 
 /* Module-specific coloring */
 #backlight {
-    background-color: #282828;
-    color: #a9b665;
+      background-color: #282828;
+      color: #a9b665;
 }
 
 #mpd {
-    background-color: #282828;
-    color: #98971a;
+      background-color: #282828;
+      color: #98971a;
 }
 
 #window {
-    background-color: #282828;
-    color: #83a598;
+      background-color: #282828;
+      color: #83a598;
 }
 
 #memory {
-    background-color: #282828;
-    color: #e78a4e;
+      background-color: #282828;
+      color: #e78a4e;
 }
 
 #battery {
-    background-color: #282828;
-    color: #D3869B;
+      background-color: #282828;
+      color: #D3869B;
 }
 
 #battery.charging,
 #battery.plugged {
-    color: #a9b665;
-    background-color: #282828;
+      color: #a9b665;
+      background-color: #282828;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #EA6962;
-    color: #ebdbb2;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+      background-color: #EA6962;
+      color: #ebdbb2;
+      animation-name: blink;
+      animation-duration: 0.5s;
+      animation-timing-function: steps(12);
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
 }
 
 #network {
-    background-color: #282828;
-    color: #d8a657;
+      background-color: #282828;
+      color: #d8a657;
 }
 
 #pulseaudio {
-    background-color: #282828;
-    color: #83a598;
+      background-color: #282828;
+      color: #83a598;
 }
 
 #pulseaudio.muted {
-    background-color: #282828;
-    color: #EA6962;
+      background-color: #282828;
+      color: #EA6962;
 }
 
 /* Cava Visualizer */
 #cava {
-    background-color: #282828;
-    color: #83a598;
-    font-family: "JetBrainsMono Nerd Font Mono";
-    border: solid 2px #504945;
-    padding: 2px 5px;
-    margin: 8px 4px;
+      background-color: #282828;
+      color: #83a598;
+      font-family: "JetBrainsMono Nerd Font Mono";
+      border: solid 2px #504945;
+      padding: 2px 5px;
+      margin: 8px 4px;
 }
 
 @keyframes blink {
-    to {
-        background-color: #fbf1c7;
-        color: #282828;
-    }
+to {
+      background-color: #fbf1c7;
+      color: #282828;
+}
 }
 
 /* Edge fixes */
 .modules-left > widget:first-child > #tags {
-    margin-left: 0;
+      margin-left: 0;
 }
 .modules-right > widget:last-child > #tags {
-    margin-right: 0;
+      margin-right: 0;
 }
