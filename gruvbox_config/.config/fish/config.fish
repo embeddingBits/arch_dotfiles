@@ -3,7 +3,7 @@ if status is-interactive
 end
 set fish_greeting
 starship init fish | source
-set -x BAT_THEME Gruvbox
+set -x BAT_THEME gruvbox-dark
 set -x EDITOR nvim
 fish_add_path /home/amiitesh/.spicetify
 

@@ -1,18 +1,15 @@
-// -*- mode: jsonc -*-
 {
       "layer": "top",
-      "position": "top", // Waybar position (top|bottom|left|right)
-      "height": 15, // Waybar height
-      "spacing": 2, // Gaps between modules
-      "margin-left": 10,
-      "margin-right": 10,
+      "position": "top", 
+      "height": 25, 
+      "spacing": 5, 
+      "margin-left": 5,
+      "margin-right": 5,
       "margin-top": 5,
       "modules-left": [
             "custom/launcher",    
             "river/tags",
-            //"river/window",
-            "hyprland/workspaces",
-            "hyprland/window",
+            "mpris",
       ],
       "modules-center": [
             "clock"
@@ -24,7 +21,6 @@
             "backlight",
             "battery",
       ],
-      // Modules configuration
       "cava": {
             "framerate": 144,
             "bars": 12,
@@ -38,14 +34,14 @@
       },
 
       "custom/launcher":{
-            "format": " ",
+            "format": "",
             "on-click": "rofi -show drun",
             "on-click-right": "killall rofi"
       },
 
       "river/tags": {
             "num-tags": 5,
-            "tag-labels": [" ", "󰈹 "," "," "," "],
+            "tag-labels": ["", "󰈹","","",""],
       },
 
       "river/window": {
@@ -77,51 +73,41 @@
             "format": "{class}",
             "max-length": 50,
             "rewrite": {
-                  "": "󰍹  Desktop", // Display "Desktop" when no window is focused
-                  "firefox": " Firefox",
-                  "kitty": "󰄛 Kitty",
-                  "discord": " Discord",
-                  "neovide": " Neovide",
-                  "spotify": " Spotify",
-                  "foot": "󰽒 foot", 
-                  "obsidian": " Obsidian",
-                  "Google-chrome": " Chrome",
-                  "org.pwmt.zathura": " Zathura",
-                  "uv4.exe": " Keil",
-                  "thunderbird": "  ThunderBird",
-                  "com.mitchellh.ghostty": "󰊠  Ghostty"
+                  "": "<span color='#83a598'>󰍹 </span> Desktop", 
+                  "firefox": "<span color='#83a598'> </span>Firefox",
+                  "kitty": "<span color='#83a598'>󰄛 </span>Kitty",
+                  "discord": "<span color='#83a598'> </span>Discord",
+                  "neovide": "<span color='#83a598'> </span>Neovide",
+                  "spotify": "<span color='#83a598'> </span>Spotify",
+                  "foot": "<span color='#83a598'>󰽒 </span>foot", 
+                  "obsidian": "<span color='#83a598'> </span>Obsidian",
+                  "Google-chrome": "<span color='#83a598'> </span>Chrome",
+                  "org.pwmt.zathura": "<span color='#83a598'> </span>Zathura",
+                  "uv4.exe": "<span color='#83a598'> </span>Keil",
+                  "thunderbird": "<span color='#83a598'> </span> ThunderBird",
+                  "com.mitchellh.ghostty": "<span color='#83a598'>󰊠 </span> Ghostty"
             } 
       },
 
-      "mpd": {
-            "format": "{stateIcon} {singleIcon}{artist} - {title} ({elapsedTime:%M:%S})",
-            "format-disconnected": "Disconnected ",
-            "format-stopped": "{stateIcon}Stopped",
-            "unknown-tag": "N/A",
-            "interval": 5,
-            "consume-icons": {
-                  "on": " "
+      "mpris": {
+            "interval": 1,
+            "format": "<span color='#a9b665'>{status_icon}</span> {artist} - {title}",
+            "format-disconnected": "Disconnected",
+            "format-stopped": "{status_icon} Stopped",
+            "ellipsis": "…",
+            "title-len": 40,
+            "player-icons": {
+                  "default": "▶"
             },
-            "random-icons": {
-                  "off": "<span color=\"#BF616A\"></span> ",
-                  "on": " "
-            },
-            "repeat-icons": {
-                  "on": " "
-            },
-            "single-icons": {
-                  "on": "1 "
-            },
-            "state-icons": {
+            "status-icons": {
                   "paused": "",
-                  "playing": ""
+                  "playing": "",
+                  "stopped": ""
             },
-            "tooltip-format": "MPD (connected)",
-            "tooltip-format-disconnected": "MPD (disconnected)"
-      },
+      }, 
       "clock": {
             "tooltip-format": "󰥔 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format": "󰥔 {:%a %d | %I:%M %p}",
+            "format": "<span color='#ea6962'>󰥔 </span>{:%a %d | %I:%M %p}",
             "interval": 1
       },
       "cpu": {
@@ -129,14 +115,8 @@
             "tooltip": false
       },
       "memory": {
-            "format": "󰍛{used: 0.2f} GB",
+            "format": "<span color='#E78A4E'>󰍛</span>{used: 0.2f} GB",
             "interval": 1,
-      },
-
-      "custom/memory": {
-            "exec": "~/.config/waybar/gruvbox_blocks/scripts/memory.sh",
-            "interval": 1,
-            "return-type": "json",
       },
 
       "temperature": {
@@ -145,7 +125,7 @@
             "format-icons": ["", "", ""]
       },
       "backlight": {
-            "format": "{icon} {percent}%",
+            "format": "<span color='#a9b665'>{icon}</span> {percent}%",
             "format-icons": ["", "", "", "", "", "", "", "", ""]
       },
       "battery": {
@@ -153,10 +133,10 @@
                   "warning": 30,
                   "critical": 15
             },
-            "format": "{icon} {capacity}%",
-            "format-full": "{icon} {capacity}%",
-            "format-charging": " {capacity}%",
-            "format-plugged": "{capacity}% ",
+            "format": "<span color='#D3869B'>{icon}</span> {capacity}%",
+            "format-full": "<span color='#d3869b'>{icon}</span> {capacity}%",
+            "format-charging": "<span color='#d3869b'> </span>{capacity}%",
+            "format-plugged": "<span color='#d3869b'></span>{capacity}% ",
             "format-alt": "{time} {icon}",
             "format-icons": ["", "", "", "", ""]
       },
@@ -172,17 +152,17 @@
             }
       },
       "network": {
-            "format-wifi": "{icon} {essid}",
+            "format-wifi": "<span color='#D8A657'>{icon}</span> {essid}",
             "format-disconnected": "Disconnected ⚠",
             "format-alt": "{ifname}: {ipaddr}/{cidr}",
             "interval": 5,
             "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
       },
       "pulseaudio": {
-            "format": "{icon}  {volume}%",
+            "format": "<span color='#83a598'>{icon}</span>  {volume}%",
             "format-muted": "󰝟  {volume}%",
-            "format-bluetooth": "{icon} {volume}%",
-            "format-bluetooth-muted": " {volume}%",
+            "format-bluetooth": "<span color='#83a598'>{icon}</span> {volume}%",
+            "format-bluetooth-muted": "<span color='#ea6962'>󰂲 </span>{volume}%",
             "format-source-muted": "󰝟 ",
             "format-icons": {
                   "headphone": "",
