@@ -2188,3 +2188,40 @@ Note: Hit end of (available) data during resync.
 2025-10-22T12:30:38 player: played "Heartbeat.mp3"
 2025-10-22T12:31:00 player: played "Heartbeat.mp3"
 2025-10-22T12:34:06 player: played "Swim.mp3"
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:08:53 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:08:54 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:08:54 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:08:56 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:08:56 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:08:58 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:08:58 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:09:07 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:09:07 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:12:32 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:12:32 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:12:32 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+2025-10-23T14:17:09 player: played "Heartbeat.mp3"
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:20:14 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+2025-10-23T14:20:58 player: played "Swim.mp3"
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:20:58 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:20:58 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:21:20 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+[src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
+2025-10-23T14:21:20 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
+2025-10-23T14:23:51 player: played "Swim.mp3"
