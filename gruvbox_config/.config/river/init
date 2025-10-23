@@ -2,6 +2,9 @@
 
 # This script is designed to replicate the Hyprland configuration for the River window manager.
 
+### ENVIRONMENT VARIABLES ###
+source "$HOME/.config/river/env.sh"
+
 ### MY PROGRAMS ###
 TERMINAL="ghostty"
 FILE_MANAGER="dolphin -stylesheet ~/archhypr_dotfiles/kde_stuff/dolphin.qss"
@@ -15,8 +18,6 @@ swww-daemon &
 waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
 dunst &
 
-### ENVIRONMENT VARIABLES ###
-source "$HOME/.config/river/env.sh"
 
 ### LOOK AND FEEL ###
 riverctl background-color 0x1d2021

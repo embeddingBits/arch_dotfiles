@@ -8,6 +8,8 @@
       "margin-top": 5,
       "modules-left": [
             "custom/launcher",    
+            "hyprland/workspaces",
+            "hyprland/window",
             "river/tags",
             "mpris",
       ],
