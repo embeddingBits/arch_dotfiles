@@ -91,7 +91,7 @@
 
       "mpris": {
             "interval": 1,
-            "format": "<span color='#a9b665'>{status_icon}</span> {artist} - {title}",
+            "format": "<span color='#a9b665'>{status_icon}</span> {artist} 󰎆 {title}",
             "format-disconnected": "Disconnected",
             "format-stopped": "{status_icon} Stopped",
             "ellipsis": "…",
