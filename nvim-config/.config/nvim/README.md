@@ -1,4 +1,4 @@
 # My usual Neovim Configuration 
 
-![dashboard2](./dashboard2.png)
-![syntax2](./syntax2.png)
+![dashboard1](./dashboard1.png)
+![syntax1](./syntax1.png)
