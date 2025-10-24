@@ -1,0 +1,14 @@
+gui:  
+  nerdFontsVersion: '3'
+  border: 'double'
+  theme:
+    defaultFgColor:
+      - 'ebdbb2'
+    activeBorderColor:
+      - '#D8A657'
+      - bold
+    inactiveBorderColor:
+      - '#A89984'
+      - bold
+    unstagedChangesColor:
+      - '#EA6962'
