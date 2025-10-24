@@ -21,7 +21,7 @@ dunst &
 
 ### LOOK AND FEEL ###
 riverctl background-color 0x1d2021
-riverctl border-color-focused 0xD79921
+riverctl border-color-focused 0xD8A657
 riverctl border-color-unfocused 0x1d2021
 riverctl border-width 3
 riverctl view-padding 5
