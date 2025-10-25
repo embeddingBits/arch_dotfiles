@@ -34,7 +34,7 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 style = "bg:#282828"
-format = '[[ $symbol  $branch ](fg:#689d6a bg:#282828)]($style)'
+format = '[[ $symbol  $branch ](fg:#89b482 bg:#282828)]($style)'
 
 [git_status]
 style = "bg:#282828"
@@ -43,17 +43,17 @@ format = '[[($all_status$ahead_behind )](fg:#98971a bg:#282828)]($style)'
 [c]
 symbol = ""
 style = "bg:#3c3836"
-format = '[[ $symbol  ($version) ](fg:#d79921 bg:#3c3836)]($style)'
+format = '[[ $symbol  ($version) ](fg:#7daea3 bg:#3c3836)]($style)'
 
 [rust]
 symbol = ""
 style = "bg:#3c3836"
-format = '[[ $symbol  ($version) ](fg:#d79921 bg:#3c3836)]($style)'
+format = '[[ $symbol  ($version) ](fg:#e78a4e bg:#3c3836)]($style)'
 
 [golang]
 symbol = ""
 style = "bg:#3c3836"
-format = '[[ $symbol  ($version) ](fg:#d79921 bg:#3c3836)]($style)'
+format = '[[ $symbol  ($version) ](fg:#7daea3 bg:#3c3836)]($style)'
 
 [php]
 symbol = ""
@@ -63,12 +63,12 @@ format = '[[ $symbol  ($version) ](fg:#d79921 bg:#3c3836)]($style)'
 [python]
 symbol = ""
 style = "bg:#3c3836"
-format = '[[ $symbol  ($version) ](fg:#d79921 bg:#3c3836)]($style)'
+format = '[[ $symbol  ($version) ](fg:#83a598 bg:#3c3836)]($style)'
 
 [zig]
 symbol = ""
 style = "bg:#3c3836"
-format = '[[ $symbol  ($version) ](fg:#d79921 bg:#3c3836)]($style)'
+format = '[[ $symbol  ($version) ](fg:#d8a657 bg:#3c3836)]($style)'
 
 [time]
 disabled = false
