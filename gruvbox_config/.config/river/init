@@ -44,6 +44,7 @@ riverctl map normal $MOD B spawn "rofi-bluetooth"
 riverctl map normal $MOD U spawn "rofi -show emoji"
 riverctl map normal "$MOD+Shift" K spawn "wine ~/.wine/drive_c/Keil_v5/UV4/UV4.exe"
 riverctl map normal "$MOD+Shift" W spawn "sh ~/.config/rofi/rofi-wifi-menu.sh"
+riverctl map normal "$MOD+Shift" S spawn "rofi -dmenu | xargs -I{} xdg-open https://www.google.com/search?q={}"
 
 # Window management
 riverctl map normal $MOD C close
