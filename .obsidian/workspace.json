@@ -160,6 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -170,6 +171,7 @@
   },
   "active": "5c5782c3152e140a",
   "lastOpenFiles": [
+    "images/river_discord.png",
     "cava.png",
     "images/terminal_gruv.png",
     "images/spotify.png",
@@ -180,7 +182,6 @@
     "images/main.png",
     "images/kitty.png",
     "images/discord_gruv.png",
-    "images/discord.png",
     "images",
     "README.md"
   ]

@@ -1,8 +1,8 @@
 # Software
 -   **Distro**: [Arch](https://archlinux.org)
--   **Window manager**: [Hyprland](https://hyprland.org/)
--   **Top bar**: [HyprPanel](https://hyprpanel.com/)
--   **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
+-   **Window manager**: [River](https://codeberg.org/river)
+-   **Top bar**: [Waybar](https://github.com/alexys/waybar)
+-   **Terminal**: [Ghostty](https://ghostty.org)
 -   **Text editor**: [neovim](https://github.com/neovim/neovim)
 -   **Application opener**: [rofi](https://github.com/davatorium/rofi)
 -   **Visual candy**: [pipes.sh](https://github.com/pipeseroni/pipes.sh)
@@ -13,11 +13,11 @@
 
 # Gruvbox Rice
 
-![riceSS](images/gruv_terminal.png)
-![riceSS](images/gruv_main.png)
-![riceSS](images/gruv_music.png)
-![riceSS](images/gruv_nvim.png)
-![riceSS](images/gruv_discord.png)
+![riceSS](images/river_terminal.png)
+![riceSS](images/river_main.png)
+![riceSS](images/river_music.png)
+![riceSS](images/river_nvim.png)
+![riceSS](images/river_discord.png)
 ![riceSS](images/hyprlock.png)
 
 # Nord Rice

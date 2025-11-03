@@ -9,6 +9,7 @@
       "modules-left": [
             "custom/launcher",    
             "river/tags",
+            "hyprland/workspaces",
             "mpris",
       ],
       "modules-center": [
@@ -53,13 +54,13 @@
             "all-outputs": true,
             "format": "{icon}",
             "format-icons": {
-                  "1": "",  
-                  "2": "󰈹",  
-                  "3": "",  
-                  "4": "",  
-                  "5": "",  
-                  "urgent": "",
-                  "default": "○"
+                  "1": "  ",  
+                  "2": " 󰈹 ",  
+                  "3": "  ",  
+                  "4": "  ",  
+                  "5": "  ",  
+                  "urgent": "  ",
+                  "default": " ○ "
             },
             "persistent-workspaces": {
                   "1": [],
