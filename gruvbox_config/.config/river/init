@@ -48,6 +48,7 @@ riverctl map normal "$MOD+Shift" S spawn "rofi -dmenu | xargs -I{} xdg-open http
 
 # Window management
 riverctl map normal $MOD C close
+riverctl map normal $MOD F toggle-fullscreen
 riverctl map normal "$MOD+Shift" M exit
 riverctl map normal $MOD V toggle-float
 riverctl map normal $MOD J toggle-split
