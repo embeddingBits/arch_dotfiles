@@ -138,7 +138,8 @@
             "format-charging": "<span color='#d3869b'> </span>{capacity}%",
             "format-plugged": "<span color='#d3869b'></span>{capacity}% ",
             "format-alt": "{time} {icon}",
-            "format-icons": ["", "", "", "", ""]
+            "format-icons": ["", "", "", "", ""],
+            "interval": 1,
       },
       "power-profiles-daemon": {
             "format": "{icon}",
