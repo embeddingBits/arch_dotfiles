@@ -142,12 +142,12 @@
 gradient = 1
 
 gradient_color_1 = '#83a598'  # Bright Blue
-gradient_color_2 = '#8ec07c'  # Bright Green
-gradient_color_3 = '#fabd2f'  # Bright Yellow
-gradient_color_4 = '#fe8019'  # Bright Orange
-gradient_color_5 = '#fb4934'  # Bright Red
+gradient_color_2 = '#a9b665'  # Bright Green
+gradient_color_3 = '#D8A657'  # Bright Yellow
+gradient_color_4 = '#e78a4e'  # Bright Orange
+gradient_color_5 = '#ea6962'  # Bright Red
 gradient_color_6 = '#d3869b'  # Bright Purple
-gradient_color_7 = '#b8bb26'  # Bright Lime
+gradient_color_7 = '#a9b665'  # Bright Lime
 gradient_color_8 = '#ebdbb2'  # Light Cream (highlight)
 
 
