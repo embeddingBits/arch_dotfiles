@@ -20,10 +20,9 @@ shell-integration-features = no-cursor
 # Font Settings
 font-size = 15
 
-font-family = IosevkaTerm NF SemiBold
-font-family-bold = "IosevkaTerm NFP Semibold" 
-font-family-italic = "IosevkaTerm NFP Semibold"
-font-family-bold-italic = "IosevkaTerm NFP ExtraBold"
+font-family = IosevkaTerm NF  
+font-style = semibold
+font-thicken = true
 
 # Theme
 theme = /home/ebits/.config/ghostty/themes/gruvbox.conf
