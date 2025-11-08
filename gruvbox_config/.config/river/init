@@ -56,12 +56,14 @@ riverctl map normal $MOD L spawn "hyprlock"
 riverctl map normal $MOD S spawn "hyprshot -m region -o ~/Pictures/Screenshots/"
 
 # Move focus
-riverctl map normal $MOD left focus-view previous
-riverctl map normal $MOD right focus-view next
+riverctl map normal $MOD J focus-view previous
+riverctl map normal $MOD K focus-view next
+riverctl map normal Super+Shift J swap next
+riverctl map normal Super+Shift K swap previous
 
 # main factor/count
-riverctl map normal $MOD J send-layout-cmd rivertile 'main-ratio -0.05'
-riverctl map normal $MOD K send-layout-cmd rivertile 'main-ratio +0.05'
+riverctl map normal $MOD Minus send-layout-cmd rivertile 'main-ratio -0.05'
+riverctl map normal $MOD Equal send-layout-cmd rivertile 'main-ratio +0.05'
 
 # Switch workspaces (tags in River)
 for i in $(seq 1 9); do
