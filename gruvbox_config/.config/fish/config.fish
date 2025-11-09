@@ -5,6 +5,7 @@ set fish_greeting
 starship init fish | source
 set -x BAT_THEME gruvbox-dark
 set -x EDITOR nvim
+set -x TERMINAL ghostty
 fish_add_path /home/amiitesh/.spicetify
 
 function fastfetch_big
