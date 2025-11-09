@@ -2225,3 +2225,4 @@ Note: Hit end of (available) data during resync.
 [src/libmpg123/lfs_wrap.c:INT123_wrap_open():851] error: Cannot open file /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: Not a directory
 2025-10-23T14:21:20 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
 2025-10-23T14:23:51 player: played "Swim.mp3"
+2025-11-08T20:25:26 player: played "My Kind of Woman.mp3"

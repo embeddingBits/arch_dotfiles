@@ -2,7 +2,7 @@ sw_volume: 55
 audio_device_state:1:My PulseAudio Output
 audio_device_state:1:my_fifo
 state: stop
-current: 4
+current: 6
 random: 0
 repeat: 1
 single: 0
@@ -18,4 +18,5 @@ playlist_begin
 3:SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3
 4:Swim.mp3
 5:The Less I Know The Better.mp3
+6:My Kind of Woman.mp3
 playlist_end
