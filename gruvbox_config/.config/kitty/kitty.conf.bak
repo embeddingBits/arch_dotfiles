@@ -19,8 +19,8 @@ include current-theme.conf
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="IosevkaTerm Nerd Font"
-bold_font        auto
+font_family      family='IosevkaTerm Nerd Font' postscript_name=IosevkaTermNF
+bold_font        family='IosevkaTerm Nerd Font' style=Bold
 italic_font      auto
-bold_italic_font auto
+bold_italic_font family='IosevkaTerm Nerd Font' style='Bold Italic'
 # END_KITTY_FONTS
