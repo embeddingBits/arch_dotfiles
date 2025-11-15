@@ -7,12 +7,13 @@ return {
                   load = {
                         ["core.defaults"] = {},
                         ["core.concealer"] = {},
+                        ["core.esupports.metagen"] = {},
+                        ["core.ui.calendar"] = {},
                         ["core.dirman"] = {
                               config = {
                                     workspaces = {
-                                          notes = "~/notes",
+                                          notes = "~/PersonalManagement",
                                     },
-                                    default_workspace = "notes",
                               },
                         },
                   },

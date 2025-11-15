@@ -1,57 +1,49 @@
 [global]
-    ### Display ###
-    monitor = 0
-    font = JetBrainsMono Nerd Font 12
-    follow = mouse
-    geometry = "300x5-30+20"
-    progress_bar = true
-    progress_bar_height = 10
-    progress_bar_frame_width = 1
-    progress_bar_min_width = 150
-    progress_bar_max_width = 300
-    corner_radius = 5
-    enable_markup = yes
-    allow_markup = yes
-    actions = true
+monitor = 0
+font = IosevkaTerm Nerd Font 12
+follow = mouse
+progress_bar = true
+progress_bar_height = 10
+progress_bar_frame_width = 1
+progress_bar_min_width = 150
+progress_bar_max_width = 300
+corner_radius = 0
 
-    ### Text ###
-    line_height = 0
-    markup = full
-    format = "<b>%s</b>\n%b"
-    alignment = left
-    vertical_alignment = center
-    show_age_threshold = 60
-    word_wrap = yes
-    ellipsize = middle
-    ignore_newline = no
-    stack_duplicates = true
-    hide_duplicate_count = false
-    
-    ### Icons ###
-    enable_recursive_icon_lookup = true
-    icon_position = left
-    max_icon_size = 90
-    icon_corner_radius = 5
-    
-    ### Behavior ###
-    sticky_history = yes
-    history_length = 20
-    dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/xdg-open
-    always_run_script = true
-    
-    ### Frame ###
-    frame_width = 2
-    frame_color = "#d7991a"  # Nord0 (Darkest)
-    separator_height = 2
-    separator_color = auto
+line_height = 0
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = left
+vertical_alignment = center
+show_age_threshold = 60
+word_wrap = yes
+ellipsize = middle
+ignore_newline = no
+stack_duplicates = false
+hide_duplicate_count = false
 
-    ### Appearance ###
-    background = "#1d2021"
-    foreground = "#ebdbb2"
+enable_recursive_icon_lookup = true
+icon_position = left
+max_icon_size = 90
+icon_corner_radius = 5
 
-    ### Misc ###
-    sort = yes
-    idle_threshold = 120
-    show_indicators = yes
+sticky_history = yes
+history_length = 20
+dmenu = /usr/bin/dmenu -p dunst:
+browser = /usr/bin/xdg-open
+always_run_script = true
 
+frame_width = 2
+frame_color = "#d8a657"
+separator_height = 2
+separator_color = auto
+
+background = "#1d2021"
+foreground = "#ebdbb2"
+
+sort = yes
+idle_threshold = 120
+show_indicators = yes
+
+[espeak]
+summary = "*"
+script = /home/ebits/alert

@@ -24,7 +24,7 @@ font-family = IosevkaTerm NF
 font-style = semibold
 font-style-bold = ExtraBold
 font-style-italic = semibold italic
-font-style-bold-italic = bold italic
+font-style-bold-italic = extrabold italic
 font-thicken = true
 
 # Theme

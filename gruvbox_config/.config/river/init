@@ -62,8 +62,8 @@ riverctl map normal Super+Shift J swap next
 riverctl map normal Super+Shift K swap previous
 
 # main factor/count
-riverctl map normal $MOD Minus send-layout-cmd rivertile 'main-ratio -0.05'
-riverctl map normal $MOD Equal send-layout-cmd rivertile 'main-ratio +0.05'
+riverctl map normal $MOD Minus send-layout-cmd rivertile 'main-ratio -0.02'
+riverctl map normal $MOD Equal send-layout-cmd rivertile 'main-ratio +0.02'
 
 # Switch workspaces (tags in River)
 for i in $(seq 1 9); do
