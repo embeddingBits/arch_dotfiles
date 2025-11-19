@@ -22,7 +22,7 @@ font-size = 15
 
 font-family = IosevkaTerm NF  
 font-style = semibold
-font-style-bold = ExtraBold
+font-style-bold = Bold
 font-style-italic = semibold italic
 font-style-bold-italic = extrabold italic
 font-thicken = true
@@ -30,3 +30,8 @@ font-thicken = true
 # Theme
 theme = /home/ebits/.config/ghostty/themes/gruvbox.conf
 bold-is-bright = true
+
+# Shaders
+custom-shader = "shaders/cursor_sweep.glsl"
+custom-shader = "shaders/sonic_boom.glsl"
+

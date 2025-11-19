@@ -5,9 +5,9 @@ select_main = { fg = "#282828", bg = "#cc241d", bold = true }
 
 # Progress (Top / 1/57)
 progress_normal = { fg = "#282828", bg = "#98971a" }
-progress_error  = { fg = "#fbf1c7", bg = "#cc241d" }
+progress_error  = { fg = "#fbf1c7", bg = "#ea6962" }
 
-perm_type  = { fg = "#d79921", bold = true }
-perm_user  = { fg = "#cc241d" }
+perm_type  = { fg = "#d8a657", bold = true }
+perm_user  = { fg = "#ea6962" }
 perm_group = { fg = "#98971a" }
-perm_other = { fg = "#458588" }
+perm_other = { fg = "#83a598" }
