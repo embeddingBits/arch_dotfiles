@@ -20,7 +20,7 @@ edit = [
 { run = 'nvim "$@"', desc = "Open with Neovim", block = true, for = "unix" }
 ]
 img = [
-{ run = 'feh --scale-down --auto-zoom --geometry 1100x800 --no-menus --image-bg black', desc = "Open with feh", block = true, for = "unix" }
+{ run = 'feh -d --scale-down --auto-zoom --geometry 1200x800 --no-menus --image-bg 1d2021', desc = "Open with feh", block = true, for = "unix" }
 ]
 
 [open]

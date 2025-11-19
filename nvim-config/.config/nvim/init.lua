@@ -13,17 +13,17 @@ vim.cmd("set scrolloff=6")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
+      local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+      local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+      if vim.v.shell_error ~= 0 then
+            vim.api.nvim_echo({
+                  { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+                  { out, "WarningMsg" },
+                  { "\nPress any key to exit..." },
+            }, true, {})
+            vim.fn.getchar()
+            os.exit(1)
+      end
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -43,10 +43,10 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
 
 if vim.g.neovide then
-    vim.opt.guifont = "JetBrainsMono Nerd Font:h14:b"
-    vim.g.neovide_cursor_animation_length = 0.05   
+      vim.opt.guifont = "IosevkaTerm Nerd Font:h14:b"
+      vim.g.neovide_cursor_animation_length = 0.05   
 end
 require("lazy").setup("plugins")
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "#1d2021" })
+vim.api.nvim_set_hl(0, "NonText", { bg = "#1d2021" })

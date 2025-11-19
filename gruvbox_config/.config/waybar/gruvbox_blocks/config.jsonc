@@ -96,7 +96,7 @@
             "format-disconnected": "Disconnected",
             "format-stopped": "{status_icon} Stopped",
             "ellipsis": "…",
-            "title-len": 40,
+            "title-len": 30,
             "player-icons": {
                   "default": "▶"
             },
