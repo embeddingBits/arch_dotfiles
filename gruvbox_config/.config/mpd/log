@@ -2226,3 +2226,777 @@ Note: Hit end of (available) data during resync.
 2025-10-23T14:21:20 mpg123: libmpg123 failed to open /home/ebits/Music/Indie/SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3: A generic mpg123 error.
 2025-10-23T14:23:51 player: played "Swim.mp3"
 2025-11-08T20:25:26 player: played "My Kind of Woman.mp3"
+2025-11-23T08:48:57 update: updating /Babydoll.mp3
+2025-11-23T08:48:57 update: updating /For the First Time.mp3
+2025-11-23T08:48:57 update: updating /I Hope to Be Around.mp3
+2025-11-23T08:48:57 update: updating /Money.mp3
+2025-11-23T08:48:57 update: updating /Messages from the Stars.mp3
+2025-11-23T08:48:57 update: updating /Headlock.mp3
+2025-11-23T08:48:57 update: updating /Apocalypse.mp3
+2025-11-23T08:48:57 update: updating /Tek It - Sped Up.mp3
+2025-11-23T08:48:57 exception: No such playlist
+2025-11-23T08:48:57 update: updating /Heartbeat.mp3
+2025-11-23T08:48:57 update: updating /Show Me How.mp3
+2025-11-23T08:48:57 update: updating /Husk.mp3
+2025-11-23T08:48:57 update: updating /Something About You.mp3
+2025-11-23T08:48:57 update: updating /Swim.mp3
+2025-11-23T08:48:57 update: updating /Mrs Magic.mp3
+2025-11-23T08:48:57 update: updating /Bad Habit.mp3
+2025-11-23T08:48:57 update: updating /My Love Mine All Mine.mp3
+2025-11-23T08:48:57 update: updating /Heart To Heart.mp3
+2025-11-23T08:48:57 update: updating /Solo.mp3
+2025-11-23T08:48:57 update: updating /Lovers Rock.mp3
+2025-11-23T08:48:57 update: updating /(dream).mp3
+2025-11-23T08:48:57 update: updating /Reflections.mp3
+2025-11-23T08:48:57 update: updating /Feeling Like The End.mp3
+2025-11-23T08:48:57 update: updating /Stephanie.mp3
+2025-11-23T08:48:57 update: updating /Notion.mp3
+2025-11-23T08:48:57 update: updating /welcome and goodbye.mp3
+2025-11-23T08:48:57 update: updating /Telephones.mp3
+2025-11-23T08:48:57 update: updating /Eventually.mp3
+2025-11-23T08:48:57 update: updating /One More Hour.mp3
+2025-11-23T08:48:57 update: updating /Golden Brown.mp3
+2025-11-23T08:48:57 update: updating /We Are The People.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/welcome and goodbye.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/We Are The People.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Young.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/On the Level.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Moonlight on the River.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/For the First Time.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/One More Hour.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Instant Destiny.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Breathe Deeper.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Borderline.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/My Love Mine All Mine.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Tek It - Sped Up.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Stephanie.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Headlock.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Solo.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Feeling Like The End.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Homage.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Shut up My Moms Calling.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Show Me How.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Tek It.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Money.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Sex, Drugs, Etc..mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Let Down.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Notion.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Neverender.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Something About You.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Mrs Magic.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/(dream).mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Loser.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Feels Like We Only Go Backwards.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Golden Brown.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Ghostride.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/All I Need.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/In My Head.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Swing Lynn.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/i love u..mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/I Hope to Be Around.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Husk.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Heart To Heart.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Swim.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Reflections.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Good Looking.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Messages from the Stars.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Bad Habit.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Lovers Rock.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Babydoll.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/The Less I Know The Better.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/New Person, Same Old Mistakes.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Eventually.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Confess Your Love.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Apocalypse.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Swim.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Telephones.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Heartbeat.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/Alternative Outro.mp3
+2025-11-23T08:48:57 update: removing SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Show Me How.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/For the First Time.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Moonlight on the River.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Telephones.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Young.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Heart To Heart.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/The Less I Know The Better.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Feels Like We Only Go Backwards.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Eventually.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/One More Hour.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Breathe Deeper.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Instant Destiny.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Apocalypse.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Heartbeat.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Money.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Feeling Like The End.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Shut up My Moms Calling.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Notion.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Reflections.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Tek It.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Husk.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Bad Habit.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Alternative Outro.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Neverender.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Borderline.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Tek It - Sped Up.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Swing Lynn.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Lovers Rock.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Good Looking.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Freaking Out the Neighborhood.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/New Person, Same Old Mistakes.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/I Hope to Be Around.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Solo.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Mrs Magic.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/On the Level.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/We Are The People.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Let Down.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Sex, Drugs, Etc..mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Babydoll.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/My Love Mine All Mine.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Ghostride.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/In My Head.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Headlock.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Golden Brown.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/i love u..mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Confess Your Love.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Homage.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Something About You.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Loser.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/All I Need.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/(dream).mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/welcome and goodbye.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Messages from the Stars.mp3
+2025-11-23T08:48:57 update: added SpotiDownloader.com - Indie.zip/Stephanie.mp3
+2025-11-23T08:48:57 update: updating /Tek It.mp3
+2025-11-23T08:48:57 update: updating /The Less I Know The Better.mp3
+2025-11-23T08:48:57 update: updating /All I Need.mp3
+2025-11-23T08:48:57 update: updating /Borderline.mp3
+2025-11-23T08:48:57 update: updating /Confess Your Love.mp3
+2025-11-23T08:48:57 update: updating /Moonlight on the River.mp3
+2025-11-23T08:48:57 update: added /Freaking Out the Neighborhood.mp3
+2025-11-23T08:48:57 update: updating /Feels Like We Only Go Backwards.mp3
+2025-11-23T08:48:57 update: updating /i love u..mp3
+2025-11-23T08:48:57 update: updating /Instant Destiny.mp3
+2025-11-23T08:48:57 update: updating /Where'd All the Time Go?.mp3
+2025-11-23T08:48:57 update: updating /Sex, Drugs, Etc..mp3
+2025-11-23T08:48:57 update: updating /Let Down.mp3
+2025-11-23T08:48:57 update: updating /Neverender.mp3
+2025-11-23T08:48:57 update: updating /Breathe Deeper.mp3
+2025-11-23T08:48:57 update: updating /Homage.mp3
+2025-11-23T08:48:57 update: updating /Loser.mp3
+2025-11-23T08:48:57 update: updating /Swing Lynn.mp3
+2025-11-23T08:48:57 update: updating /Good Looking.mp3
+2025-11-23T08:48:57 update: updating /My Kind of Woman.mp3
+2025-11-23T08:48:57 update: updating /Alternative Outro.mp3
+2025-11-23T08:48:57 update: updating /New Person, Same Old Mistakes.mp3
+2025-11-23T08:48:57 update: updating /On the Level.mp3
+2025-11-23T08:48:57 update: updating /What Would I Do?.mp3
+2025-11-23T08:48:57 update: updating /Ghostride.mp3
+2025-11-23T08:48:57 update: updating /Young.mp3
+2025-11-23T08:48:57 update: updating /In My Head.mp3
+2025-11-23T08:48:57 update: updating /Shut up My Moms Calling.mp3
+2025-11-23T08:49:07 exception: No such playlist
+2025-11-23T08:54:02 update: added /Tum Ho.mp3
+2025-11-23T08:54:02 update: added /Hawayein.mp3
+2025-11-23T08:54:02 update: added /Zaalima.mp3
+2025-11-23T08:54:02 update: added /Raabta.mp3
+2025-11-23T08:54:02 update: added /Kabira.mp3
+2025-11-23T08:54:02 update: added /Khairiyat.mp3
+2025-11-23T08:54:02 update: added /Ranjha.mp3
+2025-11-23T08:54:02 update: added /Maula Mere Maula.mp3
+2025-11-23T08:54:02 update: added /Samjhawan.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Javeda Zindagi-Tose Naina Lage.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Maula Mere Maula.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Hawayein.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Kabhi Kabhi Aditi.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Zaalima.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Shayad.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Khairiyat.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Tum Hi Ho.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Pee Loon.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Channa Mereya.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Kun Faya Kun.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Ranjha.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Tere Vaaste (From "Zara Hatke Zara Bachke").mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Akhiyaan Gulaab (From "Teri Baaton Mein Aisa Uljha Jiya").mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Pehli Nazar Mein.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Pehla Nasha.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/O Re Piya.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Raabta.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Tum Ho.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Ambarsariya.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Ahista Ahista.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Kabira.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Guzarish.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Dil Diyan Gallan.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Mahiye Jinna Sohna.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Tere Bina.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Ilahi.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Tum Se Hi.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Mast Magan (From "2 States).mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Mere Rang Mein Rangne Wali.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Falak Tak.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Yeh Jo Des Hai Tera.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Tum Jo Aaye.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Tere Naina.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Agar Tum Saath Ho (From "Tamasha").mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Masakali.mp3
+2025-11-23T08:54:02 update: added SpotiDownloader.com - Hindi Tadka 😝.zip/Samjhawan.mp3
+2025-11-23T08:54:02 update: added /Ambarsariya.mp3
+2025-11-23T08:54:02 update: added /Guzarish.mp3
+2025-11-23T08:54:02 update: added /Pehla Nasha.mp3
+2025-11-23T08:54:02 update: added /Pehli Nazar Mein.mp3
+2025-11-23T08:54:02 update: added /Mast Magan (From "2 States).mp3
+2025-11-23T08:54:02 update: added /Pee Loon.mp3
+2025-11-23T08:54:02 update: added /Falak Tak.mp3
+2025-11-23T08:54:02 update: added /O Re Piya.mp3
+2025-11-23T08:54:02 update: added /Masakali.mp3
+2025-11-23T08:54:02 update: added /Tum Se Hi.mp3
+2025-11-23T08:54:02 update: added /Dil Diyan Gallan.mp3
+2025-11-23T08:54:02 exception: No such playlist
+2025-11-23T08:54:02 update: added /Tere Vaaste (From "Zara Hatke Zara Bachke").mp3
+2025-11-23T08:54:02 update: added /Ahista Ahista.mp3
+2025-11-23T08:54:02 update: added /Tum Jo Aaye.mp3
+2025-11-23T08:54:02 update: added /Akhiyaan Gulaab (From "Teri Baaton Mein Aisa Uljha Jiya").mp3
+2025-11-23T08:54:02 update: added /Ilahi.mp3
+2025-11-23T08:54:02 update: added /Kabhi Kabhi Aditi.mp3
+2025-11-23T08:54:02 update: added /Agar Tum Saath Ho (From "Tamasha").mp3
+2025-11-23T08:54:02 update: added /Tere Naina.mp3
+2025-11-23T08:54:02 update: added /Javeda Zindagi-Tose Naina Lage.mp3
+2025-11-23T08:54:02 update: added /Tere Bina.mp3
+2025-11-23T08:54:02 update: added /Shayad.mp3
+2025-11-23T08:54:02 update: added /Channa Mereya.mp3
+2025-11-23T08:54:02 update: added /Yeh Jo Des Hai Tera.mp3
+2025-11-23T08:54:02 update: added /Mahiye Jinna Sohna.mp3
+2025-11-23T08:54:02 update: added /Tum Hi Ho.mp3
+2025-11-23T08:54:02 update: added /Mere Rang Mein Rangne Wali.mp3
+2025-11-23T08:54:02 update: added /Kun Faya Kun.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Freaking Out the Neighborhood.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/My Kind of Woman.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Alternative Outro.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Heartbeat.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Telephones.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Swim.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Apocalypse.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Confess Your Love.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Eventually.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/New Person, Same Old Mistakes.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/The Less I Know The Better.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Babydoll.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Lovers Rock.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Bad Habit.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Messages from the Stars.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Good Looking.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Reflections.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Heart To Heart.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Husk.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/I Hope to Be Around.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/i love u..mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Swing Lynn.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/In My Head.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/All I Need.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Ghostride.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Golden Brown.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Feels Like We Only Go Backwards.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Loser.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/(dream).mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Mrs Magic.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Something About You.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Neverender.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Notion.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Let Down.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Sex, Drugs, Etc..mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Money.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Tek It.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Show Me How.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Shut up My Moms Calling.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Homage.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Feeling Like The End.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Solo.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Headlock.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Stephanie.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Tek It - Sped Up.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/My Love Mine All Mine.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Borderline.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Breathe Deeper.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Instant Destiny.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/One More Hour.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/For the First Time.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Moonlight on the River.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/On the Level.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/Young.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/We Are The People.mp3
+2025-11-23T08:54:02 update: removing SpotiDownloader.com - Indie.zip/welcome and goodbye.mp3
+2025-11-23T08:54:02 update: removing Freaking Out the Neighborhood.mp3
+2025-11-23T08:54:02 update: removing My Kind of Woman.mp3
+2025-11-23T08:54:02 update: removing Alternative Outro.mp3
+2025-11-23T08:54:02 update: removing Heartbeat.mp3
+2025-11-23T08:54:02 update: removing Telephones.mp3
+2025-11-23T08:54:02 update: removing Swim.mp3
+2025-11-23T08:54:02 update: removing Apocalypse.mp3
+2025-11-23T08:54:02 update: removing Confess Your Love.mp3
+2025-11-23T08:54:02 update: removing Eventually.mp3
+2025-11-23T08:54:02 update: removing New Person, Same Old Mistakes.mp3
+2025-11-23T08:54:02 update: removing The Less I Know The Better.mp3
+2025-11-23T08:54:02 update: removing Babydoll.mp3
+2025-11-23T08:54:02 update: removing Lovers Rock.mp3
+2025-11-23T08:54:02 update: removing Bad Habit.mp3
+2025-11-23T08:54:02 update: removing Messages from the Stars.mp3
+2025-11-23T08:54:02 update: removing Good Looking.mp3
+2025-11-23T08:54:02 update: removing Reflections.mp3
+2025-11-23T08:54:02 update: removing Heart To Heart.mp3
+2025-11-23T08:54:02 update: removing Husk.mp3
+2025-11-23T08:54:02 update: removing I Hope to Be Around.mp3
+2025-11-23T08:54:02 update: removing i love u..mp3
+2025-11-23T08:54:02 update: removing Swing Lynn.mp3
+2025-11-23T08:54:02 update: removing In My Head.mp3
+2025-11-23T08:54:02 update: removing All I Need.mp3
+2025-11-23T08:54:02 update: removing Ghostride.mp3
+2025-11-23T08:54:02 update: removing Golden Brown.mp3
+2025-11-23T08:54:02 update: removing Feels Like We Only Go Backwards.mp3
+2025-11-23T08:54:02 update: removing Loser.mp3
+2025-11-23T08:54:02 update: removing (dream).mp3
+2025-11-23T08:54:02 update: removing Mrs Magic.mp3
+2025-11-23T08:54:02 update: removing Something About You.mp3
+2025-11-23T08:54:02 update: removing Neverender.mp3
+2025-11-23T08:54:02 update: removing Notion.mp3
+2025-11-23T08:54:02 update: removing Let Down.mp3
+2025-11-23T08:54:02 update: removing Sex, Drugs, Etc..mp3
+2025-11-23T08:54:02 update: removing Money.mp3
+2025-11-23T08:54:02 update: removing Tek It.mp3
+2025-11-23T08:54:02 update: removing Where'd All the Time Go?.mp3
+2025-11-23T08:54:02 update: removing Show Me How.mp3
+2025-11-23T08:54:02 update: removing Shut up My Moms Calling.mp3
+2025-11-23T08:54:02 update: removing Homage.mp3
+2025-11-23T08:54:02 update: removing Feeling Like The End.mp3
+2025-11-23T08:54:02 update: removing Solo.mp3
+2025-11-23T08:54:02 update: removing Headlock.mp3
+2025-11-23T08:54:02 update: removing Stephanie.mp3
+2025-11-23T08:54:02 update: removing Tek It - Sped Up.mp3
+2025-11-23T08:54:02 update: removing My Love Mine All Mine.mp3
+2025-11-23T08:54:02 update: removing Borderline.mp3
+2025-11-23T08:54:02 update: removing Breathe Deeper.mp3
+2025-11-23T08:54:02 update: removing Instant Destiny.mp3
+2025-11-23T08:54:02 update: removing One More Hour.mp3
+2025-11-23T08:54:02 update: removing For the First Time.mp3
+2025-11-23T08:54:02 update: removing Moonlight on the River.mp3
+2025-11-23T08:54:02 update: removing On the Level.mp3
+2025-11-23T08:54:02 update: removing Young.mp3
+2025-11-23T08:54:02 update: removing We Are The People.mp3
+2025-11-23T08:54:02 update: removing welcome and goodbye.mp3
+2025-11-23T08:54:02 update: removing What Would I Do?.mp3
+2025-11-23T08:55:27 update: removing Tere Vaaste (From "Zara Hatke Zara Bachke").mp3
+2025-11-23T08:55:27 update: removing Dil Diyan Gallan.mp3
+2025-11-23T08:55:27 update: removing Kabira.mp3
+2025-11-23T08:55:27 update: removing Ilahi.mp3
+2025-11-23T08:55:27 update: removing Falak Tak.mp3
+2025-11-23T08:55:27 update: removing Yeh Jo Des Hai Tera.mp3
+2025-11-23T08:55:27 update: removing Ranjha.mp3
+2025-11-23T08:55:27 update: removing Samjhawan.mp3
+2025-11-23T08:55:27 update: removing Tum Ho.mp3
+2025-11-23T08:55:27 update: removing Kun Faya Kun.mp3
+2025-11-23T08:55:27 update: removing Zaalima.mp3
+2025-11-23T08:55:27 update: removing Pehli Nazar Mein.mp3
+2025-11-23T08:55:27 update: removing Tum Jo Aaye.mp3
+2025-11-23T08:55:27 update: removing Pee Loon.mp3
+2025-11-23T08:55:27 update: removing Mere Rang Mein Rangne Wali.mp3
+2025-11-23T08:55:27 update: removing Agar Tum Saath Ho (From "Tamasha").mp3
+2025-11-23T08:55:27 update: removing Mast Magan (From "2 States).mp3
+2025-11-23T08:55:27 update: removing Shayad.mp3
+2025-11-23T08:55:27 update: removing Pehla Nasha.mp3
+2025-11-23T08:55:27 update: removing Tum Se Hi.mp3
+2025-11-23T08:55:27 update: removing Hawayein.mp3
+2025-11-23T08:55:27 update: removing Kabhi Kabhi Aditi.mp3
+2025-11-23T08:55:27 update: removing Tere Bina.mp3
+2025-11-23T08:55:27 update: removing Guzarish.mp3
+2025-11-23T08:55:27 update: removing Ambarsariya.mp3
+2025-11-23T08:55:27 update: removing Masakali.mp3
+2025-11-23T08:55:27 update: removing Mahiye Jinna Sohna.mp3
+2025-11-23T08:55:27 update: removing Khairiyat.mp3
+2025-11-23T08:55:27 update: removing Tere Naina.mp3
+2025-11-23T08:55:27 update: removing Maula Mere Maula.mp3
+2025-11-23T08:55:27 update: removing Javeda Zindagi-Tose Naina Lage.mp3
+2025-11-23T08:55:27 update: removing Akhiyaan Gulaab (From "Teri Baaton Mein Aisa Uljha Jiya").mp3
+2025-11-23T08:55:27 update: removing Ahista Ahista.mp3
+2025-11-23T08:55:27 update: removing Raabta.mp3
+2025-11-23T08:55:27 update: removing Channa Mereya.mp3
+2025-11-23T08:55:27 update: removing Tum Hi Ho.mp3
+2025-11-23T08:55:27 update: removing O Re Piya.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Tere Vaaste (From "Zara Hatke Zara Bachke").mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Dil Diyan Gallan.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Kabira.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Ilahi.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Falak Tak.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Yeh Jo Des Hai Tera.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Ranjha.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Samjhawan.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Tum Ho.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Kun Faya Kun.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Zaalima.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Pehli Nazar Mein.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Tum Jo Aaye.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Pee Loon.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Mere Rang Mein Rangne Wali.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Agar Tum Saath Ho (From "Tamasha").mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Mast Magan (From "2 States).mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Shayad.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Pehla Nasha.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Tum Se Hi.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Hawayein.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Kabhi Kabhi Aditi.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Tere Bina.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Guzarish.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Ambarsariya.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Masakali.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Mahiye Jinna Sohna.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Khairiyat.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Tere Naina.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Maula Mere Maula.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Javeda Zindagi-Tose Naina Lage.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Akhiyaan Gulaab (From "Teri Baaton Mein Aisa Uljha Jiya").mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Ahista Ahista.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Raabta.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Channa Mereya.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/Tum Hi Ho.mp3
+2025-11-23T08:55:27 update: removing SpotiDownloader.com - Hindi Tadka 😝.zip/O Re Piya.mp3
+2025-11-23T08:55:27 exception: No such playlist
+2025-11-23T08:55:55 exception: No such playlist
+2025-11-23T08:56:24 playlist: Failed to load "Hindi/Agar Tum Saath Ho (From \"Tamasha\").mp3".
+2025-11-23T08:56:24 playlist: Failed to load "Hindi/Ahista Ahista.mp3".
+2025-11-23T08:56:24 playlist: Failed to load "Hindi/Akhiyaan Gulaab (From \"Teri Baaton Mein Aisa Uljha Jiya\").mp3".
+2025-11-23T08:56:24 playlist: Failed to load "Hindi/Ambarsariya.mp3".
+2025-11-23T08:56:24 playlist: Failed to load "Hindi/Channa Mereya.mp3".
+2025-11-23T08:56:24 playlist: Failed to load "Hindi/Dil Diyan Gallan.mp3".
+2025-11-23T08:56:24 playlist: Failed to load "Hindi/Falak Tak.mp3".
+2025-11-23T08:56:24 playlist: Further errors for this playlist will not be logged.
+2025-11-23T08:56:31 exception: No such song
+2025-11-23T08:56:34 exception: No such song
+2025-11-23T08:56:35 exception: No such song
+2025-11-23T08:56:35 exception: No such song
+2025-11-23T09:06:23 update: added /Babydoll.mp3
+2025-11-23T09:06:23 update: added /For the First Time.mp3
+2025-11-23T09:06:23 update: added /I Hope to Be Around.mp3
+2025-11-23T09:06:23 update: added /Money.mp3
+2025-11-23T09:06:23 update: added /Headlock.mp3
+2025-11-23T09:06:23 update: added /Apocalypse.mp3
+2025-11-23T09:06:23 update: added /Tek It - Sped Up.mp3
+2025-11-23T09:06:23 update: added /Heartbeat.mp3
+2025-11-23T09:06:23 update: added /Show Me How.mp3
+2025-11-23T09:06:23 update: added /Husk.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 228591.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-11-23T09:06:23 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 228591.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-11-23T09:06:23 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-11-23T09:06:23 playlist: Failed to load "Indie/All I Need.mp3".
+2025-11-23T09:06:23 playlist: Failed to load "Indie/Alternative Outro.mp3".
+2025-11-23T09:06:23 playlist: Failed to load "Indie/Apocalypse.mp3".
+2025-11-23T09:06:23 playlist: Failed to load "Indie/Babydoll.mp3".
+2025-11-23T09:06:23 playlist: Failed to load "Indie/Bad Habit.mp3".
+2025-11-23T09:06:23 playlist: Failed to load "Indie/Borderline.mp3".
+2025-11-23T09:06:23 playlist: Failed to load "Indie/Breathe Deeper.mp3".
+2025-11-23T09:06:23 playlist: Further errors for this playlist will not be logged.
+2025-11-23T09:06:24 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-11-23T09:06:24 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-11-23T09:06:24 update: added /Swim.mp3
+2025-11-23T09:06:24 update: added /Mrs Magic.mp3
+2025-11-23T09:06:24 update: added /Bad Habit.mp3
+2025-11-23T09:06:24 update: added /My Love Mine All Mine.mp3
+2025-11-23T09:06:24 update: added /Heart To Heart.mp3
+2025-11-23T09:06:24 update: added /Solo.mp3
+2025-11-23T09:06:24 update: added /Lovers Rock.mp3
+2025-11-23T09:06:24 update: added /Reflections.mp3
+2025-11-23T09:06:24 update: added /Feeling Like The End.mp3
+2025-11-23T09:06:24 update: added /Notion.mp3
+2025-11-23T09:06:24 update: added /Telephones.mp3
+2025-11-23T09:06:24 update: added /Eventually.mp3
+2025-11-23T09:06:24 update: added /One More Hour.mp3
+2025-11-23T09:06:24 update: added /Golden Brown.mp3
+2025-11-23T09:06:24 update: added /We Are The People.mp3
+2025-11-23T09:06:24 update: added /Tek It.mp3
+2025-11-23T09:06:24 update: added /The Less I Know The Better.mp3
+2025-11-23T09:06:24 update: added /All I Need.mp3
+2025-11-23T09:06:24 update: added /Borderline.mp3
+2025-11-23T09:06:24 update: added /Confess Your Love.mp3
+2025-11-23T09:06:24 update: added /Moonlight on the River.mp3
+2025-11-23T09:06:24 update: added /Freaking Out the Neighborhood.mp3
+2025-11-23T09:06:24 update: added /Feels Like We Only Go Backwards.mp3
+2025-11-23T09:06:24 update: added /i love u..mp3
+2025-11-23T09:06:24 update: added /Instant Destiny.mp3
+2025-11-23T09:06:24 update: added /Where'd All the Time Go?.mp3
+2025-11-23T09:06:24 update: added /Sex, Drugs, Etc..mp3
+2025-11-23T09:06:24 update: added /Let Down.mp3
+2025-11-23T09:06:24 update: added /Neverender.mp3
+2025-11-23T09:06:24 update: added /Breathe Deeper.mp3
+2025-11-23T09:06:24 update: added /Homage.mp3
+2025-11-23T09:06:24 update: added /Loser.mp3
+2025-11-23T09:06:24 update: added /Swing Lynn.mp3
+2025-11-23T09:06:24 update: added /Good Looking.mp3
+2025-11-23T09:06:24 update: added /My Kind of Woman.mp3
+2025-11-23T09:06:24 update: added /Alternative Outro.mp3
+2025-11-23T09:06:24 update: added /New Person, Same Old Mistakes.mp3
+2025-11-23T09:06:24 update: added /On the Level.mp3
+2025-11-23T09:06:24 update: added /What Would I Do?.mp3
+2025-11-23T09:06:24 update: added /Ghostride.mp3
+2025-11-23T09:06:24 update: added /Young.mp3
+2025-11-23T09:06:24 update: added /In My Head.mp3
+2025-11-23T09:06:24 update: added /Shut up My Moms Calling.mp3
+2025-11-23T09:08:21 exception: No such song
+2025-11-23T09:08:22 exception: No such song
+2025-11-23T09:08:22 exception: No such song
+2025-11-23T09:08:22 exception: No such song
+2025-11-23T09:08:22 exception: No such song
+2025-11-23T09:08:22 exception: No such song
+2025-11-23T09:08:23 exception: No such song
+2025-11-23T09:08:23 exception: No such song
+2025-11-23T09:08:26 exception: No such directory
+2025-11-23T09:08:27 exception: No such directory
+2025-11-23T09:08:45 exception: No such song
+2025-11-23T09:08:45 player: played "Freaking Out the Neighborhood.mp3"
+2025-11-23T09:08:45 exception: No such directory
+2025-11-23T09:08:52 exception: No such directory
+2025-11-23T09:08:59 exception: No such directory
+2025-11-23T09:09:28 update: added Hindi/Tum Ho.mp3
+2025-11-23T09:09:28 update: added Hindi/Hawayein.mp3
+2025-11-23T09:09:28 update: added Hindi/Zaalima.mp3
+2025-11-23T09:09:28 update: added Hindi/Raabta.mp3
+2025-11-23T09:09:28 update: added Hindi/Kabira.mp3
+2025-11-23T09:09:28 update: added Hindi/Khairiyat.mp3
+2025-11-23T09:09:28 update: added Hindi/Ranjha.mp3
+2025-11-23T09:09:28 update: added Hindi/Maula Mere Maula.mp3
+2025-11-23T09:09:28 update: added Hindi/Samjhawan.mp3
+2025-11-23T09:09:28 update: added Hindi/Ambarsariya.mp3
+2025-11-23T09:09:28 update: added Hindi/Guzarish.mp3
+2025-11-23T09:09:28 update: added Hindi/Pehla Nasha.mp3
+2025-11-23T09:09:28 update: added Hindi/Pehli Nazar Mein.mp3
+2025-11-23T09:09:28 update: added Hindi/Mast Magan (From "2 States).mp3
+2025-11-23T09:09:28 update: added Hindi/Pee Loon.mp3
+2025-11-23T09:09:28 update: added Hindi/Falak Tak.mp3
+2025-11-23T09:09:28 update: added Hindi/O Re Piya.mp3
+2025-11-23T09:09:28 update: added Hindi/Masakali.mp3
+2025-11-23T09:09:28 update: added Hindi/Tum Se Hi.mp3
+2025-11-23T09:09:28 update: added Hindi/Dil Diyan Gallan.mp3
+2025-11-23T09:09:28 update: added Hindi/Tere Vaaste (From "Zara Hatke Zara Bachke").mp3
+2025-11-23T09:09:28 update: added Hindi/Ahista Ahista.mp3
+2025-11-23T09:09:28 update: added Hindi/Tum Jo Aaye.mp3
+2025-11-23T09:09:28 update: added Hindi/Akhiyaan Gulaab (From "Teri Baaton Mein Aisa Uljha Jiya").mp3
+2025-11-23T09:09:28 update: added Hindi/Ilahi.mp3
+2025-11-23T09:09:28 update: added Hindi/Kabhi Kabhi Aditi.mp3
+2025-11-23T09:09:28 update: added Hindi/Agar Tum Saath Ho (From "Tamasha").mp3
+2025-11-23T09:09:28 update: added Hindi/Tere Naina.mp3
+2025-11-23T09:09:28 update: added Hindi/Javeda Zindagi-Tose Naina Lage.mp3
+2025-11-23T09:09:28 update: added Hindi/Tere Bina.mp3
+2025-11-23T09:09:28 update: added Hindi/Shayad.mp3
+2025-11-23T09:09:28 update: added Hindi/Channa Mereya.mp3
+2025-11-23T09:09:28 update: added Hindi/Yeh Jo Des Hai Tera.mp3
+2025-11-23T09:09:28 update: added Hindi/Mahiye Jinna Sohna.mp3
+2025-11-23T09:09:28 update: added Hindi/Tum Hi Ho.mp3
+2025-11-23T09:09:28 update: added Hindi/Mere Rang Mein Rangne Wali.mp3
+2025-11-23T09:09:28 update: added Hindi/Kun Faya Kun.mp3
+2025-11-23T09:09:28 update: added Indie/Babydoll.mp3
+2025-11-23T09:09:28 update: added Indie/For the First Time.mp3
+2025-11-23T09:09:28 update: added Indie/I Hope to Be Around.mp3
+2025-11-23T09:09:28 update: added Indie/Money.mp3
+2025-11-23T09:09:28 update: added Indie/Headlock.mp3
+2025-11-23T09:09:28 update: added Indie/Apocalypse.mp3
+2025-11-23T09:09:28 update: added Indie/Tek It - Sped Up.mp3
+2025-11-23T09:09:28 update: added Indie/Heartbeat.mp3
+2025-11-23T09:09:28 update: added Indie/Show Me How.mp3
+2025-11-23T09:09:28 update: added Indie/Husk.mp3
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 228591.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-11-23T09:09:28 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Note: Illegal Audio-MPEG-Header 0x00000000 at offset 228591.
+Note: Trying to resync...
+Note: Hit end of (available) data during resync.
+2025-11-23T09:09:28 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-11-23T09:09:28 ffmpeg/mp3: Format mp3 detected only with low score of 24, misdetection possible!
+2025-11-23T09:09:28 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-11-23T09:09:28 update: added Indie/Swim.mp3
+2025-11-23T09:09:28 update: added Indie/Mrs Magic.mp3
+2025-11-23T09:09:28 update: added Indie/Bad Habit.mp3
+2025-11-23T09:09:28 update: added Indie/My Love Mine All Mine.mp3
+2025-11-23T09:09:28 update: added Indie/Heart To Heart.mp3
+2025-11-23T09:09:28 update: added Indie/Solo.mp3
+2025-11-23T09:09:28 update: added Indie/Lovers Rock.mp3
+2025-11-23T09:09:28 update: added Indie/Reflections.mp3
+2025-11-23T09:09:28 update: added Indie/Feeling Like The End.mp3
+2025-11-23T09:09:28 update: added Indie/Notion.mp3
+2025-11-23T09:09:28 update: added Indie/Telephones.mp3
+2025-11-23T09:09:28 update: added Indie/Eventually.mp3
+2025-11-23T09:09:28 update: added Indie/One More Hour.mp3
+2025-11-23T09:09:28 update: added Indie/Golden Brown.mp3
+2025-11-23T09:09:28 update: added Indie/We Are The People.mp3
+2025-11-23T09:09:28 update: added Indie/Tek It.mp3
+2025-11-23T09:09:28 update: added Indie/The Less I Know The Better.mp3
+2025-11-23T09:09:28 update: added Indie/All I Need.mp3
+2025-11-23T09:09:28 update: added Indie/Borderline.mp3
+2025-11-23T09:09:28 update: added Indie/Confess Your Love.mp3
+2025-11-23T09:09:28 update: added Indie/Moonlight on the River.mp3
+2025-11-23T09:09:28 update: added Indie/Freaking Out the Neighborhood.mp3
+2025-11-23T09:09:28 update: added Indie/Feels Like We Only Go Backwards.mp3
+2025-11-23T09:09:28 update: added Indie/i love u..mp3
+2025-11-23T09:09:28 update: added Indie/Instant Destiny.mp3
+2025-11-23T09:09:28 update: added Indie/Where'd All the Time Go?.mp3
+2025-11-23T09:09:28 update: added Indie/Sex, Drugs, Etc..mp3
+2025-11-23T09:09:28 update: added Indie/Let Down.mp3
+2025-11-23T09:09:28 update: added Indie/Neverender.mp3
+2025-11-23T09:09:28 update: added Indie/Breathe Deeper.mp3
+2025-11-23T09:09:28 update: added Indie/Homage.mp3
+2025-11-23T09:09:28 update: added Indie/Loser.mp3
+2025-11-23T09:09:28 update: added Indie/Swing Lynn.mp3
+2025-11-23T09:09:28 update: added Indie/Good Looking.mp3
+2025-11-23T09:09:28 update: added Indie/My Kind of Woman.mp3
+2025-11-23T09:09:28 update: added Indie/Alternative Outro.mp3
+2025-11-23T09:09:28 update: added Indie/New Person, Same Old Mistakes.mp3
+2025-11-23T09:09:28 update: added Indie/On the Level.mp3
+2025-11-23T09:09:28 update: added Indie/What Would I Do?.mp3
+2025-11-23T09:09:28 update: added Indie/Ghostride.mp3
+2025-11-23T09:09:28 update: added Indie/Young.mp3
+2025-11-23T09:09:28 update: added Indie/In My Head.mp3
+2025-11-23T09:09:28 update: added Indie/Shut up My Moms Calling.mp3
+2025-11-23T09:09:28 update: removing What Would I Do?.mp3
+2025-11-23T09:09:28 update: removing We Are The People.mp3
+2025-11-23T09:09:28 update: removing Young.mp3
+2025-11-23T09:09:28 update: removing On the Level.mp3
+2025-11-23T09:09:28 update: removing Moonlight on the River.mp3
+2025-11-23T09:09:28 update: removing For the First Time.mp3
+2025-11-23T09:09:28 update: removing One More Hour.mp3
+2025-11-23T09:09:28 update: removing Instant Destiny.mp3
+2025-11-23T09:09:28 update: removing Breathe Deeper.mp3
+2025-11-23T09:09:28 update: removing Borderline.mp3
+2025-11-23T09:09:28 update: removing My Love Mine All Mine.mp3
+2025-11-23T09:09:28 update: removing Tek It - Sped Up.mp3
+2025-11-23T09:09:28 update: removing Headlock.mp3
+2025-11-23T09:09:28 update: removing Solo.mp3
+2025-11-23T09:09:28 update: removing Feeling Like The End.mp3
+2025-11-23T09:09:28 update: removing Homage.mp3
+2025-11-23T09:09:28 update: removing Shut up My Moms Calling.mp3
+2025-11-23T09:09:28 update: removing Show Me How.mp3
+2025-11-23T09:09:28 update: removing Where'd All the Time Go?.mp3
+2025-11-23T09:09:28 update: removing Tek It.mp3
+2025-11-23T09:09:28 update: removing Money.mp3
+2025-11-23T09:09:28 update: removing Sex, Drugs, Etc..mp3
+2025-11-23T09:09:28 update: removing Let Down.mp3
+2025-11-23T09:09:28 update: removing Notion.mp3
+2025-11-23T09:09:28 update: removing Neverender.mp3
+2025-11-23T09:09:28 update: removing Mrs Magic.mp3
+2025-11-23T09:09:28 update: removing Loser.mp3
+2025-11-23T09:09:28 update: removing Feels Like We Only Go Backwards.mp3
+2025-11-23T09:09:28 update: removing Golden Brown.mp3
+2025-11-23T09:09:28 update: removing Ghostride.mp3
+2025-11-23T09:09:28 update: removing All I Need.mp3
+2025-11-23T09:09:28 update: removing In My Head.mp3
+2025-11-23T09:09:28 update: removing Swing Lynn.mp3
+2025-11-23T09:09:28 update: removing i love u..mp3
+2025-11-23T09:09:28 update: removing I Hope to Be Around.mp3
+2025-11-23T09:09:28 update: removing Husk.mp3
+2025-11-23T09:09:28 update: removing Heart To Heart.mp3
+2025-11-23T09:09:28 update: removing Reflections.mp3
+2025-11-23T09:09:28 update: removing Good Looking.mp3
+2025-11-23T09:09:28 update: removing Bad Habit.mp3
+2025-11-23T09:09:28 update: removing Lovers Rock.mp3
+2025-11-23T09:09:28 update: removing Babydoll.mp3
+2025-11-23T09:09:28 update: removing The Less I Know The Better.mp3
+2025-11-23T09:09:28 update: removing New Person, Same Old Mistakes.mp3
+2025-11-23T09:09:28 update: removing Eventually.mp3
+2025-11-23T09:09:28 update: removing Confess Your Love.mp3
+2025-11-23T09:09:28 update: removing Apocalypse.mp3
+2025-11-23T09:09:28 update: removing Swim.mp3
+2025-11-23T09:09:28 update: removing Telephones.mp3
+2025-11-23T09:09:28 update: removing Heartbeat.mp3
+2025-11-23T09:09:28 update: removing Alternative Outro.mp3
+2025-11-23T09:09:28 update: removing My Kind of Woman.mp3
+2025-11-23T09:09:28 update: removing Freaking Out the Neighborhood.mp3
+2025-11-23T09:09:55 exception: No such song
+2025-11-23T09:09:55 exception: No such song
+2025-11-23T09:09:55 exception: No such song
+2025-11-23T09:09:55 exception: No such song
+2025-11-23T09:09:55 exception: No such song
+2025-11-23T09:09:55 exception: No such song
+2025-11-23T09:09:55 exception: No such song
+2025-11-23T09:09:55 exception: No such song
+2025-11-23T09:09:55 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:56 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:57 exception: No such song
+2025-11-23T09:09:58 exception: No such song
+2025-11-23T09:09:58 player: played "Hindi/O Re Piya.mp3"
+2025-11-23T09:09:58 exception: No such song
+2025-11-23T09:10:07 player: played "Hindi/Akhiyaan Gulaab (From \"Teri Baaton Mein Aisa Uljha Jiya\").mp3"
+2025-11-23T09:10:11 exception: No such song
+2025-11-23T09:10:11 exception: No such song
+2025-11-23T09:10:11 exception: No such song
+2025-11-23T09:10:11 exception: No such song
+2025-11-23T09:10:11 exception: No such song
+2025-11-23T09:10:11 exception: No such song
+2025-11-23T09:10:11 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:12 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:13 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:10:14 player: played "Hindi/Tere Vaaste (From \"Zara Hatke Zara Bachke\").mp3"
+2025-11-23T09:10:14 exception: No such song
+2025-11-23T09:11:17 player: played "Hindi/O Re Piya.mp3"
