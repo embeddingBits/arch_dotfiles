@@ -1,7 +1,8 @@
-sw_volume: 100
+sw_volume: 90
 audio_device_state:1:My PulseAudio Output
 audio_device_state:1:my_fifo
 state: stop
+current: 0
 random: 0
 repeat: 0
 single: 0
@@ -11,4 +12,41 @@ mixrampdb: 0
 mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
+0:Hindi/O Re Piya.mp3
+1:Hindi/Tum Hi Ho.mp3
+2:Hindi/Channa Mereya.mp3
+3:Hindi/Raabta.mp3
+4:Hindi/Ahista Ahista.mp3
+5:Hindi/Akhiyaan Gulaab (From "Teri Baaton Mein Aisa Uljha Jiya").mp3
+6:Hindi/Javeda Zindagi-Tose Naina Lage.mp3
+7:Hindi/Maula Mere Maula.mp3
+8:Hindi/Tere Naina.mp3
+9:Hindi/Khairiyat.mp3
+10:Hindi/Mahiye Jinna Sohna.mp3
+11:Hindi/Masakali.mp3
+12:Hindi/Ambarsariya.mp3
+13:Hindi/Guzarish.mp3
+14:Hindi/Tere Bina.mp3
+15:Hindi/Kabhi Kabhi Aditi.mp3
+16:Hindi/Hawayein.mp3
+17:Hindi/Tum Se Hi.mp3
+18:Hindi/Pehla Nasha.mp3
+19:Hindi/Shayad.mp3
+20:Hindi/Mast Magan (From "2 States).mp3
+21:Hindi/Agar Tum Saath Ho (From "Tamasha").mp3
+22:Hindi/Mere Rang Mein Rangne Wali.mp3
+23:Hindi/Pee Loon.mp3
+24:Hindi/Tum Jo Aaye.mp3
+25:Hindi/Pehli Nazar Mein.mp3
+26:Hindi/Zaalima.mp3
+27:Hindi/Kun Faya Kun.mp3
+28:Hindi/Tum Ho.mp3
+29:Hindi/Samjhawan.mp3
+30:Hindi/Ranjha.mp3
+31:Hindi/Yeh Jo Des Hai Tera.mp3
+32:Hindi/Falak Tak.mp3
+33:Hindi/Ilahi.mp3
+34:Hindi/Kabira.mp3
+35:Hindi/Dil Diyan Gallan.mp3
+36:Hindi/Tere Vaaste (From "Zara Hatke Zara Bachke").mp3
 playlist_end

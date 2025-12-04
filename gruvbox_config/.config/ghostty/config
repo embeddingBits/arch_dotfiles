@@ -18,9 +18,9 @@ confirm-close-surface = false
 shell-integration-features = no-cursor
 
 # Font Settings
-font-size = 15
+font-size = 14
 
-font-family = IosevkaTerm NF  
+font-family = JetBrainsMono NF  
 font-style = semibold
 font-style-bold = Bold
 font-style-italic = semibold italic
@@ -28,7 +28,7 @@ font-style-bold-italic = extrabold italic
 font-thicken = true
 
 # Theme
-theme = /home/ebits/.config/ghostty/themes/gruvbox.conf
+theme = /home/ebits/.config/ghostty/themes/gruvbox-material.conf
 bold-is-bright = true
 
 # Shaders

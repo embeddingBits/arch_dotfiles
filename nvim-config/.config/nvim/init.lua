@@ -40,7 +40,7 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to below window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to above window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
-
+vim.keymap.set("n", "<leader>tc", ":w | !typst compile % %:r.pdf<CR>")
 
 if vim.g.neovide then
       vim.opt.guifont = "IosevkaTerm Nerd Font:h14:b"
@@ -48,5 +48,5 @@ if vim.g.neovide then
 end
 require("lazy").setup("plugins")
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "#1d2021" })
-vim.api.nvim_set_hl(0, "NonText", { bg = "#1d2021" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NonText", { bg = "NONE" })

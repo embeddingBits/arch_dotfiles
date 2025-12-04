@@ -32,11 +32,8 @@
                   "<S-Tab>": PreviousTab,
                   "1":       SwitchToTab("Queue"),
                   "2":       SwitchToTab("Directories"),
-                  "3":       SwitchToTab("Artists"),
-                  "4":       SwitchToTab("Album Artists"),
-                  "5":       SwitchToTab("Albums"),
-                  "6":       SwitchToTab("Playlists"),
-                  "7":       SwitchToTab("Search"),
+                  "3":       SwitchToTab("Playlists"),
+                  "4":       SwitchToTab("Search"),
                   "q":       Quit,
                   ">":       NextTrack,
                   "p":       TogglePause,
@@ -156,18 +153,6 @@
             (
                   name: "Directories",
                   pane: Pane(Directories),
-            ),
-            (
-                  name: "Artists",
-                  pane: Pane(Artists),
-            ),
-            (
-                  name: "Album Artists",
-                  pane: Pane(AlbumArtists),
-            ),
-            (
-                  name: "Albums",
-                  pane: Pane(Albums),
             ),
             (
                   name: "Playlists",
