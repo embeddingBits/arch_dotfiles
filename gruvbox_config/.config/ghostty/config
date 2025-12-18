@@ -22,7 +22,7 @@ font-size = 14
 
 font-family = JetBrainsMono NF  
 font-style = semibold
-font-style-bold = Bold
+font-style-bold = extrabold
 font-style-italic = semibold italic
 font-style-bold-italic = extrabold italic
 font-thicken = true
