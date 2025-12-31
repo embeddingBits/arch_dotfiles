@@ -1,0 +1,31 @@
+[user]
+      name = ebits
+      email = tspamiitesh@gmail.com
+
+[core]
+      editor = nvim
+      pager = less -FRX
+      excludesfile = ~/.config/git/gitignore_global
+
+[init]
+      defaultBranch = main
+
+[pull]
+      rebase = true
+
+[push]
+      autoSetupRemote = true
+
+[alias]
+      st = status -b
+      co = checkout
+      com = commit
+      br = branch
+      lg = log --oneline --graph --decorate --all
+
+[url "git@github.com:"]
+      insteadOf = https://github.com/
+
+[url "git@codeberg.org:"]
+      insteadOf = https://codeberg.org/
+
