@@ -1,23 +1,11 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
 set fish_greeting
 starship init fish | source
 set -x BAT_THEME gruvbox-dark
 set -x EDITOR nvim
 set -x TERMINAL ghostty
-fish_add_path /home/amiitesh/.spicetify
-
-function fastfetch_big
-      fastfetch -c ~/.config/fastfetch/large.jsonc --logo-color-1 blue --logo-color-2 red
-end
 
 function fetch
       fastfetch -c ~/.config/fastfetch/small.jsonc --logo-color-1 blue --logo-color-2 red
-end
-
-function mus
-      systemctl --user enable --now mpd.service && rmpc && systemctl --user stop mpd.service && systemctl --user disable mpd.service
 end
 
 function mirrorOut
@@ -26,10 +14,6 @@ end
 
 function dual
       wlr-randr --output HDMI-A-1 --pos 0,0 --output eDP-1 --pos 1920,0
-end
-
-function f
-      feh --scale-down --auto-zoom --geometry 1100x800 --no-menus --image-bg black $argv
 end
 
 function nv
@@ -61,9 +45,10 @@ function ls
     exa --icons $exa_args
 end
 
-if not set -q SSH_AUTH_SOCK
-    ssh-agent -c >/tmp/ssh-agent.fish
-    source /tmp/ssh-agent.fish >/dev/null
+set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+
+if status is-interactive
+    ssh-add -q ~/.ssh/id_ed25519 2>/dev/null
 end
 
 set --export BUN_INSTALL "$HOME/.bun"
