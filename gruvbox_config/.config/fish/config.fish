@@ -61,6 +61,11 @@ function ls
     exa --icons $exa_args
 end
 
+if not set -q SSH_AUTH_SOCK
+    ssh-agent -c >/tmp/ssh-agent.fish
+    source /tmp/ssh-agent.fish >/dev/null
+end
 
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+source /home/ebits/.config/fish/completions/inLimbo.fish
