@@ -19,7 +19,7 @@
 [alias]
       st = status -b
       co = checkout
-      com = commit
+      com = commit -m
       br = branch
       lg = log --oneline --graph --decorate --all
 
