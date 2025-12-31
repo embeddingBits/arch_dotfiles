@@ -1,5 +1,5 @@
 # Background Blur
-background_opacity 1
+background_opacity 0.9
 background_blur 1
 update_check_interval 0
 
@@ -14,13 +14,13 @@ cursor_shape block
 # Window Padding
 window_padding_width 8 16 
 
-font_size       14 
+font_size       15 
 include current-theme.conf
 
 
 # BEGIN_KITTY_FONTS
-font_family      family='JetBrainsMono Nerd Font' postscript_name=JetBrainsMonoNF-Regular
-bold_font        family='JetBrainsMono Nerd Font' style=Bold
-italic_font      family='JetBrainsMono Nerd Font' style=Italic
-bold_italic_font family='JetBrainsMono Nerd Font' style='Bold Italic'
+font_family      family='JetBrainsMono Nerd Font' style=SemiBold
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
 # END_KITTY_FONTS

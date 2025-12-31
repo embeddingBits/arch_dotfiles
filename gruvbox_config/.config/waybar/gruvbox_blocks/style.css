@@ -1,7 +1,7 @@
 * {
-    font-family: "JetBrainsMono Nerd Font Propo";
+    font-family: "IosevkaTerm Nerd Font Propo";
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
     text-shadow: none;
     transition: none;
     box-shadow: none;
@@ -112,7 +112,7 @@
 }
 
 #tags button {
-    padding: 0px 7px;
+    padding: 0px 12px;
     margin: 0px 2px;
     border: solid 2px #83a598;
     background-color: transparent;
