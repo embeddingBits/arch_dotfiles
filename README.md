@@ -20,43 +20,10 @@
 ![riceSS](images/river_discord.png)
 ![riceSS](images/hyprlock.png)
 
-# Nord Rice
-
-![riceSS](images/kitty.png)
-![riceSS](images/applications.png)
-![riceSS](images/cava.png)
-![riceSS](images/main.png)
-![riceSS](images/nvim.png)
-![riceSS](images/spotify.png)
-![riceSS](images/discord.png)
-
 ## How to apply
 
 Install GNU Stow. Stow is a dotfile manager. It makes applying and getting our dotfiles setup easier.
 
 ```bash
-sudo pacman -S stow
+stow gruvbox_config
 ```
-```bash
-stow <package_name>
-```
-
-For example if you want to setup up nvim then:
-```bash
-stow nvim-config
-```
-
-The files are symlinked and not actually placed in them.
-
-There are two different themes:
-
-- Gruvbox
-- Nord
-
-There are files with different colors schemes which you can choose from.
-
-For `zathura` there is `zathura_nord` and `zathura_gruv`. For applications like Rofi, there is `gruvbox.rasi` and `nord.rasi`.
-
-To choose for Rofi you have to change the color scheme file in `config.rasi`.
-
-Similarly for `cava`, there are two folders each containing different color schemes in `.config/cava/gruvbox` and `.config/cava/nord`. You have to copy the `config` file from the desired folder to the `.config/cava/config`

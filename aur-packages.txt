@@ -1,6 +1,3 @@
-cursor-bin 1.7.28-1
 downgrade 11.5.4-1
-lswt 2.0.0-1
-lswt-debug 2.0.0-1
 rofi-emoji-git r87.794fecf-1
 rofi-emoji-git-debug r87.794fecf-1

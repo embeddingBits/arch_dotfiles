@@ -7,8 +7,6 @@ return {
             local themify = require("themify")
 
             themify.setup({
-                  { "ellisonleao/gruvbox.nvim" },
-                  { "RRethy/base16-nvim" },
                   { "sainnhe/gruvbox-material" }
 
             })
