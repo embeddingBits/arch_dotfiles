@@ -53,7 +53,7 @@ riverctl map normal "$MOD+Shift" M exit
 riverctl map normal $MOD V toggle-float
 riverctl map normal $MOD J toggle-split
 riverctl map normal $MOD L spawn "hyprlock"
-riverctl map normal $MOD S spawn "hyprshot -m region -o ~/Pictures/Screenshots/"
+riverctl map normal $MOD S spawn "sshot -s"
 
 # Move focus
 riverctl map normal $MOD J focus-view previous

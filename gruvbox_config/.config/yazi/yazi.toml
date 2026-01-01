@@ -6,11 +6,9 @@ ratio = [2, 4, 6]
 [preview]
 tab_size = 2
 max_height = 1080
-max_width = 900
+max_width = 1080
+image_quality = 60
 cache_dir = ""
-iamge_quality = 75
-ueberzug_scale = 1
-ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 pdf = [
