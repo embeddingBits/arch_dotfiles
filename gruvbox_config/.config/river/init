@@ -15,13 +15,13 @@ riverctl rule-add -app-id com.mitchellh.ghostty ssd
 
 ### AUTOSTART ###
 swww-daemon &
-waybar -c ~/.config/waybar/gruvbox_dark/config.jsonc -s ~/.config/waybar/gruvbox_dark/style.css &
+waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
 dunst &
 
 
 ### LOOK AND FEEL ###
 riverctl background-color 0x1d2021
-riverctl border-color-focused 0xD8A657
+riverctl border-color-focused 0x83A598
 riverctl border-color-unfocused 0x1d2021
 riverctl border-width 3
 riverctl view-padding 5

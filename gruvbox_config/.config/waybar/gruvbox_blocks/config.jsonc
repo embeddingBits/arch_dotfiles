@@ -46,7 +46,7 @@
       },
 
       "river/window": {
-            "format": "{}",
+            "format": "󰣆  {}",
       },
 
       "hyprland/workspaces": {

@@ -1,22 +1,21 @@
 * {
-      font-family: "IosevkaTerm Nerd Font Propo";
-      font-weight: bold;
-      font-size: 17px;
-      text-shadow: none;
-      transition: none;
-      box-shadow: none;
+    font-family: "IosevkaTerm Nerd Font Propo", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-#waybar {
-      background: none;
-      color: #ebdbb2;
-      margin: 0px 180px;
+window#waybar {
+    background: transparent;
+    color: #d4be98;
+    border-radius: 9px;
+    margin: 12px 100px;
 }
 
+/* Base module styling */
 #window,
+#custom-media,
 #mpd,
 #idle_inhibitor,
-#mpris,
 #pulseaudio,
 #network,
 #power-profiles-daemon,
@@ -29,179 +28,135 @@
 #battery,
 #clock,
 #tray,
-#custom-launcher {
-      color: inherit;
-      padding: 0 7px;
-      margin: 0;
+#custom-launcher,
+#custom-power {
+    background-color: transparent;
+    color: inherit;
+    padding: 3px 10px;   /* balanced */
+    margin: 0;
+    border: none;
+    border-radius: 0;
 }
 
+/* Launcher */
 #custom-launcher {
-      background-color: #ea6962;
-      color: #3c3836;
-      border: solid 2px #cc241d;
-      padding: 0 7px;
-      margin: 0;
+    background-color: #1d2021;
+    color: #ea6962;
+    border: solid 2px #7daea3;
+    padding: 3px 8px;
+    margin: 6px 4px;
 }
 
+/* MPD */
+#mpd {
+    background-color: #1d2021;
+    color: #a9b665;
+    padding: 3px 8px;
+    margin: 6px 4px;
+}
+
+/* Window title */
 #window {
-      background-color: #3c3836;
-      border: solid 2px #665c54;
-      color: #ebdbb2;
-      border-radius: 0;
-      padding: 0 7px;
-      margin: 0;
+    background-color: #1d2021;
+    border: solid 2px #7daea3;
+    color: #7daea3;
+    padding: 3px 8px;
+    margin: 6px 4px;
 }
 
-.modules-center,
-.modules-right,
-.modules-left {
-      background: #1d2021;
-      border: none; 
-      border-radius: 0;
-      padding: 5px 5px;
-      margin: 0px;
+/* Center modules */
+.modules-center {
+    background-color: #1d2021;
+    border: solid 2px #7daea3;
+    color: #ea6962;
+    padding: 3px 8px;
+    margin: 6px 4px;
+}
+
+/* Right modules */
+.modules-right {
+    background-color: #1d2021;
+    border: solid 2px #7daea3;
+    padding: 3px 8px;
+    margin: 6px 4px;
 }
 
 #tags {
-      background-color: #1d2021;
-      border-radius: 0;
-      border: none; 
-      margin: 0px -5px 0px -5px;
-      padding: 0 7px;
+    background-color: #1d2021;
+    border: solid 2px #7daea3;
+    padding: 0;
+    margin: 6px 4px;
 }
 
 #tags button {
-      padding: 0px 5px;
-      margin: 0px 2px;
-      border: solid 2px #665c54;
-      background-color: #3c3836;
-      color: #83a598;
-      border-radius: 0;
+    padding: 3px 10px; 
+    background-color: transparent;
+    color: #83a598;
 }
 
-#tags button:first-child,
-#tags button:last-child {
-      border-radius: 0;
-}
-
+/* Hover */
 #tags button:hover {
-      background-color: #282828;
-      color: #ebdbb2;
+    background-color: #3c3836;
+    color: #ddc7a1;
 }
 
+/* Active */
 #tags button.focused,
 #tags button.active {
-      background-color: #3c3836;
-      color: #EA6962;
+    color: #ea6962;
 }
 
+/* Urgent */
 #tags button.urgent {
-      background-color: #EA6962;
-      color: #fbf1c7;
+    background-color: #ea6962;
+    color: #282828;
 }
 
-#backlight {
-      background-color: #3c3836;
-      border: solid 2px #665c54;
-      color: #ebdbb2;
-      padding: 0 7px;
-      margin: 0;
-}
-
-#mpd {
-      background-color: #3c3836;
-      border: solid 2px #665c54;
-      color: #ebdbb2;
-      padding: 0 7px;
-      margin: 0;
-}
-
-#mpris {
-      background-color: #3c3836;
-      border: solid 2px #665c54;
-      color: #ebdbb2;
-      padding: 0 7px;
-      margin: 0;
-}
-
-#memory {
-      background-color: #3c3836;
-      border: solid 2px #665c54;
-      color: #ebdbb2;
-      padding: 0 7px;
-      margin: 0;
-}
-
-#battery {
-      background-color: #3c3836;
-      border: solid 2px #665c54;
-      color: #ebdbb2;
-      padding: 0 7px;
-      margin: 0;
-}
+/* Module colors */
+#backlight  { color: #d8a657; }
+#memory     { color: #e78a4e; }
+#battery    { color: #d3869b; }
+#network    { color: #d8a657; }
+#pulseaudio { color: #7daea3; }
 
 #battery.charging,
 #battery.plugged {
-      color: #ebdbb2;
-      background-color: #3c3836;
-}
-
-#battery.critical:not(.charging) {
-      background-color: #EA6962;
-      color: #ebdbb2;
-      animation-name: blink;
-      animation-duration: 0.5s;
-      animation-timing-function: steps(12);
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-}
-
-#network {
-      background-color: #3c3836;
-      border: solid 2px #665c54;
-      color: #ebdbb2;
-      padding: 0 7px;
-      margin: 0;
-}
-
-#pulseaudio {
-      background-color: #3c3836;
-      border: solid 2px #665c54;
-      color: #ebdbb2;
-      padding: 0 7px;
-      margin: 0;
-}
-
-#clock {
-      color: #ebdbb2;
-      border: solid 2px #665c54;
-      background-color: #3c3836;
-      padding: 2px 7px;
-      margin: 0;
+    color: #a9b665;
 }
 
 #pulseaudio.muted {
-      background-color: #3c3836;
-      color: #ebdbb2;
+    color: #ea6962;
 }
 
+/* Critical battery */
+#battery.critical:not(.charging) {
+    background-color: #ea6962;
+    color: #d4be98;
+    animation: blink 0.5s steps(12) infinite alternate;
+}
+
+/* Cava */
 #cava {
-      background-color: #3c3836;
-      color: #ebdbb2;
-      font-family: "IosevkaTerm Nerd Font Propo";
-      border: solid 2px #665c54;
-      padding: 0 7px;
-      margin: 0;
+    background-color: #1d2021;
+    color: #89b482;
+    font-family: "Iosevka Nerd Font";
+    border: solid 2px #89b482;
+    padding: 3px 12px;   /* wider but same height */
+    margin: 6px 4px;
 }
 
 @keyframes blink {
-to {
-      background-color: #fbf1c7;
-      color: #3c3836;
-}
+    to {
+        background-color: #d4be98;
+        color: #282828;
+    }
 }
 
-.modules-left > widget:first-child > #tags,
-.modules-right > widget:last-child > #tags {
-      margin: 0;
+/* Edge fixes */
+.modules-left > widget:first-child > #tags {
+    margin-left: 0;
 }
+.modules-right > widget:last-child > #tags {
+    margin-right: 0;
+}
+

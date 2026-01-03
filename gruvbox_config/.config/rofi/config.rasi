@@ -89,7 +89,7 @@ textbox-prompt-colon {
       padding:                     5px 10px;
       margin:                      0px;
       expand:                      false;
-      str:                         "Apps:";
+      str:                         "Search:";
       border:                      3px solid;
       border-color:                #ea6962;
       background-color:            #ea6962;
