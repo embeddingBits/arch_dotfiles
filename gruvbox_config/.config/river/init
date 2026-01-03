@@ -52,7 +52,7 @@ riverctl map normal $MOD F toggle-fullscreen
 riverctl map normal "$MOD+Shift" M exit
 riverctl map normal $MOD V toggle-float
 riverctl map normal $MOD J toggle-split
-riverctl map normal $MOD L spawn "hyprlock"
+riverctl map normal $MOD L spawn "waylock -init-color 0xD8A657 -input-color 0x83a598 -fail-color 0xea6962"
 riverctl map normal $MOD S spawn "sshot -s"
 
 # Move focus
