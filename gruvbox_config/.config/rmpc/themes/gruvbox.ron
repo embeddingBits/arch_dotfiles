@@ -17,7 +17,7 @@
       ),
       highlighted_item_style: (fg: "#ea6962", modifiers: "Bold"),             
       current_item_style: (fg: "#D3869B", bg: "#1d2021", modifiers: "Bold"),  
-      borders_style: (fg: "#D8A657"),                                         
+      borders_style: (fg: "#83a598"),                                         
       highlight_border_style: (fg: "#ea6962", bg: "#282828", modifiers: "Bold"),                                
       symbols: (song: "S", dir: "D", marker: "M", ellipsis: "..."),
       progress_bar: (
@@ -147,16 +147,3 @@
             ),
       ],
 )
-
-cava: (
-    bar_width: 6,
-    bar_spacing: 1,
-    orientation: Bottom,
-
-      bar_color: Gradient({
-          0: "#ea6962",
-          50: "#D8A657",
-          100: "#83a598",
-    })
-
-),

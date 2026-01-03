@@ -94,26 +94,6 @@
       ),
 
       // Cava configuration
-      cava: (
-            framerate: 144,
-            autosens: true,
-            sensitivity: 100,
-            lower_cutoff_freq: 50,
-            higher_cutoff_freq: 10000,
-            input: (
-                  method: Fifo,
-                  source: "/tmp/mpd.fifo",
-                  sample_rate: 44100,
-                  channels: 2,
-                  sample_bits: 16,
-            ),
-            smoothing: (
-                  noise_reduction: 80,
-                  monstercat: false,
-                  waves: true,
-            ),
-            eq: []
-      ),
 
       search: (
             case_sensitive: false,
@@ -143,8 +123,7 @@
                               (size: "65%", pane: Split(
                                     direction: Vertical,
                                     panes: [
-                                          (size: "40%", pane: Pane(Queue)),
-                                          (size: "60%", pane: Pane(Cava), borders: "TOP"),
+                                          (size: "100%", pane: Pane(Queue)),
                                     ]
                               ))
                         ],

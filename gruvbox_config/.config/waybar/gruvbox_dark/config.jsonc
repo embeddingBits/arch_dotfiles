@@ -1,30 +1,29 @@
+// -*- mode: jsonc -*-
 {
-      "layer": "top",
-      "position": "top", 
-      "height": 25, 
-      "spacing": 5, 
-      "margin-left": 15,
-      "margin-right": 15,
-      "margin-top": 5,
+      "layer": "top", // Waybar at top layer
+      "position": "top", // Waybar position (top|bottom|left|right)
+      "height": 25, // Waybar height
+      "spacing": 0, // Gaps between modules
       "modules-left": [
-            "custom/launcher",    
+            "custom/launcher",
             "river/tags",
-            "river/window",
-            "mpris",
+            "river/window"
       ],
       "modules-center": [
             "clock"
       ],
       "modules-right": [
             "pulseaudio",
+            "custom/speed",
             "network",
             "memory",
             "backlight",
             "battery",
       ],
+      // Modules configuration
       "cava": {
             "framerate": 144,
-            "bars": 12,
+            "bars": 9,
             "method": "pipewire",
             "source": "auto",
             "bar_delimiter": 0,
@@ -35,9 +34,84 @@
       },
 
       "custom/launcher":{
-            "format": "",
+            "format": " ",
             "on-click": "rofi -show drun",
             "on-click-right": "killall rofi"
+      },
+
+      "hyprland/workspaces": {
+            "disable-scroll": true,
+            "all-outputs": true,
+            "format": "{icon}",
+            "format-icons": {
+                  "1": "1",  
+                  "2": "2",  
+                  "3": "3",  
+                  "4": "4",  
+                  "5": "5",  
+                  "urgent": "",
+                  "default": "○"
+            },
+            "persistent-workspaces": {
+                  "1": [],
+                  "2": [],
+                  "3": [],
+                  "4": [],
+                  "5": []
+            }
+      },
+      "hyprland/window": {
+            "format": "{class}",
+            "max-length": 50,
+            "rewrite": {
+                  "": "󰍹  Desktop", // Display "Desktop" when no window is focused
+                  "firefox": "  Firefox",
+                  "kitty": "󰄛  Kitty",
+                  "discord": "  Discord",
+                  "neovide": "  Neovide",
+                  "spotify": "  Spotify",
+                  "foot": "󰽒 foot", 
+                  "obsidian": " Obsidian",
+                  "Google-chrome": " Chrome",
+                  "org.pwmt.zathura": " Zathura",
+                  "uv4.exe": " Keil",
+                  "thunderbird": "  ThunderBird"
+            } 
+      },
+
+      "mpd": {
+            "format": "{stateIcon} {singleIcon}{artist} - {title} ({elapsedTime:%M:%S})",
+            "format-disconnected": "Disconnected ",
+            "format-stopped": "{stateIcon}Stopped",
+            "unknown-tag": "N/A",
+            "interval": 5,
+            "consume-icons": {
+                  "on": " "
+            },
+            "random-icons": {
+                  "off": "<span color=\"#BF616A\"></span> ",
+                  "on": " "
+            },
+            "repeat-icons": {
+                  "on": " "
+            },
+            "single-icons": {
+                  "on": "1 "
+            },
+            "state-icons": {
+                  "paused": "",
+                  "playing": ""
+            },
+            "tooltip-format": "MPD (connected)",
+            "tooltip-format-disconnected": "MPD (disconnected)"
+      },
+      "clock": {
+            "tooltip-format": "󰥔 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format": "󰥔 {:%I:%M %p %a %d}"
+      },
+      "cpu": {
+            "format": "{usage}% ",
+            "tooltip": false
       },
 
       "river/tags": {
@@ -45,50 +119,18 @@
             "tag-labels": ["", "󰈹","","",""],
       },
 
-      "river/window": {
-            "format": "{}",
-            "ellipsis": "…",
-            "max-length": 40,
 
-      },
-
-      "mpris": {
-            "interval": 1,
-            "format": "<span color='#a9b665'>{status_icon}</span> {artist} 󰎆 {title}",
-            "format-disconnected": "Disconnected",
-            "format-stopped": "{status_icon} Stopped",
-            "ellipsis": "…",
-            "title-len": 30,
-            "player-icons": {
-                  "default": "▶"
-            },
-            "status-icons": {
-                  "paused": "",
-                  "playing": "",
-                  "stopped": ""
-            },
-      }, 
-      "clock": {
-            "tooltip-format": "󰥔 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format": "<span color='#ea6962'>󰥔 </span>{:%a %d | %I:%M %p}",
-            "interval": 1
-      },
-      "cpu": {
-            "format": "{usage}% ",
-            "tooltip": false
-      },
       "memory": {
-            "format": "<span color='#E78A4E'>󰍛</span>{used: 0.2f} GB",
-            "interval": 1,
+            "format": "󰍛{used: 0.2f} GB",
+            "interval": 2,
       },
-
       "temperature": {
             "critical-threshold": 80,
             "format": "{temperatureC}°C {icon}",
             "format-icons": ["", "", ""]
       },
       "backlight": {
-            "format": "<span color='#a9b665'>{icon}</span> {percent}%",
+            "format": "{icon} {percent}%",
             "format-icons": ["", "", "", "", "", "", "", "", ""]
       },
       "battery": {
@@ -96,17 +138,16 @@
                   "warning": 30,
                   "critical": 15
             },
-            "format": "<span color='#D3869B'>{icon}</span> {capacity}%",
-            "format-full": "<span color='#d3869b'>{icon}</span> {capacity}%",
-            "format-charging": "<span color='#d3869b'> </span>{capacity}%",
-            "format-plugged": "<span color='#d3869b'></span>{capacity}% ",
+            "format": "{icon}  {capacity}%",
+            "format-full": "{icon} {capacity}%",
+            "format-charging": "{capacity}%  ",
+            "format-plugged": "{capacity}% ",
             "format-alt": "{time} {icon}",
-            "format-icons": ["", "", "", "", ""],
-            "interval": 1,
+            "format-icons": ["", "", "", "", ""]
       },
       "power-profiles-daemon": {
             "format": "{icon}",
-            "tooltip-format": "Power profile: {profile}\nDhyprland: {dhyprland}",
+            "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
             "tooltip": true,
             "format-icons": {
                   "default": "",
@@ -116,17 +157,17 @@
             }
       },
       "network": {
-            "format-wifi": "<span color='#D8A657'>{icon}</span> {essid}",
+            "format-wifi": "{icon} {essid}",
             "format-disconnected": "Disconnected ⚠",
             "format-alt": "{ifname}: {ipaddr}/{cidr}",
             "interval": 5,
             "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
       },
       "pulseaudio": {
-            "format": "<span color='#83a598'>{icon}</span>  {volume}%",
+            "format": "{icon}  {volume}%",
             "format-muted": "󰝟  {volume}%",
-            "format-bluetooth": "<span color='#83a598'>{icon}</span> {volume}%",
-            "format-bluetooth-muted": "<span color='#ea6962'>󰂲 </span>{volume}%",
+            "format-bluetooth": "{icon} {volume}%",
+            "format-bluetooth-muted": " {volume}%",
             "format-source-muted": "󰝟 ",
             "format-icons": {
                   "headphone": "",
