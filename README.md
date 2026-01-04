@@ -18,11 +18,10 @@
 ![riceSS](images/river_music.png)
 ![riceSS](images/river_nvim.png)
 ![riceSS](images/river_discord.png)
-![riceSS](images/hyprlock.png)
 
-## How to apply
+## How to Use 
 
-Install GNU Stow. Stow is a dotfile manager. It makes applying and getting our dotfiles setup easier.
+This is a repo that is maitained using GNU Stow.
 
 ```bash
 stow gruvbox_config
