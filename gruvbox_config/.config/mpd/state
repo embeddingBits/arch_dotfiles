@@ -1,4 +1,4 @@
-sw_volume: 60
+sw_volume: 95
 audio_device_state:1:My PulseAudio Output
 audio_device_state:1:my_fifo
 state: stop
