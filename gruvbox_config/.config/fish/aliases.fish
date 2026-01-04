@@ -10,3 +10,8 @@ function nv --wraps=nvim --description 'alias nv nvim'
     nvim $argv
 end
 
+alias tree="ls --tree"
+alias pac="sudo pacman"
+alias pacref="sudo pacman -Syy"
+alias pacup="sudo pacman -Syyu"
+alias aur="yay -S"
