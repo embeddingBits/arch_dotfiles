@@ -10,8 +10,27 @@ function nv --wraps=nvim --description 'alias nv nvim'
     nvim $argv
 end
 
+# Git commands
+alias gt="git status"
+alias gp="git push"
+alias ga="git add"
+alias gl="git log"
+alias gc="git commit -m"
+alias gu="git pull"
+
+# Common Commands
+alias j="z"
 alias tree="ls --tree"
+alias zb="zig build"
+
+# Pacman aliases
 alias pac="sudo pacman"
 alias pacref="sudo pacman -Syy"
 alias pacup="sudo pacman -Syyu"
 alias aur="yay -S"
+
+# Tmux aliases
+alias tnew="tmux new -s"
+alias tls="tmux ls"
+alias ta="tmux attach -t"
+alias td="tmux detach"
