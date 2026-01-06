@@ -5,6 +5,7 @@ set -x EDITOR nvim
 set -x TERMINAL ghostty
 
 source ~/.config/fish/aliases.fish
+zoxide init fish | source
 
 # ssh agent
 set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
