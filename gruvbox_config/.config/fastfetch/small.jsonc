@@ -34,10 +34,10 @@
                   "keyColor": "blue"
             },
             {
-                        "type": "wm",
-            "key": " ",
-            "keyColor": "blue"
-},
+                  "type": "wm",
+                  "key": " ",
+                  "keyColor": "blue"
+            },
             {
                   "key": " ",
                   "type": "terminal",

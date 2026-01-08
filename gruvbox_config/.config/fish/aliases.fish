@@ -27,7 +27,6 @@ alias zb="zig build"
 alias pac="sudo pacman"
 alias pacref="sudo pacman -Syy"
 alias pacup="sudo pacman -Syyu"
-alias aur="yay -S"
 
 # Tmux aliases
 alias tnew="tmux new -s"
