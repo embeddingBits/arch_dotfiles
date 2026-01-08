@@ -46,4 +46,4 @@ show_indicators = yes
 
 [espeak]
 summary = "*"
-script = /home/ebits/alert
+script = /home/ebits/.config/dunst/alert

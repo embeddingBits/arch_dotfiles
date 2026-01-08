@@ -1,14 +1,16 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export GOBIN:/home/ebits/\x2elocal/go/bin
+SETUVAR --export --path GOPATH:/home/ebits/\x2elocal/go
 SETUVAR --export --path LD_LIBRARY_PATH:/opt/cuda/lib64
 SETUVAR --export --path PATH:/opt/cuda/bin\x1e/home/embeddingbits/\x2ebun/bin\x1e/home/embeddingbits/\x2ebun/bin\x1e/home/embeddingbits/\x2ebun/bin\x1e/home/embeddingbits/\x2ebun/bin\x1e/home/embeddingbits/\x2ecargo/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/sbin\x1e/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:blue
-SETUVAR fish_color_comment:#ea69662
+SETUVAR fish_color_comment:\x23ea69662
 SETUVAR fish_color_cwd:green
-SETUVAR fish_color_cwd_root:#ea69662
+SETUVAR fish_color_cwd_root:\x23ea69662
 SETUVAR fish_color_end:green
 SETUVAR fish_color_error:brred
 SETUVAR fish_color_escape:brcyan
@@ -41,3 +43,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dreverse
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
+SETUVAR fish_user_paths:/home/ebits/\x2elocal/go/bin

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-paplay alert.wav
+paplay ~/.config/dunst/alert.wav
