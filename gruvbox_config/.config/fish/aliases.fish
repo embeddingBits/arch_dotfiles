@@ -22,6 +22,7 @@ alias gu="git pull"
 alias j="z"
 alias tree="ls --tree"
 alias zb="zig build"
+alias upfor="uptime -p"
 
 # Pacman aliases
 alias pac="sudo pacman"

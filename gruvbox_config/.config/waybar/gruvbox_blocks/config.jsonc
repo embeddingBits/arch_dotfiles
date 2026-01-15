@@ -132,7 +132,10 @@
       "battery": {
             "states": {
                   "warning": 30,
-                  "critical": 15
+                  "critical": 20
+            },
+            "events": {
+                  "on-discharging-warning": "notify-send -u critical 'Low Battery'",
             },
             "format": "<span color='#D3869B'>{icon}</span> {capacity}%",
             "format-full": "<span color='#d3869b'>{icon}</span> {capacity}%",
