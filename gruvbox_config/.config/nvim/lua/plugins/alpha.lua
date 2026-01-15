@@ -24,8 +24,9 @@ return {
             dashboard.section.buttons.val = {
                   dashboard.button("SPC n", "  New File", ":enew<CR>"),
                   dashboard.button("SPC f f", "󰈞  Find File", ":Telescope find_files<CR>"),
-                  dashboard.button("SPC o", "  Open Project", ":cd ~/Projects<CR>"),
                   dashboard.button("SPC f g", "  Find Word", ":Telescope live_grep<CR>"),
+                  dashboard.button("SPC o", "  Open Project", ":cd ~/Projects<CR>"),
+                  dashboard.button("SPC t", "  Open Tasks", ":cd ~/Tasks<CR>"),
                   dashboard.button("q", "󰗼  Quit", ":qa<CR>"),}
 
             -- Set your custom header as part of the configuration
