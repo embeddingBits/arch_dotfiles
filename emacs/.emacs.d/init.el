@@ -196,11 +196,12 @@
 (use-package websocket)
 (use-package typst-preview
   :init
+  (setq typst-preview-browser "eaf-browser")
   (setq typst-preview-autostart t)
   (setq typst-preview-open-browser-automatically t)
 
   :custom
-  (typst-preview-invert-colors "always"))
+  (typst-preview-invert-colors "never"))
 
 (use-package typst-ts-mode
   :mode "\\.typ\\'")
