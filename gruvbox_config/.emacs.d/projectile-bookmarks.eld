@@ -1,1 +1,0 @@
-("~/arch_dotfiles/" "~/blogsite/" "~/Projects/contribution/inLimbo/" "~/Projects/personal/algorithmsCPP/" "~/Projects/personal/coreutils-zig/")
