@@ -8,6 +8,21 @@
 ;; Increase process IO for LSP & subprocesses
 (setq read-process-output-max (* 4 1024 1024))
 
+;;; UI Defaults
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq dired-kill-when-opening-new-dired-buffer t)
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)
+
+;;; UI / Look & Feel
+(setq inhibit-startup-message t
+      ring-bell-function 'ignore
+      make-backup-files nil
+      auto-save-default nil
+      visible-bell nil)
+
 ;;; Package system & use-package
 (require 'package)
 (setq package-archives
@@ -23,30 +38,17 @@
 (setq use-package-always-ensure t
       use-package-defer t)
 
-;;; UI Defaults
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(setq dired-kill-when-opening-new-dired-buffer t)
-
-;;; UI / Look & Feel
-(setq inhibit-startup-message t
-      ring-bell-function 'ignore
-      make-backup-files nil
-      auto-save-default nil
-      visible-bell nil)
 ;; Font
 (set-frame-font "JetBrainsMono NFP Semibold 13" nil t)
 ;; Line numbers
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative
       display-line-numbers-width 3)
-;; Visual line wrapping
+
 (global-visual-line-mode 1)
-;; Column number in mode-line
 (column-number-mode 1)
-;; Highlight current line in programming modes only
 (add-hook 'prog-mode-hook #'hl-line-mode)
+
 ;; Scrolling feel
 (setq scroll-step 1
       scroll-margin 8
@@ -57,7 +59,8 @@
   :ensure nil
   :config
   (setq treesit-language-source-alist
-        '((zig "https://github.com/tree-sitter-grammars/tree-sitter-zig"))
+        '((zig "https://github.com/tree-sitter-grammars/tree-sitter-zig")
+          (typst "https://github.com/uben0/tree-sitter-typst"))
         treesit-font-lock-level 4)
   (setq major-mode-remap-alist
         '((c-mode . c-ts-mode)
@@ -65,6 +68,7 @@
           (python-mode . python-ts-mode)
           (go-mode . go-ts-mode)
           (zig-mode . zig-ts-mode)
+          (typst-mode . typst-ts-mode)
           (sh-mode . bash-ts-mode)
           (bash-mode . bash-ts-mode)
           (fish-mode . fish-ts-mode))))
@@ -172,6 +176,7 @@
   :hook ((c-ts-mode . eglot-ensure)
          (c++-ts-mode . eglot-ensure)
          (zig-mode . eglot-ensure)
+         (typst-mode . eglot-ensure)
          (go-ts-mode . eglot-ensure))
   :custom
   (eglot-autoshutdown t)
@@ -188,6 +193,15 @@
   (eglot-stay-out-of '(yasnippet)))
 
 ;;; Typst
+(use-package websocket)
+(use-package typst-preview
+  :init
+  (setq typst-preview-autostart t)
+  (setq typst-preview-open-browser-automatically t)
+
+  :custom
+  (typst-preview-invert-colors "always"))
+
 (use-package typst-ts-mode
   :mode "\\.typ\\'")
 
@@ -224,6 +238,16 @@
                           (projects . 5)))
   (dashboard-setup-startup-hook))
 
+;; eaf tools
+(use-package eaf
+  :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
+  :custom
+  (eaf-browser-continue-where-left-off t)
+  (eaf-browser-enable-adblocker t)
+  (browse-url-browser-function 'eaf-open-browser))
+(require 'eaf-browser)
+(require 'eaf-pdf-viewer)
+
 ;;; Programming defaults
 (setq-default indent-tabs-mode nil
               tab-width 4)
@@ -251,4 +275,5 @@
    '(all-the-icons company dashboard doom-modeline evil-collection
                    general gruvbox-theme indent-bars lsp-ui magit
                    marginalia org-appear projectile rg treesit-auto
-                   typst-ts-mode vertico zig-mode zig-ts-mode)))
+                   typst-preview typst-ts-mode vertico zig-mode
+                   zig-ts-mode)))
