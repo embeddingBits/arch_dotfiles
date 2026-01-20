@@ -44,20 +44,21 @@
       use-package-defer t)
 
 ;; Font
-(defvar +fixed-width-font "JetBrainsMono Nerd Font"
-  "Font used globally for fixed-width text.")
 
-(defvar +variable-width-font "IosevkaTerm Nerd Font"
-  "Font used in Org buffers (variable + fixed pitch).")
+(defvar +font "IosevkaTerm NF")
 
 (set-face-attribute 'default nil
-                    :font +fixed-width-font
-                    :height 130
-                    :weight 'medium)
+                    :font +font
+                    :height 140
+                    :weight 'regular)
 
 (set-face-attribute 'fixed-pitch nil
-                    :font +fixed-width-font
-                    :height 130)
+                    :font +font
+                    :height 140)
+
+(set-face-attribute 'variable-pitch nil
+                    :font +font
+                    :height 140)
 
 ;; Line numbers
 (global-display-line-numbers-mode 1)
@@ -251,8 +252,7 @@
         dashboard-set-heading-icons t
         dashboard-set-file-icons t
         dashboard-items '((recents . 5)
-                          (bookmarks . 5))
-        dashboard-projects-backend 'projectile)
+                          (bookmarks . 5)))
   (dashboard-setup-startup-hook))
 
 ;; eaf tools
@@ -282,45 +282,6 @@
 (electric-pair-mode 1)
 
 ;; Org mode
-
-(defvar +fixed-width-font "JetBrainsMono NF")
-(defvar +org-font "IosevkaTerm NF")
-
-(defun my/org-font-setup ()
-  ;; Enable variable pitch in Org buffers
-  (variable-pitch-mode 1)
-
-  ;; Main text
-  (face-remap-add-relative
-   'variable-pitch
-   :family +org-font
-   :height 130
-   :weight 'regular)
-
-  ;; Fixed-width parts in Org
-  (face-remap-add-relative
-   'fixed-pitch
-   :family +org-font
-   :height 130)
-
-  ;; Explicit Org faces
-  (dolist (face '(org-code
-                  org-table
-                  org-block
-                  org-block-begin-line
-                  org-block-end-line
-                  org-verbatim
-                  org-meta-line
-                  org-special-keyword
-                  org-modern-symbol))
-    (face-remap-add-relative
-     face
-     :family +org-font
-     :height 130)))
-
-(add-hook 'org-mode-hook #'my/org-font-setup)
-
-;;;; Org Appearance Basics
 (setq org-hide-emphasis-markers t
       org-pretty-entities t
       org-ellipsis "…"
@@ -370,6 +331,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(dashboard-footer-messages '("The one true editor, Emacs!"))
  '(package-selected-packages
    '(all-the-icons company dashboard doom-modeline evil-collection
                    general gruvbox-theme indent-bars lsp-ui magit

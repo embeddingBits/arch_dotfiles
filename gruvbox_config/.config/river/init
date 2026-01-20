@@ -7,7 +7,6 @@ source "$HOME/.config/river/env.sh"
 
 ### MY PROGRAMS ###
 TERMINAL="ghostty"
-FILE_MANAGER="dolphin -stylesheet ~/archhypr_dotfiles/kde_stuff/dolphin.qss"
 MENU="rofi -show drun"
 
 riverctl rule-add ssd
@@ -36,7 +35,7 @@ MOD="Super"
 
 # Launch applications
 riverctl map normal $MOD Q spawn $TERMINAL
-riverctl map normal $MOD G spawn foot
+riverctl map normal $MOD Return spawn emacs
 riverctl map normal $MOD E spawn $FILE_MANAGER
 riverctl map normal $MOD R spawn "$MENU"
 riverctl map normal $MOD W spawn "firefox"
