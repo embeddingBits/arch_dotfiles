@@ -143,6 +143,16 @@
   (which-key-mode 1))
 
 ;;; Completion & LSP
+
+;; Yasnippets
+(use-package yasnippet
+  :hook (prog-mode . yas-minor-mode)
+  :config
+  (yas-reload-all))
+
+(use-package yasnippet-snippets
+  :after yasnippet)
+
 ;; Company
 (use-package company
   :hook
@@ -158,19 +168,7 @@
                 vterm-mode-hook
                 minibuffer-setup-hook))
   (add-hook hook (lambda () (company-mode -1))))
-(use-package lsp-mode
-  :hook
-  ((c-mode c++-mode python-mode go-mode zig-mode) . lsp)
-  :init (setq lsp-keymap-prefix "C-c l")
-  :config
-  (setq lsp-enable-snippet t
-        lsp-idle-delay 0.5
-        lsp-headerline-breadcrumb-enable t
-        lsp-completion-provider :capf))  ;; Use capf for completion
-(use-package lsp-ui
-  :after lsp-mode
-  :config
-  (setq lsp-ui-doc-enable nil))
+
 ;; Eglot
 (use-package eglot
   :hook ((c-ts-mode . eglot-ensure)
@@ -191,6 +189,7 @@
      :colorProvider
      :foldingRangeProvider))
   (eglot-stay-out-of '(yasnippet)))
+
 
 ;;; Typst
 (use-package websocket)
@@ -254,10 +253,6 @@
               tab-width 4)
 (electric-pair-mode 1)
 
-;;; Org extras
-(use-package org-appear
-  :hook (org-mode . org-appear-mode))
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -276,5 +271,5 @@
    '(all-the-icons company dashboard doom-modeline evil-collection
                    general gruvbox-theme indent-bars lsp-ui magit
                    marginalia org-appear projectile rg treesit-auto
-                   typst-preview typst-ts-mode vertico zig-mode
-                   zig-ts-mode)))
+                   typst-preview typst-ts-mode vertico yasnippet-capf
+                   yasnippet-snippets zig-mode zig-ts-mode)))
