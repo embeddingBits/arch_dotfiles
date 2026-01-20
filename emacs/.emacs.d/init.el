@@ -44,7 +44,21 @@
       use-package-defer t)
 
 ;; Font
-(set-frame-font "JetBrainsMono NFP Semibold 13" nil t)
+(defvar +fixed-width-font "JetBrainsMono Nerd Font"
+  "Font used globally for fixed-width text.")
+
+(defvar +variable-width-font "IosevkaTerm Nerd Font"
+  "Font used in Org buffers (variable + fixed pitch).")
+
+(set-face-attribute 'default nil
+                    :font +fixed-width-font
+                    :height 130
+                    :weight 'medium)
+
+(set-face-attribute 'fixed-pitch nil
+                    :font +fixed-width-font
+                    :height 130)
+
 ;; Line numbers
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative
@@ -268,22 +282,79 @@
 (electric-pair-mode 1)
 
 ;; Org mode
+
+(defvar +fixed-width-font "JetBrainsMono NF")
+(defvar +org-font "IosevkaTerm NF")
+
+(defun my/org-font-setup ()
+  ;; Enable variable pitch in Org buffers
+  (variable-pitch-mode 1)
+
+  ;; Main text
+  (face-remap-add-relative
+   'variable-pitch
+   :family +org-font
+   :height 130
+   :weight 'regular)
+
+  ;; Fixed-width parts in Org
+  (face-remap-add-relative
+   'fixed-pitch
+   :family +org-font
+   :height 130)
+
+  ;; Explicit Org faces
+  (dolist (face '(org-code
+                  org-table
+                  org-block
+                  org-block-begin-line
+                  org-block-end-line
+                  org-verbatim
+                  org-meta-line
+                  org-special-keyword
+                  org-modern-symbol))
+    (face-remap-add-relative
+     face
+     :family +org-font
+     :height 130)))
+
+(add-hook 'org-mode-hook #'my/org-font-setup)
+
+;;;; Org Appearance Basics
+(setq org-hide-emphasis-markers t
+      org-pretty-entities t
+      org-ellipsis "…"
+      org-auto-align-tags nil
+      org-tags-column 0
+      org-agenda-tags-column 0)
+
+;;;; org-appear
 (use-package org-appear
-  :commands (org-appear-mode)
-  :hook     (org-mode . org-appear-mode)
+  :hook (org-mode . org-appear-mode)
   :config
-  (setq org-hide-emphasis-markers t) 
-  (setq org-appear-autoemphasis   t  
-        org-appear-autolinks      t  
-		org-appear-autosubmarkers t))
+  (setq org-appear-autoemphasis t
+        org-appear-autolinks t
+        org-appear-autosubmarkers t
+        org-appear-delay 0.1))
 
 
-;; Org Modern
+;;;; org-modern
 (use-package org-modern
   :after org
-  :hook (org-mode . org-modern-mode)
+  :hook ((org-mode . org-modern-mode)
+         (org-agenda-finalize . org-modern-agenda))
   :config
-  (setq org-modern-star '("⌬" "⊛" "➤" "▻" "◎" "❂" "⦿" "✦"  "❅" "◈" "☢" )))
+  (setq org-modern-variable-pitch t
+        org-modern-table nil
+        org-modern-star '("⌬" "⊛" "➤" "▻" "◎" "❂" "⦿" "✦" "❅" "◈" "☢")))
+
+
+;;;; Org Visual Polish
+(add-hook 'org-mode-hook
+          (lambda ()
+            (display-line-numbers-mode -1)))
+
+(setq org-startup-indented nil)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
