@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: #ifndef XXX; #define XXX; #endif
+# key: once
+# --
+#ifndef ${1:`(upcase (replace-regexp-in-string "[^A-Za-z0-9_]" "_" (file-name-nondirectory (or (buffer-file-name)))))`}
+#define $1
+
+$0
+
+#endif /* $1 */
