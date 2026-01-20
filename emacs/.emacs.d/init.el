@@ -179,6 +179,7 @@
   :hook ((c-ts-mode . eglot-ensure)
          (c++-ts-mode . eglot-ensure)
          (zig-mode . eglot-ensure)
+         (org-mode . eglot-ensure)
          (typst-mode . eglot-ensure)
          (go-ts-mode . eglot-ensure))
   :custom
@@ -197,7 +198,6 @@
 
 
 ;;; Typst
-(use-package websocket)
 (use-package typst-preview
   :init
   (setq typst-preview-browser "eaf-browser")
@@ -205,7 +205,7 @@
   (setq typst-preview-open-browser-automatically t)
 
   :custom
-  (typst-preview-invert-colors "never"))
+  (typst-preview-invert-colors "auto"))
 
 (use-package typst-ts-mode
   :mode "\\.typ\\'")
@@ -220,10 +220,6 @@
           zig-mode zig-ts-mode)))
 
 ;;; Project / Search / Git
-(use-package projectile
-  :config
-  (setq projectile-known-projects '("~/Projects/personal/algorithmsCPP/")))
-
 (use-package rg)
 (use-package magit)
 
@@ -241,7 +237,6 @@
         dashboard-set-heading-icons t
         dashboard-set-file-icons t
         dashboard-items '((recents . 5)
-                          (projects . 5)
                           (bookmarks . 5))
         dashboard-projects-backend 'projectile)
   (dashboard-setup-startup-hook))
@@ -265,12 +260,30 @@
     (evil-define-key 'normal pdf-view-mode-map
       (kbd "j") 'pdf-view-next-page
       (kbd "k") 'pdf-view-previous-page))
-  :hook (pdf-view-mode-hook . (lambda () (display-line-numbers-mode -1))))
+  :hook (pdf-view-mode-hook . (lambda () (display-line-numbers-mode nil))))
 
 ;;; Programming defaults
 (setq-default indent-tabs-mode nil
               tab-width 4)
 (electric-pair-mode 1)
+
+;; Org mode
+(use-package org-appear
+  :commands (org-appear-mode)
+  :hook     (org-mode . org-appear-mode)
+  :config
+  (setq org-hide-emphasis-markers t) 
+  (setq org-appear-autoemphasis   t  
+        org-appear-autolinks      t  
+		org-appear-autosubmarkers t))
+
+
+;; Org Modern
+(use-package org-modern
+  :after org
+  :hook (org-mode . org-modern-mode)
+  :config
+  (setq org-modern-star '("⌬" "⊛" "➤" "▻" "◎" "❂" "⦿" "✦"  "❅" "◈" "☢" )))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -289,7 +302,7 @@
  '(package-selected-packages
    '(all-the-icons company dashboard doom-modeline evil-collection
                    general gruvbox-theme indent-bars lsp-ui magit
-                   marginalia org-appear pdf-tools projectile rg
-                   treesit treesit-auto typst-preview typst-ts-mode
-                   vertico yasnippet-capf yasnippet-snippets zig-mode
-                   zig-ts-mode)))
+                   marginalia org-appear org-modern pdf-tools
+                   projectile rg treesit treesit-auto typst-preview
+                   typst-ts-mode vertico yasnippet-capf
+                   yasnippet-snippets zig-mode zig-ts-mode)))
