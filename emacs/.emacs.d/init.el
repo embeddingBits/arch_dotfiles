@@ -23,6 +23,11 @@
       auto-save-default nil
       visible-bell nil)
 
+;; Keybinding
+(global-set-key (kbd "C-c d") 'delete-file)
+(global-set-key (kbd "C-c e") 'eshell)
+(global-set-key (kbd "C-c b") 'eaf-open-browser)
+
 ;;; Package system & use-package
 (require 'package)
 (setq package-archives
@@ -217,7 +222,9 @@
 ;;; Project / Search / Git
 (use-package projectile
   :config
-  (projectile-mode 1))
+  (setq projectile-known-projects '("~/Projects/contribution/"
+                                    "~/Projects/personal/")))
+
 (use-package rg)
 (use-package magit)
 
@@ -235,7 +242,8 @@
         dashboard-set-heading-icons t
         dashboard-set-file-icons t
         dashboard-items '((recents . 5)
-                          (projects . 5)))
+                          (projects . 5))
+        dashboard-projects-backend 'projectile)
   (dashboard-setup-startup-hook))
 
 ;; eaf tools
