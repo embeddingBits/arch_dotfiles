@@ -222,8 +222,7 @@
 ;;; Project / Search / Git
 (use-package projectile
   :config
-  (setq projectile-known-projects '("~/Projects/contribution/"
-                                    "~/Projects/personal/")))
+  (setq projectile-known-projects '("~/Projects/personal/algorithmsCPP/")))
 
 (use-package rg)
 (use-package magit)
@@ -232,7 +231,7 @@
 (use-package dashboard
   :demand t
   :config
-  (setq dashboard-startup-banner (expand-file-name "~/Downloads/dashboard.jpeg")
+  (setq dashboard-startup-banner (expand-file-name "~/Downloads/dashboard-1.jpeg")
         dashboard-banner-logo-title "eBits Emacs"
         dashboard-center-content t
         dashboard-vertically-center-content t
@@ -242,7 +241,8 @@
         dashboard-set-heading-icons t
         dashboard-set-file-icons t
         dashboard-items '((recents . 5)
-                          (projects . 5))
+                          (projects . 5)
+                          (bookmarks . 5))
         dashboard-projects-backend 'projectile)
   (dashboard-setup-startup-hook))
 
@@ -254,7 +254,18 @@
   (eaf-browser-enable-adblocker t)
   (browse-url-browser-function 'eaf-open-browser))
 (require 'eaf-browser)
-(require 'eaf-pdf-viewer)
+
+;; PDF Tools
+(use-package pdf-tools
+  :config
+  (pdf-loader-install)
+  (setq-default pdf-view-display-size 'fit-page)
+  (setq pdf-view-resize-factor 1.1)
+  (with-eval-after-load 'evil
+    (evil-define-key 'normal pdf-view-mode-map
+      (kbd "j") 'pdf-view-next-page
+      (kbd "k") 'pdf-view-previous-page))
+  :hook (pdf-view-mode-hook . (lambda () (display-line-numbers-mode -1))))
 
 ;;; Programming defaults
 (setq-default indent-tabs-mode nil
@@ -278,6 +289,7 @@
  '(package-selected-packages
    '(all-the-icons company dashboard doom-modeline evil-collection
                    general gruvbox-theme indent-bars lsp-ui magit
-                   marginalia org-appear projectile rg treesit-auto
-                   typst-preview typst-ts-mode vertico yasnippet-capf
-                   yasnippet-snippets zig-mode zig-ts-mode)))
+                   marginalia org-appear pdf-tools projectile rg
+                   treesit treesit-auto typst-preview typst-ts-mode
+                   vertico yasnippet-capf yasnippet-snippets zig-mode
+                   zig-ts-mode)))
