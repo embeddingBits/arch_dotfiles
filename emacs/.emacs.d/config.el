@@ -1,12 +1,4 @@
-#+title:     eBits Emacs – Literate Configuration
-#+author:    Amiitesh Pradeep Kumar
-
-* Emacs Config
-** Emacs startup performance tweaks
-
-We raise gc-cons-threshold during startup, then bring it back down.
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Emacs startup performance tweaks][Emacs startup performance tweaks:1]]
 (setq gc-cons-threshold most-positive-fixnum
       gc-cons-percentage 0.8)
 
@@ -14,17 +6,13 @@ We raise gc-cons-threshold during startup, then bring it back down.
           (lambda ()
             (setq gc-cons-threshold (* 64 1024 1024)
                   gc-cons-percentage 0.1)))
-#+end_src
+;; Emacs startup performance tweaks:1 ends here
 
-Increase process output buffer for LSP & friends.
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Emacs startup performance tweaks][Emacs startup performance tweaks:2]]
 (setq read-process-output-max (* 4 1024 1024))
-#+end_src
+;; Emacs startup performance tweaks:2 ends here
 
-** UI – turn off distracting elements
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*UI – turn off distracting elements][UI – turn off distracting elements:1]]
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -32,48 +20,36 @@ Increase process output buffer for LSP & friends.
 (setq dired-kill-when-opening-new-dired-buffer t
       split-height-threshold nil
       split-width-threshold 0)
-#+end_src
+;; UI – turn off distracting elements:1 ends here
 
-** General look & feel, quality of life
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*General look & feel, quality of life][General look & feel, quality of life:1]]
 (setq inhibit-startup-message t
       ring-bell-function       'ignore
       visible-bell             nil
       make-backup-files        nil
       auto-save-default        nil)
-#+end_src
+;; General look & feel, quality of life:1 ends here
 
-*** Useful quick keybindings
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Useful quick keybindings][Useful quick keybindings:1]]
 (global-set-key (kbd "C-c d") 'delete-file)
 (global-set-key (kbd "C-c e") 'eshell)
 (global-set-key (kbd "C-c b") 'eaf-open-browser)
-#+end_src
+;; Useful quick keybindings:1 ends here
 
-** Package system & use-package bootstrap
-
-(Already done in init.el – we only add configuration here)
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Package system & use-package bootstrap][Package system & use-package bootstrap:1]]
 (setq use-package-always-ensure t
       use-package-defer      t)
-#+end_src
+;; Package system & use-package bootstrap:1 ends here
 
-** Font
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Font][Font:1]]
 (defvar +font "IosevkaTerm NFP")
 
 (set-face-attribute 'default        nil :font +font :height 140 :weight 'regular)
 (set-face-attribute 'fixed-pitch    nil :font +font :height 140)
 (set-face-attribute 'variable-pitch nil :font +font :height 140)
-#+end_src
+;; Font:1 ends here
 
-** Line numbers, scrolling, visuals
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Line numbers, scrolling, visuals][Line numbers, scrolling, visuals:1]]
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type  'relative
       display-line-numbers-width 3)
@@ -86,11 +62,9 @@ Increase process output buffer for LSP & friends.
 (setq scroll-step            1
       scroll-margin          8
       scroll-conservatively 101)
-#+end_src
+;; Line numbers, scrolling, visuals:1 ends here
 
-** Built-in Treesit configuration
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Built-in Treesit configuration][Built-in Treesit configuration:1]]
 (use-package treesit
   :ensure nil
   :config
@@ -109,63 +83,50 @@ Increase process output buffer for LSP & friends.
           (sh-mode      . bash-ts-mode)
           (bash-mode    . bash-ts-mode)
           (fish-mode    . fish-ts-mode))))
-#+end_src
+;; Built-in Treesit configuration:1 ends here
 
-#+begin_src emacs-lisp
+;; [[file:config.org::*Built-in Treesit configuration][Built-in Treesit configuration:2]]
 (use-package treesit-auto
   :config
   (global-treesit-auto-mode))
-#+end_src
+;; Built-in Treesit configuration:2 ends here
 
-** Zig mode
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Zig mode][Zig mode:1]]
 (use-package zig-ts-mode
   :vc (:url "https://codeberg.org/meow_king/zig-ts-mode"
             :rev :newest))
 
 (add-to-list 'auto-mode-alist '("\\.zig\\(?:\\.zon\\)?\\'" . zig-ts-mode))
-#+end_src
+;; Zig mode:1 ends here
 
-** Theme
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Theme][Theme:1]]
 (use-package gruvbox-theme
   :demand t
   :config
   (load-theme 'gruvbox-dark-hard t))
-#+end_src
+;; Theme:1 ends here
 
-** Core packages – modeline, icons, completion, evil
-*** Doom Modeline
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Doom Modeline][Doom Modeline:1]]
 (use-package doom-modeline
   :demand t
   :config
   (doom-modeline-mode 1))
-#+end_src
+;; Doom Modeline:1 ends here
 
-*** All the icons
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*All the icons][All the icons:1]]
 (use-package all-the-icons
   :if (display-graphic-p))
-#+end_src
+;; All the icons:1 ends here
 
-*** Vertico and Marginalia
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Vertico and Marginalia][Vertico and Marginalia:1]]
 (use-package vertico
   :init (vertico-mode 1))
 
 (use-package marginalia
   :init (marginalia-mode 1))
-#+end_src
+;; Vertico and Marginalia:1 ends here
 
-*** Evil Mode
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Evil Mode][Evil Mode:1]]
 (use-package evil
   :demand t
   :init
@@ -180,11 +141,9 @@ Increase process output buffer for LSP & friends.
   :after evil
   :config
   (evil-collection-init))
-#+end_src
+;; Evil Mode:1 ends here
 
-
-*** General Config
-#+begin_src emacs-lisp
+;; [[file:config.org::*General Config][General Config:1]]
 (use-package general
   :after evil
   :config
@@ -202,20 +161,15 @@ Increase process output buffer for LSP & friends.
     "l r" '(lsp-find-references :which-key "references")
     "l h" '(lsp-describe-thing-at-point :which-key "hover")
     "l f" '(lsp-format-buffer :which-key "format")))
-#+end_src
+;; General Config:1 ends here
 
-*** Which Key configuration
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Which Key configuration][Which Key configuration:1]]
 (use-package which-key
   :config
   (which-key-mode 1))
-#+end_src
+;; Which Key configuration:1 ends here
 
-** Completion & LSP related packages
-
-*** Yasnippet
-#+begin_src emacs-lisp
+;; [[file:config.org::*Yasnippet][Yasnippet:1]]
 (use-package yasnippet
   :hook (prog-mode . yas-minor-mode)
   :config
@@ -223,10 +177,9 @@ Increase process output buffer for LSP & friends.
 
 (use-package yasnippet-snippets
   :after yasnippet)
-#+end_src
-*** Company
+;; Yasnippet:1 ends here
 
-#+begin_src emacs-lisp
+;; [[file:config.org::*Company][Company:1]]
 (use-package company
   :hook (prog-mode . company-mode)
   :config
@@ -238,11 +191,9 @@ Increase process output buffer for LSP & friends.
 (dolist (hook '(eshell-mode-hook shell-mode-hook term-mode-hook
                 vterm-mode-hook minibuffer-setup-hook))
   (add-hook hook (lambda () (company-mode -1))))
-#+end_src
+;; Company:1 ends here
 
-*** Eglot
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Eglot][Eglot:1]]
 (use-package eglot
   :hook ((c-ts-mode     . eglot-ensure)
          (c++-ts-mode   . eglot-ensure)
@@ -263,11 +214,9 @@ Increase process output buffer for LSP & friends.
      :colorProvider
      :foldingRangeProvider))
   (eglot-stay-out-of '(yasnippet)))
-#+end_src
+;; Eglot:1 ends here
 
-** Typst support
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Typst support][Typst support:1]]
 (use-package typst-preview
   :init
   (setq typst-preview-browser 'default
@@ -278,28 +227,22 @@ Increase process output buffer for LSP & friends.
 
 (use-package typst-ts-mode
   :mode "\\.typ\\'")
-#+end_src
+;; Typst support:1 ends here
 
-** Visual indent guides
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Visual indent guides][Visual indent guides:1]]
 (use-package indent-bars
   :custom (indent-bars-treesit-support t)
   :hook ((emacs-lisp-mode
           c-mode c++-mode c-ts-mode c++-ts-mode
           zig-mode zig-ts-mode)))
-#+end_src
+;; Visual indent guides:1 ends here
 
-** Project, search, git
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Project, search, git][Project, search, git:1]]
 (use-package rg)
 (use-package magit)
-#+end_src
+;; Project, search, git:1 ends here
 
-** Dashboard
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Dashboard][Dashboard:1]]
 (use-package dashboard
   :demand t
   :config
@@ -315,11 +258,9 @@ Increase process output buffer for LSP & friends.
         dashboard-items '((recents   . 3)
                           (bookmarks . 3)))
   (dashboard-setup-startup-hook))
-#+end_src
+;; Dashboard:1 ends here
 
-** PDF Tools
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*PDF Tools][PDF Tools:1]]
 (use-package pdf-tools
   :config
   (pdf-loader-install)
@@ -332,22 +273,16 @@ Increase process output buffer for LSP & friends.
       (kbd "k") 'pdf-view-previous-page))
 
   :hook (pdf-view-mode . (lambda () (display-line-numbers-mode -1))))
-#+end_src
+;; PDF Tools:1 ends here
 
-** Programming defaults
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Programming defaults][Programming defaults:1]]
 (setq-default indent-tabs-mode nil
               tab-width 4)
 
 (electric-pair-mode 1)
-#+end_src
+;; Programming defaults:1 ends here
 
-** Org mode – the heart
-
-*** Setup Functions
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Setup Functions][Setup Functions:1]]
 (defun efs/org-mode-setup ()
   (variable-pitch-mode 1)
   (org-indent-mode)
@@ -386,11 +321,9 @@ Increase process output buffer for LSP & friends.
   (set-face-attribute 'org-special-keyword  nil :inherit '(font-lock-comment-face fixed-pitch))
   (set-face-attribute 'org-meta-line        nil :inherit '(font-lock-comment-face fixed-pitch))
   (set-face-attribute 'org-checkbox         nil :inherit 'fixed-pitch))
-#+end_src
+;; Setup Functions:1 ends here
 
-*** Main org configuration
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Main org configuration][Main org configuration:1]]
 (use-package org
   :hook (org-mode . efs/org-mode-setup)
   :config
@@ -403,11 +336,9 @@ Increase process output buffer for LSP & friends.
                     "|" "DONE(d)" "CANCELLED(c)")))
 
   (efs/org-font-setup))
-#+end_src
+;; Main org configuration:1 ends here
 
-*** Org Modern
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Org Modern][Org Modern:1]]
 (use-package org-modern
   :after org
   :hook (org-mode . org-modern-mode)
@@ -421,31 +352,27 @@ Increase process output buffer for LSP & friends.
           ("WAITING"  . (:foreground "#1d2021" :background "#d8a657" :weight bold))
           ("DONE"     . (:foreground "#1d2021" :background "#a9b665" :weight bold))
           ("CANCELLED" . (:foreground "green" :strike-through t)))))
-#+end_src
+;; Org Modern:1 ends here
 
-#+begin_src emacs-lisp
+;; [[file:config.org::*Org Modern][Org Modern:2]]
 (use-package org-appear
   :hook (org-mode . org-appear-mode)
   :config
   (setq org-appear-autoemphasis   t
         org-appear-autolinks      t
         org-appear-autosubmarkers t))
-#+end_src
+;; Org Modern:2 ends here
 
-** Face customizations
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Face customizations][Face customizations:1]]
 (custom-set-faces
  '(line-number          ((t (:background "#1d2021" :foreground "#7c6f64"))))
  '(mode-line            ((t (:background "#1d2021" :foreground "#ebdbb2"
                                :box (:line-width 2 :color "#1d2021")))))
  '(mode-line-inactive   ((t (:background "#555555" :foreground "#eeeeee")))))
-#+end_src
+;; Face customizations:1 ends here
 
-** Custom variables (you can also keep them in custom.el)
-
-#+begin_src emacs-lisp
+;; [[file:config.org::*Custom variables (you can also keep them in custom.el)][Custom variables (you can also keep them in custom.el):1]]
 (custom-set-variables
  '(dashboard-footer-messages
    '("Yadā yadā hi dharmasya glānir bhavati bhārata,\nAbhyutthānam adharmasya tadātmānaṁ sṛjāmyaham")))
-#+end_src
+;; Custom variables (you can also keep them in custom.el):1 ends here
