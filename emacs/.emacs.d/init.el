@@ -100,7 +100,7 @@
 ;; Zig mode
 (use-package zig-ts-mode
   :vc (:url "https://codeberg.org/meow_king/zig-ts-mode"
-       :rev :newest))
+            :rev :newest))
 (add-to-list 'auto-mode-alist '("\\.zig\\(?:\\.zon\\)?\\'" . zig-ts-mode))
 
 ;;; Theme
@@ -251,8 +251,8 @@
         dashboard-icon-type 'all-the-icons
         dashboard-set-heading-icons t
         dashboard-set-file-icons t
-        dashboard-items '((recents . 5)
-                          (bookmarks . 5)))
+        dashboard-items '((recents . 3)
+                          (bookmarks . 3)))
   (dashboard-setup-startup-hook))
 
 ;; eaf tools
@@ -281,41 +281,58 @@
               tab-width 4)
 (electric-pair-mode 1)
 
-;; Org mode
-(setq org-hide-emphasis-markers t
-      org-pretty-entities t
-      org-ellipsis "…"
-      org-auto-align-tags nil
-      org-tags-column 0
-      org-agenda-tags-column 0)
+;; Org Mode Configuration 
+(defun efs/org-mode-setup ()
+  (org-indent-mode)
+  (display-line-numbers-mode -1)
+  (variable-pitch-mode 1)
+  (visual-line-mode 1))
 
-;;;; org-appear
-(use-package org-appear
-  :hook (org-mode . org-appear-mode)
+(defun efs/org-font-setup ()
+  ;; Replace list hyphen with dot
+  (font-lock-add-keywords 'org-mode
+                          '(("^ *\\([-]\\) "
+                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+
+  (dolist (face '((org-level-1 . 1.2)
+                  (org-level-2 . 1.1)
+                  (org-level-3 . 1.05)
+                  (org-level-4 . 1.0)
+                  (org-level-5 . 1.1)
+                  (org-level-6 . 1.1)
+                  (org-level-7 . 1.1)
+                  (org-level-8 . 1.1)))
+    (set-face-attribute (car face) nil :font "IosevkaTerm NF" :weight 'regular :height (cdr face)))
+
+  ;; Ensure that anything that should be fixed-pitch in Org files appears that way
+  (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
+  (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
+  (set-face-attribute 'org-table nil   :inherit '(shadow fixed-pitch))
+  (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
+  (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
+  (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
+  (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch))
+
+(use-package org
+  :hook (org-mode . efs/org-mode-setup)
   :config
-  (setq org-appear-autoemphasis t
-        org-appear-autolinks t
-        org-appear-autosubmarkers t
-        org-appear-delay 0.1))
+  (setq org-ellipsis " ⤵")
+  (setq org-hide-emphasis-markers t)
+  (efs/org-font-setup))
 
-
-;;;; org-modern
-(use-package org-modern
+(use-package org-bullets
   :after org
-  :hook ((org-mode . org-modern-mode)
-         (org-agenda-finalize . org-modern-agenda))
-  :config
-  (setq org-modern-variable-pitch t
-        org-modern-table nil
-        org-modern-star '("⌬" "⊛" "➤" "▻" "◎" "❂" "⦿" "✦" "❅" "◈" "☢")))
+  :hook (org-mode . org-bullets-mode)
+  :custom
+  (org-bullets-bullet-list '("●" "○" "✸" "✿")))
 
+(defun efs/org-mode-visual-fill ()
+  (setq visual-fill-column-width 100
+        visual-fill-column-center-text t)
+  (visual-fill-column-mode 1))
 
-;;;; Org Visual Polish
-(add-hook 'org-mode-hook
-          (lambda ()
-            (display-line-numbers-mode -1)))
-
-(setq org-startup-indented nil)
+(use-package visual-fill-column
+  :hook (org-mode . efs/org-mode-visual-fill))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -331,11 +348,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(dashboard-footer-messages '("The one true editor, Emacs!"))
+ '(dashboard-footer-messages
+   '("Yadā yadā hi dharmasya glānir bhavati bhārata,\12Abhyutthānam adharmasya tadātmānaṁ sṛjāmyaham"))
  '(package-selected-packages
    '(all-the-icons company dashboard doom-modeline evil-collection
                    general gruvbox-theme indent-bars lsp-ui magit
-                   marginalia org-appear org-modern pdf-tools
-                   projectile rg treesit treesit-auto typst-preview
-                   typst-ts-mode vertico yasnippet-capf
+                   marginalia org-appear org-modern org-superstar
+                   pdf-tools projectile rg treesit treesit-auto
+                   typst-preview typst-ts-mode vertico yasnippet-capf
                    yasnippet-snippets zig-mode zig-ts-mode)))
