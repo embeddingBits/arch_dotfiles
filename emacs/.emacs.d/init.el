@@ -45,7 +45,7 @@
 
 ;; Font
 
-(defvar +font "IosevkaTerm NF")
+(defvar +font "IosevkaTerm NFP")
 
 (set-face-attribute 'default nil
                     :font +font
@@ -57,7 +57,7 @@
                     :height 140)
 
 (set-face-attribute 'variable-pitch nil
-                    :font +font
+                    :font "IosevkaTerm NFP"
                     :height 140)
 
 ;; Line numbers
@@ -215,7 +215,7 @@
 ;;; Typst
 (use-package typst-preview
   :init
-  (setq typst-preview-browser "eaf-browser")
+  (setq typst-preview-browser 'default)
   (setq typst-preview-autostart t)
   (setq typst-preview-open-browser-automatically t)
 
@@ -255,15 +255,6 @@
                           (bookmarks . 3)))
   (dashboard-setup-startup-hook))
 
-;; eaf tools
-(use-package eaf
-  :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
-  :custom
-  (eaf-browser-continue-where-left-off t)
-  (eaf-browser-enable-adblocker t)
-  (browse-url-browser-function 'eaf-open-browser))
-(require 'eaf-browser)
-
 ;; PDF Tools
 (use-package pdf-tools
   :config
@@ -282,32 +273,42 @@
 (electric-pair-mode 1)
 
 ;; Org Mode Configuration 
+
 (defun efs/org-mode-setup ()
+  (variable-pitch-mode 1)
   (org-indent-mode)
   (display-line-numbers-mode -1)
-  (variable-pitch-mode 1)
   (visual-line-mode 1))
 
 (defun efs/org-font-setup ()
-  ;; Replace list hyphen with dot
-  (font-lock-add-keywords 'org-mode
-                          '(("^ *\\([-]\\) "
-                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+  ;; Replace list hyphen with dot (run once)
+  (with-eval-after-load 'org
+    (font-lock-add-keywords
+     'org-mode
+     '(("^ *\\([-]\\) "
+        (0 (prog1 ()
+             (compose-region (match-beginning 1)
+                             (match-end 1)
+                             "•")))))))
 
-  (dolist (face '((org-level-1 . 1.2)
-                  (org-level-2 . 1.1)
-                  (org-level-3 . 1.05)
-                  (org-level-4 . 1.0)
+  ;; Headings
+  (dolist (face '((org-level-1 . 1.4)
+                  (org-level-2 . 1.3)
+                  (org-level-3 . 1.2)
+                  (org-level-4 . 1.1)
                   (org-level-5 . 1.1)
                   (org-level-6 . 1.1)
                   (org-level-7 . 1.1)
                   (org-level-8 . 1.1)))
-    (set-face-attribute (car face) nil :font "IosevkaTerm NF" :weight 'regular :height (cdr face)))
+    (set-face-attribute (car face) nil
+                        :font "IosevkaTerm NFP"
+                        :weight 'regular
+                        :height (cdr face)))
 
-  ;; Ensure that anything that should be fixed-pitch in Org files appears that way
-  (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
-  (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-table nil   :inherit '(shadow fixed-pitch))
+  ;; Fixed pitch areas
+  (set-face-attribute 'org-block nil :inherit 'fixed-pitch)
+  (set-face-attribute 'org-code nil :inherit '(shadow fixed-pitch))
+  (set-face-attribute 'org-table nil :inherit '(shadow fixed-pitch))
   (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
   (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
   (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
@@ -316,23 +317,44 @@
 (use-package org
   :hook (org-mode . efs/org-mode-setup)
   :config
-  (setq org-ellipsis " ⤵")
-  (setq org-hide-emphasis-markers t)
+  (setq org-ellipsis " ⤵"
+        org-pretty-entities t
+        org-hide-emphasis-markers t)
+
+  (setq org-todo-keywords
+        '((sequence "TODO(t)" "IN-PROG(p)" "WAITING(w)"
+                    "|" "DONE(d)" "CANCELLED(c)")))
   (efs/org-font-setup))
 
-(use-package org-bullets
+;; Org Modern
+(use-package org-modern
   :after org
-  :hook (org-mode . org-bullets-mode)
-  :custom
-  (org-bullets-bullet-list '("●" "○" "✸" "✿")))
+  :hook (org-mode . org-modern-mode)
+  :config
+  (setq org-modern-star 'replace
+        org-modern-replace-stars '("●" "○" "✸" "✿")
+        org-modern-todo t
+        org-modern-todo-faces
+        '(("TODO"      . (:foreground "#1d2021" :background "#ea6962" :weight bold))
+          ("IN-PROG"   . (:foreground "#1d2021" :background "#83a598" :weight bold))
+          ("WAITING"   . (:foreground "#1d2021" :background "#d8a657" :weight bold))
+          ("DONE"      . (:foreground "#1d2021" :background "#a9b665" :weight bold))
+          ("CANCELLED" . (:foreground "green" :strike-through t)))))
 
-(defun efs/org-mode-visual-fill ()
-  (setq visual-fill-column-width 100
-        visual-fill-column-center-text t)
-  (visual-fill-column-mode 1))
+(use-package org-appear
+  :hook (org-mode . org-appear-mode)
+  :config
+  (setq org-appear-autoemphasis t
+        org-appear-autolinks t
+        org-appear-autosubmarkers t))
 
-(use-package visual-fill-column
-  :hook (org-mode . efs/org-mode-visual-fill))
+;;(use-package org-bullets
+;;  :after org
+;;  :hook (org-mode . org-bullets-mode)
+;;  :custom
+;;  (org-bullets-bullet-list '("󰪥" "" ""  "󰴈")))
+
+;; Markdown
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -353,7 +375,8 @@
  '(package-selected-packages
    '(all-the-icons company dashboard doom-modeline evil-collection
                    general gruvbox-theme indent-bars lsp-ui magit
-                   marginalia org-appear org-modern org-superstar
-                   pdf-tools projectile rg treesit treesit-auto
-                   typst-preview typst-ts-mode vertico yasnippet-capf
-                   yasnippet-snippets zig-mode zig-ts-mode)))
+                   marginalia markdown-preview-mode org-appear
+                   org-modern org-superstar pdf-tools projectile rg
+                   treesit treesit-auto typst-preview typst-ts-mode
+                   vertico yasnippet-capf yasnippet-snippets zig-mode
+                   zig-ts-mode)))
