@@ -184,7 +184,7 @@ Ligatures in Emacs
 #+begin_src emacs-lisp
 (global-set-key (kbd "C-c d") 'delete-file)
 (global-set-key (kbd "C-c e") 'eshell)
-(global-set-key (kbd "C-c b") 'eaf-open-browser)
+(global-set-key (kbd "C-c c") 'compile)
 #+end_src
 
 ** Programming Configuration
