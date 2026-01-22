@@ -18,9 +18,9 @@ confirm-close-surface = false
 shell-integration-features = no-cursor
 
 # Font Settings
-font-size = 15
+font-size = 14
 
-font-family = IosevkaTerm NFP  
+font-family = JetBrainsMono NFP  
 font-style = semibold
 font-style-bold = bold
 font-style-italic = semibold italic
