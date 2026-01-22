@@ -1,6 +1,6 @@
-#+title: eBits 
+#+title: eBits - Clean Emacs Configuration
 
-* Emacs Setup
+* Emacs Config
 ** Performance & Startup
 *** Garbage Collection Optimization
 #+begin_src emacs-lisp
@@ -151,19 +151,19 @@
     "f s" '(save-buffer :which-key "save")
     "b b" '(switch-to-buffer :which-key "switch buffer")
     "b k" '(kill-buffer :which-key "kill buffer")
-    "q" '(eshell :which-key "Open eshell")
     "w q" '(kill-buffer-and-window :which-key "close window")
     "w v" '(split-window-right :which-key "split right")
     "w s" '(split-window-below :which-key "split below")))
 #+end_src
-** Programming Configuration
-*** Programming Defaults
+
+*** Quick Global Keybindings
 #+begin_src emacs-lisp
-(setq-default indent-tabs-mode nil
-              tab-width 4)
-(electric-pair-mode 1)
+(global-set-key (kbd "C-c d") 'delete-file)
+(global-set-key (kbd "C-c e") 'eshell)
+(global-set-key (kbd "C-c b") 'eaf-open-browser)
 #+end_src
 
+** Programming Configuration
 *** Tree-sitter Support
 #+begin_src emacs-lisp
 (use-package treesit
@@ -208,6 +208,13 @@
         typst-preview-open-browser-automatically t)
   :custom
   (typst-preview-invert-colors "auto"))
+#+end_src
+
+*** Programming Defaults
+#+begin_src emacs-lisp
+(setq-default indent-tabs-mode nil
+              tab-width 4)
+(electric-pair-mode 1)
 #+end_src
 
 *** Visual Indent Guides
@@ -395,94 +402,61 @@
         org-appear-autosubmarkers t))
 #+end_src
 
-*** Org Evil Keybindings
+*** Org Mode Keybindings
 #+begin_src emacs-lisp
-
-  (with-eval-after-load 'org
-    (require 'evil)
-    (require 'general)
-    
-    ;; Local leader for org-mode
-    (general-create-definer my/org-leader
-      :states '(normal visual)
-      :keymaps 'org-mode-map
-      :prefix ",")
-    
-    ;; Org-specific leader bindings
-    (my/org-leader
-      ;; TODO management
-      "t" '(org-todo :which-key "cycle todo")
-      "T" '(org-show-todo-tree :which-key "todo tree")
-      
-      ;; Structure editing
-      "i" '(org-insert-heading-respect-content :which-key "insert heading")
-      "I" '(org-insert-subheading :which-key "insert subheading")
-      "h" '(org-insert-heading :which-key "insert heading here")
-      "*" '(org-ctrl-c-star :which-key "toggle heading")
-      
-      ;; Planning & scheduling
-      "d" '(org-deadline :which-key "deadline")
-      "s" '(org-schedule :which-key "schedule")
-      "D" '((lambda () (interactive) 
-              (org-deadline '(4))) :which-key "remove deadline")
-      "S" '((lambda () (interactive) 
-              (org-schedule '(4))) :which-key "remove schedule")
-      
-      ;; Organization
-      "r" '(org-refile :which-key "refile")
-      "a" '(org-archive-subtree :which-key "archive subtree")
-      
-      ;; Links & attachments
-      "l" '(org-insert-link :which-key "insert link")
-      "L" '(org-store-link :which-key "store link")
-      
-      ;; Lists
-      "b" '(org-cycle-list-bullet :which-key "cycle bullet")
-      
-      ;; Properties & tags
-      "p" '(org-set-property :which-key "set property")
-      ":" '(org-set-tags-command :which-key "set tags")
-      
-      ;; Clocking
-      "c i" '(org-clock-in :which-key "clock in")
-      "c o" '(org-clock-out :which-key "clock out")
-      "c c" '(org-clock-cancel :which-key "cancel clock")
-      
-      ;; Export
-      "e" '(org-export-dispatch :which-key "export"))
-    
-    ;; Normal mode structure editing
-    (general-define-key
-     :states '(normal visual)
-     :keymaps 'org-mode-map
-     
-     ;; Promote/demote (intuitive direction keys)
-     "M-h" 'org-metaleft          ; promote heading/item
-     "M-l" 'org-metaright         ; demote heading/item
-     "M-j" 'org-metadown          ; move subtree/item down
-     "M-k" 'org-metaup            ; move subtree/item up
-     
-     ;; Shift versions for finer control
-     "M-H" 'org-shiftmetaleft     ; promote subtree
-     "M-L" 'org-shiftmetaright    ; demote subtree
-     "M-J" 'org-shiftmetadown     ; move subtree down
-     "M-K" 'org-shiftmetaup       ; move subtree up
-     
-     ">>" 'org-demote-subtree
-     "<<" 'org-promote-subtree
-     
-     ;; Tab for cycling
-     (kbd "TAB") 'org-cycle
-     (kbd "S-TAB") 'org-global-cycle
-
-     ;; Quick TODO state change
-     "t" 'org-todo
-     
-     ;; Navigation
-     "gj" 'org-forward-heading-same-level
-     "gk" 'org-backward-heading-same-level
-     "gh" 'outline-up-heading
-     "gl" 'org-next-visible-heading))
+(with-eval-after-load 'org
+  ;; Org-mode specific keybindings
+  (define-key org-mode-map (kbd "C-c t") 'org-todo)
+  (define-key org-mode-map (kbd "C-c T") 'org-show-todo-tree)
+  
+  ;; Structure editing
+  (define-key org-mode-map (kbd "C-c i") 'org-insert-heading-respect-content)
+  (define-key org-mode-map (kbd "C-c I") 'org-insert-subheading)
+  (define-key org-mode-map (kbd "C-c h") 'org-insert-heading)
+  (define-key org-mode-map (kbd "C-c *") 'org-ctrl-c-star)
+  
+  ;; Planning & scheduling
+  (define-key org-mode-map (kbd "C-c d") 'org-deadline)
+  (define-key org-mode-map (kbd "C-c s") 'org-schedule)
+  (define-key org-mode-map (kbd "C-c D") 
+    (lambda () (interactive) (org-deadline '(4))))
+  (define-key org-mode-map (kbd "C-c S") 
+    (lambda () (interactive) (org-schedule '(4))))
+  
+  ;; Organization
+  (define-key org-mode-map (kbd "C-c r") 'org-refile)
+  (define-key org-mode-map (kbd "C-c a") 'org-archive-subtree)
+  
+  ;; Links
+  (define-key org-mode-map (kbd "C-c l") 'org-insert-link)
+  (define-key org-mode-map (kbd "C-c L") 'org-store-link)
+  
+  ;; Lists
+  (define-key org-mode-map (kbd "C-c b") 'org-cycle-list-bullet)
+  
+  ;; Properties & tags
+  (define-key org-mode-map (kbd "C-c p") 'org-set-property)
+  (define-key org-mode-map (kbd "C-c :") 'org-set-tags-command)
+  
+  ;; Clocking
+  (define-key org-mode-map (kbd "C-c x i") 'org-clock-in)
+  (define-key org-mode-map (kbd "C-c x o") 'org-clock-out)
+  (define-key org-mode-map (kbd "C-c x c") 'org-clock-cancel)
+  
+  ;; Export
+  (define-key org-mode-map (kbd "C-c e") 'org-export-dispatch)
+  
+  ;; Promote/demote with arrow keys
+  (define-key org-mode-map (kbd "M-<left>") 'org-metaleft)
+  (define-key org-mode-map (kbd "M-<right>") 'org-metaright)
+  (define-key org-mode-map (kbd "M-<up>") 'org-metaup)
+  (define-key org-mode-map (kbd "M-<down>") 'org-metadown)
+  
+  ;; Promote/demote subtree
+  (define-key org-mode-map (kbd "M-S-<left>") 'org-shiftmetaleft)
+  (define-key org-mode-map (kbd "M-S-<right>") 'org-shiftmetaright)
+  (define-key org-mode-map (kbd "M-S-<up>") 'org-shiftmetaup)
+  (define-key org-mode-map (kbd "M-S-<down>") 'org-shiftmetadown))
 #+end_src
 
 ** Dashboard
