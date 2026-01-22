@@ -1,128 +1,123 @@
-#+title: eBits
+#+title: eBits 
 
-* Emacs Config
-** Emacs startup performance tweaks
-We raise gc-cons-threshold during startup, then bring it back down.
+* Emacs Setup
+** Performance & Startup
+*** Garbage Collection Optimization
 #+begin_src emacs-lisp
 (setq gc-cons-threshold most-positive-fixnum
       gc-cons-percentage 0.8)
+
 (add-hook 'emacs-startup-hook
           (lambda ()
             (setq gc-cons-threshold (* 64 1024 1024)
                   gc-cons-percentage 0.1)))
 #+end_src
-Increase process output buffer for LSP & friends.
+
+*** Process Output Buffer
 #+begin_src emacs-lisp
 (setq read-process-output-max (* 4 1024 1024))
 #+end_src
-** UI – turn off distracting elements
+
+** UI Configuration
+*** Clean Interface
 #+begin_src emacs-lisp
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(setq dired-kill-when-opening-new-dired-buffer t
-      split-height-threshold nil
-      split-width-threshold 0)
-#+end_src
-** General look & feel, quality of life
-#+begin_src emacs-lisp
+
 (setq inhibit-startup-message t
       ring-bell-function 'ignore
       visible-bell nil
       make-backup-files nil
       auto-save-default nil)
 #+end_src
-*** Useful quick keybindings
+
+*** Window & Buffer Management
 #+begin_src emacs-lisp
-(global-set-key (kbd "C-c d") 'delete-file)
-(global-set-key (kbd "C-c e") 'eshell)
-(global-set-key (kbd "C-c b") 'eaf-open-browser)
+(setq dired-kill-when-opening-new-dired-buffer t
+      split-height-threshold nil
+      split-width-threshold 0)
 #+end_src
-** Package system & use-package bootstrap
-(Already done in init.el – we only add configuration here)
-#+begin_src emacs-lisp
-(setq use-package-always-ensure t
-      use-package-defer t)
-#+end_src
-** Font
-#+begin_src emacs-lisp
-(defvar +font "IosevkaTerm NFP")
-(set-face-attribute 'default nil :font +font :height 140 :weight 'regular)
-(set-face-attribute 'fixed-pitch nil :font +font :height 140)
-(set-face-attribute 'variable-pitch nil :font +font :height 140)
-#+end_src
-** Line numbers, scrolling, visuals
+
+*** Line Numbers & Visual Aids
 #+begin_src emacs-lisp
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative
       display-line-numbers-width 3)
+
 (global-visual-line-mode 1)
 (column-number-mode 1)
 (add-hook 'prog-mode-hook #'hl-line-mode)
+#+end_src
+
+*** Scrolling Behavior
+#+begin_src emacs-lisp
 (setq scroll-step 1
       scroll-margin 8
       scroll-conservatively 101)
 #+end_src
-** Built-in Treesit configuration
+
+*** Font Configuration
 #+begin_src emacs-lisp
-(use-package treesit
-  :ensure nil
-  :config
-  (setq treesit-language-source-alist
-        '((zig "https://github.com/tree-sitter-grammars/tree-sitter-zig")
-          (typst "https://github.com/uben0/tree-sitter-typst"))
-        treesit-font-lock-level 4)
-  (setq major-mode-remap-alist
-        '((c-mode . c-ts-mode)
-          (c++-mode . c++-ts-mode)
-          (python-mode . python-ts-mode)
-          (go-mode . go-ts-mode)
-          (zig-mode . zig-ts-mode)
-          (typst-mode . typst-ts-mode)
-          (sh-mode . bash-ts-mode)
-          (bash-mode . bash-ts-mode)
-          (fish-mode . fish-ts-mode))))
+(defvar +font "IosevkaTerm NFP")
+
+(set-face-attribute 'default nil 
+                    :font +font :height 140 :weight 'regular)
+(set-face-attribute 'fixed-pitch nil 
+                    :font +font :height 140)
+(set-face-attribute 'variable-pitch nil 
+                    :font +font :height 140)
 #+end_src
-#+begin_src emacs-lisp
-(use-package treesit-auto
-  :config
-  (global-treesit-auto-mode))
-#+end_src
-** Zig mode
-#+begin_src emacs-lisp
-(use-package zig-ts-mode
-  :vc (:url "https://codeberg.org/meow_king/zig-ts-mode"
-            :rev :newest))
-(add-to-list 'auto-mode-alist '("\\.zig\\(?:\\.zon\\)?\\'" . zig-ts-mode))
-#+end_src
-** Theme
+
+*** Theme
 #+begin_src emacs-lisp
 (use-package gruvbox-theme
   :demand t
   :config
   (load-theme 'gruvbox-dark-hard t))
 #+end_src
-** Core packages – modeline, icons, completion, evil
-*** Doom Modeline
+
+*** Custom Faces
+#+begin_src emacs-lisp
+(custom-set-faces
+ '(line-number ((t (:background "#1d2021" :foreground "#7c6f64"))))
+ '(mode-line ((t (:background "#1d2021" :foreground "#ebdbb2"
+                  :box (:line-width 2 :color "#1d2021")))))
+ '(mode-line-inactive ((t (:background "#555555" :foreground "#eeeeee")))))
+#+end_src
+
+** Package Configuration
+*** Use-Package Settings
+#+begin_src emacs-lisp
+(setq use-package-always-ensure t
+      use-package-defer t)
+#+end_src
+
+*** Modeline & Icons
 #+begin_src emacs-lisp
 (use-package doom-modeline
   :demand t
   :config
   (doom-modeline-mode 1))
-#+end_src
-*** All the icons
-#+begin_src emacs-lisp
+
 (use-package all-the-icons
   :if (display-graphic-p))
 #+end_src
-*** Vertico and Marginalia
+
+*** Completion Framework
 #+begin_src emacs-lisp
 (use-package vertico
   :init (vertico-mode 1))
+
 (use-package marginalia
   :init (marginalia-mode 1))
+
+(use-package which-key
+  :config
+  (which-key-mode 1))
 #+end_src
-*** Evil Mode
+
+** Evil Mode Configuration
 #+begin_src emacs-lisp
 (use-package evil
   :demand t
@@ -133,42 +128,110 @@ Increase process output buffer for LSP & friends.
         evil-want-C-i-jump nil)
   :config
   (evil-mode 1))
+
 (use-package evil-collection
   :after evil
   :config
   (evil-collection-init))
 #+end_src
-*** General Config
+
+*** General Keybindings
 #+begin_src emacs-lisp
 (use-package general
   :after evil
   :config
+  ;; Leader key setup
   (general-create-definer my/leader
     :states '(normal visual)
     :prefix "SPC")
+  
+  ;; Global leader bindings
   (my/leader
     "f f" '(find-file :which-key "find file")
     "f s" '(save-buffer :which-key "save")
     "b b" '(switch-to-buffer :which-key "switch buffer")
-    "w q" '(kill-buffer-and-window :which-key "close window")))
+    "b k" '(kill-buffer :which-key "kill buffer")
+    "q" '(eshell :which-key "Open eshell")
+    "w q" '(kill-buffer-and-window :which-key "close window")
+    "w v" '(split-window-right :which-key "split right")
+    "w s" '(split-window-below :which-key "split below")))
 #+end_src
-*** Which Key configuration
+** Programming Configuration
+*** Programming Defaults
 #+begin_src emacs-lisp
-(use-package which-key
-  :config
-  (which-key-mode 1))
+(setq-default indent-tabs-mode nil
+              tab-width 4)
+(electric-pair-mode 1)
 #+end_src
-** Completion & LSP related packages
-*** Yasnippet
+
+*** Tree-sitter Support
+#+begin_src emacs-lisp
+(use-package treesit
+  :ensure nil
+  :config
+  (setq treesit-language-source-alist
+        '((zig "https://github.com/tree-sitter-grammars/tree-sitter-zig")
+          (typst "https://github.com/uben0/tree-sitter-typst"))
+        treesit-font-lock-level 4)
+  
+  (setq major-mode-remap-alist
+        '((c-mode . c-ts-mode)
+          (c++-mode . c++-ts-mode)
+          (python-mode . python-ts-mode)
+          (go-mode . go-ts-mode)
+          (zig-mode . zig-ts-mode)
+          (typst-mode . typst-ts-mode)
+          (sh-mode . bash-ts-mode)
+          (bash-mode . bash-ts-mode)
+          (fish-mode . fish-ts-mode))))
+
+(use-package treesit-auto
+  :config
+  (global-treesit-auto-mode))
+#+end_src
+
+*** Language-Specific Modes
+#+begin_src emacs-lisp
+(use-package zig-ts-mode
+  :vc (:url "https://codeberg.org/meow_king/zig-ts-mode"
+            :rev :newest))
+
+(add-to-list 'auto-mode-alist '("\\.zig\\(?:\\.zon\\)?\\'" . zig-ts-mode))
+
+(use-package typst-ts-mode
+  :mode "\\.typ\\'")
+
+(use-package typst-preview
+  :init
+  (setq typst-preview-browser 'default
+        typst-preview-autostart t
+        typst-preview-open-browser-automatically t)
+  :custom
+  (typst-preview-invert-colors "auto"))
+#+end_src
+
+*** Visual Indent Guides
+#+begin_src emacs-lisp
+(use-package indent-bars
+  :custom (indent-bars-treesit-support t)
+  :hook ((emacs-lisp-mode
+          c-ts-mode c++-ts-mode
+          zig-ts-mode)))
+#+end_src
+
+** Completion & LSP
+*** Snippets
 #+begin_src emacs-lisp
 (use-package yasnippet
   :hook (prog-mode . yas-minor-mode)
   :config
   (yas-reload-all))
+
 (use-package yasnippet-snippets
   :after yasnippet)
 #+end_src
-*** Company
+
+*** Company Completion
 #+begin_src emacs-lisp
 (use-package company
   :hook (prog-mode . company-mode)
@@ -177,11 +240,14 @@ Increase process output buffer for LSP & friends.
         company-idle-delay 0.0
         company-tooltip-align-annotations t
         company-backends (cons 'company-capf company-backends)))
+
+;; Disable company in terminal modes
 (dolist (hook '(eshell-mode-hook shell-mode-hook term-mode-hook
                 vterm-mode-hook minibuffer-setup-hook))
   (add-hook hook (lambda () (company-mode -1))))
 #+end_src
-*** Eglot
+
+*** Eglot LSP
 #+begin_src emacs-lisp
 (use-package eglot
   :hook ((c-ts-mode . eglot-ensure)
@@ -204,49 +270,13 @@ Increase process output buffer for LSP & friends.
      :foldingRangeProvider))
   (eglot-stay-out-of '(yasnippet)))
 #+end_src
-** Typst support
-#+begin_src emacs-lisp
-(use-package typst-preview
-  :init
-  (setq typst-preview-browser 'default
-        typst-preview-autostart t
-        typst-preview-open-browser-automatically t)
-  :custom
-  (typst-preview-invert-colors "auto"))
-(use-package typst-ts-mode
-  :mode "\\.typ\\'")
-#+end_src
-** Visual indent guides
-#+begin_src emacs-lisp
-(use-package indent-bars
-  :custom (indent-bars-treesit-support t)
-  :hook ((emacs-lisp-mode
-          c-ts-mode c++-ts-mode
-          zig-ts-mode)))
-#+end_src
-** Project, search, git
+
+** Project & Version Control
 #+begin_src emacs-lisp
 (use-package rg)
 (use-package magit)
 #+end_src
-** Dashboard
-#+begin_src emacs-lisp
-(use-package dashboard
-  :demand t
-  :config
-  (setq dashboard-startup-banner (expand-file-name "~/Downloads/dashboard-1.jpeg")
-        dashboard-banner-logo-title "eBits Emacs"
-        dashboard-center-content t
-        dashboard-vertically-center-content t
-        dashboard-show-shortcuts nil
-        dashboard-display-icons-p t
-        dashboard-icon-type 'all-the-icons
-        dashboard-set-heading-icons t
-        dashboard-set-file-icons t
-        dashboard-items '((recents . 3)
-                          (bookmarks . 3)))
-  (dashboard-setup-startup-hook))
-#+end_src
+
 ** PDF Tools
 #+begin_src emacs-lisp
 (use-package pdf-tools
@@ -254,28 +284,28 @@ Increase process output buffer for LSP & friends.
   (pdf-loader-install)
   (setq-default pdf-view-display-size 'fit-page)
   (setq pdf-view-resize-factor 1.1)
+  
   (with-eval-after-load 'evil
     (evil-define-key 'normal pdf-view-mode-map
       (kbd "j") 'pdf-view-next-page
       (kbd "k") 'pdf-view-previous-page))
+  
   :hook (pdf-view-mode . (lambda () (display-line-numbers-mode -1))))
 #+end_src
-** Programming defaults
-#+begin_src emacs-lisp
-(setq-default indent-tabs-mode nil
-              tab-width 4)
-(electric-pair-mode 1)
-#+end_src
-** Org mode – the heart
-*** Setup Functions
+
+** Org Mode Configuration
+*** Helper Functions
 #+begin_src emacs-lisp
 (defun efs/org-mode-setup ()
+  "Setup org-mode visual appearance."
   (variable-pitch-mode 1)
   (org-indent-mode)
   (display-line-numbers-mode -1)
   (visual-line-mode 1))
+
 (defun efs/org-font-setup ()
-  ;; Replace list hyphen with dot (run once)
+  "Configure org-mode fonts and styling."
+  ;; Replace list hyphen with dot
   (font-lock-add-keywords
    'org-mode
    '(("^ *\\([-]\\) "
@@ -283,7 +313,8 @@ Increase process output buffer for LSP & friends.
            (compose-region (match-beginning 1)
                            (match-end 1)
                            "•"))))))
-  ;; Headings
+  
+  ;; Heading sizes
   (dolist (face '((org-level-1 . 1.4)
                   (org-level-2 . 1.3)
                   (org-level-3 . 1.2)
@@ -296,17 +327,20 @@ Increase process output buffer for LSP & friends.
                         :font "IosevkaTerm NFP"
                         :weight 'regular
                         :height (cdr face)))
-  ;; Fixed pitch areas
+  
+  ;; Fixed pitch for code blocks and tables
   (set-face-attribute 'org-block nil :inherit 'fixed-pitch)
   (set-face-attribute 'org-code nil :inherit '(shadow fixed-pitch))
   (set-face-attribute 'org-table nil :inherit '(shadow fixed-pitch))
   (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
-  (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
+  (set-face-attribute 'org-special-keyword nil 
+                      :inherit '(font-lock-comment-face fixed-pitch))
+  (set-face-attribute 'org-meta-line nil 
+                      :inherit '(font-lock-comment-face fixed-pitch))
   (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch))
 #+end_src
 
-*** Main org configuration
+*** Main Org Configuration
 #+begin_src emacs-lisp
 (use-package org
   :hook (org-mode . efs/org-mode-setup)
@@ -315,14 +349,26 @@ Increase process output buffer for LSP & friends.
         org-pretty-entities t
         org-hide-emphasis-markers t
         org-adapt-indentation t
-        org-startup-indented t)
+        org-startup-indented t
+        ;; Enable auto-fill for new headings and list items
+        org-list-allow-alphabetical t
+        org-return-follows-link nil)
+  
+  ;; TODO keywords
   (setq org-todo-keywords
         '((sequence "TODO(t)" "IN-PROG(p)" "WAITING(w)"
                     "|" "DONE(d)" "CANCELLED(c)")))
-  (efs/org-font-setup))
+  
+  (efs/org-font-setup)
+  
+  ;; Auto-insert headings and list items on RET
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (setq-local org-blank-before-new-entry 
+                          '((heading . nil) (plain-list-item . nil))))))
 #+end_src
 
-*** Org Modern + Appear
+*** Org Modern Styling
 #+begin_src emacs-lisp
 (use-package org-modern
   :after org
@@ -339,6 +385,7 @@ Increase process output buffer for LSP & friends.
           ("CANCELLED" . (:foreground "green" :strike-through t)))))
 #+end_src
 
+*** Org Appear
 #+begin_src emacs-lisp
 (use-package org-appear
   :hook (org-mode . org-appear-mode)
@@ -348,50 +395,117 @@ Increase process output buffer for LSP & friends.
         org-appear-autosubmarkers t))
 #+end_src
 
-*** Evil-friendly Org-mode keybindings
+*** Org Evil Keybindings
 #+begin_src emacs-lisp
-(with-eval-after-load 'org
-  (general-define-key
-   :states '(normal visual)
-   :keymaps 'org-mode-map
 
-   ">>"     'org-demote
-   "<<"     'org-promote
-   "g>"     'org-demote-subtree
-   "g<"     'org-promote-subtree
+  (with-eval-after-load 'org
+    (require 'evil)
+    (require 'general)
+    
+    ;; Local leader for org-mode
+    (general-create-definer my/org-leader
+      :states '(normal visual)
+      :keymaps 'org-mode-map
+      :prefix ",")
+    
+    ;; Org-specific leader bindings
+    (my/org-leader
+      ;; TODO management
+      "t" '(org-todo :which-key "cycle todo")
+      "T" '(org-show-todo-tree :which-key "todo tree")
+      
+      ;; Structure editing
+      "i" '(org-insert-heading-respect-content :which-key "insert heading")
+      "I" '(org-insert-subheading :which-key "insert subheading")
+      "h" '(org-insert-heading :which-key "insert heading here")
+      "*" '(org-ctrl-c-star :which-key "toggle heading")
+      
+      ;; Planning & scheduling
+      "d" '(org-deadline :which-key "deadline")
+      "s" '(org-schedule :which-key "schedule")
+      "D" '((lambda () (interactive) 
+              (org-deadline '(4))) :which-key "remove deadline")
+      "S" '((lambda () (interactive) 
+              (org-schedule '(4))) :which-key "remove schedule")
+      
+      ;; Organization
+      "r" '(org-refile :which-key "refile")
+      "a" '(org-archive-subtree :which-key "archive subtree")
+      
+      ;; Links & attachments
+      "l" '(org-insert-link :which-key "insert link")
+      "L" '(org-store-link :which-key "store link")
+      
+      ;; Lists
+      "b" '(org-cycle-list-bullet :which-key "cycle bullet")
+      
+      ;; Properties & tags
+      "p" '(org-set-property :which-key "set property")
+      ":" '(org-set-tags-command :which-key "set tags")
+      
+      ;; Clocking
+      "c i" '(org-clock-in :which-key "clock in")
+      "c o" '(org-clock-out :which-key "clock out")
+      "c c" '(org-clock-cancel :which-key "cancel clock")
+      
+      ;; Export
+      "e" '(org-export-dispatch :which-key "export"))
+    
+    ;; Normal mode structure editing
+    (general-define-key
+     :states '(normal visual)
+     :keymaps 'org-mode-map
+     
+     ;; Promote/demote (intuitive direction keys)
+     "M-h" 'org-metaleft          ; promote heading/item
+     "M-l" 'org-metaright         ; demote heading/item
+     "M-j" 'org-metadown          ; move subtree/item down
+     "M-k" 'org-metaup            ; move subtree/item up
+     
+     ;; Shift versions for finer control
+     "M-H" 'org-shiftmetaleft     ; promote subtree
+     "M-L" 'org-shiftmetaright    ; demote subtree
+     "M-J" 'org-shiftmetadown     ; move subtree down
+     "M-K" 'org-shiftmetaup       ; move subtree up
+     
+     ">>" 'org-demote-subtree
+     "<<" 'org-promote-subtree
+     
+     ;; Tab for cycling
+     (kbd "TAB") 'org-cycle
+     (kbd "S-TAB") 'org-global-cycle
 
-   "gh"     'org-metaleft           ; left = promote level or item
-   "gl"     'org-metaright          ; right = demote
-   "gj"     'org-metadown           ; down = move subtree/item down
-   "gk"     'org-metaup             ; up = move subtree/item up
-
-   "gH"     'org-shiftmetaleft
-   "gL"     'org-shiftmetaright
-   "gJ"     'org-shiftmetadown
-   "gK"     'org-shiftmetaup
-
-   ;; Common Org actions (you already had some of these)
-   (kbd "TAB")   'org-cycle-bullet-list
-   (kbd "S-TAB") 'org-global-cycle
-   (kbd "RET")   'org-return
-
-   :prefix "SPC"
-   "o t"   '(org-todo :which-key "todo state")
-   "o i"   '(org-insert-heading-respect-content :which-key "insert heading")
-   "o *"   '(org-ctrl-c-star :which-key "toggle heading")
-   "o a"   '(org-archive-subtree :which-key "archive subtree")
-   "o l"   '(org-store-link :which-key "store link")
-   "o c"   '(org-capture :which-key "capture")))
+     ;; Quick TODO state change
+     "t" 'org-todo
+     
+     ;; Navigation
+     "gj" 'org-forward-heading-same-level
+     "gk" 'org-backward-heading-same-level
+     "gh" 'outline-up-heading
+     "gl" 'org-next-visible-heading))
 #+end_src
-** Face customizations
+
+** Dashboard
 #+begin_src emacs-lisp
-(custom-set-faces
- '(line-number ((t (:background "#1d2021" :foreground "#7c6f64"))))
- '(mode-line ((t (:background "#1d2021" :foreground "#ebdbb2"
-                               :box (:line-width 2 :color "#1d2021")))))
- '(mode-line-inactive ((t (:background "#555555" :foreground "#eeeeee")))))
+(use-package dashboard
+  :demand t
+  :config
+  (setq dashboard-startup-banner 
+        (expand-file-name "~/Downloads/dashboard-1.jpeg")
+        dashboard-banner-logo-title "eBits Emacs"
+        dashboard-center-content t
+        dashboard-vertically-center-content t
+        dashboard-show-shortcuts nil
+        dashboard-display-icons-p t
+        dashboard-icon-type 'all-the-icons
+        dashboard-set-heading-icons t
+        dashboard-set-file-icons t
+        dashboard-items '((recents . 3)
+                          (bookmarks . 3)))
+  (dashboard-setup-startup-hook))
 #+end_src
-** Custom variables (you can also keep them in custom.el)
+
+** Custom Variables
 #+begin_src emacs-lisp
 (custom-set-variables
  '(dashboard-footer-messages
