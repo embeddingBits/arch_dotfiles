@@ -1,0 +1,29 @@
+#+startup: inlineimages
+
+* Software
+- *Distro*: [[https://archlinux.org][Arch]]
+- *Window manager*: [[https://codeberg.org/river][River]]
+- *Top bar*: [[https://github.com/alexys/waybar][Waybar]]
+- *Terminal*: [[https://ghostty.org][Ghostty]]
+- *Text editor*: [[https://github.com/neovim/neovim][Neovim]]
+- *Application opener*: [[https://github.com/davatorium/rofi][Rofi]]
+- *Visual candy*: [[https://github.com/pipeseroni/pipes.sh][pipes.sh]]
+- *Shell*: [[https://github.com/fish-shell/fish-shell][fish]]
+- *Spotify*: [[https://github.com/spicetify][Spicetify]]
+- *Discord*: [[https://betterdiscord.app][Discord]]
+
+
+
+* Gruvbox Rice
+[[./images/river_terminal.png]]
+[[./images/river_main.png]]
+[[./images/river_main.png]]
+[[./images/river_discord.png]]
+
+* How to Use 
+
+This is a repo that is maitained using GNU Stow.
+
+#+begin_src bash
+stow gruvbox_config
+#+end_src
