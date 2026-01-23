@@ -191,8 +191,9 @@ Ligatures in Emacs
 *** Quick Global Keybindings
 #+begin_src emacs-lisp
 (global-set-key (kbd "C-c d") 'delete-file)
-(global-set-key (kbd "C-c e") 'eshell)
+(global-set-key (kbd "C-c q") 'eshell)
 (global-set-key (kbd "C-c c") 'compile)
+(global-set-key (kbd "C-c v") 'vterm)
 #+end_src
 
 ** Programming Configuration
@@ -224,22 +225,23 @@ Ligatures in Emacs
 
 *** Language-Specific Modes
 #+begin_src emacs-lisp
-(use-package zig-ts-mode
-  :vc (:url "https://codeberg.org/meow_king/zig-ts-mode"
-            :rev :newest))
+  (use-package zig-ts-mode
+    :vc (:url "https://codeberg.org/meow_king/zig-ts-mode"
+              :rev :newest))
 
-(add-to-list 'auto-mode-alist '("\\.zig\\(?:\\.zon\\)?\\'" . zig-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.zig\\(?:\\.zon\\)?\\'" . zig-ts-mode))
 
-(use-package typst-ts-mode
-  :mode "\\.typ\\'")
+  (use-package typst-ts-mode
+    :mode "\\.typ\\'")
 
-(use-package typst-preview
-  :init
-  (setq typst-preview-browser 'default
-        typst-preview-autostart t
-        typst-preview-open-browser-automatically t)
-  :custom
-  (typst-preview-invert-colors "auto"))
+  (use-package websocket)
+  (use-package typst-preview
+    :init
+    (setq typst-preview-browser 'default
+          typst-preview-autostart t
+          typst-preview-open-browser-automatically t)
+    :custom
+    (typst-preview-invert-colors "auto"))
 #+end_src
 
 *** Programming Defaults
@@ -417,7 +419,7 @@ Ligatures in Emacs
     :hook (org-mode . org-modern-mode)
     :config
     (setq org-modern-star 'replace
-          org-modern-replace-stars '("●" "○" "✸" "✿")
+          org-modern-replace-stars '("󰪥" "○" "✸" "󰴈")
           org-modern-todo t
           org-modern-todo-faces
           '(("TODO" . (:foreground "#1d2021" :background "#ea6962" :weight bold))
