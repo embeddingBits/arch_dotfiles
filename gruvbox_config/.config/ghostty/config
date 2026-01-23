@@ -18,7 +18,7 @@ confirm-close-surface = false
 shell-integration-features = no-cursor
 
 # Font Settings
-font-size = 14
+font-size = 13
 
 font-family = JetBrainsMono NFP  
 font-style = semibold
