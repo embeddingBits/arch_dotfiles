@@ -1,5 +1,5 @@
 # Font
-set font "IosevkaTerm Nerd Font 12"
+set font "JetBrainsMono Nerd Font 12"
 
 # History
 set show-recent 3

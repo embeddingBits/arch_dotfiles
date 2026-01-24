@@ -1,4 +1,4 @@
-#+title: eBits - Clean Emacs Configuration
+#+title: eBits Emacs Config 
 
 * Emacs Config
 ** Performance & Startup
@@ -34,9 +34,7 @@
 
 *** Window & Buffer Management
 #+begin_src emacs-lisp
-(setq dired-kill-when-opening-new-dired-buffer t
-      split-height-threshold nil
-      split-width-threshold 0)
+(setq dired-kill-when-opening-new-dired-buffer t)
 #+end_src
 
 *** Line Numbers & Visual Aids
@@ -294,7 +292,6 @@ Ligatures in Emacs
     :hook ((c-ts-mode . eglot-ensure)
            (c++-ts-mode . eglot-ensure)
            (zig-ts-mode . eglot-ensure)
-           (org-mode . eglot-ensure)
            (typst-ts-mode . eglot-ensure)
            (go-ts-mode . eglot-ensure))
     :custom
@@ -311,6 +308,7 @@ Ligatures in Emacs
        :colorProvider
        :foldingRangeProvider))
     (eglot-stay-out-of '(yasnippet)))
+
 #+end_src
 
 ** Project & Version Control
@@ -421,14 +419,78 @@ Ligatures in Emacs
     (setq org-modern-star 'replace
           org-modern-replace-stars '("󰪥" "○" "✸" "󰴈")
           org-modern-todo t
+          org-modern-priority t
           org-modern-todo-faces
           '(("TODO" . (:foreground "#1d2021" :background "#ea6962" :weight bold))
             ("IN-PROG" . (:foreground "#1d2021" :background "#83a598" :weight bold))
             ("WAITING" . (:foreground "#1d2021" :background "#d8a657" :weight bold))
             ("DONE" . (:foreground "#1d2021" :background "#a9b665"))
-            ("CANCELLED" . (:foreground "#1d2021" :strike-through t)))))
+            ("CANCELLED" . (:foreground "#cc241d" :strike-through t)))
+          org-modern-priority-faces
+          '((?A . (:foreground "#1d2021" :background "#ea6962" :weight bold))
+            (?B . (:foreground "#1d2021" :background "#fe8019" :weight bold))           
+            (?C . (:foreground "#1d2021" :background "#d79921" :weight bold))))) 
 #+end_src
+*** Org Roam
+#+begin_src emacs-lisp
+(use-package org-roam
+  :defer t
+  :commands (org-roam-node-find
+             org-roam-node-insert
+             org-roam-capture
+             org-roam-dailies-capture-today
+             org-roam-dailies-goto-today)
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ("C-c n j" . org-roam-dailies-capture-today)
+         ("C-c n J" . org-roam-dailies-goto-today))
+  :custom
+  (org-roam-directory (file-truename "~/Notes"))
+  (org-roam-db-location (file-truename "~/Notes/org-roam.db"))
+  (org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+  (org-roam-completion-everywhere t)
 
+  (org-roam-capture-templates
+   '(("c" "Concept" plain
+      "#+title: ${title}\n#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${subject} roam_note concept\n\n"
+      :if-new (file+head "fleet/${subject}/%<%d-%m-%Y-%H%M>-${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
+
+     ("i" "Index / MOC" plain
+      "#+title: ${title} – Index / Map of Content\n#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${subject} index moc\n\n"
+      :if-new (file+head "fleet/${subject}/000-${slug}-index.org" "#+title: ${title}\n")
+      :unnarrowed t)
+
+     ("q" "Question / Problem" entry
+      "* TODO %^{Problem description}\n:PROPERTIES:\n:Source: %^{From lecture/book?/year}\n:Marks: %^{Marks?}\n:END:\n\n** Attempt\n\n** Solution\n\n** Key Insight\n"
+      :target (file+head "fleet/${subject}/${subject}-questions.org" "#+title: ${subject} – Questions & Problems")
+      :prepend t)
+
+     ("d" "Default" plain "%?"
+      :if-new (file+head "%<%d-%m-%Y-%H%M>-${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)))
+
+  ;; Dailies – use dd-mm-yyyy format
+  (org-roam-dailies-directory "daily/")
+  (org-roam-dailies-capture-templates
+   '(("d" "Default" entry
+      "* %<%H:%M> %?"
+      :if-new (file+head "%<%d-%m-%Y>.org" "#+title: %<%d-%m-%Y %a>\n"))))
+
+  :config
+  (org-roam-db-autosync-mode +1))
+
+(use-package org-roam-ui
+  :ensure t
+  :after org-roam
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow nil
+        org-roam-ui-update-on-save t
+        org-roam-ui-open-on-start t))
+#+end_src
 *** Org Appear
 #+begin_src emacs-lisp
 (use-package org-appear

@@ -1,6 +1,6 @@
 [global]
 monitor = 0
-font = IosevkaTerm Nerd Font 12
+font = JetBrainsMono Nerd Font 12
 follow = mouse
 progress_bar = true
 progress_bar_height = 10
