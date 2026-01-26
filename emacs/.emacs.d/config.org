@@ -91,13 +91,6 @@ Ligatures in Emacs
   (ligature-set-ligatures 'prog-mode ligatures)
   (ligature-set-ligatures 'org-mode ligatures))
 #+end_src
-*** Theme
-#+begin_src emacs-lisp
-(use-package gruvbox-theme
-  :demand t
-  :config
-  (load-theme 'gruvbox-dark-hard t))
-#+end_src
 
 *** Custom Faces
 #+begin_src emacs-lisp
@@ -263,6 +256,7 @@ Ligatures in Emacs
 #+begin_src emacs-lisp
 (use-package yasnippet
   :hook (prog-mode . yas-minor-mode)
+  :hook (org-mode . yas-minor-mode)
   :config
   (yas-reload-all))
 
@@ -272,18 +266,26 @@ Ligatures in Emacs
 
 *** Company Completion
 #+begin_src emacs-lisp
-(use-package company
-  :hook (prog-mode . company-mode)
-  :config
-  (setq company-minimum-prefix-length 1
-        company-idle-delay 0.0
-        company-tooltip-align-annotations t
-        company-backends (cons 'company-capf company-backends)))
+  (use-package company
+    :hook (prog-mode . company-mode)
+    :hook (org-mode . company-mode)
+    :config
+    (setq company-minimum-prefix-length 1
+          company-idle-delay 0.0
+          company-tooltip-align-annotations t
+          company-backends (cons 'company-capf company-backends)))
+  (with-eval-after-load 'company
+    (define-key company-active-map (kbd "<tab>") nil)
+    (define-key company-active-map (kbd "TAB") nil))
 
-;; Disable company in terminal modes
-(dolist (hook '(eshell-mode-hook shell-mode-hook term-mode-hook
-                vterm-mode-hook minibuffer-setup-hook))
-  (add-hook hook (lambda () (company-mode -1))))
+  (setq yas-trigger-key "<tab>")
+  (global-set-key (kbd "C-<tab>") #'company-complete)
+
+
+  ;; Disable company in terminal modes
+  (dolist (hook '(eshell-mode-hook shell-mode-hook term-mode-hook
+                                   vterm-mode-hook minibuffer-setup-hook))
+    (add-hook hook (lambda () (company-mode -1))))
 #+end_src
 
 *** Eglot LSP
@@ -331,6 +333,13 @@ Ligatures in Emacs
       (kbd "k") 'pdf-view-previous-page))
   
   :hook (pdf-view-mode . (lambda () (display-line-numbers-mode -1))))
+#+end_src
+
+** EAF
+#+begin_src emacs-lisp
+  (add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
+  (require 'eaf)
+  (require 'eaf-browser)
 #+end_src
 
 ** Org Mode Configuration
@@ -408,6 +417,17 @@ Ligatures in Emacs
               (lambda ()
                 (setq-local org-blank-before-new-entry 
                             '((heading . nil) (plain-list-item . nil))))))
+
+  (add-hook 'org-src-mode-hook
+            (lambda ()
+              (when (derived-mode-p
+                     'c-ts-mode
+                     'c++-ts-mode
+                     'python-ts-mode
+                     'go-ts-mode
+                     'zig-ts-mode
+                     'typst-ts-mode)
+                (eglot-ensure))))
 #+end_src
 
 *** Org Modern Styling
@@ -433,63 +453,54 @@ Ligatures in Emacs
 #+end_src
 *** Org Roam
 #+begin_src emacs-lisp
-(use-package org-roam
-  :defer t
-  :commands (org-roam-node-find
-             org-roam-node-insert
-             org-roam-capture
-             org-roam-dailies-capture-today
-             org-roam-dailies-goto-today)
-  :bind (("C-c n l" . org-roam-buffer-toggle)
-         ("C-c n f" . org-roam-node-find)
-         ("C-c n i" . org-roam-node-insert)
-         ("C-c n c" . org-roam-capture)
-         ("C-c n j" . org-roam-dailies-capture-today)
-         ("C-c n J" . org-roam-dailies-goto-today))
-  :custom
-  (org-roam-directory (file-truename "~/Notes"))
-  (org-roam-db-location (file-truename "~/Notes/org-roam.db"))
-  (org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
-  (org-roam-completion-everywhere t)
+      (use-package org-roam
+        :defer t
+        :commands (org-roam-node-find
+                   org-roam-node-insert
+                   org-roam-capture
+                   org-roam-dailies-capture-today
+                   org-roam-dailies-goto-today)
+        :bind (("C-c n l" . org-roam-buffer-toggle)
+               ("C-c n f" . org-roam-node-find)
+               ("C-c n i" . org-roam-node-insert)
+               ("C-c n c" . org-roam-capture)
+               ("C-c n j" . org-roam-dailies-capture-today)
+               ("C-c n J" . org-roam-dailies-goto-today))
+        :custom
+        (org-roam-directory (file-truename "~/Notes"))
+        (org-roam-db-location (file-truename "~/Notes/org-roam.db"))
+        (org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+        (org-roam-completion-everywhere t)
 
-  (org-roam-capture-templates
-   '(("c" "Concept" plain
-      "#+title: ${title}\n#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${subject} roam_note concept\n\n"
-      :if-new (file+head "fleet/${subject}/%<%d-%m-%Y-%H%M>-${slug}.org" "#+title: ${title}\n")
-      :unnarrowed t)
+        (org-roam-capture-templates
+         '(("c" "Concept" plain
+            "#+title: ${title}\n#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${subject} concept\n\n"
+            :target (file+head "fleet/${college-personal}/${subject}/%<%d-%m-%Y>-${slug}.org"
+                               "#+title: ${title}"))
+           ("p" "Papers" plain
+            "#+title: ${title}\n#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${about} concept\n\n"
+            :target (file+head "literature/%<%d-%m-%Y>-${slug}.org"
+                               "#+title: ${title}"))
+           ))
 
-     ("i" "Index / MOC" plain
-      "#+title: ${title} – Index / Map of Content\n#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${subject} index moc\n\n"
-      :if-new (file+head "fleet/${subject}/000-${slug}-index.org" "#+title: ${title}\n")
-      :unnarrowed t)
+        ;; Dailies – use dd-mm-yyyy format
+        (org-roam-dailies-directory "daily/")
+        (org-roam-dailies-capture-templates
+         '(("d" "Default" entry
+            "* %<%H:%M> %?"
+            :if-new (file+head "%<%d-%m-%Y>.org" "#+title: %<%d-%m-%Y %a>\n"))))
 
-     ("q" "Question / Problem" entry
-      "* TODO %^{Problem description}\n:PROPERTIES:\n:Source: %^{From lecture/book?/year}\n:Marks: %^{Marks?}\n:END:\n\n** Attempt\n\n** Solution\n\n** Key Insight\n"
-      :target (file+head "fleet/${subject}/${subject}-questions.org" "#+title: ${subject} – Questions & Problems")
-      :prepend t)
+        :config
+        (org-roam-db-autosync-mode +1))
 
-     ("d" "Default" plain "%?"
-      :if-new (file+head "%<%d-%m-%Y-%H%M>-${slug}.org" "#+title: ${title}\n")
-      :unnarrowed t)))
-
-  ;; Dailies – use dd-mm-yyyy format
-  (org-roam-dailies-directory "daily/")
-  (org-roam-dailies-capture-templates
-   '(("d" "Default" entry
-      "* %<%H:%M> %?"
-      :if-new (file+head "%<%d-%m-%Y>.org" "#+title: %<%d-%m-%Y %a>\n"))))
-
-  :config
-  (org-roam-db-autosync-mode +1))
-
-(use-package org-roam-ui
-  :ensure t
-  :after org-roam
-  :config
-  (setq org-roam-ui-sync-theme t
-        org-roam-ui-follow nil
-        org-roam-ui-update-on-save t
-        org-roam-ui-open-on-start t))
+      (use-package org-roam-ui
+        :ensure t
+        :after org-roam
+        :config
+        (setq org-roam-ui-sync-theme t
+              org-roam-ui-follow nil
+              org-roam-ui-update-on-save t
+              org-roam-ui-open-on-start t))
 #+end_src
 *** Org Appear
 #+begin_src emacs-lisp
@@ -582,5 +593,6 @@ Ligatures in Emacs
 #+begin_src emacs-lisp
 (custom-set-variables
  '(dashboard-footer-messages
-   '("Yadā yadā hi dharmasya glānir bhavati bhārata,\nAbhyutthānam adharmasya tadātmānaṁ sṛjāmyaham")))
+   '("Yadā yadā hi dharmasya glānir bhavati bhārata,\nAbhyutthānam adharmasya tadātmānaṁ sṛjāmyaham, \nParitrāṇāya sādhūnāṁ vināśhāya cha duṣhkṛitām
+Dharma-sansthāpanārthāya sambhavāmi yuge yuge ")))
 #+end_src
