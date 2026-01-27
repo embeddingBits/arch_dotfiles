@@ -16,7 +16,8 @@
 * Gruvbox Rice
 [[./images/river_terminal.png]]
 [[./images/river_main.png]]
-[[./images/river_main.png]]
+[[./images/river_emacs.png]]
+[[./images/river_nvim.png]]
 [[./images/river_discord.png]]
 
 * How to Use 
