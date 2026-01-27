@@ -6,7 +6,7 @@
 source "$HOME/.config/river/env.sh"
 
 ### MY PROGRAMS ###
-TERMINAL="ghostty"
+TERMINAL="kitty"
 MENU="rofi -show drun"
 
 riverctl rule-add ssd
