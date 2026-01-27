@@ -32,6 +32,29 @@
       auto-save-default nil)
 #+end_src
 
+*** Dashboard
+#+begin_src emacs-lisp
+  (use-package dashboard
+    :demand t
+    :init
+    (setq dashboard-items '((recents . 3)
+                            (bookmarks . 5))
+          dashboard-set-init-info nil)
+    :config
+    (setq dashboard-startup-banner
+          (expand-file-name "~/Downloads/imageonline-co-noisedimage-modified.png")
+          dashboard-banner-logo-title "eBits Emacs"
+          dashboard-center-content t
+          dashboard-vertically-center-content t
+          dashboard-show-shortcuts nil
+          dashboard-display-icons-p t
+          dashboard-icon-type 'nerd-icons
+          dashboard-set-heading-icons t
+          dashboard-set-file-icons t)
+
+    (dashboard-setup-startup-hook))
+#+end_src
+
 *** Window & Buffer Management
 #+begin_src emacs-lisp
 (setq dired-kill-when-opening-new-dired-buffer t)
@@ -114,8 +137,7 @@ Ligatures in Emacs
     :demand t
     :config
     (doom-modeline-mode 1))
-
-  (use-package all-the-icons)
+  (setq doom-modeline-height 30)
 #+end_src
 *** Nerd Icons
 #+begin_src emacs-lisp
@@ -126,6 +148,7 @@ Ligatures in Emacs
   :config
   (nerd-icons-completion-mode)
   (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
+  (setq nerd-icons-scale-factor 1.25)
 #+end_src
 *** Completion Framework
 #+begin_src emacs-lisp
@@ -341,7 +364,6 @@ Ligatures in Emacs
   (require 'eaf)
   (require 'eaf-browser)
 #+end_src
-
 ** Org Mode Configuration
 *** Helper Functions
 #+begin_src emacs-lisp
@@ -364,9 +386,9 @@ Ligatures in Emacs
                              "•"))))))
     
     ;; Heading sizes
-    (dolist (face '((org-level-1 . 1.4)
-                    (org-level-2 . 1.3)
-                    (org-level-3 . 1.2)
+    (dolist (face '((org-level-1 . 1.2)
+                    (org-level-2 . 1.1)
+                    (org-level-3 . 1.1)
                     (org-level-4 . 1.1)
                     (org-level-5 . 1.1)
                     (org-level-6 . 1.1)
@@ -569,30 +591,9 @@ Ligatures in Emacs
   (define-key org-mode-map (kbd "M-S-<down>") 'org-shiftmetadown))
 #+end_src
 
-** Dashboard
-#+begin_src emacs-lisp
-(use-package dashboard
-  :demand t
-  :config
-  (setq dashboard-startup-banner 
-        (expand-file-name "~/Downloads/dashboard-1.jpeg")
-        dashboard-banner-logo-title "eBits Emacs"
-        dashboard-center-content t
-        dashboard-vertically-center-content t
-        dashboard-show-shortcuts nil
-        dashboard-display-icons-p t
-        dashboard-icon-type 'all-the-icons
-        dashboard-set-heading-icons t
-        dashboard-set-file-icons t
-        dashboard-items '((recents . 3)
-                          (bookmarks . 5)))
-  (dashboard-setup-startup-hook))
-#+end_src
-
 ** Custom Variables
 #+begin_src emacs-lisp
 (custom-set-variables
  '(dashboard-footer-messages
-   '("Yadā yadā hi dharmasya glānir bhavati bhārata,\nAbhyutthānam adharmasya tadātmānaṁ sṛjāmyaham, \nParitrāṇāya sādhūnāṁ vināśhāya cha duṣhkṛitām
-Dharma-sansthāpanārthāya sambhavāmi yuge yuge ")))
+   '("Yadā yadā hi dharmasya glānir bhavati bhārata |\nAbhyutthānam adharmasya tadātmānaṁ sṛjāmyaham |")))
 #+end_src

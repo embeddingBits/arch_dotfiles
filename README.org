@@ -5,13 +5,12 @@
 - *Window manager*: [[https://codeberg.org/river][River]]
 - *Top bar*: [[https://github.com/alexys/waybar][Waybar]]
 - *Terminal*: [[https://ghostty.org][Ghostty]]
-- *Text editor*: [[https://github.com/neovim/neovim][Neovim]]
+- *Text editor*: [[https://www.gnu.org/software/emacs/][Emacs]]
 - *Application opener*: [[https://github.com/davatorium/rofi][Rofi]]
 - *Visual candy*: [[https://github.com/pipeseroni/pipes.sh][pipes.sh]]
 - *Shell*: [[https://github.com/fish-shell/fish-shell][fish]]
 - *Spotify*: [[https://github.com/spicetify][Spicetify]]
 - *Discord*: [[https://betterdiscord.app][Discord]]
-
 
 
 * Gruvbox Rice
