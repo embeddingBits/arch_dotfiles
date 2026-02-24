@@ -1,1 +1,6 @@
 *.elc
+lazy-lock.json
+database
+log
+state
+sticker.sql
