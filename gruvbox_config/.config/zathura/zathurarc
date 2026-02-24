@@ -36,8 +36,7 @@ set scroll-step             50
 set render-loading          true
 set recolor                 true
 set recolor-keephue         true
-set recolor-lightcolor      "#ddc7a1"
-set recolor-darkcolor      "#1d2021"
+set recolor-lightcolor      "#1d2021"
 
 # Hide UI elements
 set statusbar-h-padding     5

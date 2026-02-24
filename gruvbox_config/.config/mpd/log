@@ -3682,3 +3682,675 @@ Note: Hit end of (available) data during resync.
 2026-01-16T08:32:42 exception: No such song
 2026-01-16T08:32:42 exception: No such directory
 2026-01-16T08:32:50 player: played "Indie/Mac DeMarco - Freaking Out the Neighborhood.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Mac DeMarco - Freaking Out the Neighborhood.mp3"; Failed to open "/home/ebits/Music/Indie/Mac DeMarco - Freaking Out the Neighborhood.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Mac DeMarco - Freaking Out the Neighborhood.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Mac DeMarco - My Kind of Woman.mp3"; Failed to open "/home/ebits/Music/Indie/Mac DeMarco - My Kind of Woman.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Mac DeMarco - My Kind of Woman.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/LUCKI - Alternative Outro.mp3"; Failed to open "/home/ebits/Music/Indie/LUCKI - Alternative Outro.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/LUCKI - Alternative Outro.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Grover Washington, Jr., Bill Withers - Just the Two of Us (feat. Bill Withers).mp3"; Failed to open "/home/ebits/Music/Indie/Grover Washington, Jr., Bill Withers - Just the Two of Us (feat. Bill Withers).mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Grover Washington, Jr., Bill Withers - Just the Two of Us (feat. Bill Withers).mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Laufey - From The Start.mp3"; Failed to open "/home/ebits/Music/Indie/Laufey - From The Start.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Laufey - From The Start.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Childish Gambino - Heartbeat.mp3"; Failed to open "/home/ebits/Music/Indie/Childish Gambino - Heartbeat.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Childish Gambino - Heartbeat.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Vacations - Telephones.mp3"; Failed to open "/home/ebits/Music/Indie/Vacations - Telephones.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Vacations - Telephones.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Chase Atlantic - Swim.mp3"; Failed to open "/home/ebits/Music/Indie/Chase Atlantic - Swim.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Chase Atlantic - Swim.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Cigarettes After Sex - Apocalypse.mp3"; Failed to open "/home/ebits/Music/Indie/Cigarettes After Sex - Apocalypse.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Cigarettes After Sex - Apocalypse.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Jiandro, ola.wav - Confess Your Love.mp3"; Failed to open "/home/ebits/Music/Indie/Jiandro, ola.wav - Confess Your Love.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Jiandro, ola.wav - Confess Your Love.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - Eventually.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - Eventually.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - Eventually.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - The Less I Know The Better.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - The Less I Know The Better.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - The Less I Know The Better.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - New Person, Same Old Mistakes.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - New Person, Same Old Mistakes.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - New Person, Same Old Mistakes.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - Obsolete.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - Obsolete.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - Obsolete.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - Afterthought.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - Afterthought.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - Afterthought.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/adore - did i tell u that i miss u - slowed.mp3"; Failed to open "/home/ebits/Music/Indie/adore - did i tell u that i miss u - slowed.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/adore - did i tell u that i miss u - slowed.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Dominic Fike - Babydoll.mp3"; Failed to open "/home/ebits/Music/Indie/Dominic Fike - Babydoll.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Dominic Fike - Babydoll.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - Dracula.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - Dracula.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - Dracula.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Robert Miles - Children (Dream Version) - Remastered.mp3"; Failed to open "/home/ebits/Music/Indie/Robert Miles - Children (Dream Version) - Remastered.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Robert Miles - Children (Dream Version) - Remastered.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/TV Girl - Lovers Rock.mp3"; Failed to open "/home/ebits/Music/Indie/TV Girl - Lovers Rock.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/TV Girl - Lovers Rock.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Steve Lacy - Bad Habit.mp3"; Failed to open "/home/ebits/Music/Indie/Steve Lacy - Bad Habit.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Steve Lacy - Bad Habit.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/The Rah Band - Messages from the Stars.mp3"; Failed to open "/home/ebits/Music/Indie/The Rah Band - Messages from the Stars.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/The Rah Band - Messages from the Stars.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Suki Waterhouse - Good Looking.mp3"; Failed to open "/home/ebits/Music/Indie/Suki Waterhouse - Good Looking.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Suki Waterhouse - Good Looking.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/The Neighbourhood - Reflections.mp3"; Failed to open "/home/ebits/Music/Indie/The Neighbourhood - Reflections.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/The Neighbourhood - Reflections.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/The American Dawn - Her.mp3"; Failed to open "/home/ebits/Music/Indie/The American Dawn - Her.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/The American Dawn - Her.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Mac DeMarco - Heart To Heart.mp3"; Failed to open "/home/ebits/Music/Indie/Mac DeMarco - Heart To Heart.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Mac DeMarco - Heart To Heart.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Men I Trust - Husk.mp3"; Failed to open "/home/ebits/Music/Indie/Men I Trust - Husk.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Men I Trust - Husk.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Men I Trust - I Hope to Be Around.mp3"; Failed to open "/home/ebits/Music/Indie/Men I Trust - I Hope to Be Around.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Men I Trust - I Hope to Be Around.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/wiv - i love u..mp3"; Failed to open "/home/ebits/Music/Indie/wiv - i love u..mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/wiv - i love u..mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Hotel Ugly - I Think I Left the Stove On.mp3"; Failed to open "/home/ebits/Music/Indie/Hotel Ugly - I Think I Left the Stove On.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Hotel Ugly - I Think I Left the Stove On.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Harmless - Swing Lynn.mp3"; Failed to open "/home/ebits/Music/Indie/Harmless - Swing Lynn.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Harmless - Swing Lynn.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Bedroom - In My Head.mp3"; Failed to open "/home/ebits/Music/Indie/Bedroom - In My Head.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Bedroom - In My Head.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Radiohead - All I Need.mp3"; Failed to open "/home/ebits/Music/Indie/Radiohead - All I Need.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Radiohead - All I Need.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/BADBADNOTGOOD, Samuel T. Herring - Time Moves Slow.mp3"; Failed to open "/home/ebits/Music/Indie/BADBADNOTGOOD, Samuel T. Herring - Time Moves Slow.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/BADBADNOTGOOD, Samuel T. Herring - Time Moves Slow.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Crumb - Ghostride.mp3"; Failed to open "/home/ebits/Music/Indie/Crumb - Ghostride.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Crumb - Ghostride.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/The Stranglers - Golden Brown.mp3"; Failed to open "/home/ebits/Music/Indie/The Stranglers - Golden Brown.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/The Stranglers - Golden Brown.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/tired bunny, Mzlznzz - let it happen - slowed+pitched down.mp3"; Failed to open "/home/ebits/Music/Indie/tired bunny, Mzlznzz - let it happen - slowed+pitched down.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/tired bunny, Mzlznzz - let it happen - slowed+pitched down.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - Feels Like We Only Go Backwards.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - Feels Like We Only Go Backwards.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - Feels Like We Only Go Backwards.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - Loser.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - Loser.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - Loser.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/salvia palth - (dream).mp3"; Failed to open "/home/ebits/Music/Indie/salvia palth - (dream).mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/salvia palth - (dream).mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Strawberry Guy - Mrs Magic.mp3"; Failed to open "/home/ebits/Music/Indie/Strawberry Guy - Mrs Magic.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Strawberry Guy - Mrs Magic.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Eyedress, Dent May - Something About You.mp3"; Failed to open "/home/ebits/Music/Indie/Eyedress, Dent May - Something About You.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Eyedress, Dent May - Something About You.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Justice, Tame Impala - Neverender.mp3"; Failed to open "/home/ebits/Music/Indie/Justice, Tame Impala - Neverender.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Justice, Tame Impala - Neverender.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/The Rare Occasions - Notion.mp3"; Failed to open "/home/ebits/Music/Indie/The Rare Occasions - Notion.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/The Rare Occasions - Notion.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Radiohead - Let Down.mp3"; Failed to open "/home/ebits/Music/Indie/Radiohead - Let Down.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Radiohead - Let Down.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Radiohead - Creep.mp3"; Failed to open "/home/ebits/Music/Indie/Radiohead - Creep.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Radiohead - Creep.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Beach Weather - Sex, Drugs, Etc..mp3"; Failed to open "/home/ebits/Music/Indie/Beach Weather - Sex, Drugs, Etc..mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Beach Weather - Sex, Drugs, Etc..mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/The Drums - Money.mp3"; Failed to open "/home/ebits/Music/Indie/The Drums - Money.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/The Drums - Money.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Cafuné - Tek It.mp3"; Failed to open "/home/ebits/Music/Indie/Cafuné - Tek It.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Cafuné - Tek It.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Dr. Dog - Where'd All the Time Go.mp3"; Failed to open "/home/ebits/Music/Indie/Dr. Dog - Where'd All the Time Go.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Dr. Dog - Where'd All the Time Go.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Men I Trust - Show Me How.mp3"; Failed to open "/home/ebits/Music/Indie/Men I Trust - Show Me How.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Men I Trust - Show Me How.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Hotel Ugly - Shut up My Moms Calling.mp3"; Failed to open "/home/ebits/Music/Indie/Hotel Ugly - Shut up My Moms Calling.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Hotel Ugly - Shut up My Moms Calling.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Mild High Club - Homage.mp3"; Failed to open "/home/ebits/Music/Indie/Mild High Club - Homage.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Mild High Club - Homage.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Joji - Feeling Like The End.mp3"; Failed to open "/home/ebits/Music/Indie/Joji - Feeling Like The End.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Joji - Feeling Like The End.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/RiveR - Solo.mp3"; Failed to open "/home/ebits/Music/Indie/RiveR - Solo.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/RiveR - Solo.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Imogen Heap - Headlock.mp3"; Failed to open "/home/ebits/Music/Indie/Imogen Heap - Headlock.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Imogen Heap - Headlock.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Cults - Always Forever.mp3"; Failed to open "/home/ebits/Music/Indie/Cults - Always Forever.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Cults - Always Forever.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Nafeesisboujee - Stephanie.mp3"; Failed to open "/home/ebits/Music/Indie/Nafeesisboujee - Stephanie.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Nafeesisboujee - Stephanie.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/The Marías - No One Noticed.mp3"; Failed to open "/home/ebits/Music/Indie/The Marías - No One Noticed.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/The Marías - No One Noticed.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Cafuné - Tek It - Sped Up.mp3"; Failed to open "/home/ebits/Music/Indie/Cafuné - Tek It - Sped Up.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Cafuné - Tek It - Sped Up.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Mitski - My Love Mine All Mine.mp3"; Failed to open "/home/ebits/Music/Indie/Mitski - My Love Mine All Mine.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Mitski - My Love Mine All Mine.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - Instant Destiny.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - Instant Destiny.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - Instant Destiny.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - Borderline.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - Borderline.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - Borderline.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - Breathe Deeper.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - Breathe Deeper.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - Breathe Deeper.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Tame Impala - One More Hour.mp3"; Failed to open "/home/ebits/Music/Indie/Tame Impala - One More Hour.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Tame Impala - One More Hour.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Mac DeMarco - For the First Time.mp3"; Failed to open "/home/ebits/Music/Indie/Mac DeMarco - For the First Time.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Mac DeMarco - For the First Time.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Mac DeMarco - On the Level.mp3"; Failed to open "/home/ebits/Music/Indie/Mac DeMarco - On the Level.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Mac DeMarco - On the Level.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Mac DeMarco - Moonlight on the River.mp3"; Failed to open "/home/ebits/Music/Indie/Mac DeMarco - Moonlight on the River.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Mac DeMarco - Moonlight on the River.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Vacations - Young.mp3"; Failed to open "/home/ebits/Music/Indie/Vacations - Young.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Vacations - Young.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Empire Of The Sun - We Are The People.mp3"; Failed to open "/home/ebits/Music/Indie/Empire Of The Sun - We Are The People.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Empire Of The Sun - We Are The People.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Dream, Ivory - welcome and goodbye.mp3"; Failed to open "/home/ebits/Music/Indie/Dream, Ivory - welcome and goodbye.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Dream, Ivory - welcome and goodbye.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Strawberry Guy - What Would I Do.mp3"; Failed to open "/home/ebits/Music/Indie/Strawberry Guy - What Would I Do.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Strawberry Guy - What Would I Do.mp3"
+2026-02-10T18:48:12 exception: Failed to decode "/home/ebits/Music/Indie/Xodyl - Yugoslavskiy Groove - Slowed + Reverb.mp3"; Failed to open "/home/ebits/Music/Indie/Xodyl - Yugoslavskiy Groove - Slowed + Reverb.mp3": No such file or directory
+2026-02-10T18:48:12 player: played "Indie/Xodyl - Yugoslavskiy Groove - Slowed + Reverb.mp3"
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:14 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:15 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:16 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:17 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:18 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:19 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:20 exception: No such song
+2026-02-10T18:48:39 update: added Hindi/Pehli Nazar Mein - Atif Aslam,  Pritam.mp3
+2026-02-10T18:48:39 update: added Hindi/Tum Hi Ho - Mithoon,  Arijit Singh.mp3
+2026-02-10T18:48:39 update: added Hindi/Tere Vaaste (From _Zara Hatke Zara Bachke_) - Sachin-Jigar,  Varun Jain,  Shadab Faridi,  Altamash Faridi,  Amitabh Bhattacharya.mp3
+2026-02-10T18:48:39 update: added Hindi/Pehla Nasha - Udit Narayan,  Sadhana Sargam.mp3
+2026-02-10T18:48:39 update: added Hindi/Channa Mereya - Pritam,  Arijit Singh.mp3
+2026-02-10T18:48:39 update: added Hindi/Zaalima - Arijit Singh,  Harshdeep Kaur.mp3
+2026-02-10T18:48:39 update: added Hindi/O Re Piya - Salim–Sulaiman,  Rahat Fateh Ali Khan,  Jaideep Sahni.mp3
+2026-02-10T18:48:39 update: added Hindi/Ahista Ahista - Kazinama,  Musarrat Nazir.mp3
+2026-02-10T18:48:39 update: added Hindi/Hawayein - Pritam,  Arijit Singh.mp3
+2026-02-10T18:48:39 update: added Hindi/Javeda Zindagi-Tose Naina Lage - Kshitij Tarey,  Shilpa Rao.mp3
+2026-02-10T18:48:39 update: added Hindi/Tum Ho - Mohit Chauhan,  Suzanne D'Mello.mp3
+2026-02-10T18:48:39 update: added Hindi/Kun Faya Kun - A.R. Rahman,  Javed Ali,  Mohit Chauhan.mp3
+2026-02-10T18:48:39 update: added Hindi/Khairiyat - Pritam,  Arijit Singh.mp3
+2026-02-10T18:48:39 update: added Hindi/Apna Bana Le - Sachin-Jigar,  Arijit Singh,  Amitabh Bhattacharya.mp3
+2026-02-10T18:48:39 update: added Hindi/Ambarsariya - Sona Mohapatra,  Ram Sampath,  Munna Dhiman.mp3
+2026-02-10T18:48:39 update: added Hindi/Akhiyaan Gulaab (From _Teri Baaton Mein Aisa Uljha Jiya_) - Mitraz.mp3
+2026-02-10T18:48:39 update: added Hindi/Maula Mere Maula - Roop Kumar Rathod,  Sayeed Quadri.mp3
+2026-02-10T18:48:39 update: added Hindi/Kabhi Kabhi Aditi - Rashid Ali.mp3
+2026-02-10T18:48:39 update: added Hindi/Pee Loon - Pritam,  Mohit Chauhan,  Irshad Kamil.mp3
+2026-02-10T18:48:39 update: added Hindi/Ranjha - Jasleen Royal,  B Praak,  Romy.mp3
+2026-02-10T18:48:39 update: added Hindi/Raabta - Pritam,  Arijit Singh.mp3
+2026-02-10T18:48:39 update: added Hindi/Shayad - Pritam,  Arijit Singh.mp3
+2026-02-10T18:48:39 update: added Tamil/Newyork Nagaram - A.R. Rahman,  Vaali.mp3
+2026-02-10T18:48:39 update: added Tamil/Chinna Thamarai - Vijay Antony,  Krishh,  Suchitra,  Viveka.mp3
+2026-02-10T18:48:39 update: added Tamil/Nee Partha - Hariharan,  Asha Bhosle.mp3
+2026-02-10T18:48:39 update: added Tamil/Ennadi Maayavi Nee (From _VadaChennai_) - Santhosh Narayanan,  Vivek,  Sid Sriram.mp3
+2026-02-10T18:48:39 update: added Tamil/Nila Adhu Vanathumele - Ilaiyaraaja.mp3
+2026-02-10T18:48:39 update: added Tamil/Azhakooril (From _Thirumalai_) - S. P. Balasubrahmanyam,  Sujatha.mp3
+2026-02-10T18:48:39 update: added Tamil/Moongil Thottam - A.R. Rahman,  Abhay Jodhpurkar,  Harini,  Vairamuthu.mp3
+2026-02-10T18:48:39 update: added Tamil/Vaarayo Vaarayo - Harris Jayaraj,  Chinmayi,  Unnikrishnan,  Mega,  Kabilan.mp3
+2026-02-10T18:48:39 update: added Tamil/Nenjukkule - A.R. Rahman,  Shakthisree Gopalan,  Vairamuthu.mp3
+2026-02-10T18:48:39 update: added Tamil/Mundhinam - Harris Jayaraj,  Naresh Iyer,  Prashanthini,  Thamarai.mp3
+2026-02-10T18:48:39 update: added Tamil/Nenjil Nenjil - Harris Jayaraj,  Chinmayi,  Harish Raghavendra,  Madhan Karky.mp3
+2026-02-10T18:48:39 update: added Tamil/Kaattrae En Vaasal - Wind - Unnikrishnan,  Kavita Krishnamurthy.mp3
+2026-02-10T18:48:39 update: added Tamil/Ondra Renda - Bombay Jayashri,  Thamarai.mp3
+2026-02-10T18:48:39 update: added Tamil/En Anbe - Harris Jayaraj,  Benny Dayal,  Sadhana Sargam.mp3
+2026-02-10T18:48:39 update: added Tamil/Valaiyosai - Ilaiyaraaja,  S. P. Balasubrahmanyam,  Lata Mangeshkar.mp3
+2026-02-10T18:48:39 update: added Tamil/Adiye - A.R. Rahman,  Sid Sriram,  Maria Roe Vincent,  Madhan Karky.mp3
+2026-02-10T18:48:39 update: added Tamil/Engeyum Kaadhal - Harris Jayaraj,  Aalaap Raju,  Devan Ekambaram,  Ranina Reddy.mp3
+2026-02-10T18:48:39 update: added Tamil/Vellai Pookkal - A.R. Rahman,  Vairamuthu.mp3
+2026-02-10T18:48:39 update: added Tamil/Anjali Anjali - S. P. Balasubrahmanyam,  K. S. Chithra.mp3
+2026-02-10T18:48:39 update: added Tamil/Hosanna - A.R. Rahman,  Vijay Prakash,  Suzanne D'Mello,  Blaaze,  Thamarai.mp3
+2026-02-10T18:48:39 update: added Tamil/Pudhu Vellai Mazhai (From _Roja_) - Unni Menon,  Sujatha.mp3
+2026-02-10T18:48:39 update: added Tamil/Yaar Indha Saalai Oram - G. V. Prakash,  Saindhavi,  Na.Muthukumar.mp3
+2026-02-10T18:48:39 update: added Tamil/The Life of Ram - Govind Vasantha,  Pradeep Kumar.mp3
+2026-02-10T18:48:39 update: added Tamil/Nee Paartha Vizhigal - The Touch of Love - Anirudh Ravichander,  Vijay Yesudas,  Shweta Mohan,  Dhanush.mp3
+2026-02-10T18:48:39 update: added Tamil/Mazhai Vara Pogudhae - Harris Jayaraj,  Karthik,  Emcee Jesz,  Thamarai.mp3
+2026-02-10T18:48:39 update: added Tamil/Anbe En Anbe - Harris Jayaraj,  Harish Raghavendra,  Na.Muthukumar.mp3
+2026-02-10T18:48:39 update: added Tamil/Pachai Nirame - Hariharan,  Clinton Cerejo.mp3
+2026-02-10T18:48:39 update: added Tamil/Dailamo Dailamo - Vijay Antony,  Sangeetha Rajeshwaran.mp3
+2026-02-10T18:48:39 update: added Tamil/Poovukkul (From _Jeans_) - Unnikrishnan,  Sujatha,  Vairamuthu,  A.R. Rahman.mp3
+2026-02-10T18:48:39 update: added Tamil/Yaaro Manathile - Harris Jayaraj,  Bombay Jayashri,  Krish.mp3
+2026-02-10T18:48:39 update: added Tamil/Nilaave Vaa - S. P. Balasubrahmanyam.mp3
+2026-02-10T18:48:39 update: added Tamil/Andha Arabi Kadaloram - A.R. Rahman.mp3
+2026-02-10T18:48:39 update: added Tamil/Yennai Izhukkuthadi (From _Kadhalikka Neramillai_) - A.R. Rahman,  Dhee.mp3
+2026-02-10T18:48:39 update: added Tamil/Mannipaaya - A.R. Rahman,  Shreya Ghoshal,  Thamarai.mp3
+2026-02-10T18:48:39 update: added Tamil/Aaromale - A.R. Rahman,  Alphons Joseph.mp3
+2026-02-10T18:48:39 update: added Tamil/Nenjukkul Peidhidum - Harris Jayaraj,  Hariharan,  Devan Ekambaram,  VV Prassanna,  Thamarai.mp3
+2026-02-10T18:48:39 update: added Tamil/Kannmoodi thirakkum - Devi Sri Prasad.mp3
+2026-02-10T18:48:39 update: added Tamil/Adiyae Kolluthey - Harris Jayaraj,  Krishh,  Benny Dayal,  Shruti Haasan,  Thamarai.mp3
+2026-02-10T18:48:39 update: added Tamil/En Rojaa Neeye - Hesham Abdul Wahab.mp3
+2026-02-10T18:48:39 update: added Tamil/Annul Maelae - Harris Jayaraj,  Sudha Ragunathan,  Thamarai.mp3
+2026-02-10T18:48:39 update: added Tamil/Kadhal Sadugudu - S.P. Charan.mp3
+2026-02-10T18:48:39 update: added Tamil/Maruvaarthai - Darbuka Siva,  Sid Sriram.mp3
+2026-02-10T18:48:39 update: added Tamil/Raja Raja Chozhan - K. J. Yesudas.mp3
+2026-02-10T18:48:39 update: added Tamil/Azhagiye (From _Kaatru Veliyidai_) - A.R. Rahman,  Arjun Chandy,  Haricharan,  Jonita Gandhi,  Madhan Karky.mp3
+2026-02-10T18:48:39 update: added Tamil/Usure Pogudhey - A.R. Rahman,  Karthik,  Vairamuthu.mp3
+2026-02-10T18:48:39 update: added Tamil/Ennamo Yeadho - Harris Jayaraj,  Aalaap Raju,  Prashanthini,  Emcee Jesz,  Sri Charan,  Madhan Karky.mp3
+2026-02-10T18:48:39 update: added Tamil/Vaseegara - Bombay Jayashri.mp3
+2026-02-10T18:48:39 update: added Tamil/Ayyayo - G. V. Prakash,  S. P. Balasubrahmanyam,  S.P. Charan,  Prashanthini,  Snehan.mp3
+2026-02-10T18:48:39 update: added Tamil/Otha Sollaala - G. V. Prakash,  Velmurugan,  Ekadasi.mp3
+2026-02-10T18:48:39 update: added Tamil/Vaan Engum Nee Minna - Harris Jayaraj,  Aalaap Raju,  Harini,  Devan Ekambaram,  Pravin Saivi,  Madhan Karky.mp3
+2026-02-10T18:48:39 update: added Tamil/Hasili Fisiliye - Harris Jayaraj,  Karthik,  Harini,  Dr. Burn,  Maya Iyer,  Pa. Vijay.mp3
+2026-02-10T18:48:39 update: added Tamil/Iragai Poley - Yuvan Shankar Raja,  Tanvi Shah.mp3
+2026-02-10T18:48:39 update: added Tamil/Venmathiye - Tippu.mp3
+2026-02-10T18:48:39 update: added Tamil/Anbil Avan - A.R. Rahman,  Chinmayi,  Devan Ekambaram,  Thamarai.mp3
+2026-02-10T18:48:39 update: removing Indie/Mac DeMarco - Freaking Out the Neighborhood.mp3
+2026-02-10T18:48:39 update: removing Indie/Mac DeMarco - My Kind of Woman.mp3
+2026-02-10T18:48:39 update: removing Indie/LUCKI - Alternative Outro.mp3
+2026-02-10T18:48:39 update: removing Indie/Grover Washington, Jr., Bill Withers - Just the Two of Us (feat. Bill Withers).mp3
+2026-02-10T18:48:39 update: removing Indie/Laufey - From The Start.mp3
+2026-02-10T18:48:39 update: removing Indie/Childish Gambino - Heartbeat.mp3
+2026-02-10T18:48:39 update: removing Indie/Vacations - Telephones.mp3
+2026-02-10T18:48:39 update: removing Indie/Chase Atlantic - Swim.mp3
+2026-02-10T18:48:39 update: removing Indie/Cigarettes After Sex - Apocalypse.mp3
+2026-02-10T18:48:39 update: removing Indie/Jiandro, ola.wav - Confess Your Love.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - Eventually.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - The Less I Know The Better.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - New Person, Same Old Mistakes.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - Obsolete.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - Afterthought.mp3
+2026-02-10T18:48:39 update: removing Indie/adore - did i tell u that i miss u - slowed.mp3
+2026-02-10T18:48:39 update: removing Indie/Dominic Fike - Babydoll.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - Dracula.mp3
+2026-02-10T18:48:39 update: removing Indie/Robert Miles - Children (Dream Version) - Remastered.mp3
+2026-02-10T18:48:39 update: removing Indie/TV Girl - Lovers Rock.mp3
+2026-02-10T18:48:39 update: removing Indie/Steve Lacy - Bad Habit.mp3
+2026-02-10T18:48:39 update: removing Indie/The Rah Band - Messages from the Stars.mp3
+2026-02-10T18:48:39 update: removing Indie/Suki Waterhouse - Good Looking.mp3
+2026-02-10T18:48:39 update: removing Indie/The Neighbourhood - Reflections.mp3
+2026-02-10T18:48:39 update: removing Indie/The American Dawn - Her.mp3
+2026-02-10T18:48:39 update: removing Indie/Mac DeMarco - Heart To Heart.mp3
+2026-02-10T18:48:39 update: removing Indie/Men I Trust - Husk.mp3
+2026-02-10T18:48:39 update: removing Indie/Men I Trust - I Hope to Be Around.mp3
+2026-02-10T18:48:39 update: removing Indie/wiv - i love u..mp3
+2026-02-10T18:48:39 update: removing Indie/Hotel Ugly - I Think I Left the Stove On.mp3
+2026-02-10T18:48:39 update: removing Indie/Harmless - Swing Lynn.mp3
+2026-02-10T18:48:39 update: removing Indie/Bedroom - In My Head.mp3
+2026-02-10T18:48:39 update: removing Indie/Radiohead - All I Need.mp3
+2026-02-10T18:48:39 update: removing Indie/BADBADNOTGOOD, Samuel T. Herring - Time Moves Slow.mp3
+2026-02-10T18:48:39 update: removing Indie/Crumb - Ghostride.mp3
+2026-02-10T18:48:39 update: removing Indie/The Stranglers - Golden Brown.mp3
+2026-02-10T18:48:39 update: removing Indie/tired bunny, Mzlznzz - let it happen - slowed+pitched down.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - Feels Like We Only Go Backwards.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - Loser.mp3
+2026-02-10T18:48:39 update: removing Indie/salvia palth - (dream).mp3
+2026-02-10T18:48:39 update: removing Indie/Strawberry Guy - Mrs Magic.mp3
+2026-02-10T18:48:39 update: removing Indie/Eyedress, Dent May - Something About You.mp3
+2026-02-10T18:48:39 update: removing Indie/Justice, Tame Impala - Neverender.mp3
+2026-02-10T18:48:39 update: removing Indie/The Rare Occasions - Notion.mp3
+2026-02-10T18:48:39 update: removing Indie/Radiohead - Let Down.mp3
+2026-02-10T18:48:39 update: removing Indie/Radiohead - Creep.mp3
+2026-02-10T18:48:39 update: removing Indie/Beach Weather - Sex, Drugs, Etc..mp3
+2026-02-10T18:48:39 update: removing Indie/The Drums - Money.mp3
+2026-02-10T18:48:39 update: removing Indie/Cafuné - Tek It.mp3
+2026-02-10T18:48:39 update: removing Indie/Dr. Dog - Where'd All the Time Go.mp3
+2026-02-10T18:48:39 update: removing Indie/Men I Trust - Show Me How.mp3
+2026-02-10T18:48:39 update: removing Indie/Hotel Ugly - Shut up My Moms Calling.mp3
+2026-02-10T18:48:39 update: removing Indie/Mild High Club - Homage.mp3
+2026-02-10T18:48:39 update: removing Indie/Joji - Feeling Like The End.mp3
+2026-02-10T18:48:39 update: removing Indie/RiveR - Solo.mp3
+2026-02-10T18:48:39 update: removing Indie/Imogen Heap - Headlock.mp3
+2026-02-10T18:48:39 update: removing Indie/Cults - Always Forever.mp3
+2026-02-10T18:48:39 update: removing Indie/Nafeesisboujee - Stephanie.mp3
+2026-02-10T18:48:39 update: removing Indie/The Marías - No One Noticed.mp3
+2026-02-10T18:48:39 update: removing Indie/Cafuné - Tek It - Sped Up.mp3
+2026-02-10T18:48:39 update: removing Indie/Mitski - My Love Mine All Mine.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - Instant Destiny.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - Borderline.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - Breathe Deeper.mp3
+2026-02-10T18:48:39 update: removing Indie/Tame Impala - One More Hour.mp3
+2026-02-10T18:48:39 update: removing Indie/Mac DeMarco - For the First Time.mp3
+2026-02-10T18:48:39 update: removing Indie/Mac DeMarco - On the Level.mp3
+2026-02-10T18:48:39 update: removing Indie/Mac DeMarco - Moonlight on the River.mp3
+2026-02-10T18:48:39 update: removing Indie/Vacations - Young.mp3
+2026-02-10T18:48:39 update: removing Indie/Empire Of The Sun - We Are The People.mp3
+2026-02-10T18:48:39 update: removing Indie/Dream, Ivory - welcome and goodbye.mp3
+2026-02-10T18:48:39 update: removing Indie/Strawberry Guy - What Would I Do.mp3
+2026-02-10T18:48:39 update: removing Indie/Xodyl - Yugoslavskiy Groove - Slowed + Reverb.mp3
+2026-02-10T18:54:57 player: played "Tamil/En Anbe - Harris Jayaraj,  Benny Dayal,  Sadhana Sargam.mp3"
+2026-02-10T19:03:22 player: played "Tamil/Ennamo Yeadho - Harris Jayaraj,  Aalaap Raju,  Prashanthini,  Emcee Jesz,  Sri Charan,  Madhan Karky.mp3"
+2026-02-10T19:03:25 update: added Hindi/Kabira - Pritam,  Tochi Raina,  Rekha Bhardwaj.mp3
+2026-02-10T19:03:25 update: added Hindi/Dil Diyan Gallan - Atif Aslam.mp3
+2026-02-10T19:03:25 update: added Hindi/Mere Rang Mein Rangne Wali - S. P. Balasubrahmanyam.mp3
+2026-02-10T19:03:25 update: added Hindi/Guzarish - A.R. Rahman,  Javed Ali,  Prasoon Joshi.mp3
+2026-02-10T19:03:25 update: added Hindi/Ilahi - Pritam,  Arijit Singh.mp3
+2026-02-10T19:03:25 update: added Hindi/bargad - sufr,  Arpit Bala,  toorjo dey.mp3
+2026-02-10T19:03:25 update: added Hindi/Ajab Si - Vishal-Shekhar,  KK.mp3
+2026-02-10T19:03:25 update: added Hindi/Tum Jo Aaye - Pritam,  Rahat Fateh Ali Khan,  Tulsi Kumar,  Irshad Kamil.mp3
+2026-02-10T19:03:25 update: added Hindi/Masakali - Mohit Chauhan,  A.R. Rahman,  Prasoon Joshi.mp3
+2026-02-10T19:03:25 update: added Hindi/Mast Magan (From _2 States) - Arijit Singh,  Chinmayi.mp3
+2026-02-10T19:03:25 update: added Hindi/Tere Bina - A.R. Rahman,  Chinmayi,  Murtuza Khan,  Qadir Khan.mp3
+2026-02-10T19:03:25 update: added Hindi/Yeh Jo Des Hai Tera - A.R. Rahman.mp3
+2026-02-10T19:03:25 update: added Hindi/Agar Tum Saath Ho (From _Tamasha_) - Alka Yagnik,  Arijit Singh.mp3
+2026-02-10T19:03:25 update: added Hindi/Tujh Mein Rab Dikhta Hai - Salim–Sulaiman,  Roop Kumar Rathod,  Jaideep Sahni.mp3
+2026-02-10T19:03:25 update: added Hindi/Samjhawan - Jawad Ahmad,  Shaarib Toshi,  Arijit Singh,  Shreya Ghoshal.mp3
+2026-02-10T19:03:25 update: added Hindi/Falak Tak - Vishal-Shekhar,  Udit Narayan,  Mahalakshmi Iyer,  Kausar Munir.mp3
+2026-02-10T19:03:25 update: added Hindi/Tum Se Hi - Pritam,  Mohit Chauhan,  Irshad Kamil.mp3
+2026-02-10T19:03:25 update: added Hindi/Mast Magan - Arijit Singh,  Chinmayi.mp3
+2026-02-10T19:03:25 update: added Hindi/Mahiye Jinna Sohna - Darshan Raval.mp3
+2026-02-10T19:03:25 update: added Hindi/Tere Naina - Shankar Mahadevan,  Shreya Ghoshal.mp3
+2026-02-10T19:03:25 update: added Hindi/Jashn-E-Bahaaraa - A.R. Rahman,  Javed Ali.mp3
+2026-02-10T19:03:25 update: added Hindi/Bheegi Si Bhaagi Si - Pritam,  Mohit Chauhan,  Antara Mitra.mp3
+2026-02-10T19:03:25 update: added Indie/Young - Vacations.mp3
+2026-02-10T19:03:25 update: added Indie/My Kind of Woman - Mac DeMarco.mp3
+2026-02-10T19:03:25 update: added Indie/Moonlight on the River - Mac DeMarco.mp3
+2026-02-10T19:03:25 update: added Indie/Swim - Chase Atlantic.mp3
+2026-02-10T19:03:25 update: added Indie/For the First Time - Mac DeMarco.mp3
+2026-02-10T19:03:25 update: added Indie/Show Me How - Men I Trust.mp3
+2026-02-10T19:03:25 update: added Indie/Telephones - Vacations.mp3
+2026-02-10T19:03:25 update: added Indie/Heart To Heart - Mac DeMarco.mp3
+2026-02-10T19:03:35 exception: No such song
+2026-02-10T19:03:35 exception: No such song
+2026-02-10T19:03:35 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:36 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:37 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:38 exception: No such song
+2026-02-10T19:03:39 exception: No such song
+2026-02-10T19:03:39 exception: No such song
+2026-02-10T19:03:39 exception: No such song
+2026-02-10T19:03:39 exception: No such song
+2026-02-10T19:03:39 exception: No such song
+2026-02-10T19:03:39 exception: No such song
+2026-02-10T19:03:39 exception: No such song
+2026-02-10T19:03:39 player: played "Tamil/Poovukkul (From _Jeans_) - Unnikrishnan,  Sujatha,  Vairamuthu,  A.R. Rahman.mp3"
+2026-02-10T19:03:39 exception: No such song
+2026-02-10T19:03:39 exception: No such song
+2026-02-10T19:15:16 player: played "Tamil/The Life of Ram - Govind Vasantha,  Pradeep Kumar.mp3"
+2026-02-10T19:20:46 player: played "Tamil/Engeyum Kaadhal - Harris Jayaraj,  Aalaap Raju,  Devan Ekambaram,  Ranina Reddy.mp3"
+2026-02-10T19:26:10 player: played "Tamil/Ennamo Yeadho - Harris Jayaraj,  Aalaap Raju,  Prashanthini,  Emcee Jesz,  Sri Charan,  Madhan Karky.mp3"
+2026-02-10T19:31:28 player: played "Tamil/Hasili Fisiliye - Harris Jayaraj,  Karthik,  Harini,  Dr. Burn,  Maya Iyer,  Pa. Vijay.mp3"
+2026-02-10T19:36:44 player: played "Tamil/Adiyae Kolluthey - Harris Jayaraj,  Krishh,  Benny Dayal,  Shruti Haasan,  Thamarai.mp3"
+2026-02-10T19:40:47 player: played "Tamil/En Rojaa Neeye - Hesham Abdul Wahab.mp3"
+2026-02-10T19:48:40 player: played "Tamil/Anjali Anjali - S. P. Balasubrahmanyam,  K. S. Chithra.mp3"
+2026-02-10T19:49:09 player: played "Tamil/Dailamo Dailamo - Vijay Antony,  Sangeetha Rajeshwaran.mp3"
+2026-02-17T14:54:10 player: played "Tamil/Yaaro Manathile - Harris Jayaraj,  Bombay Jayashri,  Krish.mp3"
+2026-02-17T14:54:30 update: updating Hindi/Kabira - Pritam,  Tochi Raina,  Rekha Bhardwaj.mp3
+2026-02-17T14:54:30 update: updating Hindi/Pehli Nazar Mein - Atif Aslam,  Pritam.mp3
+2026-02-17T14:54:30 update: updating Hindi/Tum Hi Ho - Mithoon,  Arijit Singh.mp3
+2026-02-17T14:54:30 update: updating Hindi/Tere Vaaste (From _Zara Hatke Zara Bachke_) - Sachin-Jigar,  Varun Jain,  Shadab Faridi,  Altamash Faridi,  Amitabh Bhattacharya.mp3
+2026-02-17T14:54:30 update: updating Hindi/Pehla Nasha - Udit Narayan,  Sadhana Sargam.mp3
+2026-02-17T14:54:30 update: updating Hindi/Channa Mereya - Pritam,  Arijit Singh.mp3
+2026-02-17T14:54:30 update: updating Hindi/Zaalima - Arijit Singh,  Harshdeep Kaur.mp3
+2026-02-17T14:54:30 update: updating Hindi/O Re Piya - Salim–Sulaiman,  Rahat Fateh Ali Khan,  Jaideep Sahni.mp3
+2026-02-17T14:54:30 update: updating Hindi/Dil Diyan Gallan - Atif Aslam.mp3
+2026-02-17T14:54:30 update: updating Hindi/Mere Rang Mein Rangne Wali - S. P. Balasubrahmanyam.mp3
+2026-02-17T14:54:30 update: updating Hindi/Guzarish - A.R. Rahman,  Javed Ali,  Prasoon Joshi.mp3
+2026-02-17T14:54:30 update: updating Hindi/Ahista Ahista - Kazinama,  Musarrat Nazir.mp3
+2026-02-17T14:54:30 update: updating Hindi/Ilahi - Pritam,  Arijit Singh.mp3
+2026-02-17T14:54:30 update: updating Hindi/Hawayein - Pritam,  Arijit Singh.mp3
+2026-02-17T14:54:30 update: updating Hindi/Javeda Zindagi-Tose Naina Lage - Kshitij Tarey,  Shilpa Rao.mp3
+2026-02-17T14:54:30 update: updating Hindi/bargad - sufr,  Arpit Bala,  toorjo dey.mp3
+2026-02-17T14:54:30 update: updating Hindi/Tum Ho - Mohit Chauhan,  Suzanne D'Mello.mp3
+2026-02-17T14:54:30 update: updating Hindi/Kun Faya Kun - A.R. Rahman,  Javed Ali,  Mohit Chauhan.mp3
+2026-02-17T14:54:30 update: updating Hindi/Ajab Si - Vishal-Shekhar,  KK.mp3
+2026-02-17T14:54:30 update: updating Hindi/Khairiyat - Pritam,  Arijit Singh.mp3
+2026-02-17T14:54:30 update: updating Hindi/Apna Bana Le - Sachin-Jigar,  Arijit Singh,  Amitabh Bhattacharya.mp3
+2026-02-17T14:54:30 update: updating Hindi/Tum Jo Aaye - Pritam,  Rahat Fateh Ali Khan,  Tulsi Kumar,  Irshad Kamil.mp3
+2026-02-17T14:54:30 update: updating Hindi/Masakali - Mohit Chauhan,  A.R. Rahman,  Prasoon Joshi.mp3
+2026-02-17T14:54:30 update: updating Hindi/Ambarsariya - Sona Mohapatra,  Ram Sampath,  Munna Dhiman.mp3
+2026-02-17T14:54:30 update: updating Hindi/Mast Magan (From _2 States) - Arijit Singh,  Chinmayi.mp3
+2026-02-17T14:54:30 update: updating Hindi/Tere Bina - A.R. Rahman,  Chinmayi,  Murtuza Khan,  Qadir Khan.mp3
+2026-02-17T14:54:30 update: updating Hindi/Yeh Jo Des Hai Tera - A.R. Rahman.mp3
+2026-02-17T14:54:30 update: updating Hindi/Agar Tum Saath Ho (From _Tamasha_) - Alka Yagnik,  Arijit Singh.mp3
+2026-02-17T14:54:30 update: updating Hindi/Tujh Mein Rab Dikhta Hai - Salim–Sulaiman,  Roop Kumar Rathod,  Jaideep Sahni.mp3
+2026-02-17T14:54:30 update: updating Hindi/Samjhawan - Jawad Ahmad,  Shaarib Toshi,  Arijit Singh,  Shreya Ghoshal.mp3
+2026-02-17T14:54:30 update: updating Hindi/Falak Tak - Vishal-Shekhar,  Udit Narayan,  Mahalakshmi Iyer,  Kausar Munir.mp3
+2026-02-17T14:54:30 update: updating Hindi/Akhiyaan Gulaab (From _Teri Baaton Mein Aisa Uljha Jiya_) - Mitraz.mp3
+2026-02-17T14:54:30 update: added Hindi/Gehra Hua (From _Dhurandhar_) - Shashwat Sachdev,  Arijit Singh,  Irshad Kamil,  Armaan Khan.mp3
+2026-02-17T14:54:30 update: updating Hindi/Maula Mere Maula - Roop Kumar Rathod,  Sayeed Quadri.mp3
+2026-02-17T14:54:30 update: updating Hindi/Kabhi Kabhi Aditi - Rashid Ali.mp3
+2026-02-17T14:54:30 update: updating Hindi/Tum Se Hi - Pritam,  Mohit Chauhan,  Irshad Kamil.mp3
+2026-02-17T14:54:30 update: updating Hindi/Mast Magan - Arijit Singh,  Chinmayi.mp3
+2026-02-17T14:54:30 update: updating Hindi/Mahiye Jinna Sohna - Darshan Raval.mp3
+2026-02-17T14:54:30 update: updating Hindi/Pee Loon - Pritam,  Mohit Chauhan,  Irshad Kamil.mp3
+2026-02-17T14:54:30 update: updating Hindi/Ranjha - Jasleen Royal,  B Praak,  Romy.mp3
+2026-02-17T14:54:30 update: updating Hindi/Tere Naina - Shankar Mahadevan,  Shreya Ghoshal.mp3
+2026-02-17T14:54:30 update: updating Hindi/Jashn-E-Bahaaraa - A.R. Rahman,  Javed Ali.mp3
+2026-02-17T14:54:30 update: updating Hindi/Raabta - Pritam,  Arijit Singh.mp3
+2026-02-17T14:54:30 update: updating Hindi/Bheegi Si Bhaagi Si - Pritam,  Mohit Chauhan,  Antara Mitra.mp3
+2026-02-17T14:54:30 update: updating Hindi/Shayad - Pritam,  Arijit Singh.mp3
+2026-02-17T14:54:30 update: updating Tamil/Newyork Nagaram - A.R. Rahman,  Vaali.mp3
+2026-02-17T14:54:30 update: updating Tamil/Chinna Thamarai - Vijay Antony,  Krishh,  Suchitra,  Viveka.mp3
+2026-02-17T14:54:30 update: updating Tamil/Nee Partha - Hariharan,  Asha Bhosle.mp3
+2026-02-17T14:54:30 update: updating Tamil/Ennadi Maayavi Nee (From _VadaChennai_) - Santhosh Narayanan,  Vivek,  Sid Sriram.mp3
+2026-02-17T14:54:30 update: updating Tamil/Nila Adhu Vanathumele - Ilaiyaraaja.mp3
+2026-02-17T14:54:30 update: updating Tamil/Azhakooril (From _Thirumalai_) - S. P. Balasubrahmanyam,  Sujatha.mp3
+2026-02-17T14:54:30 update: updating Tamil/Moongil Thottam - A.R. Rahman,  Abhay Jodhpurkar,  Harini,  Vairamuthu.mp3
+2026-02-17T14:54:30 update: updating Tamil/Vaarayo Vaarayo - Harris Jayaraj,  Chinmayi,  Unnikrishnan,  Mega,  Kabilan.mp3
+2026-02-17T14:54:30 update: updating Tamil/Nenjukkule - A.R. Rahman,  Shakthisree Gopalan,  Vairamuthu.mp3
+2026-02-17T14:54:30 update: updating Tamil/Mundhinam - Harris Jayaraj,  Naresh Iyer,  Prashanthini,  Thamarai.mp3
+2026-02-17T14:54:30 update: updating Tamil/Nenjil Nenjil - Harris Jayaraj,  Chinmayi,  Harish Raghavendra,  Madhan Karky.mp3
+2026-02-17T14:54:30 update: updating Tamil/Kaattrae En Vaasal - Wind - Unnikrishnan,  Kavita Krishnamurthy.mp3
+2026-02-17T14:54:30 update: updating Tamil/Ondra Renda - Bombay Jayashri,  Thamarai.mp3
+2026-02-17T14:54:30 update: updating Tamil/En Anbe - Harris Jayaraj,  Benny Dayal,  Sadhana Sargam.mp3
+2026-02-17T14:54:30 update: updating Tamil/Valaiyosai - Ilaiyaraaja,  S. P. Balasubrahmanyam,  Lata Mangeshkar.mp3
+2026-02-17T14:54:30 update: updating Tamil/Adiye - A.R. Rahman,  Sid Sriram,  Maria Roe Vincent,  Madhan Karky.mp3
+2026-02-17T14:54:30 update: updating Tamil/Engeyum Kaadhal - Harris Jayaraj,  Aalaap Raju,  Devan Ekambaram,  Ranina Reddy.mp3
+2026-02-17T14:54:30 update: updating Tamil/Vellai Pookkal - A.R. Rahman,  Vairamuthu.mp3
+2026-02-17T14:54:30 update: updating Tamil/Anjali Anjali - S. P. Balasubrahmanyam,  K. S. Chithra.mp3
+2026-02-17T14:54:30 update: updating Tamil/Hosanna - A.R. Rahman,  Vijay Prakash,  Suzanne D'Mello,  Blaaze,  Thamarai.mp3
+2026-02-17T14:54:30 update: updating Tamil/Pudhu Vellai Mazhai (From _Roja_) - Unni Menon,  Sujatha.mp3
+2026-02-17T14:54:30 update: updating Tamil/Yaar Indha Saalai Oram - G. V. Prakash,  Saindhavi,  Na.Muthukumar.mp3
+2026-02-17T14:54:30 update: updating Tamil/The Life of Ram - Govind Vasantha,  Pradeep Kumar.mp3
+2026-02-17T14:54:30 update: updating Tamil/Nee Paartha Vizhigal - The Touch of Love - Anirudh Ravichander,  Vijay Yesudas,  Shweta Mohan,  Dhanush.mp3
+2026-02-17T14:54:30 update: updating Tamil/Mazhai Vara Pogudhae - Harris Jayaraj,  Karthik,  Emcee Jesz,  Thamarai.mp3
+2026-02-17T14:54:30 update: updating Tamil/Anbe En Anbe - Harris Jayaraj,  Harish Raghavendra,  Na.Muthukumar.mp3
+2026-02-17T14:54:30 update: updating Tamil/Pachai Nirame - Hariharan,  Clinton Cerejo.mp3
+2026-02-17T14:54:30 update: updating Tamil/Dailamo Dailamo - Vijay Antony,  Sangeetha Rajeshwaran.mp3
+2026-02-17T14:54:30 update: updating Tamil/Poovukkul (From _Jeans_) - Unnikrishnan,  Sujatha,  Vairamuthu,  A.R. Rahman.mp3
+2026-02-17T14:54:30 update: updating Tamil/Yaaro Manathile - Harris Jayaraj,  Bombay Jayashri,  Krish.mp3
+2026-02-17T14:54:30 update: updating Tamil/Nilaave Vaa - S. P. Balasubrahmanyam.mp3
+2026-02-17T14:54:30 update: updating Tamil/Andha Arabi Kadaloram - A.R. Rahman.mp3
+2026-02-17T14:54:30 update: updating Tamil/Yennai Izhukkuthadi (From _Kadhalikka Neramillai_) - A.R. Rahman,  Dhee.mp3
+2026-02-17T14:54:30 update: updating Tamil/Mannipaaya - A.R. Rahman,  Shreya Ghoshal,  Thamarai.mp3
+2026-02-17T14:54:30 update: updating Tamil/Aaromale - A.R. Rahman,  Alphons Joseph.mp3
+2026-02-17T14:54:30 update: updating Tamil/Nenjukkul Peidhidum - Harris Jayaraj,  Hariharan,  Devan Ekambaram,  VV Prassanna,  Thamarai.mp3
+2026-02-17T14:54:30 update: updating Tamil/Kannmoodi thirakkum - Devi Sri Prasad.mp3
+2026-02-17T14:54:30 update: updating Tamil/Adiyae Kolluthey - Harris Jayaraj,  Krishh,  Benny Dayal,  Shruti Haasan,  Thamarai.mp3
+2026-02-17T14:54:30 update: updating Tamil/En Rojaa Neeye - Hesham Abdul Wahab.mp3
+2026-02-17T14:54:30 update: updating Tamil/Annul Maelae - Harris Jayaraj,  Sudha Ragunathan,  Thamarai.mp3
+2026-02-17T14:54:30 update: updating Tamil/Kadhal Sadugudu - S.P. Charan.mp3
+2026-02-17T14:54:30 update: updating Tamil/Maruvaarthai - Darbuka Siva,  Sid Sriram.mp3
+2026-02-17T14:54:30 update: updating Tamil/Raja Raja Chozhan - K. J. Yesudas.mp3
+2026-02-17T14:54:30 update: updating Tamil/Azhagiye (From _Kaatru Veliyidai_) - A.R. Rahman,  Arjun Chandy,  Haricharan,  Jonita Gandhi,  Madhan Karky.mp3
+2026-02-17T14:54:30 update: updating Tamil/Usure Pogudhey - A.R. Rahman,  Karthik,  Vairamuthu.mp3
+2026-02-17T14:54:30 update: updating Tamil/Ennamo Yeadho - Harris Jayaraj,  Aalaap Raju,  Prashanthini,  Emcee Jesz,  Sri Charan,  Madhan Karky.mp3
+2026-02-17T14:54:30 update: updating Tamil/Vaseegara - Bombay Jayashri.mp3
+2026-02-17T14:54:30 update: updating Tamil/Ayyayo - G. V. Prakash,  S. P. Balasubrahmanyam,  S.P. Charan,  Prashanthini,  Snehan.mp3
+2026-02-17T14:54:30 update: updating Tamil/Otha Sollaala - G. V. Prakash,  Velmurugan,  Ekadasi.mp3
+2026-02-17T14:54:30 update: updating Tamil/Vaan Engum Nee Minna - Harris Jayaraj,  Aalaap Raju,  Harini,  Devan Ekambaram,  Pravin Saivi,  Madhan Karky.mp3
+2026-02-17T14:54:30 update: updating Tamil/Hasili Fisiliye - Harris Jayaraj,  Karthik,  Harini,  Dr. Burn,  Maya Iyer,  Pa. Vijay.mp3
+2026-02-17T14:54:30 update: updating Tamil/Iragai Poley - Yuvan Shankar Raja,  Tanvi Shah.mp3
+2026-02-17T14:54:30 update: updating Tamil/Venmathiye - Tippu.mp3
+2026-02-17T14:54:30 update: updating Tamil/Anbil Avan - A.R. Rahman,  Chinmayi,  Devan Ekambaram,  Thamarai.mp3
+2026-02-17T14:54:30 update: added Indie/No One Noticed - The Marías.mp3
+2026-02-17T14:54:30 update: added Indie/Instant Destiny - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/Mrs Magic - Strawberry Guy.mp3
+2026-02-17T14:54:30 update: added Indie/Afterthought - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/The Less I Know The Better - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/did i tell u that i miss u - slowed - adore.mp3
+2026-02-17T14:54:30 update: added Indie/Let Down - Radiohead.mp3
+2026-02-17T14:54:30 update: added Indie/Dracula - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/Heartbeat - Childish Gambino.mp3
+2026-02-17T14:54:30 update: added Indie/Messages from the Stars - The Rah Band.mp3
+2026-02-17T14:54:30 update: added Indie/On the Level - Mac DeMarco.mp3
+2026-02-17T14:54:30 update: added Indie/Shut up My Moms Calling - Hotel Ugly.mp3
+2026-02-17T14:54:30 update: added Indie/What Would I Do_ - Strawberry Guy.mp3
+2026-02-17T14:54:30 update: added Indie/Bad Habit - Steve Lacy.mp3
+2026-02-17T14:54:30 update: added Indie/Blue Hair - TV Girl.mp3
+2026-02-17T14:54:30 update: added Indie/Creep - Radiohead.mp3
+2026-02-17T14:54:30 update: added Indie/Sex, Drugs, Etc. - Beach Weather.mp3
+2026-02-17T14:54:30 update: added Indie/Obsolete - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/Eventually - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/Feeling Like The End - Joji.mp3
+2026-02-17T14:54:30 update: updating Indie/Young - Vacations.mp3
+2026-02-17T14:54:30 update: added Indie/In My Head - Bedroom.mp3
+2026-02-17T14:54:30 update: added Indie/Notion - The Rare Occasions.mp3
+2026-02-17T14:54:30 update: updating Indie/My Kind of Woman - Mac DeMarco.mp3
+2026-02-17T14:54:30 update: added Indie/Children (Dream Version) - Remastered - Robert Miles.mp3
+2026-02-17T14:54:30 update: added Indie/welcome and goodbye - Dream_,  Ivory.mp3
+2026-02-17T14:54:30 update: added Indie/One More Hour - Tame Impala.mp3
+2026-02-17T14:54:30 update: updating Indie/Moonlight on the River - Mac DeMarco.mp3
+2026-02-17T14:54:30 update: added Indie/From The Start - Laufey.mp3
+2026-02-17T14:54:30 update: added Indie/Time Moves Slow - BADBADNOTGOOD,  Samuel T. Herring.mp3
+2026-02-17T14:54:30 update: added Indie/Something About You - Eyedress,  Dent May.mp3
+2026-02-17T14:54:30 update: added Indie/Swing Lynn - Harmless.mp3
+2026-02-17T14:54:30 update: added Indie/(dream) - salvia palth.mp3
+2026-02-17T14:54:30 update: updating Indie/Swim - Chase Atlantic.mp3
+2026-02-17T14:54:30 update: added Indie/We Are The People - Empire Of The Sun.mp3
+2026-02-17T14:54:30 update: added Indie/Where'd All the Time Go_ - Dr. Dog.mp3
+2026-02-17T14:54:30 update: added Indie/Loser - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/Freaking Out the Neighborhood - Mac DeMarco.mp3
+2026-02-17T14:54:30 update: updating Indie/For the First Time - Mac DeMarco.mp3
+2026-02-17T14:54:30 update: added Indie/Confess Your Love - Jiandro,  ola.wav.mp3
+2026-02-17T14:54:30 update: added Indie/Yugoslavskiy Groove - Slowed + Reverb - Xodyl.mp3
+2026-02-17T14:54:30 update: added Indie/let it happen - slowed+pitched down - tired bunny,  Mzlznzz.mp3
+2026-02-17T14:54:30 update: added Indie/Feels Like We Only Go Backwards - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/Neverender - Justice,  Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/Tek It - Sped Up - Cafuné.mp3
+2026-02-17T14:54:30 update: added Indie/My Love Mine All Mine - Mitski.mp3
+2026-02-17T14:54:30 update: added Indie/Money - The Drums.mp3
+2026-02-17T14:54:30 update: added Indie/Breathe Deeper - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/Borderline - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/I Hope to Be Around - Men I Trust.mp3
+2026-02-17T14:54:30 update: added Indie/All I Need - Radiohead.mp3
+2026-02-17T14:54:30 update: added Indie/Good Looking - Suki Waterhouse.mp3
+2026-02-17T14:54:30 update: added Indie/Her - The American Dawn.mp3
+2026-02-17T14:54:30 update: updating Indie/Show Me How - Men I Trust.mp3
+2026-02-17T14:54:30 update: added Indie/Apocalypse - Cigarettes After Sex.mp3
+2026-02-17T14:54:30 update: added Indie/Babydoll - Dominic Fike.mp3
+2026-02-17T14:54:30 update: added Indie/Stephanie - Nafeesisboujee.mp3
+2026-02-17T14:54:30 update: added Indie/Homage - Mild High Club.mp3
+2026-02-17T14:54:30 update: added Indie/Tek It - Cafuné.mp3
+2026-02-17T14:54:30 update: added Indie/Headlock - Imogen Heap.mp3
+2026-02-17T14:54:30 update: added Indie/i love u. - wiv.mp3
+2026-02-17T14:54:30 update: added Indie/Alternative Outro - LUCKI.mp3
+2026-02-17T14:54:30 update: added Indie/Lovers Rock - TV Girl.mp3
+2026-02-17T14:54:30 update: added Indie/Solo - RiveR.mp3
+2026-02-17T14:54:30 update: added Indie/Always Forever - Cults.mp3
+2026-02-17T14:54:30 update: added Indie/Reflections - The Neighbourhood.mp3
+2026-02-17T14:54:30 update: added Indie/Husk - Men I Trust.mp3
+2026-02-17T14:54:30 update: updating Indie/Telephones - Vacations.mp3
+2026-02-17T14:54:30 update: added Indie/New Person, Same Old Mistakes - Tame Impala.mp3
+2026-02-17T14:54:30 update: added Indie/Ghostride - Crumb.mp3
+2026-02-17T14:54:30 update: added Indie/I Think I Left the Stove On - Hotel Ugly.mp3
+2026-02-17T14:54:30 update: added Indie/Just the Two of Us (feat. Bill Withers) - Grover Washington_,  Jr.,  Bill Withers.mp3
+2026-02-17T14:54:30 update: added Indie/Golden Brown - The Stranglers.mp3
+2026-02-17T14:54:30 update: added Indie/Cigarettes out the Window - TV Girl.mp3
+2026-02-17T14:54:30 update: updating Indie/Heart To Heart - Mac DeMarco.mp3
+2026-02-17T14:56:52 player: played "Indie/i love u. - wiv.mp3"
+2026-02-18T13:09:42 player: played "Indie/In My Head - Bedroom.mp3"
+2026-02-18T13:10:05 player: played "Indie/In My Head - Bedroom.mp3"
+2026-02-18T13:10:22 player: played "Indie/Tek It - Sped Up - Cafuné.mp3"
+2026-02-18T13:11:05 player: played "Indie/In My Head - Bedroom.mp3"
+2026-02-18T13:27:51 player: played "Hindi/Gehra Hua (From _Dhurandhar_) - Shashwat Sachdev,  Arijit Singh,  Irshad Kamil,  Armaan Khan.mp3"
+2026-02-18T13:53:13 player: played "Hindi/Dil Diyan Gallan - Atif Aslam.mp3"
+2026-02-18T14:00:45 player: played "Hindi/Gehra Hua (From _Dhurandhar_) - Shashwat Sachdev,  Arijit Singh,  Irshad Kamil,  Armaan Khan.mp3"
+2026-02-22T11:39:50 player: played "Hindi/Gehra Hua (From _Dhurandhar_) - Shashwat Sachdev,  Arijit Singh,  Irshad Kamil,  Armaan Khan.mp3"
+2026-02-22T12:38:15 update: updating Hindi/Gehra Hua (From _Dhurandhar_) - Shashwat Sachdev,  Arijit Singh,  Irshad Kamil,  Armaan Khan.mp3
+2026-02-22T12:38:15 update: added Tamil/nee_partha.flac
+2026-02-22T12:39:39 player: played "Tamil/Nee Partha - Hariharan,  Asha Bhosle.mp3"
+2026-02-22T12:40:20 player: played "Tamil/nee_partha.flac"

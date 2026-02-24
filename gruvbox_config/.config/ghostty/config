@@ -18,13 +18,13 @@ confirm-close-surface = false
 shell-integration-features = no-cursor
 
 # Font Settings
-font-size = 13
+font-size = 14
 
-font-family = JetBrainsMono NFP  
+font-family = MartianMono NF Cond  
 font-style = semibold
-font-style-bold = bold
-font-style-italic = semibold italic
-font-style-bold-italic = extrabold italic
+font-style-bold = medium
+font-style-italic = medium italic
+font-style-bold-italic = medium italic
 font-thicken = true
 
 # Theme

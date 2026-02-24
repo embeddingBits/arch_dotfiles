@@ -1,8 +1,7 @@
-sw_volume: 95
+sw_volume: 85
 audio_device_state:1:My PulseAudio Output
 audio_device_state:1:my_fifo
 state: stop
-current: 0
 random: 0
 repeat: 0
 single: 0
@@ -12,77 +11,4 @@ mixrampdb: 0
 mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
-0:Indie/Mac DeMarco - Freaking Out the Neighborhood.mp3
-1:Indie/Mac DeMarco - My Kind of Woman.mp3
-2:Indie/LUCKI - Alternative Outro.mp3
-3:Indie/Grover Washington, Jr., Bill Withers - Just the Two of Us (feat. Bill Withers).mp3
-4:Indie/Laufey - From The Start.mp3
-5:Indie/Childish Gambino - Heartbeat.mp3
-6:Indie/Vacations - Telephones.mp3
-7:Indie/Chase Atlantic - Swim.mp3
-8:Indie/Cigarettes After Sex - Apocalypse.mp3
-9:Indie/Jiandro, ola.wav - Confess Your Love.mp3
-10:Indie/Tame Impala - Eventually.mp3
-11:Indie/Tame Impala - The Less I Know The Better.mp3
-12:Indie/Tame Impala - New Person, Same Old Mistakes.mp3
-13:Indie/Tame Impala - Obsolete.mp3
-14:Indie/Tame Impala - Afterthought.mp3
-15:Indie/adore - did i tell u that i miss u - slowed.mp3
-16:Indie/Dominic Fike - Babydoll.mp3
-17:Indie/Tame Impala - Dracula.mp3
-18:Indie/Robert Miles - Children (Dream Version) - Remastered.mp3
-19:Indie/TV Girl - Lovers Rock.mp3
-20:Indie/Steve Lacy - Bad Habit.mp3
-21:Indie/The Rah Band - Messages from the Stars.mp3
-22:Indie/Suki Waterhouse - Good Looking.mp3
-23:Indie/The Neighbourhood - Reflections.mp3
-24:Indie/The American Dawn - Her.mp3
-25:Indie/Mac DeMarco - Heart To Heart.mp3
-26:Indie/Men I Trust - Husk.mp3
-27:Indie/Men I Trust - I Hope to Be Around.mp3
-28:Indie/wiv - i love u..mp3
-29:Indie/Hotel Ugly - I Think I Left the Stove On.mp3
-30:Indie/Harmless - Swing Lynn.mp3
-31:Indie/Bedroom - In My Head.mp3
-32:Indie/Radiohead - All I Need.mp3
-33:Indie/BADBADNOTGOOD, Samuel T. Herring - Time Moves Slow.mp3
-34:Indie/Crumb - Ghostride.mp3
-35:Indie/The Stranglers - Golden Brown.mp3
-36:Indie/tired bunny, Mzlznzz - let it happen - slowed+pitched down.mp3
-37:Indie/Tame Impala - Feels Like We Only Go Backwards.mp3
-38:Indie/Tame Impala - Loser.mp3
-39:Indie/salvia palth - (dream).mp3
-40:Indie/Strawberry Guy - Mrs Magic.mp3
-41:Indie/Eyedress, Dent May - Something About You.mp3
-42:Indie/Justice, Tame Impala - Neverender.mp3
-43:Indie/The Rare Occasions - Notion.mp3
-44:Indie/Radiohead - Let Down.mp3
-45:Indie/Radiohead - Creep.mp3
-46:Indie/Beach Weather - Sex, Drugs, Etc..mp3
-47:Indie/The Drums - Money.mp3
-48:Indie/Cafuné - Tek It.mp3
-49:Indie/Dr. Dog - Where'd All the Time Go.mp3
-50:Indie/Men I Trust - Show Me How.mp3
-51:Indie/Hotel Ugly - Shut up My Moms Calling.mp3
-52:Indie/Mild High Club - Homage.mp3
-53:Indie/Joji - Feeling Like The End.mp3
-54:Indie/RiveR - Solo.mp3
-55:Indie/Imogen Heap - Headlock.mp3
-56:Indie/Cults - Always Forever.mp3
-57:Indie/Nafeesisboujee - Stephanie.mp3
-58:Indie/The Marías - No One Noticed.mp3
-59:Indie/Cafuné - Tek It - Sped Up.mp3
-60:Indie/Mitski - My Love Mine All Mine.mp3
-61:Indie/Tame Impala - Instant Destiny.mp3
-62:Indie/Tame Impala - Borderline.mp3
-63:Indie/Tame Impala - Breathe Deeper.mp3
-64:Indie/Tame Impala - One More Hour.mp3
-65:Indie/Mac DeMarco - For the First Time.mp3
-66:Indie/Mac DeMarco - On the Level.mp3
-67:Indie/Mac DeMarco - Moonlight on the River.mp3
-68:Indie/Vacations - Young.mp3
-69:Indie/Empire Of The Sun - We Are The People.mp3
-70:Indie/Dream, Ivory - welcome and goodbye.mp3
-71:Indie/Strawberry Guy - What Would I Do.mp3
-72:Indie/Xodyl - Yugoslavskiy Groove - Slowed + Reverb.mp3
 playlist_end

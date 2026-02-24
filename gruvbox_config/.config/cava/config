@@ -141,7 +141,7 @@
 
 gradient = 1
 
-gradient_color_1 = '#83a598'  # Bright Blue
+gradient_color_1 = '#7daea3'  # Bright Blue
 gradient_color_2 = '#a9b665'  # Bright Green
 gradient_color_3 = '#D8A657'  # Bright Yellow
 gradient_color_4 = '#e78a4e'  # Bright Orange

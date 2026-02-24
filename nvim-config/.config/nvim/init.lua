@@ -1,14 +1,12 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.cursorline = true  -- Optional: Highlight the current line for better visibility
+vim.opt.cursorline = true  
 
 vim.cmd("set expandtab")
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=6")
-vim.cmd("set softtabstop=6")
-vim.cmd("set shiftwidth=6")
-vim.cmd("set scrolloff=6")
-vim.cmd("setlocal spell spelllang=en_us")
+vim.cmd("set tabstop=8")
+vim.cmd("set softtabstop=8")
+vim.cmd("set shiftwidth=8")
+vim.cmd("set scrolloff=8")
 
 ------------------------------ Lazy Neovim Setup -------------------------------
 

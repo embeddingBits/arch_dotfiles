@@ -74,19 +74,19 @@
             "format": "{class}",
             "max-length": 50,
             "rewrite": {
-                  "": "<span color='#83a598'>󰍹 </span> Desktop", 
-                  "firefox": "<span color='#83a598'> </span>Firefox",
-                  "kitty": "<span color='#83a598'>󰄛 </span>Kitty",
-                  "discord": "<span color='#83a598'> </span>Discord",
-                  "neovide": "<span color='#83a598'> </span>Neovide",
-                  "spotify": "<span color='#83a598'> </span>Spotify",
-                  "foot": "<span color='#83a598'>󰽒 </span>foot", 
-                  "obsidian": "<span color='#83a598'> </span>Obsidian",
-                  "Google-chrome": "<span color='#83a598'> </span>Chrome",
-                  "org.pwmt.zathura": "<span color='#83a598'> </span>Zathura",
-                  "uv4.exe": "<span color='#83a598'> </span>Keil",
-                  "thunderbird": "<span color='#83a598'> </span> ThunderBird",
-                  "com.mitchellh.ghostty": "<span color='#83a598'>󰊠 </span> Ghostty"
+                  "": "<span color='#7daea3'>󰍹 </span> Desktop", 
+                  "firefox": "<span color='#7daea3'> </span>Firefox",
+                  "kitty": "<span color='#7daea3'>󰄛 </span>Kitty",
+                  "discord": "<span color='#7daea3'> </span>Discord",
+                  "neovide": "<span color='#7daea3'> </span>Neovide",
+                  "spotify": "<span color='#7daea3'> </span>Spotify",
+                  "foot": "<span color='#7daea3'>󰽒 </span>foot", 
+                  "obsidian": "<span color='#7daea3'> </span>Obsidian",
+                  "Google-chrome": "<span color='#7daea3'> </span>Chrome",
+                  "org.pwmt.zathura": "<span color='#7daea3'> </span>Zathura",
+                  "uv4.exe": "<span color='#7daea3'> </span>Keil",
+                  "thunderbird": "<span color='#7daea3'> </span> ThunderBird",
+                  "com.mitchellh.ghostty": "<span color='#7daea3'>󰊠 </span> Ghostty"
             } 
       },
 
@@ -164,9 +164,9 @@
             "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
       },
       "pulseaudio": {
-            "format": "<span color='#83a598'>{icon}</span>  {volume}%",
+            "format": "<span color='#7daea3'>{icon}</span>  {volume}%",
             "format-muted": "󰝟  {volume}%",
-            "format-bluetooth": "<span color='#83a598'>{icon}</span> {volume}%",
+            "format-bluetooth": "<span color='#7daea3'>{icon}</span> {volume}%",
             "format-bluetooth-muted": "<span color='#ea6962'>󰂲 </span>{volume}%",
             "format-source-muted": "󰝟 ",
             "format-icons": {
