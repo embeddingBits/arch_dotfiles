@@ -1,7 +1,8 @@
 * {
-    font-family: "JetBrainsMono Nerd Font Propo";
-    font-weight: bold;
-    font-size: 15px;
+    font-family: "MartianMono NFP Cond Med";
+    font-weight: 500;
+    font-stretch: condensed;
+    font-size: 14px;
     text-shadow: none;
     transition: none;
     box-shadow: none;
@@ -48,7 +49,7 @@
 
 #window {
     background-color: #1d2021;
-    border: solid 2px #83a598;
+    border: solid 2px #7daea3;
     color: #ebdbb2;
     border-radius: 0;
     padding: 0 7px;
@@ -76,9 +77,9 @@
 #workspaces button {
     padding: 0px 7px;
     margin: 0px 2px;
-    border: solid 2px #83a598;
+    border: solid 2px #7daea3;
     background-color: transparent;
-    color: #83a598;
+    color: #7daea3;
     border-radius: 0;
 }
 
@@ -114,9 +115,9 @@
 #tags button {
     padding: 0px 9px;
     margin: 0px 2px;
-    border: solid 2px #83a598;
+    border: solid 2px #7daea3;
     background-color: transparent;
-    color: #83a598;
+    color: #7daea3;
     border-radius: 0;
 }
 
@@ -207,7 +208,7 @@
 
 #pulseaudio {
     background-color: #1d2021;
-    border: solid 2px #83a598;
+    border: solid 2px #7daea3;
     color: #ebdbb2;
     padding: 0 7px;
     margin: 0;
@@ -230,7 +231,7 @@
     background-color: #1d2021;
     color: #ebdbb2;
     font-family: "IosevkaTerm Nerd Font Propo";
-    border: solid 2px #83a598;
+    border: solid 2px #7daea3;
     padding: 0 7px;
     margin: 0;
 }

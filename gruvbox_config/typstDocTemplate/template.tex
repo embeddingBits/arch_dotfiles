@@ -1,0 +1,70 @@
+\documentclass[14pt]{extarticle}
+
+% Required Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, margin=1in]{geometry} % Adjust margins as needed
+\usepackage{fancyhdr}   % For custom headers
+\usepackage{lipsum}     % For dummy text (equivalent to #lorem)
+\usepackage{anyfontsize}% To allow arbitrary font sizes (like 80pt)
+
+% 1. Setup headings to be numbered (Default in LaTeX, but explicit here)
+\setcounter{secnumdepth}{3}
+
+% Custom command to mimic the #module function
+\newcommand{\module}[2]{%
+    \clearpage
+    % Setup the header for this specific module
+    \pagestyle{fancy}
+    \fancyhf{} % Clear all header/footer fields
+    \fancyhead[L]{#1}      % Title on the left
+    \fancyhead[R]{Chapter} % "Chapter" on the right
+    \renewcommand{\headrulewidth}{0.4pt} % The line below header
+    \fancyfoot[C]{\thepage} % Page numbering at bottom center
+
+    % Create the section
+    \section{#1}
+    
+    % Vertical space #v(10pt)
+    \vspace{10pt}
+    
+    % Insert body content
+    #2
+}
+
+\begin{document}
+
+% --- Title Page ---
+% Equivalent to #align(center+horizon) and #text(80pt)
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    {\fontsize{80pt}{100pt}\selectfont \textbf{Subject}}
+    \vspace*{\fill}
+\end{titlepage}
+
+% --- Document Setup ---
+% Equivalent to #set page(numbering: "1")
+\pagenumbering{arabic}
+
+% Equivalent to #outline()
+\tableofcontents
+
+% Equivalent to #pagebreak() before content starts
+\newpage
+
+% --- Content ---
+
+% Equivalent to #module("Module 1")[...]
+\module{Module 1}{
+    % \lipsum generates dummy text. 
+    % [1-6] is roughly equivalent to 1000 words or a few pages of text.
+    \lipsum[1-6]
+}
+
+% Equivalent to #module("Module 2")[...]
+\module{Module 2}{
+    \lipsum[1-6]
+}
+
+\end{document}
