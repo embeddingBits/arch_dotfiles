@@ -80,7 +80,7 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-(defvar +font "MartianMono Nerd Font Propo")
+(defvar +font "JetBrainsMono Nerd Font Propo")
 
 (when (member +font (font-family-list))
   (set-face-attribute 'default nil
@@ -399,7 +399,7 @@ Ligatures in Emacs
                     (org-level-7 . 1.1)
                     (org-level-8 . 1.1)))
       (set-face-attribute (car face) nil
-                          :font "MartianMono Nerd Font Propo"
+                          :font "JetBrainsMono Nerd Font Propo"
                           :weight 'regular
                           :width 'condensed
                           :height (cdr face)))

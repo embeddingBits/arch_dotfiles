@@ -108,7 +108,7 @@
       }, 
       "clock": {
             "tooltip-format": "󰥔 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format": "<span color='#ea6962'>󰥔 </span>{:%a %d | %I:%M %p}",
+            "format": "<span color='#ea6962'>󰥔 </span>{:%a %d | %I:%M:%S %p}",
             "interval": 1
       },
       "cpu": {
