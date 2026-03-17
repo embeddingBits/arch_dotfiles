@@ -47,7 +47,7 @@ vim.api.nvim_set_hl(0, "Normal", { bg = "#1d2021" })
 vim.api.nvim_set_hl(0, "NonText", { bg = "#1d2021" })
 
 if vim.g.neovide then
-        vim.opt.guifont = "MartianMono NFP Cond:h14:medium"
+        vim.opt.guifont = "JetBrainsMono NFP:h14:semibold"
         vim.g.neovide_cursor_animation_length = 0.10
         vim.opt.termguicolors = true
 

@@ -1,6 +1,6 @@
 [mgr]
 border_style = "rounded"
-show_hidden = true
+show_hidden = false
 ratio = [2, 4, 6]
 
 [preview]
