@@ -19,5 +19,5 @@ export PATH="$HOME/.bun/bin:$HOME/.local/go/bin:/opt/cuda/bin:$PATH"
 
 dbus-update-activation-environment --systemd --all
 
-systemctl --user start xdg-desktop-portal-wlr
 systemctl --user start xdg-desktop-portal
+systemctl --user start xdg-desktop-portal-wlr

@@ -80,26 +80,23 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-  (defvar +font "JetBrainsMono Nerd Font Propo")
+  (defvar +font "Iosevka Nerd Font Propo")
 
   (when (member +font (font-family-list))
     (set-face-attribute 'default nil
                         :family +font
-                        :height 130
-                        :weight 'regular
-                        :width 'condensed)
+                        :height 140
+                        :weight 'semibold)
 
     (set-face-attribute 'fixed-pitch nil
                         :family +font
-                        :height 130
-                        :weight 'regular
-                        :width 'condensed)
+                        :height 140
+                        :weight 'semibold)
 
     (set-face-attribute 'variable-pitch nil
                         :family +font
-                        :height 130
-                        :weight 'regular
-                        :width 'condensed))
+                        :height 140
+                        :weight 'semibold))
 #+end_src
 *** Ligatures
 Ligatures in Emacs
@@ -445,7 +442,7 @@ Ligatures in Emacs
                     (org-level-7 . 1.1)
                     (org-level-8 . 1.1)))
       (set-face-attribute (car face) nil
-                          :font "JetBrainsMono Nerd Font Propo"
+                          :font "Iosevka Nerd Font Propo"
                           :weight 'bold
                           :height (cdr face)))
     
@@ -500,6 +497,11 @@ Ligatures in Emacs
                      'zig-ts-mode
                      'typst-ts-mode)
                 (eglot-ensure))))
+
+  (setq-default org-display-custom-times t)
+  (setq org-time-stamp-custom-formats
+        '(" <%d-%m-%Y %a>" . " <%d-%m-%Y %a %H:%M>"))
+
 #+end_src
 
 *** Org Modern Styling

@@ -6,14 +6,14 @@
 source "$HOME/.config/river/env.sh"
 
 ### MY PROGRAMS ###
-TERMINAL="kitty"
-MENU="rofi -show drun"
+TERMINAL="foot"
+MENU="fuzzel"
 
 riverctl rule-add ssd
 riverctl rule-add -app-id com.mitchellh.ghostty ssd
 
 ### AUTOSTART ###
-swww-daemon &
+awww-daemon &
 waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
 dunst &
 
@@ -43,7 +43,7 @@ riverctl map normal $MOD B spawn "rofi-bluetooth"
 riverctl map normal $MOD U spawn "rofi -show emoji"
 riverctl map normal "$MOD+Shift" K spawn "wine ~/.wine/drive_c/Keil_v5/UV4/UV4.exe"
 riverctl map normal "$MOD+Shift" W spawn "sh ~/.config/rofi/rofi-wifi-menu.sh"
-riverctl map normal "$MOD+Shift" S spawn "rofi -dmenu | xargs -I{} xdg-open https://www.google.com/search?q={}"
+riverctl map normal "$MOD+Shift" S spawn "fuzzel --dmenu --lines 0 --placeholder 'Search Firefox' | sed 's/^/"/g;s/$/"/g' | xargs firefox --search"
 
 # Window management
 riverctl map normal $MOD C close

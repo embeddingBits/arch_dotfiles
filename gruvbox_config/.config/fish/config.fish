@@ -2,7 +2,7 @@ set fish_greeting
 starship init fish | source
 set -x BAT_THEME gruvbox-dark
 set -x EDITOR nvim
-set -x TERMINAL ghostty
+set -x TERMINAL foot
 
 source ~/.config/fish/aliases.fish
 zoxide init fish | source
