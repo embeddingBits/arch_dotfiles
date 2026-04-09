@@ -6,6 +6,7 @@
       password: None,
       theme: Some("gruvbox"),
       cache_dir: None,
+      lyrics_dir: "/home/ebits/Music/lyrics",
       on_song_change: None,
       volume_step: 5,
       max_fps: 30,
@@ -32,8 +33,9 @@
                   "<S-Tab>": PreviousTab,
                   "1":       SwitchToTab("Queue"),
                   "2":       SwitchToTab("Directories"),
-                  "3":       SwitchToTab("Playlists"),
-                  "4":       SwitchToTab("Search"),
+                  "3":       SwitchToTab("Lyrics"),
+                  "4":       SwitchToTab("Playlists"),
+                  "5":       SwitchToTab("Search"),
                   "q":       Quit,
                   ">":       NextTrack,
                   "p":       TogglePause,
@@ -132,6 +134,10 @@
             (
                   name: "Directories",
                   pane: Pane(Directories),
+            ),
+            (
+                  name: "Lyrics",
+                  pane: Pane(Lyrics),
             ),
             (
                   name: "Playlists",

@@ -9,7 +9,7 @@
       "modules-left": [
             "custom/launcher",    
             "river/tags",
-            "hyprland/workspaces",
+            "niri/workspaces",
             "mpris",
       ],
       "modules-center": [
@@ -17,6 +17,7 @@
       ],
       "modules-right": [
             "pulseaudio",
+            "tray",
             "network",
             "memory",
             "backlight",
@@ -34,6 +35,14 @@
             "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
       },
 
+      "tray": {
+            "icon-size": 21,
+            "spacing": 10,
+            "icons": {
+                  "blueman": "bluetooth",
+                  "TelegramDesktop": "$HOME/.local/share/icons/Gruvbox-Plus-Dark/apps/16/telegram-desktop.svg"
+            }
+      },
       "custom/launcher":{
             "format": "",
             "on-click": "rofi -show drun",
@@ -49,45 +58,17 @@
             "format": "󰣆  {}",
       },
 
-      "hyprland/workspaces": {
+      "niri/workspaces": {
             "disable-scroll": true,
-            "all-outputs": true,
+            "all-outputs": false,
             "format": "{icon}",
             "format-icons": {
-                  "1": "  ",  
-                  "2": " 󰈹 ",  
-                  "3": "  ",  
-                  "4": "  ",  
-                  "5": "  ",  
-                  "urgent": "  ",
-                  "default": " ○ "
+                  "terminal": "  ",  
+                  "browser": " 󰈹 ",  
+                  "discord": "  ",  
+                  "music": "  ",  
+                  "random": "  ",  
             },
-            "persistent-workspaces": {
-                  "1": [],
-                  "2": [],
-                  "3": [],
-                  "4": [],
-                  "5": []
-            }
-      },
-      "hyprland/window": {
-            "format": "{class}",
-            "max-length": 50,
-            "rewrite": {
-                  "": "<span color='#7daea3'>󰍹 </span> Desktop", 
-                  "firefox": "<span color='#7daea3'> </span>Firefox",
-                  "kitty": "<span color='#7daea3'>󰄛 </span>Kitty",
-                  "discord": "<span color='#7daea3'> </span>Discord",
-                  "neovide": "<span color='#7daea3'> </span>Neovide",
-                  "spotify": "<span color='#7daea3'> </span>Spotify",
-                  "foot": "<span color='#7daea3'>󰽒 </span>foot", 
-                  "obsidian": "<span color='#7daea3'> </span>Obsidian",
-                  "Google-chrome": "<span color='#7daea3'> </span>Chrome",
-                  "org.pwmt.zathura": "<span color='#7daea3'> </span>Zathura",
-                  "uv4.exe": "<span color='#7daea3'> </span>Keil",
-                  "thunderbird": "<span color='#7daea3'> </span> ThunderBird",
-                  "com.mitchellh.ghostty": "<span color='#7daea3'>󰊠 </span> Ghostty"
-            } 
       },
 
       "mpris": {
