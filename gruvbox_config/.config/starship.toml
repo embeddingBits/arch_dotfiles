@@ -41,7 +41,7 @@ color_green = '#a9b665'
 color_orange = '#d65d0e'
 color_purple = '#d3869b'
 color_red = '#ea6962'
-color_yellow = '#d8a657'
+color_yellow = '#d79921'
 
 [os]
 disabled = false

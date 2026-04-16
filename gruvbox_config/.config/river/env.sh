@@ -8,6 +8,8 @@ export XDG_SESSION_DESKTOP=River
 export XDG_SESSION_TYPE=wayland
 export MOZ_ENABLE_WAYLAND=1
 
+export GTK_THEME=Gruvbox-BL-LB-Dark
+
 export QT_QPA_PLATFORM="wayland;xcb"
 export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
