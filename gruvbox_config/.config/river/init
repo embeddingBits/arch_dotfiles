@@ -41,9 +41,7 @@ riverctl map normal $MOD R spawn "$MENU"
 riverctl map normal $MOD W spawn "firefox"
 riverctl map normal $MOD B spawn "sh ~/.config/fuzzel/fuzzel-bluetooth.sh"
 riverctl map normal $MOD U spawn "sh ~/.config/fuzzel/fuzzel-emoji.sh"
-riverctl map normal "$MOD+Shift" K spawn "wine ~/.wine/drive_c/Keil_v5/UV4/UV4.exe"
-riverctl map normal "$MOD+Shift" W spawn "sh ~/.config/rofi/rofi-wifi-menu.sh"
-riverctl map normal "$MOD+Shift" S spawn "fuzzel --dmenu --lines 0 --placeholder 'Search Firefox' | sed 's/^/"/g;s/$/"/g' | xargs firefox --search"
+riverctl map normal "$MOD+Shift" S spawn "sh ~/.config/fuzzel/fuzzel-search.sh"
 
 # Window management
 riverctl map normal $MOD C close
