@@ -7,6 +7,7 @@
 - *Terminal*: [[https://codeberg.org/dnkl/foot][foot]]
 - *Text editor*: [[https://www.gnu.org/software/emacs/][Emacs]] and [[https://neovim.io/][Neovim]]
 - *Application Launcher*: [[https://codeberg.org/dnkl/fuzzel][Fuzzel]]
+- *Notification Daemon*: [[https://codeberg.org/dnkl/fnott][Fnott]]
 - *Visual candy*: [[https://github.com/pipeseroni/pipes.sh][pipes.sh]]
 - *Shell*: [[https://github.com/fish-shell/fish-shell][fish]]
 - *Spotify*: [[https://github.com/spicetify][Spicetify]]
