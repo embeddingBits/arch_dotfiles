@@ -1,3 +1,0 @@
-#!/bin/bash
-
-paplay ~/.config/dunst/alert.wav

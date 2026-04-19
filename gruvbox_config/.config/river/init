@@ -15,7 +15,7 @@ riverctl rule-add -app-id com.mitchellh.ghostty ssd
 ### AUTOSTART ###
 awww-daemon &
 waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
-dunst &
+fnott &
 
 
 ### LOOK AND FEEL ###
