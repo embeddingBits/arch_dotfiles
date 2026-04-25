@@ -20,7 +20,7 @@ sudo pacman -S --needed \
   qt5ct qt6ct nwg-look \
   \
   # Terminal / dev
-  foot yazi waylock \
+  fish foot yazi waylock \
   \
   # Media / documents
   mpv mpv-mpris \
@@ -29,3 +29,6 @@ sudo pacman -S --needed \
   \
   # Fonts / apps
   ttf-iosevka-nerd brave-browser-bin element-desktop 
+
+# Changing Shell
+chsh -s /usr/bin/fish
