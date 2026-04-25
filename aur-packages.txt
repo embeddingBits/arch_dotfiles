@@ -1,2 +1,0 @@
-downgrade 11.5.4-1
-rofi-emoji-git r87.794fecf-1
