@@ -28,7 +28,7 @@ sudo pacman -S --needed \
   poppler zathura zathura-pdf-mupdf \ 
   \
   # Fonts / apps
-  ttf-iosevka-nerd brave-browser-bin element-desktop 
+  ttf-iosevka-nerd firefox brave-browser-bin element-desktop 
 
 # Changing Shell
 chsh -s /usr/bin/fish
