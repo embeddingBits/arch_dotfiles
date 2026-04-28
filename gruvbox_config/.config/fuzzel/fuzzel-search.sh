@@ -7,7 +7,7 @@ if [ -z "$QUERY" ]; then
 fi
 
 if [[ "$QUERY" =~ ^(https?|ftp):// ]] || [[ "$QUERY" =~ ^[^\ ]+\.[^\ ]+ ]]; then
-    firefox --new-tab "$QUERY"
+    brave --new-tab "$QUERY"
 else
-    firefox --new-tab "https://www.google.com/search?q=$QUERY"
+    brave --new-tab "https://www.google.com/search?q=$QUERY"
 fi
