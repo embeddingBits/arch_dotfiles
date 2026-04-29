@@ -1,0 +1,160 @@
+// niri config — converted from River/rivertile setup
+// Source env vars manually or via systemd environment — niri doesn't source shell files.
+// Set $FILE_MANAGER, etc. in your environment before launching niri.
+
+input {
+    keyboard {
+        xkb { }
+    }
+    mouse {
+        accel-speed 0.0
+    }
+    touchpad {
+        tap
+    }
+    focus-follows-mouse max-scroll-amount="0%"
+}
+
+output "eDP-1" { }
+
+layout {
+    gaps 9
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.5
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 3
+        active-color "#7daea3"
+        inactive-color "#1d2021"
+    }
+
+    border {
+        off
+    }
+}
+
+// Gruvbox Material dark background
+// background-color "#1d2021"  // not a top-level key in niri KDL; set via wallpaper
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations { }
+
+// ── Window rules ──────────────────────────────────────────────────────────────
+
+window-rule {
+    match app-id="waypaper"
+    open-floating true
+}
+
+window-rule {
+    match app-id="nwg-look"
+    open-floating true
+}
+
+window-rule {
+    match app-id="feh"
+    open-floating true
+}
+
+// Disable CSD for Ghostty (ssd equivalent)
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+    draw-border-with-background false
+}
+
+// ── Binds ─────────────────────────────────────────────────────────────────────
+
+binds {
+    // ── Launch applications ────────────────────────────────────────────────
+
+    Super+Q { spawn "foot"; }
+    Super+Return { spawn "emacs"; }
+    // Super+E spawns $FILE_MANAGER — replace "thunar" with your actual file manager
+    Super+R { spawn "fuzzel"; }
+    Super+W { spawn "firefox"; }
+    Super+B { spawn "sh" "~/.config/fuzzel/fuzzel-bluetooth.sh"; }
+    Super+U { spawn "sh" "~/.config/fuzzel/fuzzel-emoji.sh"; }
+    // Google search via rofi dmenu
+    Super+Shift+S { spawn "sh" "~/.config/fuzzel/fuzzel-search.sh"; }
+
+    // ── Window management ──────────────────────────────────────────────────
+
+    Super+C { close-window; }
+    Super+F { fullscreen-window; }
+    Super+Shift+M { quit; }
+    Super+V { toggle-window-floating; }
+    Super+Shift+L { spawn "waylock" "-init-color" "0xD8A657" "-input-color" "0x7daea3" "-fail-color" "0xea6962"; }
+    Super+S { spawn "hyprshot" "-m" "region"; }
+
+    // ── Focus movement ────────────────────────────────────────────────────
+
+    Super+H { focus-column-left; }
+    Super+L { focus-column-right; }
+    Super+J { focus-window-or-workspace-down; }
+    Super+K { focus-window-or-workspace-up; }
+
+    // ── Move windows ──────────────────────────────────────────────────────
+
+    Super+Shift+H { move-column-left; }
+    Super+Shift+J { move-window-down-or-to-workspace-down; }
+    Super+Shift+K { move-window-up-or-to-workspace-up; }
+
+    // ── Column width ──────────────────────────────────────────────────────
+
+    Super+Minus { set-column-width "-2%"; }
+    Super+Equal { set-column-width "+2%"; }
+
+    // ── Workspaces (River tags → niri workspaces) ─────────────────────────
+
+    Super+1 { focus-workspace 1; }
+    Super+2 { focus-workspace 2; }
+    Super+3 { focus-workspace 3; }
+    Super+4 { focus-workspace 4; }
+    Super+5 { focus-workspace 5; }
+    Super+6 { focus-workspace 6; }
+    Super+7 { focus-workspace 7; }
+    Super+8 { focus-workspace 8; }
+    Super+9 { focus-workspace 9; }
+    Super+0 { focus-workspace 10; }
+
+    Super+Shift+1 { move-window-to-workspace 1; }
+    Super+Shift+2 { move-window-to-workspace 2; }
+    Super+Shift+3 { move-window-to-workspace 3; }
+    Super+Shift+4 { move-window-to-workspace 4; }
+    Super+Shift+5 { move-window-to-workspace 5; }
+    Super+Shift+6 { move-window-to-workspace 6; }
+    Super+Shift+7 { move-window-to-workspace 7; }
+    Super+Shift+8 { move-window-to-workspace 8; }
+    Super+Shift+9 { move-window-to-workspace 9; }
+    Super+Shift+0 { move-window-to-workspace 10; }
+
+    // ── Multimedia ────────────────────────────────────────────────────────
+
+    XF86AudioNext  { spawn "playerctl" "next"; }
+    XF86AudioPause { spawn "playerctl" "play-pause"; }
+    XF86AudioPlay  { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev  { spawn "playerctl" "previous"; }
+
+    XF86AudioRaiseVolume  { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "1%+"; }
+    XF86AudioLowerVolume  { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "1%-"; }
+    XF86AudioMute         { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute      { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    XF86MonBrightnessUp   { spawn "brightnessctl" "set" "2%+"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "2%-"; }
+}
+
+// ── Autostart ─────────────────────────────────────────────────────────────────
+// niri doesn't have an exec-once block; use spawn-at-startup for each daemon.
+
+spawn-at-startup "swww-daemon"
+spawn-at-startup "waybar" "-c" "/home/$USER/.config/waybar/gruvbox_blocks/config.jsonc" "-s" "/home/$USER/.config/waybar/gruvbox_blocks/style.css"
+spawn-at-startup "dunst"
