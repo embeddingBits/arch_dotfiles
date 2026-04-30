@@ -14,7 +14,6 @@ set -Ux PATH /opt/cuda/bin $PATH
 set -Ux LD_LIBRARY_PATH /opt/cuda/lib64 $LD_LIBRARY_PATH
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
-source /home/ebits/.config/fish/completions/inLimbo.fish
 set -Ux GOPATH $HOME/.local/go
 set -Ux GOBIN  $HOME/.local/go/bin
 fish_add_path  $GOBIN
