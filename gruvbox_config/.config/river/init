@@ -20,9 +20,9 @@ fnott &
 
 ### LOOK AND FEEL ###
 riverctl background-color 0x1d2021
-riverctl border-color-focused 0x7daea3
-riverctl border-color-unfocused 0x1d2021
-riverctl border-width 3
+riverctl border-color-focused 0xd8a657
+riverctl border-color-unfocused 0x504945
+riverctl border-width 2
 riverctl view-padding 5
 riverctl outer-padding 9
 riverctl focus-follows-cursor normal
@@ -50,7 +50,7 @@ riverctl map normal "$MOD+Shift" M exit
 riverctl map normal $MOD V toggle-float
 riverctl map normal $MOD J toggle-split
 riverctl map normal $MOD L spawn "waylock -init-color 0xD8A657 -input-color 0x7daea3 -fail-color 0xea6962"
-riverctl map normal $MOD S spawn "sshot -s"
+riverctl map normal $MOD S spawn "hyprshot -m region"
 
 # Move focus
 riverctl map normal $MOD J focus-view previous
