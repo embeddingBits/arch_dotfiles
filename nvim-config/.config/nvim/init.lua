@@ -43,6 +43,10 @@ vim.keymap.set("n", "<leader>tc", ":w | !typst compile % %:r.pdf<CR>")
 
 require("lazy").setup("plugins")
 
+vim.treesitter.language.add('norg', { 
+    path = "/home/ebits/.local/share/nvim/site/parser/norg.so"
+})
+
 vim.api.nvim_set_hl(0, "Normal", { bg = "#1d2021" })
 vim.api.nvim_set_hl(0, "NonText", { bg = "#1d2021" })
 
