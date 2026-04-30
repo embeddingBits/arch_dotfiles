@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SCREENSHOT_DIR="${HOME}/Pictures/Screenshots"
+mkdir -p "$SCREENSHOT_DIR"
+
+DATE=$(date +"%d-%m-%Y_%H-%M-%S")
+FILENAME="sshot_${DATE}.png"
+FULLPATH="${SCREENSHOT_DIR}/${FILENAME}"
+
+
+show_help() {
+    echo "Usage: $(basename "$0") [OPTION]"
+    echo
+    echo "Options:"
+    echo "  -f, --full          Capture entire screen"
+    echo "  -s, --select        Interactive region selection (default)"
+    echo "  -h, --help          Show this help message"
+    echo
+    echo "Without arguments: interactive selection (same as -s)"
+    echo
+    exit 0
+}
+
+take_screenshot() {
+    local geometry="$1"
+
+    if [ -z "$geometry" ]; then
+        grim "$FULLPATH"
+    else
+        grim -g "$geometry" "$FULLPATH"
+    fi
+
+    wl-copy < "$FULLPATH"
+
+    if command -v notify-send >/dev/null; then
+        notify-send "Screenshot saved" \
+            "${FULLPATH}\nCopied to clipboard" \
+            -i "${FULLPATH}" \
+            -t 4000
+    fi
+
+    echo "Screenshot saved to: $FULLPATH"
+    echo "Copied to clipboard"
+}
+
+case "${1:-}" in
+    -f|--full)
+        take_screenshot ""
+        ;;
+
+    -s|--select|"")
+        geometry=$(slurp -d 2>/dev/null) || exit 1
+        [ -z "$geometry" ] && exit 0
+
+        take_screenshot "$geometry"
+        ;;
+
+    -h|--help)
+        show_help
+        ;;
+
+    *)
+        echo "Unknown option: $1" >&2
+        echo "Use --help for usage information" >&2
+        exit 1
+        ;;
+esac
