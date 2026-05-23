@@ -78,20 +78,20 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-  (defvar +font "Iosevka Nerd Font Propo")
+  (defvar +font "JetBrainsMono Nerd Font Propo")
 
   (when (member +font (font-family-list))
     (set-face-attribute 'default nil
                         :family +font
-                        :height 140
+                        :height 130
                         :weight 'semibold)
     (set-face-attribute 'fixed-pitch nil
                         :family +font
-                        :height 140
+                        :height 130
                         :weight 'semibold)
     (set-face-attribute 'variable-pitch nil
                         :family +font
-                        :height 140
+                        :height 130
                         :weight 'semibold))
 #+end_src
 
@@ -406,7 +406,7 @@
                     (org-level-7 . 1.1)
                     (org-level-8 . 1.1)))
       (set-face-attribute (car face) nil
-                          :font "Iosevka Nerd Font Propo"
+                          :font "JetBrainsMono Nerd Font Propo"
                           :weight 'bold
                           :height (cdr face)))
     (set-face-attribute 'org-block nil :inherit 'fixed-pitch)

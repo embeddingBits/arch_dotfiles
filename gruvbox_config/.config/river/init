@@ -16,7 +16,7 @@ riverctl rule-add -app-id com.mitchellh.ghostty ssd
 awww-daemon &
 waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
 fnott &
-
+wl-paste -t text -w xclip -selection clipboard &
 
 ### LOOK AND FEEL ###
 riverctl background-color 0x1d2021
@@ -50,7 +50,7 @@ riverctl map normal "$MOD+Shift" M exit
 riverctl map normal $MOD V toggle-float
 riverctl map normal $MOD J toggle-split
 riverctl map normal $MOD L spawn "waylock -init-color 0xD8A657 -input-color 0x7daea3 -fail-color 0xea6962"
-riverctl map normal $MOD S spawn "hyprshot -m region"
+riverctl map normal $MOD S spawn "sshot -s"
 
 # Move focus
 riverctl map normal $MOD J focus-view previous

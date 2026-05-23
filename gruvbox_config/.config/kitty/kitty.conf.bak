@@ -15,8 +15,8 @@ font_size       15
 include current-theme.conf
 
 # BEGIN_KITTY_FONTS
-font_family      family='IosevkaTerm Nerd Font' style=Regular
-bold_font        auto
+font_family      family="JetBrainsMonoNL Nerd Font Mono"
+bold_font        family='JetBrainsMonoNL Nerd Font Mono' style=Bold
 italic_font      auto
-bold_italic_font family='IosevkaTerm Nerd Font' postscript_name=IosevkaTermNF-BoldItalic
+bold_italic_font family='JetBrainsMonoNL Nerd Font Mono' style='Bold Italic'
 # END_KITTY_FONTS

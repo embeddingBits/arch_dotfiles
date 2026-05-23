@@ -3,7 +3,7 @@ sudo pacman -S --needed \
   unzip zip unrar \
    bat less fd eza ripgrep fzf jq \
   fastfetch btop cava stow \
-  zoxide starship neovim zed emacs \
+  zoxide starship neovim emacs \
   \
   # System / services
   bluez bluez-utils blueman \
@@ -28,7 +28,7 @@ sudo pacman -S --needed \
   poppler zathura zathura-pdf-mupdf \ 
   \
   # Fonts / apps
-  ttf-iosevka-nerd firefox brave-browser-bin element-desktop 
+  ttf-iosevka-nerd firefox element-desktop vesktop 
 
 # Changing Shell
 chsh -s /usr/bin/fish
