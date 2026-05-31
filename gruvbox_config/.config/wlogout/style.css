@@ -1,0 +1,52 @@
+* {
+    background-image: none;
+    box-shadow: none;
+}
+
+window {
+    background-color: rgba(29, 32, 33, 0.9); /* Gruvbox Material Hard Dark background */
+}
+
+button {
+    border-radius: 4px;                      /* Slight curve fits Gruvbox better, or change to 0 if you prefer razor sharp edges */
+    border-color: #1d2021;                   /* Dark contrast border */
+    text-decoration-color: #ddc7a1;          /* Warm material foreground light text */
+    color: #ddc7a1;                          /* Warm material foreground text */
+    background-color: #282828;               /* Gruvbox Material Medium background */
+    border-style: solid;
+    border-width: 1px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+    background-color: #7daea3;               /* Gruvbox Material Aqua highlight */
+    color: #1d2021;                          /* Invert text to dark color for peak legibility on hover */
+    border-color: #7daea3;                   /* Subtle Green accent boundary */
+    outline-style: none;
+}
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}

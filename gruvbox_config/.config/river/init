@@ -6,7 +6,7 @@
 source "$HOME/.config/river/env.sh"
 
 ### MY PROGRAMS ###
-TERMINAL="foot"
+TERMINAL="kitty"
 MENU="fuzzel"
 
 riverctl rule-add ssd
@@ -14,7 +14,7 @@ riverctl rule-add -app-id com.mitchellh.ghostty ssd
 
 ### AUTOSTART ###
 awww-daemon &
-waybar -c ~/.config/waybar/gruvbox_blocks/config.jsonc -s ~/.config/waybar/gruvbox_blocks/style.css &
+waybar -c ~/.config/waybar/gruvbox_blocks/river.jsonc -s ~/.config/waybar/gruvbox_blocks/river.css &
 fnott &
 wl-paste -t text -w xclip -selection clipboard &
 

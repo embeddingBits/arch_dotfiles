@@ -33,24 +33,29 @@
 
 *** Dashboard
 #+begin_src emacs-lisp
-  (use-package dashboard
-    :demand t
-    :init
-    (setq dashboard-items '((recents . 3)
-                            (bookmarks . 5))
-          dashboard-set-init-info nil)
-    :config
-    (setq dashboard-startup-banner
-          (expand-file-name "~/Downloads/dashboard-1.jpeg")
-          dashboard-banner-logo-title "eBits Emacs"
-          dashboard-center-content t
-          dashboard-vertically-center-content t
-          dashboard-show-shortcuts nil
-          dashboard-display-icons-p t
-          dashboard-icon-type 'nerd-icons
-          dashboard-set-heading-icons t
-          dashboard-set-file-icons t)
-    (dashboard-setup-startup-hook))
+    (use-package dashboard
+      :demand t
+      :init
+      (setq dashboard-items '((recents . 3)
+                              (bookmarks . 5))
+            dashboard-set-init-info nil)
+      :config
+      (setq dashboard-startup-banner "~/Downloads/dashboard-1.jpeg"
+            dashboard-footer-messages
+            '("Asato mā sad gamaya, Tamaso mā jyotir gamaya, Mṛtyor mā amṛtaṃ gamaya"
+              "Tat tvam asi"
+              "Yadā yadā hi dharmasya glānir bhavati bhārata |
+  Abhyutthānam adharmasya tadātmānaṁ sṛjāmyaham |"
+              "Ātmānaṃ rathinaṃ viddhi, śarīraṃ rathameva tu, buddhiṃ tu sārathiṃ viddhi, manaḥ pragrahameva ca.")
+            dashboard-banner-logo-title "eBits Emacs"
+            dashboard-center-content t
+            dashboard-vertically-center-content t
+            dashboard-show-shortcuts nil
+            dashboard-display-icons-p t
+            dashboard-icon-type 'nerd-icons
+            dashboard-set-heading-icons t
+            dashboard-set-file-icons t)
+      (dashboard-setup-startup-hook))
 #+end_src
 
 *** Window & Buffer Management
@@ -78,7 +83,7 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-  (defvar +font "JetBrainsMono Nerd Font Propo")
+  (defvar +font "JetBrainsMono Nerd Font")
 
   (when (member +font (font-family-list))
     (set-face-attribute 'default nil
@@ -406,7 +411,7 @@
                     (org-level-7 . 1.1)
                     (org-level-8 . 1.1)))
       (set-face-attribute (car face) nil
-                          :font "JetBrainsMono Nerd Font Propo"
+                          :font "JetBrainsMono Nerd Font"
                           :weight 'bold
                           :height (cdr face)))
     (set-face-attribute 'org-block nil :inherit 'fixed-pitch)
@@ -641,8 +646,3 @@
 #+end_src
 
 ** Custom Variables
-#+begin_src emacs-lisp
-  (custom-set-variables
-   '(dashboard-footer-messages
-     '("Yadā yadā hi dharmasya glānir bhavati bhārata |\nAbhyutthānam adharmasya tadātmānaṁ sṛjāmyaham |")))
-#+end_src

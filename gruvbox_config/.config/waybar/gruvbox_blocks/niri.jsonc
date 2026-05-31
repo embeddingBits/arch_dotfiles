@@ -8,9 +8,9 @@
       "margin-top": 10,
       "modules-left": [
             "custom/launcher",    
-            "river/tags",
             "niri/workspaces",
-            "mpris",
+            "niri/window",
+            "mpris"
       ],
       "modules-center": [
             "clock"
@@ -21,19 +21,8 @@
             "network",
             "memory",
             "backlight",
-            "battery",
+            "battery"
       ],
-      "cava": {
-            "framerate": 144,
-            "bars": 12,
-            "method": "pipewire",
-            "source": "auto",
-            "bar_delimiter": 0,
-            "waves": true,
-            "noise_reduction": 0.77,
-            "input_delay": 4,
-            "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-      },
 
       "tray": {
             "icon-size": 21,
@@ -49,26 +38,29 @@
             "on-click-right": "killall rofi"
       },
 
-      "river/tags": {
-            "num-tags": 5,
-            "tag-labels": ["", "󰈹","","",""],
-      },
-
-      "river/window": {
-            "format": "󰣆  {}",
-      },
-
       "niri/workspaces": {
-            "disable-scroll": true,
+            "sort-by": "number",
+            "sort-by-number": true,
             "all-outputs": false,
             "format": "{icon}",
             "format-icons": {
-                  "terminal": "  ",  
-                  "browser": " 󰈹 ",  
-                  "discord": "  ",  
-                  "music": "  ",  
-                  "random": "  ",  
-            },
+                  "1": "  ",  
+                  "2": " 󰈹 ",  
+                  "3": "  ",  
+                  "4": "  ",  
+                  "5": "  "  
+            }
+      },
+
+      "niri/window": {
+            "format": "{app_id}",
+            "rewrite": {
+                  "": "󰣆  {}",
+                  "firefox": "󰈹 Firefox",
+                  "kitty": " Kitty",
+                  "discord": "  Discord",
+                  "emacs": " Emacs"
+            }
       },
 
       "mpris": {
@@ -85,7 +77,7 @@
                   "paused": "",
                   "playing": "",
                   "stopped": ""
-            },
+            }
       }, 
       "clock": {
             "tooltip-format": "󰥔 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -98,7 +90,7 @@
       },
       "memory": {
             "format": "<span color='#E78A4E'>󰍛</span>{used: 0.2f} GB",
-            "interval": 1,
+            "interval": 1
       },
 
       "temperature": {
@@ -116,7 +108,7 @@
                   "critical": 20
             },
             "events": {
-                  "on-discharging-warning": "notify-send -u critical 'Low Battery'",
+                  "on-discharging-warning": "notify-send -u critical 'Low Battery'"
             },
             "format": "<span color='#D3869B'>{icon}</span> {capacity}%",
             "format-full": "<span color='#d3869b'>{icon}</span> {capacity}%",
@@ -124,7 +116,7 @@
             "format-plugged": "<span color='#d3869b'></span>{capacity}% ",
             "format-alt": "{time} {icon}",
             "format-icons": ["", "", "", "", ""],
-            "interval": 1,
+            "interval": 1
       },
       "power-profiles-daemon": {
             "format": "{icon}",
@@ -168,6 +160,5 @@
                   "suspend": "systemctl suspend",
                   "hibernate": "systemctl hibernate"
             }
-      }
+        }
 }
-

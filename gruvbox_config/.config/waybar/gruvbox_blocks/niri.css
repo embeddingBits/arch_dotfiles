@@ -1,0 +1,147 @@
+* {
+    font-family: "JetBrainsMono NFP";
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: none;
+    transition: none;
+    box-shadow: none;
+}
+#waybar {
+    background: transparent;
+    color: #ebdbb2;
+    margin: 0;
+    padding: 0 10px;
+    min-height: 0;
+}
+#window,
+#mpd,
+#idle_inhibitor,
+#mpris,
+#pulseaudio,
+#network,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#keyboard-state,
+#battery,
+#clock,
+#tray,
+#cava,
+#custom-launcher {
+    background-color: transparent;
+    color: inherit;
+    padding: 4px 7px;
+    margin: 0;
+}
+/* Module Container Settings */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: #1d2021;
+    border: none;
+    border-radius: 0;
+    padding: 5px 7px; /* increased horizontal padding to prevent border clipping */
+    margin: 0;
+}
+#workspaces {
+    background-color: #1d2021;
+    border-radius: 0;
+    border: none;
+    margin: 0; /* removed negative right margin that was clipping last workspace border */
+    padding: 0;
+}
+#workspaces button {
+    padding: 0 7px;
+    margin: 0 2px;
+    border: solid 2px #7daea3;
+    background-color: transparent;
+    color: #7daea3;
+    border-radius: 0;
+}
+#workspaces button:first-child,
+#workspaces button:last-child {
+    border-radius: 0;
+}
+#workspaces button:hover {
+    background-color: #1d2021;
+    color: #ebdbb2;
+}
+/* '.active' is the critical selector for Niri workspace tracking */
+#workspaces button.active,
+#workspaces button.focused {
+    background-color: #1d2021;
+    color: #ea6962;
+}
+#workspaces button.urgent {
+    background-color: #ea6962;
+    color: #fbf1c7;
+}
+#custom-launcher {
+    background-color: #ea6962;
+    color: #1d2021;
+    border: solid 2px #e3433b;
+}
+#window {
+    background-color: #1d2021;
+    border: solid 2px #7daea3;
+    color: #ebdbb2;
+}
+#pulseaudio,
+#cava {
+    background-color: #1d2021;
+    border: solid 2px #7daea3;
+    color: #ebdbb2;
+}
+#cava {
+    font-family: "Iosevka Nerd Font Propo";
+}
+#backlight,
+#tray,
+#mpd,
+#mpris {
+    background-color: #1d2021;
+    border: solid 2px #a9b665;
+    color: #ebdbb2;
+}
+#network {
+    background-color: #1d2021;
+    border: solid 2px #d8a657;
+    color: #ebdbb2;
+}
+#memory {
+    background-color: #1d2021;
+    border: solid 2px #e78a4e;
+    color: #ebdbb2;
+}
+#clock {
+    background-color: #1d2021;
+    border: solid 2px #ea6962;
+    color: #ebdbb2;
+}
+#battery {
+    background-color: #1d2021;
+    border: solid 2px #d3869b;
+    color: #ebdbb2;
+}
+#battery.charging,
+#battery.plugged {
+    color: #ebdbb2;
+    background-color: #1d2021;
+}
+#battery.critical:not(.charging) {
+    background-color: #ea6962;
+    color: #ebdbb2;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes blink {
+    to {
+        background-color: #fbf1c7;
+        color: #1d2021;
+    }
+}
