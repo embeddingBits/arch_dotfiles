@@ -65,7 +65,7 @@ window-rule {
 
 window-rule {
     match app-id="kitty"
-    opacity 0.85
+    opacity 0.9
     background-effect {
         blur true
     }
@@ -89,7 +89,7 @@ window-rule {
 
 window-rule {
     match app-id="brave"
-    opacity 0.85
+    opacity 0.9
     background-effect {
         blur true
     }
@@ -104,24 +104,8 @@ window-rule {
 }
 
 window-rule {
-    match app-id="Zoom"
-    opacity 0.85
-    background-effect {
-        blur true
-    }
-}
-
-window-rule {
     match app-id="org.pwmt.zathura"
-    opacity 0.85
-    background-effect {
-        blur true
-    }
-}
-
-window-rule {
-    match app-id="brave"
-    opacity 0.85
+    opacity 0.9
     background-effect {
         blur true
     }

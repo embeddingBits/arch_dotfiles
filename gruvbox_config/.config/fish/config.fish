@@ -17,3 +17,6 @@ set --export PATH $BUN_INSTALL/bin $PATH
 set -Ux GOPATH $HOME/.local/go
 set -Ux GOBIN  $HOME/.local/go/bin
 fish_add_path  $GOBIN
+
+# OpenClaw Completion
+test -f "/home/ebits/.openclaw/completions/openclaw.fish"; and source "/home/ebits/.openclaw/completions/openclaw.fish"
