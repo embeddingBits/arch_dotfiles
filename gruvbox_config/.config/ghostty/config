@@ -20,7 +20,7 @@ shell-integration-features = no-cursor
 # Font Settings
 font-size = 14
 
-font-family = MartianMono NF Cond  
+font-family = JetBrainsMono NF
 font-style = semibold
 font-style-bold = medium
 font-style-italic = medium italic

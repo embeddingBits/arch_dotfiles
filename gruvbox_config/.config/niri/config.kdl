@@ -215,3 +215,4 @@ binds {
 spawn-at-startup "awww-daemon"
 spawn-at-startup "waybar" "-c" "/home/ebits/.config/waybar/gruvbox_blocks/niri.jsonc" "-s" "/home/ebits/.config/waybar/gruvbox_blocks/niri.css"
 spawn-at-startup "fnott"
+spawn-at-startup "xwayland-satellite"
