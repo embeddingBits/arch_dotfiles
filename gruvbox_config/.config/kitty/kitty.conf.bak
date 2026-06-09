@@ -15,8 +15,8 @@ font_size       14
 include current-theme.conf
 
 # BEGIN_KITTY_FONTS
-font_family      family="JetBrainsMonoNL Nerd Font"
-bold_font        family='JetBrainsMonoNL Nerd Font' style=Bold
+font_family      family='JetBrainsMonoNL Nerd Font' postscript_name=JetBrainsMonoNLNF-Regular
+bold_font        family='JetBrainsMonoNL Nerd Font' style=SemiBold
 italic_font      auto
-bold_italic_font family='JetBrainsMonoNL Nerd Font' style='Bold Italic'
+bold_italic_font family='JetBrainsMonoNL Nerd Font' postscript_name=JetBrainsMonoNLNF-BoldItalic
 # END_KITTY_FONTS

@@ -33,29 +33,53 @@
 
 *** Dashboard
 #+begin_src emacs-lisp
-    (use-package dashboard
-      :demand t
-      :init
-      (setq dashboard-items '((recents . 3)
-                              (bookmarks . 5))
-            dashboard-set-init-info nil)
-      :config
-      (setq dashboard-startup-banner "~/Downloads/dashboard-1.jpeg"
-            dashboard-footer-messages
-            '("Asato mā sad gamaya, Tamaso mā jyotir gamaya, Mṛtyor mā amṛtaṃ gamaya"
-              "Tat tvam asi"
-              "Yadā yadā hi dharmasya glānir bhavati bhārata |
-  Abhyutthānam adharmasya tadātmānaṁ sṛjāmyaham |"
-              "Ātmānaṃ rathinaṃ viddhi, śarīraṃ rathameva tu, buddhiṃ tu sārathiṃ viddhi, manaḥ pragrahameva ca.")
-            dashboard-banner-logo-title "eBits Emacs"
-            dashboard-center-content t
-            dashboard-vertically-center-content t
-            dashboard-show-shortcuts nil
-            dashboard-display-icons-p t
-            dashboard-icon-type 'nerd-icons
-            dashboard-set-heading-icons t
-            dashboard-set-file-icons t)
-      (dashboard-setup-startup-hook))
+  (use-package dashboard
+    :demand t
+    :bind (:map dashboard-mode-map
+                ("n" . dashboard-next-line)
+                ("p" . dashboard-previous-line))
+    :init
+    (add-hook 'dashboard-mode-hook (lambda () (setq show-trailing-whitespace nil)))
+    :custom
+    (dashboard-set-navigator t)
+    (dashboard-center-content t)
+    (dashboard-vertically-center-content t)
+    (dashboard-set-file-icons t)
+    (dashboard-set-heading-icons t)
+    (dashboard-show-shortcuts nil)
+    (dashboard-display-icons-p t)
+    (dashboard-icon-type 'nerd-icons)
+    (dashboard-set-init-info nil)
+    (dashboard-banner-logo-title "eBits Emacs")
+    (dashboard-startup-banner "~/Downloads/dashboard-1.jpeg")
+    (dashboard-items '((recents . 3)
+                       (bookmarks . 5)))
+    (dashboard-footer-messages
+     '("Asato mā sad gamaya, Tamaso mā jyotir gamaya, Mṛtyor mā amṛtaṃ gamaya"
+       "Tat tvam asi"
+       "Yadā yadā hi dharmasya glānir bhavati bhārata | Abhyutthānam adharmasya tadātmānaṁ sṛjāmyaham |"
+       "Ātmānaṃ rathinaṃ viddhi, śarīraṃ rathameva tu, buddhiṃ tu sārathiṃ viddhi, manaḥ pragrahameva ca."))
+    :config
+    (dashboard-setup-startup-hook)
+    (setq dashboard-footer-icon
+          (nerd-icons-codicon "nf-cod-calendar"
+                              :height 1.1
+                              :v-adjust -0.05
+                              :face 'font-lock-keyword-face))
+    (setq dashboard-navigator-buttons
+          `((("" "\n" "" nil nil "" ""))
+            ((,(nerd-icons-faicon "nf-fa-search" :height 0.9 :v-adjust -0.1)
+              " Find file" "Open a file (C-x C-f)"
+              (lambda (&rest _) (counsel-find-file)) nil "" "  C-x C-f"))
+            ((,(nerd-icons-octicon "nf-oct-file_directory" :height 1.0 :v-adjust -0.1)
+              " Open project" "Switch to a project (C-x p d)"
+              (lambda (&rest _) (counsel-projectile-switch-project)) nil "" "  C-x p d"))
+            ((,(nerd-icons-octicon "nf-oct-three_bars" :height 1.1 :v-adjust -0.1)
+              " File explorer" "Open file explorer (C-x p D)"
+              (lambda (&rest _) (neotree-toggle)) nil "" "  C-x p D"))
+            ((,(nerd-icons-codicon "nf-cod-settings" :height 0.9 :v-adjust -0.1)
+              " Open settings" "Open config file (C-c e)"
+              (lambda (&rest _) (open-config-file)) nil "" "  C-c e")))))
 #+end_src
 
 *** Window & Buffer Management
@@ -168,7 +192,27 @@
 *** Completion Framework
 #+begin_src emacs-lisp
   (use-package vertico
-    :init (vertico-mode 1))
+    :init
+    (vertico-mode 1))
+
+  (use-package vertico-posframe
+    :after vertico
+    :config
+    (vertico-posframe-mode 1)
+    
+    ;; Customizing the appearance
+    (setq vertico-posframe-parameters
+          '((left-fringe . 8)
+            (right-fringe . 8)
+            (line-spacing . 0.1)
+            (internal-border-width . 2)))
+
+    ;; Customizing the behavior
+    (setq vertico-posframe-poshandler #'posframe-poshandler-frame-center ; Position
+          vertico-posframe-width 100                                       ; Width
+          vertico-posframe-height 12                                       ; Max height
+          vertico-posframe-border-width 2                                  ; Border thickness
+          vertico-posframe-fallback-mode vertico-buffer-mode))             ; Fallback if posframe fails
 
   (use-package marginalia
     :init (marginalia-mode 1))
@@ -646,3 +690,7 @@
 #+end_src
 
 ** Custom Variables
+#+begin_src emacs-lisp
+  (custom-set-faces
+   '(vertico-posframe-border ((t (:background "#dfa657")))))
+#+end_src
