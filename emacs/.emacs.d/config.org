@@ -38,48 +38,80 @@
     :bind (:map dashboard-mode-map
                 ("n" . dashboard-next-line)
                 ("p" . dashboard-previous-line))
+
     :init
-    (add-hook 'dashboard-mode-hook (lambda () (setq show-trailing-whitespace nil)))
+    (add-hook 'dashboard-mode-hook
+              (lambda ()
+                (setq show-trailing-whitespace nil)))
+
     :custom
-    (dashboard-set-navigator t)
+    ;; Layout
     (dashboard-center-content t)
     (dashboard-vertically-center-content t)
-    (dashboard-set-file-icons t)
-    (dashboard-set-heading-icons t)
-    (dashboard-show-shortcuts nil)
+
+    ;; Banner
+    (dashboard-startup-banner "~/Downloads/dashboard-1.jpeg")
+    (dashboard-banner-logo-title "eBits Emacs")
+
+    ;; Icons
     (dashboard-display-icons-p t)
     (dashboard-icon-type 'nerd-icons)
+    (dashboard-set-file-icons t)
+    (dashboard-set-heading-icons t)
+
+    ;; General
+    (dashboard-show-shortcuts nil)
     (dashboard-set-init-info nil)
-    (dashboard-banner-logo-title "eBits Emacs")
-    (dashboard-startup-banner "~/Downloads/dashboard-1.jpeg")
+
+    ;; Sections
     (dashboard-items '((recents . 3)
                        (bookmarks . 5)))
+
+    ;; IMPORTANT: Required for navigator buttons
+    (dashboard-startupify-list
+     '(dashboard-insert-banner
+       dashboard-insert-newline
+       dashboard-insert-banner-title
+       dashboard-insert-navigator
+       dashboard-insert-items
+       dashboard-insert-footer))
+
+    ;; Footer messages
     (dashboard-footer-messages
      '("Asato mā sad gamaya, Tamaso mā jyotir gamaya, Mṛtyor mā amṛtaṃ gamaya"
        "Tat tvam asi"
-       "Yadā yadā hi dharmasya glānir bhavati bhārata | Abhyutthānam adharmasya tadātmānaṁ sṛjāmyaham |"
+       "Yadā yadā hi dharmasya glānir bhavati bhārata | Abhyutthānam adharmasya tadātmānaṁ sṛjāmyaham"
        "Ātmānaṃ rathinaṃ viddhi, śarīraṃ rathameva tu, buddhiṃ tu sārathiṃ viddhi, manaḥ pragrahameva ca."))
+
     :config
-    (dashboard-setup-startup-hook)
+
     (setq dashboard-footer-icon
-          (nerd-icons-codicon "nf-cod-calendar"
-                              :height 1.1
-                              :v-adjust -0.05
-                              :face 'font-lock-keyword-face))
+          (nerd-icons-codicon
+           "nf-cod-note"
+           :height 1.1
+           :v-adjust -0.05
+           :face 'font-lock-keyword-face))
+
     (setq dashboard-navigator-buttons
-          `((("" "\n" "" nil nil "" ""))
-            ((,(nerd-icons-faicon "nf-fa-search" :height 0.9 :v-adjust -0.1)
-              " Find file" "Open a file (C-x C-f)"
-              (lambda (&rest _) (counsel-find-file)) nil "" "  C-x C-f"))
-            ((,(nerd-icons-octicon "nf-oct-file_directory" :height 1.0 :v-adjust -0.1)
-              " Open project" "Switch to a project (C-x p d)"
-              (lambda (&rest _) (counsel-projectile-switch-project)) nil "" "  C-x p d"))
-            ((,(nerd-icons-octicon "nf-oct-three_bars" :height 1.1 :v-adjust -0.1)
-              " File explorer" "Open file explorer (C-x p D)"
-              (lambda (&rest _) (neotree-toggle)) nil "" "  C-x p D"))
-            ((,(nerd-icons-codicon "nf-cod-settings" :height 0.9 :v-adjust -0.1)
-              " Open settings" "Open config file (C-c e)"
-              (lambda (&rest _) (open-config-file)) nil "" "  C-c e")))))
+          `(((,(nerd-icons-faicon "nf-fa-file")
+              " Find File"
+              "Open a file"
+              (lambda (&rest _)
+                (call-interactively #'find-file)))
+
+             (,(nerd-icons-faicon "nf-fa-search")
+              " Find Grep"
+              "Search with ripgrep"
+              (lambda (&rest _)
+                (call-interactively #'consult-ripgrep)))
+
+             (,(nerd-icons-octicon "nf-oct-file_directory")
+              " Open Project"
+              "Switch project"
+              (lambda (&rest _)
+                (project-switch-project))))))
+
+    (dashboard-setup-startup-hook))
 #+end_src
 
 *** Window & Buffer Management
@@ -107,23 +139,33 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-  (defvar +font "JetBrainsMono Nerd Font")
+(defvar +font-mono "JetBrainsMono Nerd Font Propo")
+(defvar +font-variable "JetBrainsMono Nerd Font Propo")
 
-  (when (member +font (font-family-list))
-    (set-face-attribute 'default nil
-                        :family +font
-                        :height 130
-                        :weight 'semibold)
-    (set-face-attribute 'fixed-pitch nil
-                        :family +font
-                        :height 130
-                        :weight 'semibold)
-    (set-face-attribute 'variable-pitch nil
-                        :family +font
-                        :height 130
-                        :weight 'semibold))
+(when (member +font-mono (font-family-list))
+  (set-face-attribute 'default nil
+                      :family +font-mono
+                      :height 130
+                      :weight 'semibold)
+  (set-face-attribute 'fixed-pitch nil
+                      :family +font-mono
+                      :height 130
+                      :weight 'semibold))
+
+(when (member +font-variable (font-family-list))
+  (set-face-attribute 'variable-pitch nil
+                      :family +font-variable
+                      :height 130
+                      :weight 'regular))
 #+end_src
-
+*** Neotree
+#+begin_src emacs-lisp
+#+end_src
+*** Theme
+#+begin_src emacs-lisp
+  (setq doom-gruvbox-dark-variant "hard")
+  (setq doom-theme 'doom-gruvbox)
+#+end_src
 *** Ligatures
 #+begin_src emacs-lisp
   (use-package ligature
@@ -169,7 +211,14 @@
   (use-package doom-modeline
     :demand t
     :config
-    (setq doom-modeline-height 18)
+    (setq nerd-icons-scale-factor 1.0)
+    (setq doom-modeline-height 25)
+    
+    ;; Fixed standard face customization syntax
+    (custom-set-faces
+     '(doom-modeline-evil-normal-state ((t (:weight regular :foreground "#a9b665"))))
+     '(doom-modeline-evil-insert-state ((t (:weight regular :foreground "#ea6962")))))
+    
     (doom-modeline-mode 1))
 #+end_src
 
@@ -209,7 +258,7 @@
 
     ;; Customizing the behavior
     (setq vertico-posframe-poshandler #'posframe-poshandler-frame-center ; Position
-          vertico-posframe-width 100                                       ; Width
+          vertico-posframe-width 150                                       ; Width
           vertico-posframe-height 12                                       ; Max height
           vertico-posframe-border-width 2                                  ; Border thickness
           vertico-posframe-fallback-mode vertico-buffer-mode))             ; Fallback if posframe fails
@@ -221,7 +270,6 @@
     :config
     (which-key-mode 1))
 #+end_src
-
 ** Evil Mode Configuration
 #+begin_src emacs-lisp
   (use-package evil
@@ -446,16 +494,16 @@
              (compose-region (match-beginning 1)
                              (match-end 1)
                              "•"))))))
-    (dolist (face '((org-level-1 . 1.4)
-                    (org-level-2 . 1.3)
-                    (org-level-3 . 1.2)
+    (dolist (face '((org-level-1 . 1.3)
+                    (org-level-2 . 1.2)
+                    (org-level-3 . 1.1)
                     (org-level-4 . 1.1)
-                    (org-level-5 . 1.1)
-                    (org-level-6 . 1.1)
-                    (org-level-7 . 1.1)
-                    (org-level-8 . 1.1)))
+                    (org-level-5 . 1.0)
+                    (org-level-6 . 1.0)
+                    (org-level-7 . 1.0)
+                    (org-level-8 . 1.0)))
       (set-face-attribute (car face) nil
-                          :font "JetBrainsMono Nerd Font"
+                          :font +font-variable
                           :weight 'bold
                           :height (cdr face)))
     (set-face-attribute 'org-block nil :inherit 'fixed-pitch)

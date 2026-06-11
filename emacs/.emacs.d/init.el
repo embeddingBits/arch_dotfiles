@@ -40,3 +40,4 @@
 (load custom-file 'noerror 'nomessage)
 
 (provide 'init)
+(put 'downcase-region 'disabled nil)
