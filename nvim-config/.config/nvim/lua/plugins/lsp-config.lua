@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "zls", "gopls", "verible", "tinymist", "pyright" }
+        ensure_installed = { "lua_ls", "clangd", "zls", "gopls", "verible", "tinymist", "pyright", "ols", "c3-lsp" }
       })
     end
   },
@@ -25,6 +25,7 @@ return {
       vim.lsp.enable('clangd')
       vim.lsp.enable('zls')
       vim.lsp.enable('gopls')
+      vim.lsp.enable('c3-lsp')
       vim.lsp.enable('verible')
       vim.lsp.enable('svlangserver')
     end

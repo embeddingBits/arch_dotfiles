@@ -29,6 +29,9 @@
         visible-bell nil
         make-backup-files nil
         auto-save-default nil)
+
+  (use-package consult
+    :ensure t)
 #+end_src
 
 *** Dashboard
@@ -139,33 +142,41 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-(defvar +font-mono "JetBrainsMono Nerd Font Propo")
-(defvar +font-variable "JetBrainsMono Nerd Font Propo")
+  (defvar +font-mono "JetBrainsMono Nerd Font Propo")
+  (defvar +font-variable "JetBrainsMono Nerd Font Propo")
 
-(when (member +font-mono (font-family-list))
-  (set-face-attribute 'default nil
-                      :family +font-mono
-                      :height 130
-                      :weight 'semibold)
-  (set-face-attribute 'fixed-pitch nil
-                      :family +font-mono
-                      :height 130
-                      :weight 'semibold))
+  (when (member +font-mono (font-family-list))
+    (set-face-attribute 'default nil
+                        :family +font-mono
+                        :height 130
+                        :weight 'semibold)
+    (set-face-attribute 'fixed-pitch nil
+                        :family +font-mono
+                        :height 130
+                        :weight 'semibold))
 
-(when (member +font-variable (font-family-list))
-  (set-face-attribute 'variable-pitch nil
-                      :family +font-variable
-                      :height 130
-                      :weight 'regular))
+  (when (member +font-variable (font-family-list))
+    (set-face-attribute 'variable-pitch nil
+                        :family +font-variable
+                        :height 130
+                        :weight 'regular))
 #+end_src
+
 *** Neotree
 #+begin_src emacs-lisp
+  (use-package neotree
+    :config
+    (setq neo-theme 'nerd-icons))
 #+end_src
+
 *** Theme
 #+begin_src emacs-lisp
-  (setq doom-gruvbox-dark-variant "hard")
-  (setq doom-theme 'doom-gruvbox)
+  (use-package doom-themes
+    :config
+    (setq doom-gruvbox-dark-variant "hard")
+    (setq doom-theme 'doom-gruvbox))
 #+end_src
+
 *** Ligatures
 #+begin_src emacs-lisp
   (use-package ligature
@@ -178,8 +189,7 @@
                       "??" "???" "?:" "?." "?=" "<:" ":<" ":>" ">:" "<:<" "<>" "<<<" ">>>"
                       "<<" ">>" "||" "-|" "_|_" "|-" "||-" "|=" "||=" "##" "###" "####"
                       "#{" "#[" "]#" "#(" "#?" "#_" "#_(" "#:" "#!" "#=" "^=" "<$>" "<$"
-                      "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "<!--" "<#--"
-                      "-->" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
+                      "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
                       "==>" "=>" "=>>" ">=>" ">>=" ">>-" ">-" "-<" "-<<" ">->" "<-<" "<-|"
                       "<=|" "|=>" "|->" "<->" "<~~" "<~" "<~>" "~~" "~~>" "~>" "~-" "-~"
                       "~@" "[||]" "|]" "[|" "|}" "{|" "[<" ">]" "|>" "<|" "||>" "<||"
@@ -214,7 +224,6 @@
     (setq nerd-icons-scale-factor 1.0)
     (setq doom-modeline-height 25)
     
-    ;; Fixed standard face customization syntax
     (custom-set-faces
      '(doom-modeline-evil-normal-state ((t (:weight regular :foreground "#a9b665"))))
      '(doom-modeline-evil-insert-state ((t (:weight regular :foreground "#ea6962")))))
@@ -257,11 +266,11 @@
             (internal-border-width . 2)))
 
     ;; Customizing the behavior
-    (setq vertico-posframe-poshandler #'posframe-poshandler-frame-center ; Position
-          vertico-posframe-width 150                                       ; Width
-          vertico-posframe-height 12                                       ; Max height
-          vertico-posframe-border-width 2                                  ; Border thickness
-          vertico-posframe-fallback-mode vertico-buffer-mode))             ; Fallback if posframe fails
+    (setq vertico-posframe-poshandler #'posframe-poshandler-frame-center
+          vertico-posframe-width 150
+          vertico-posframe-height 12
+          vertico-posframe-border-width 2
+          vertico-posframe-fallback-mode vertico-buffer-mode))
 
   (use-package marginalia
     :init (marginalia-mode 1))
@@ -270,6 +279,7 @@
     :config
     (which-key-mode 1))
 #+end_src
+
 ** Evil Mode Configuration
 #+begin_src emacs-lisp
   (use-package evil
@@ -325,21 +335,23 @@
           '((c      . ("https://github.com/tree-sitter/tree-sitter-c"))
             (cpp    . ("https://github.com/tree-sitter/tree-sitter-cpp"))
             (python . ("https://github.com/tree-sitter/tree-sitter-python"))
+            (c3     . ("https://github.com/c3lang/tree-sitter-c3"))
             (go     . ("https://github.com/tree-sitter/tree-sitter-go"))
-            (zig    . ("https://github.com/tree-sitter-grammars/tree-sitter-zig"))
             (typst  . ("https://github.com/uben0/tree-sitter-typst")))
-          treesit-font-lock-level 3)
-    (global-treesit-auto-mode))
+          treesit-font-lock-level 4)
+    (global-treesit-auto-mode)
+
+    ;; Force C/C++ to open directly in Tree-sitter modes
+    (setq major-mode-remap-alist
+          '((c-mode . c-ts-mode)
+            (c++-mode . c++-ts-mode)
+            (python-mode . python-ts-mode)
+            (go-mode . go-ts-mode)
+            (c-or-c++-mode . src-ts-mode-maybe))))
 #+end_src
 
 *** Language-Specific Modes
 #+begin_src emacs-lisp
-  (use-package zig-ts-mode
-    :vc (:url "https://codeberg.org/meow_king/zig-ts-mode"
-              :rev :newest))
-
-  (add-to-list 'auto-mode-alist '("\\.zig\\(?:\\.zon\\)?\\'" . zig-ts-mode))
-
   (use-package typst-ts-mode
     :mode "\\.typ\\'")
 
@@ -353,6 +365,9 @@
           typst-preview-open-browser-automatically t)
     :custom
     (typst-preview-invert-colors "auto"))
+
+  (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/c3-ts-mode"))
+  (require 'c3-ts-mode)
 #+end_src
 
 *** Programming Defaults
@@ -370,51 +385,92 @@
     :custom (indent-bars-treesit-support t)
     :hook ((emacs-lisp-mode
             c-ts-mode
-            c++-ts-mode
-            zig-ts-mode)))
+            go-ts-mode
+            c3-ts-mode
+            python-ts-mode
+            c++-ts-mode)))
 #+end_src
 
 ** Completion & LSP
 *** Snippets
 #+begin_src emacs-lisp
   (use-package yasnippet
-    :hook (prog-mode . yas-minor-mode)
-    :hook (org-mode . yas-minor-mode)
+    :hook ((prog-mode . yas-minor-mode)
+           (org-mode  . yas-minor-mode))
     :config
+    ;; Correctly inherit classic snippets for tree-sitter modes
+    (add-hook 'c-ts-mode-hook      (lambda () (yas-activate-extra-mode 'c-mode)))
+    (add-hook 'c++-ts-mode-hook    (lambda ()
+                                     (yas-activate-extra-mode 'c++-mode)))
+    (add-hook 'python-ts-mode-hook (lambda () (yas-activate-extra-mode 'python-mode)))
+    (add-hook 'go-ts-mode-hook     (lambda () (yas-activate-extra-mode 'go-mode)))
     (yas-reload-all))
 
   (use-package yasnippet-snippets
     :after yasnippet)
 #+end_src
 
-*** Company Completion
+*** Company (Completion Framework)
 #+begin_src emacs-lisp
   (use-package company
+    :demand t
     :hook (prog-mode . company-mode)
-    :hook (org-mode . company-mode)
+    :bind (:map company-active-map
+                ("<tab>"    . company-complete-selection)
+                ("C-n"      . company-select-next)
+                ("C-p"      . company-select-previous)
+                ("C-d"      . company-show-doc-buffer)
+                ("<escape>" . company-abort))
+    :custom
+    (company-idle-delay 0.1)
+    (company-minimum-prefix-length 1)
+    (company-tooltip-limit 14)
+    (company-tooltip-align-annotations t)
+    (company-tooltip-flip-when-above t)
+    (company-require-match nil)
+    (company-selection-wrap-around t)
+    ;; Preserve casing from source buffer (important for camelCase code)
+    (company-dabbrev-downcase nil)
+    (company-dabbrev-ignore-case t)
     :config
-    (setq company-minimum-prefix-length 1
-          company-idle-delay 0.0
-          company-tooltip-align-annotations t
-          company-backends (cons 'company-capf company-backends))
-    (define-key company-active-map (kbd "<tab>") nil)
-    (define-key company-active-map (kbd "TAB") nil)
-    (dolist (hook '(eshell-mode-hook shell-mode-hook term-mode-hook
-                                     vterm-mode-hook minibuffer-setup-hook))
-      (add-hook hook (lambda () (company-mode -1)))))
+    ;; Default backends for non-LSP buffers (eglot overrides these when active)
+    (setq company-backends
+          '((company-capf
+             company-yasnippet
+             company-dabbrev-code
+             company-keywords)
+            company-dabbrev
+            company-files)))
 
-  (setq yas-trigger-key "<tab>")
-  (global-set-key (kbd "C-<tab>") #'company-complete)
+  ;; Prettier popup with per-kind icons — GUI only
+  (use-package company-box
+    :if (display-graphic-p)
+    :after company
+    :hook (company-mode . company-box-mode)
+    :custom
+    (company-box-show-single-candidate t)
+    (company-box-max-candidates 50)
+    (company-box-doc-delay 0.3)
+    (company-box-icons-alist 'company-box-icons-nerd-icons))
+#+end_src
+
+*** Orderless (Fuzzy Matching)
+#+begin_src emacs-lisp
+  (use-package orderless
+    :custom
+    (completion-styles '(orderless basic))
+    (completion-category-overrides '((file (styles basic partial-completion)))))
 #+end_src
 
 *** Eglot LSP
 #+begin_src emacs-lisp
   (use-package eglot
-    :hook ((c-ts-mode     . eglot-ensure)
-           (c++-ts-mode   . eglot-ensure)
-           (zig-ts-mode   . eglot-ensure)
-           (typst-ts-mode . eglot-ensure)
-           (go-ts-mode    . eglot-ensure))
+    :hook ((c-ts-mode      . eglot-ensure)
+           (c++-ts-mode    . eglot-ensure)
+           (typst-ts-mode  . eglot-ensure)
+           (c3-ts-mode     . eglot-ensure)
+           (python-ts-mode . eglot-ensure)
+           (go-ts-mode     . eglot-ensure))
     :config
     (setq eglot-autoshutdown t
           eglot-events-buffer-size 0
@@ -428,7 +484,18 @@
             :colorProvider
             :foldingRangeProvider)
           eglot-stay-out-of '(yasnippet))
-    (eglot-inlay-hints-mode -1))
+
+    ;; Eglot resets company-backends to just (company-capf), dropping yasnippet.
+    ;; This hook re-injects yasnippet alongside capf using the :with grouping
+    ;; syntax so both LSP completions and snippets appear in the popup.
+    (defun my/eglot-company-backends ()
+      (setq-local company-backends
+                  '((company-capf :with company-yasnippet)
+                    company-dabbrev-code
+                    company-files)))
+
+    (add-hook 'eglot-managed-mode-hook #'my/eglot-company-backends)
+    (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1))))
 #+end_src
 
 ** Project & Version Control
@@ -545,8 +612,8 @@
               (when (derived-mode-p 'c-ts-mode
                                     'c++-ts-mode
                                     'python-ts-mode
+                                    'c3-ts-mode
                                     'go-ts-mode
-                                    'zig-ts-mode
                                     'typst-ts-mode)
                 (eglot-ensure))))
 
@@ -637,53 +704,53 @@
     (add-to-list 'org-latex-classes
                  '("custom-module"
                    "\\documentclass[14pt]{extarticle}
-\\usepackage[utf8]{inputenc}
-\\usepackage[T1]{fontenc}
-\\usepackage[a4paper, margin=1in]{geometry}
-\\usepackage{fixltx2e}
-\\usepackage{graphicx}
-\\usepackage{longtable}
-\\usepackage{float}
-\\usepackage{wrapfig}
-\\usepackage{rotating}
-\\usepackage[normalem]{ulem}
-\\usepackage{amsmath}
-\\usepackage{textcomp}
-\\usepackage{marvosym}
-\\usepackage{wasysym}
-\\usepackage{amssymb}
-\\usepackage{hyperref}
-\\usepackage{mathpazo}
-\\usepackage{color}
-\\usepackage{parskip}
-\\usepackage{fancyhdr}
-\\usepackage{titlesec}
-\\usepackage{anyfontsize}
+  \\usepackage[utf8]{inputenc}
+  \\usepackage[T1]{fontenc}
+  \\usepackage[a4paper, margin=1in]{geometry}
+  \\usepackage{fixltx2e}
+  \\usepackage{graphicx}
+  \\usepackage{longtable}
+  \\usepackage{float}
+  \\usepackage{wrapfig}
+  \\usepackage{rotating}
+  \\usepackage[normalem]{ulem}
+  \\usepackage{amsmath}
+  \\usepackage{textcomp}
+  \\usepackage{marvosym}
+  \\usepackage{wasysym}
+  \\usepackage{amssymb}
+  \\usepackage{hyperref}
+  \\usepackage{mathpazo}
+  \\usepackage{color}
+  \\usepackage{parskip}
+  \\usepackage{fancyhdr}
+  \\usepackage{titlesec}
+  \\usepackage{anyfontsize}
 
-\\pagestyle{fancy}
-\\fancyhf{}
-\\fancyhead[L]{\\leftmark}
-\\fancyhead[R]{Chapter}
-\\fancyfoot[C]{\\thepage}
-\\renewcommand{\\headrulewidth}{0.4pt}
-\\newcommand{\\sectionbreak}{\\clearpage}
+  \\pagestyle{fancy}
+  \\fancyhf{}
+  \\fancyhead[L]{\\leftmark}
+  \\fancyhead[R]{Chapter}
+  \\fancyfoot[C]{\\thepage}
+  \\renewcommand{\\headrulewidth}{0.4pt}
+  \\newcommand{\\sectionbreak}{\\clearpage}
 
-\\makeatletter
-\\renewcommand{\\maketitle}{
-  \\begin{titlepage}
-  \\centering
-  \\vspace*{\\fill}
-  {\\fontsize{80pt}{100pt}\\selectfont \\textbf{\\@title}}
-  \\vspace*{\\fill}
-  \\end{titlepage}
-  \\thispagestyle{empty}
-  \\clearpage
-}
-\\makeatother
+  \\makeatletter
+  \\renewcommand{\\maketitle}{
+    \\begin{titlepage}
+    \\centering
+    \\vspace*{\\fill}
+    {\\fontsize{80pt}{100pt}\\selectfont \\textbf{\\@title}}
+    \\vspace*{\\fill}
+    \\end{titlepage}
+    \\thispagestyle{empty}
+    \\clearpage
+  }
+  \\makeatother
 
-[NO-DEFAULT-PACKAGES]
-[PACKAGES]
-[EXTRA]"
+  [NO-DEFAULT-PACKAGES]
+  [PACKAGES]
+  [EXTRA]"
                    ("\\section{%s}" . "\\section*{%s}")
                    ("\\subsection{%s}" . "\\subsection*{%s}")
                    ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
