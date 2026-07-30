@@ -1,8 +1,8 @@
 #+startup: inlineimages
 
 * Software
-- *Distro*: [[https://archlinux.org][Arch]]
-- *Window manager*: [[https://codeberg.org/river][River]]
+- *Distro*: [[https://voidlinux.org/][Void Linux]]
+- *Window manager*: [[https://niri-wm.github.io/niri/index.html][Niri]]
 - *Top bar*: [[https://github.com/alexys/waybar][Waybar]]
 - *Terminal*: [[https://codeberg.org/dnkl/foot][foot]]
 - *Text editor*: [[https://www.gnu.org/software/emacs/][Emacs]] and [[https://neovim.io/][Neovim]]
@@ -12,7 +12,6 @@
 - *Spotify*: [[https://github.com/spicetify][Spicetify]]
 - *Discord*: [[https://betterdiscord.app][Discord]]
 
-  
 * Gruvbox Rice
 [[./images/river_terminal.png]]
 [[./images/river_main.png]]
@@ -20,18 +19,39 @@
 [[./images/river_nvim.png]]
 [[./images/river_discord.png]]
 
-* How to Use 
+* Reproducible Installation
 
-This is a repo that is maitained using GNU Stow.
+Dotfiles are managed with [[https://www.gnu.org/software/stow/][GNU Stow]].
+
+Packages are categorized in =packages.lst= for modular, selective installation.
+The =install.sh= script orchestrates a full reproducible bootstrap.
+
+** Quick start (full install)
 
 #+begin_src bash
-stow gruvbox_config
+./install.sh
 #+end_src
 
+This runs all stages:
+1. System sync & update
+2. Non-free repositories
+3. Install all package groups from =packages.lst=
+4. Enable runit services (NetworkManager, pipewire)
+5. Add user to required groups (_pipewire, pulse)
+6. Stow dotfiles (dotfiles/, emacs/, nvim-config/)
+
+** Selective install
+
+Install only specific package groups:
+
 #+begin_src bash
+./install.sh --group dev,tools
+#+end_src
+
+** Manual stow (if not using install.sh)
+
+#+begin_src bash
+stow dotfiles
 stow emacs
-#+end_src
-
-#+begin_src bash
-stow nvim_config
+stow nvim-config
 #+end_src

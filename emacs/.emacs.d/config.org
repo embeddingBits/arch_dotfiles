@@ -1,25 +1,9 @@
-#+title: eBits Emacs Config
-
-* Emacs Config
-** Performance & Startup
-*** Garbage Collection Optimization
-#+begin_src emacs-lisp
-  (setq gc-cons-threshold most-positive-fixnum
-        gc-cons-percentage 0.8)
-  (add-hook 'emacs-startup-hook
-            (lambda ()
-              (setq gc-cons-threshold (* 64 1024 1024)
-                    gc-cons-percentage 0.1)))
-#+end_src
-
-*** Process Output Buffer
-#+begin_src emacs-lisp
-  (setq read-process-output-max (* 4 1024 1024))
-#+end_src
+#+title: eBits Emacs
 
 ** UI Configuration
 *** Clean Interface
 #+begin_src emacs-lisp
+  (server-start)
   (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
@@ -34,6 +18,10 @@
     :ensure t)
 #+end_src
 
+*** Process Output Buffer
+#+begin_src emacs-lisp
+  (setq read-process-output-max (* 4 1024 1024))
+#+end_src
 *** Dashboard
 #+begin_src emacs-lisp
   (use-package dashboard
@@ -72,7 +60,8 @@
 
     ;; IMPORTANT: Required for navigator buttons
     (dashboard-startupify-list
-     '(dashboard-insert-banner
+     '(
+       dashboard-insert-banner
        dashboard-insert-newline
        dashboard-insert-banner-title
        dashboard-insert-navigator
@@ -189,7 +178,7 @@
                       "??" "???" "?:" "?." "?=" "<:" ":<" ":>" ">:" "<:<" "<>" "<<<" ">>>"
                       "<<" ">>" "||" "-|" "_|_" "|-" "||-" "|=" "||=" "##" "###" "####"
                       "#{" "#[" "]#" "#(" "#?" "#_" "#_(" "#:" "#!" "#=" "^=" "<$>" "<$"
-                      "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
+                      "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
                       "==>" "=>" "=>>" ">=>" ">>=" ">>-" ">-" "-<" "-<<" ">->" "<-<" "<-|"
                       "<=|" "|=>" "|->" "<->" "<~~" "<~" "<~>" "~~" "~~>" "~>" "~-" "-~"
                       "~@" "[||]" "|]" "[|" "|}" "{|" "[<" ">]" "|>" "<|" "||>" "<||"
@@ -249,53 +238,61 @@
 
 *** Completion Framework
 #+begin_src emacs-lisp
-  (use-package vertico
-    :init
-    (vertico-mode 1))
+    (use-package vertico
+      :init
+      (vertico-mode 1))
 
-  (use-package vertico-posframe
-    :after vertico
-    :config
-    (vertico-posframe-mode 1)
-    
-    ;; Customizing the appearance
-    (setq vertico-posframe-parameters
-          '((left-fringe . 8)
-            (right-fringe . 8)
-            (line-spacing . 0.1)
-            (internal-border-width . 2)))
+    (use-package vertico-posframe
+      :after vertico
+      :config
+      (vertico-posframe-mode 1)
+      
+      ;; Customizing the appearance
+      (setq vertico-posframe-parameters
+            '((left-fringe . 8)
+              (right-fringe . 8)
+              (line-spacing . 0.1)
+              (internal-border-width . 2)))
 
-    ;; Customizing the behavior
-    (setq vertico-posframe-poshandler #'posframe-poshandler-frame-center
-          vertico-posframe-width 150
-          vertico-posframe-height 12
-          vertico-posframe-border-width 2
-          vertico-posframe-fallback-mode vertico-buffer-mode))
+      ;; Customizing the behavior
+      (setq vertico-posframe-poshandler #'posframe-poshandler-frame-center
+            vertico-posframe-width 150
+            vertico-posframe-height 12
+            vertico-posframe-border-width 2
+            vertico-posframe-fallback-mode vertico-buffer-mode))
 
-  (use-package marginalia
-    :init (marginalia-mode 1))
+    (use-package marginalia
+      :init (marginalia-mode 1))
 
-  (use-package which-key
-    :config
-    (which-key-mode 1))
+    (use-package orderless
+      :ensure t
+      :config
+      (setq completion-styles '(orderless basic)))
+
+    (use-package which-key
+      :config
+      (which-key-mode 1))
 #+end_src
 
 ** Evil Mode Configuration
 #+begin_src emacs-lisp
-  (use-package evil
-    :demand t
-    :init
-    (setq evil-want-integration t
-          evil-want-keybinding nil
-          evil-want-C-u-scroll t
-          evil-want-C-i-jump nil)
-    :config
-    (evil-mode 1))
+    (use-package evil
+      :demand t
+      :init
+      (setq evil-want-integration t
+            evil-want-keybinding nil
+            evil-want-C-u-scroll t
+            evil-want-C-i-jump nil)
+      :config
+      (evil-mode 1))
 
-  (use-package evil-collection
-    :after evil
-    :config
-    (evil-collection-init))
+  (with-eval-after-load 'evil
+    (evil-set-initial-state 'eshell-mode 'emacs))
+
+    (use-package evil-collection
+      :after evil
+      :config
+      (evil-collection-init))
 #+end_src
 
 *** General Keybindings
@@ -337,6 +334,7 @@
             (python . ("https://github.com/tree-sitter/tree-sitter-python"))
             (c3     . ("https://github.com/c3lang/tree-sitter-c3"))
             (go     . ("https://github.com/tree-sitter/tree-sitter-go"))
+            (odin   .  ("https://github.com/tree-sitter-grammars/tree-sitter-odin"))
             (typst  . ("https://github.com/uben0/tree-sitter-typst")))
           treesit-font-lock-level 4)
     (global-treesit-auto-mode)
@@ -366,8 +364,6 @@
     :custom
     (typst-preview-invert-colors "auto"))
 
-  (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/c3-ts-mode"))
-  (require 'c3-ts-mode)
 #+end_src
 
 *** Programming Defaults
@@ -386,7 +382,6 @@
     :hook ((emacs-lisp-mode
             c-ts-mode
             go-ts-mode
-            c3-ts-mode
             python-ts-mode
             c++-ts-mode)))
 #+end_src
@@ -441,34 +436,13 @@
              company-keywords)
             company-dabbrev
             company-files)))
-
-  ;; Prettier popup with per-kind icons — GUI only
-  (use-package company-box
-    :if (display-graphic-p)
-    :after company
-    :hook (company-mode . company-box-mode)
-    :custom
-    (company-box-show-single-candidate t)
-    (company-box-max-candidates 50)
-    (company-box-doc-delay 0.3)
-    (company-box-icons-alist 'company-box-icons-nerd-icons))
 #+end_src
-
-*** Orderless (Fuzzy Matching)
-#+begin_src emacs-lisp
-  (use-package orderless
-    :custom
-    (completion-styles '(orderless basic))
-    (completion-category-overrides '((file (styles basic partial-completion)))))
-#+end_src
-
 *** Eglot LSP
 #+begin_src emacs-lisp
   (use-package eglot
     :hook ((c-ts-mode      . eglot-ensure)
            (c++-ts-mode    . eglot-ensure)
            (typst-ts-mode  . eglot-ensure)
-           (c3-ts-mode     . eglot-ensure)
            (python-ts-mode . eglot-ensure)
            (go-ts-mode     . eglot-ensure))
     :config
@@ -514,6 +488,15 @@
           pdf-view-midnight-colors '("#d5c4a1" . "#1d2021"))
     :hook (pdf-view-mode . (lambda () (display-line-numbers-mode -1))))
 
+  (defun my/elcord-project-name ()
+    "Return current project name or directory name."
+    (if-let ((project (project-current nil)))
+        (file-name-nondirectory
+         (directory-file-name
+          (project-root project)))
+      (file-name-nondirectory
+       (directory-file-name default-directory))))
+
   (defun my/elcord-details-and-state ()
     "Like elcord--details-and-state but shows page number for PDFs."
     (let ((activity
@@ -527,9 +510,10 @@
                  (if elcord-display-line-numbers
                      (list
                       (cons "details" (funcall elcord-buffer-details-format-function))
-                      (cons "state" (format "Line %s of %S"
+                      (cons "state" (format "Line %s of %S (in %s)"
                                             (format-mode-line "%l")
-                                            (+ 1 (count-lines (point-min) (point-max))))))
+                                            (+ 1 (count-lines (point-min) (point-max)))
+                                            (my/elcord-project-name))))
                    (list
                     (cons "details" (funcall elcord-buffer-details-format-function)))))
              (list
@@ -612,7 +596,6 @@
               (when (derived-mode-p 'c-ts-mode
                                     'c++-ts-mode
                                     'python-ts-mode
-                                    'c3-ts-mode
                                     'go-ts-mode
                                     'typst-ts-mode)
                 (eglot-ensure))))
@@ -659,7 +642,7 @@
            ("C-c n c" . org-roam-capture)
            ("C-c n j" . org-roam-dailies-capture-today)
            ("C-c n J" . org-roam-dailies-goto-today))
-    :custom
+:custom
     (org-roam-directory (file-truename "~/Org-Notes/"))
     (org-roam-db-location (file-truename "~/Org-Notes/org-roam.db"))
     (org-roam-node-display-template
@@ -667,22 +650,22 @@
     (org-roam-completion-everywhere t)
     (org-roam-capture-templates
      '(("c" "Concept" plain
-        "#+title: ${title}\n#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${subject} concept\n\n"
-        :target (file+head "fleet/${college-personal}/${subject}/%<%d-%m-%Y>-${slug}.org"
-                           "#+title: ${title}"))
+        "#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${subject} concept\n\n%?"
+        :target (file+head "fleet/${college-personal}/${subject}/%<%Y-%m-%d>-${slug}.org"
+                           "#+title: ${title}\n"))
        ("p" "Papers" plain
-        "#+title: ${title}\n#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${about} concept\n\n"
-        :target (file+head "literature/%<%d-%m-%Y>-${slug}.org"
-                           "#+title: ${title}"))
+        "#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${about} concept\n\n%?"
+        :target (file+head "literature/%<%Y-%m-%d>-${slug}.org"
+                           "#+title: ${title}\n"))
        ("i" "inbox" plain
-        "#+title: ${title}\n#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: inbox fleeting\n\n%?"
+        "#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: inbox fleeting\n\n%?"
         :target (file+headline "inbox.org" "Inbox")
         :prepend t)))
     (org-roam-dailies-directory "daily/")
     (org-roam-dailies-capture-templates
      '(("d" "Default" entry
         "* %<%H:%M> %?"
-        :if-new (file+head "%<%d-%m-%Y>.org" "#+title: %<%d-%m-%Y %a>\n"))))
+        :if-new (file+head "%<%Y-%m-%d>.org" "#+title: %<%Y-%m-%d %a>\n"))))
     :config
     (org-roam-db-autosync-mode +1))
 

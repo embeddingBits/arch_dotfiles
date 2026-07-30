@@ -1,0 +1,219 @@
+input {
+    keyboard {
+        xkb { }
+    }
+    mouse {
+        accel-speed 0.0
+    }
+    touchpad {
+        tap
+    }
+    focus-follows-mouse max-scroll-amount="0%"
+}
+
+output "eDP-1" { }
+
+layout {
+    gaps 12
+    center-focused-column "never"
+    always-center-single-column
+
+    preset-column-widths {
+        proportion 0.5
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 3
+        active-color "#dfa658"
+        inactive-color "#504945"
+    }
+
+    border {
+        off
+    }
+}
+
+// Add this rule right below your layout block
+window-rule {
+    // This forces Niri to draw focus rings and borders *around* the window
+    // instead of a solid color block bleeding through your transparent blur.
+    draw-border-with-background false
+}
+
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+animations { }
+
+// Window rules 
+window-rule {
+    match app-id="waypaper"
+    open-floating true
+}
+
+blur {
+    passes 3
+    offset 3.5     
+    saturation 1
+}
+
+window-rule {
+    match app-id="nwg-look"
+    open-floating true
+}
+
+window-rule {
+    match app-id="foot"
+    opacity 0.9
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="emacs"
+    opacity 0.90
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="zed"
+    opacity 0.90
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="brave"
+    opacity 0.9
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="org.mozilla.firefox"
+    opacity 0.85
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="org.pwmt.zathura"
+    opacity 0.9
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="foot"
+    opacity 0.85
+    background-effect {
+        blur true
+    }
+}
+
+layer-rule {
+    match namespace="^launcher$"
+    opacity 0.95
+    background-effect {
+        blur true
+    }
+}
+
+layer-rule {
+    match namespace="notifications"
+    opacity 0.95
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="feh"
+    open-floating true
+}
+
+binds {
+
+    Super+Q { spawn "foot"; }
+    Super+Return { spawn "env" "GDK_BACKEND=wayland" "emacs"; }
+    Super+R { spawn "fuzzel"; }
+    Super+W { spawn "firefox"; }
+    Super+B { spawn "sh" "-c" "~/.config/fuzzel/fuzzel-bluetooth.sh"; }
+    Super+U { spawn "sh" "-c" "~/.config/fuzzel/fuzzel-emoji.sh"; }
+    Super+Shift+S { spawn "sh" "-c" "~/.config/fuzzel/fuzzel-search.sh"; }
+
+
+    Super+C { close-window; }
+    Super+F { fullscreen-window; }
+    Super+Shift+M { quit; }
+    Super+V { toggle-window-floating; }
+    Super+Shift+L { spawn "sh" "-c" "~/.config/niri/scripts/swaylock.sh"; } 
+    Super+S { spawn "sshot" "-s"; }
+
+
+    Super+H { focus-column-left; }
+    Super+L { focus-column-right; }
+    Super+J { focus-window-or-workspace-down; }
+    Super+K { focus-window-or-workspace-up; }
+    // ── Move windows ──────────────────────────────────────────────────────
+
+    Super+Shift+H { move-column-left; }
+    Super+Shift+J { move-window-down-or-to-workspace-down; }
+    Super+Shift+K { move-window-up-or-to-workspace-up; }
+
+
+    Super+Minus { set-column-width "-2%"; }
+    Super+Equal { set-column-width "+2%"; }
+
+
+    Super+1 { focus-workspace 1; }
+    Super+2 { focus-workspace 2; }
+    Super+3 { focus-workspace 3; }
+    Super+4 { focus-workspace 4; }
+    Super+5 { focus-workspace 5; }
+    Super+6 { focus-workspace 6; }
+    Super+7 { focus-workspace 7; }
+    Super+8 { focus-workspace 8; }
+    Super+9 { focus-workspace 9; }
+    Super+0 { focus-workspace 10; }
+
+    Super+Shift+1 { move-window-to-workspace 1; }
+    Super+Shift+2 { move-window-to-workspace 2; }
+    Super+Shift+3 { move-window-to-workspace 3; }
+    Super+Shift+4 { move-window-to-workspace 4; }
+    Super+Shift+5 { move-window-to-workspace 5; }
+    Super+Shift+6 { move-window-to-workspace 6; }
+    Super+Shift+7 { move-window-to-workspace 7; }
+    Super+Shift+8 { move-window-to-workspace 8; }
+    Super+Shift+9 { move-window-to-workspace 9; }
+    Super+Shift+0 { move-window-to-workspace 10; }
+
+
+    XF86AudioNext  { spawn "playerctl" "next"; }
+    XF86AudioPause { spawn "playerctl" "play-pause"; }
+    XF86AudioPlay  { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev  { spawn "playerctl" "previous"; }
+
+    XF86AudioRaiseVolume  { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "1%+"; }
+    XF86AudioLowerVolume  { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "1%-"; }
+    XF86AudioMute         { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute      { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    XF86MonBrightnessUp   { spawn "brightnessctl" "set" "2%+"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "2%-"; }
+}
+
+
+spawn-at-startup "./autostart"
+spawn-at-startup "swaybg" "-i" "/home/ebits/Pictures/wallpapers/sushi.jpg"
+spawn-at-startup "waybar" "-c" "/home/ebits/.config/waybar/gruvbox_blocks/niri.jsonc" "-s" "/home/ebits/.config/waybar/gruvbox_blocks/niri.css"
+spawn-at-startup "fnott"
+spawn-at-startup "xwayland-satellite"

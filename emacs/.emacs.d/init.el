@@ -1,5 +1,6 @@
 ;;; init.el --- Robust Entry Point -*- lexical-binding: t; -*-
 
+
 ;; 1. Silence Compiler Noise
 (setq native-comp-async-report-warnings-errors 'silent)
 (setq byte-compile-warnings '(not free-vars unresolved await regexp))

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+sudo pkill -9 -f pipewire
+sudo pkill -9 -f wireplumber
+sleep 4
+
+sudo alsa force-reload || (sudo alsactl init && sudo alsactl store)
+
+pipewire &
+sleep 2
+pipewire-pulse &
+sleep 2
+wireplumber &
+sleep 5

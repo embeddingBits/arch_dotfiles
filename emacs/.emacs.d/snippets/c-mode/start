@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: start
+# key: start
+# --
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+        printf("This is a sample code");
+        return 0;
+}
