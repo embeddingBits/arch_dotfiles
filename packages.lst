@@ -12,8 +12,6 @@ mesa-vaapi
 dbus
 elogind
 polkitd
-pipewire
-libspa-bluetooth
 wayland
 wayland-protocols
 wayland-utils
@@ -34,6 +32,14 @@ void-repo-multilib-nonfree
 NetworkManager
 tailscale
 wireguard-tools
+
+@audio
+pipewire
+pipewire-pulse
+wireplumber
+alsa-pipewire
+libspa-bluetooth
+pavucontrol
 
 @desktop
 niri
@@ -71,7 +77,6 @@ fzf
 jq
 bat
 eza
-pavucontrol
 playerctl
 ffmpeg
 gparted

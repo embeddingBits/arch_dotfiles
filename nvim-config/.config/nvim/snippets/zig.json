@@ -1,0 +1,250 @@
+{
+  "Import Std": {
+    "prefix": "import",
+    "body": [
+      "const std = @import(\"std\");"
+    ],
+    "description": "Import the standard library"
+  },
+  "Main Function": {
+    "prefix": "main",
+    "body": [
+      "pub fn main() !void",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "pub fn main() !void"
+  },
+  "Function": {
+    "prefix": "fn",
+    "body": [
+      "fn ${1:name}(${2:args}) ${3:return_type}",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Function definition"
+  },
+  "Public Function": {
+    "prefix": "pubfn",
+    "body": [
+      "pub fn ${1:name}(${2:args}) ${3:return_type}",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Public function definition"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "If conditional block"
+  },
+  "If Else": {
+    "prefix": "ife",
+    "body": [
+      "if (${1:condition})",
+      "{",
+      "\t$2",
+      "} else",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "If else block"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (${1:items}) |${2:item}|",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "For loop over an array"
+  },
+  "For Index": {
+    "prefix": "fori",
+    "body": [
+      "for (${1:items}, 0..) |${2:item}, ${3:index}|",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "For loop with index"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "Switch": {
+    "prefix": "switch",
+    "body": [
+      "switch (${1:value})",
+      "{",
+      "\t${2:0} => ${3:result},",
+      "\telse => ${4:default},",
+      "}"
+    ],
+    "description": "Switch statement"
+  },
+  "Const": {
+    "prefix": "const",
+    "body": [
+      "const ${1:name} = ${2:value};"
+    ],
+    "description": "Constant declaration"
+  },
+  "Var": {
+    "prefix": "var",
+    "body": [
+      "var ${1:name}: ${2:type} = ${3:value};"
+    ],
+    "description": "Mutable variable declaration"
+  },
+  "Public Const": {
+    "prefix": "pubconst",
+    "body": [
+      "pub const ${1:name} = ${2:value};"
+    ],
+    "description": "Public constant declaration"
+  },
+  "Defer": {
+    "prefix": "defer",
+    "body": [
+      "defer ${1:statement};"
+    ],
+    "description": "Defer statement"
+  },
+  "Errdefer": {
+    "prefix": "errdefer",
+    "body": [
+      "errdefer ${1:statement};"
+    ],
+    "description": "Error defer statement"
+  },
+  "Try": {
+    "prefix": "try",
+    "body": [
+      "try ${1:expression};"
+    ],
+    "description": "Try expression"
+  },
+  "Catch": {
+    "prefix": "catch",
+    "body": [
+      "${1:expression} catch ${2:err} => ${3:default},"
+    ],
+    "description": "Catch expression"
+  },
+  "Comptime": {
+    "prefix": "comptime",
+    "body": [
+      "comptime",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Comptime block"
+  },
+  "Struct": {
+    "prefix": "struct",
+    "body": [
+      "pub const ${1:Name} = struct",
+      "{",
+      "\t${2:field}: ${3:type},",
+      "};"
+    ],
+    "description": "Struct definition"
+  },
+  "Enum": {
+    "prefix": "enum",
+    "body": [
+      "pub const ${1:Name} = enum",
+      "{",
+      "\t${2:value},",
+      "};"
+    ],
+    "description": "Enum definition"
+  },
+  "Union": {
+    "prefix": "union",
+    "body": [
+      "pub const ${1:Name} = union(enum)",
+      "{",
+      "\t${2:variant}: ${3:type},",
+      "};"
+    ],
+    "description": "Tagged union definition"
+  },
+  "Error Set": {
+    "prefix": "errset",
+    "body": [
+      "const ${1:Error} = error",
+      "{",
+      "\t${2:OutOfMemory},",
+      "};"
+    ],
+    "description": "Error set definition"
+  },
+  "Error Union": {
+    "prefix": "err",
+    "body": [
+      "const ${1:Name} = error{${2:Error}} || ${3:Type};"
+    ],
+    "description": "Error union type"
+  },
+  "Test": {
+    "prefix": "test",
+    "body": [
+      "test \"${1:name}\"",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Test block"
+  },
+  "Print": {
+    "prefix": "print",
+    "body": [
+      "std.debug.print(\"{s}\\n\", .{${1:variable}});"
+    ],
+    "description": "std.debug.print(...)"
+  },
+  "Allocator": {
+    "prefix": "gpa",
+    "body": [
+      "var gpa = std.heap.GeneralPurposeAllocator(.{}){};",
+      "defer _ = gpa.deinit();",
+      "const allocator = gpa.allocator();"
+    ],
+    "description": "General purpose allocator"
+  },
+  "Array List": {
+    "prefix": "arraylist",
+    "body": [
+      "var ${1:list} = std.ArrayList(${2:Type}).init(allocator);",
+      "defer ${1:list}.deinit();"
+    ],
+    "description": "std.ArrayList allocation"
+  },
+  "Slice": {
+    "prefix": "slice",
+    "body": [
+      "const ${1:slice}: []${2:Type} = ${3:array}[${4:start}..${5:end}];"
+    ],
+    "description": "Slice of an array"
+  }
+}

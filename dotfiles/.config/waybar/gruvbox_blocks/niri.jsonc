@@ -16,7 +16,7 @@
             "clock"
       ],
       "modules-right": [
-            "pulseaudio",
+            "wireplumber",
             "tray",
             "network",
             "memory",
@@ -138,7 +138,7 @@
             "format-alt": "{ifname}: {ipaddr}/{cidr}",
             "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
       },
-      "pulseaudio": {
+      "wireplumber": {
             "format": "<span color='#7daea3'>{icon}</span>  {volume}%",
             "format-muted": "󰝟  {volume}%",
             "format-bluetooth": "<span color='#7daea3'>{icon}</span> {volume}%",

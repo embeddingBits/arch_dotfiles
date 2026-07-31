@@ -1,14 +1,26 @@
 #!/bin/bash
 
-sudo pkill -9 -f pipewire
-sudo pkill -9 -f wireplumber
-sleep 4
+# Kill any audio daemons left over from a previous session (they hold
+# the pipewire/pulse sockets and would block this session's stack).
+pkill -x pipewire-pulse 2>/dev/null
+pkill -x wireplumber 2>/dev/null
+pkill -x pipewire 2>/dev/null
+sleep 1
 
-sudo alsa force-reload || (sudo alsactl init && sudo alsactl store)
+# Remove stale sockets, then start the stack. The main pipewire daemon
+# spawns wireplumber and pipewire-pulse itself (see
+# /etc/pipewire/pipewire.conf.d/), so this is all that is needed.
+rm -f /run/user/1000/pipewire-0 /run/user/1000/pipewire-0-manager \
+      /run/user/1000/pipewire-0.lock /run/user/1000/pipewire-0-manager.lock
+rm -rf /run/user/1000/pulse
 
-pipewire &
-sleep 2
-pipewire-pulse &
-sleep 2
-wireplumber &
-sleep 5
+pipewire > /tmp/pipewire.log 2>&1 < /dev/null &
+
+# Wait for the pulse server to come up before continuing autostart,
+# so apps started right after login always see a working audio stack.
+for i in $(seq 1 50); do
+  if [ -S /run/user/1000/pulse/native ]; then
+    break
+  fi
+  sleep 0.2
+done

@@ -1,0 +1,250 @@
+{
+  "Package Declaration": {
+    "prefix": "package",
+    "body": [
+      "package ${1:main}"
+    ],
+    "description": "Package declaration"
+  },
+  "Import": {
+    "prefix": "import",
+    "body": [
+      "import \"${1:fmt}\""
+    ],
+    "description": "Import a package"
+  },
+  "Import Block": {
+    "prefix": "importb",
+    "body": [
+      "import (",
+      "\t\"${1:fmt}\"",
+      ")",
+      "$0"
+    ],
+    "description": "Import block"
+  },
+  "Main Function": {
+    "prefix": "main",
+    "body": [
+      "func main() {",
+      "\t$0",
+      "}"
+    ],
+    "description": "func main()"
+  },
+  "Function": {
+    "prefix": "fn",
+    "body": [
+      "func ${1:name}(${2:args}) ${3:return_type} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Function definition"
+  },
+  "Method": {
+    "prefix": "method",
+    "body": [
+      "func (${1:receiver} ${2:Type}) ${3:name}(${4:args}) ${5:return_type} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Method on a type"
+  },
+  "Error Function": {
+    "prefix": "errfn",
+    "body": [
+      "func ${1:name}(${2:args}) error {",
+      "\t$0",
+      "\treturn nil",
+      "}"
+    ],
+    "description": "Function returning an error"
+  },
+  "Test Function": {
+    "prefix": "testfn",
+    "body": [
+      "func Test${1:Name}(t *testing.T) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Unit test function"
+  },
+  "Print Formatted": {
+    "prefix": "pr",
+    "body": [
+      "fmt.Printf(\"${1:%s}\\n\", ${2:args})",
+      "$0"
+    ],
+    "description": "fmt.Printf(...)"
+  },
+  "Print Line": {
+    "prefix": "println",
+    "body": [
+      "fmt.Println(${1:args})"
+    ],
+    "description": "fmt.Println(...)"
+  },
+  "Print Error": {
+    "prefix": "prerr",
+    "body": [
+      "fmt.Errorf(\"${1:%s}\\n\", ${2:args})"
+    ],
+    "description": "fmt.Errorf(...)"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if $1 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If conditional block"
+  },
+  "If Error": {
+    "prefix": "iferr",
+    "body": [
+      "if err != nil {",
+      "\t$0",
+      "}"
+    ],
+    "description": "if err != nil"
+  },
+  "If Error Return": {
+    "prefix": "ier",
+    "body": [
+      "if err != nil {",
+      "\treturn err",
+      "}"
+    ],
+    "description": "if err != nil { return err }"
+  },
+  "If Error Panic": {
+    "prefix": "iep",
+    "body": [
+      "if err != nil {",
+      "\tpanic(err)",
+      "}"
+    ],
+    "description": "if err != nil { panic(err) }"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for $1 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Standard for loop"
+  },
+  "For Index": {
+    "prefix": "fori",
+    "body": [
+      "for ${1:i} := ${2:0}; ${1:i} < ${3:n}; ${1:i}++ {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Indexed for loop"
+  },
+  "For Range Loop": {
+    "prefix": "range",
+    "body": [
+      "for ${3:key}, ${2:value} := range ${1:target} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "For range loop iteration"
+  },
+  "Switch": {
+    "prefix": "switch",
+    "body": [
+      "switch ${1:expr} {",
+      "case ${2:value}:",
+      "\t$3",
+      "default:",
+      "\t$0",
+      "}"
+    ],
+    "description": "Switch statement"
+  },
+  "Select": {
+    "prefix": "select",
+    "body": [
+      "select {",
+      "case ${1:msg} := <-${2:ch}:",
+      "\t$0",
+      "}"
+    ],
+    "description": "Select on channels"
+  },
+  "Goroutine": {
+    "prefix": "go",
+    "body": [
+      "go ${1:func}(${2:args})"
+    ],
+    "description": "Launch a goroutine"
+  },
+  "Defer": {
+    "prefix": "defer",
+    "body": [
+      "defer ${1:func}(${2:args})"
+    ],
+    "description": "Defer a function call"
+  },
+  "Struct": {
+    "prefix": "struct",
+    "body": [
+      "type ${1:Name} struct {",
+      "\t${2:Field} ${3:type}",
+      "}"
+    ],
+    "description": "Struct type definition"
+  },
+  "Interface": {
+    "prefix": "interface",
+    "body": [
+      "type ${1:Name} interface {",
+      "\t${2:Method}(${3:args}) ${4:return_type}",
+      "}"
+    ],
+    "description": "Interface definition"
+  },
+  "Type Alias": {
+    "prefix": "type",
+    "body": [
+      "type ${1:Name} ${2:underlying_type}"
+    ],
+    "description": "Type definition"
+  },
+  "Const Block": {
+    "prefix": "const",
+    "body": [
+      "const (",
+      "\t${1:Name} = ${2:value}",
+      ")"
+    ],
+    "description": "Constant block"
+  },
+  "Var Block": {
+    "prefix": "var",
+    "body": [
+      "var (",
+      "\t${1:Name} ${2:type}",
+      ")"
+    ],
+    "description": "Variable block"
+  },
+  "Channel": {
+    "prefix": "chan",
+    "body": [
+      "${1:ch} := make(chan ${2:int}, ${3:size})"
+    ],
+    "description": "Create a channel"
+  },
+  "Make Map": {
+    "prefix": "map",
+    "body": [
+      "${1:m} := make(map[${2:key}]${3:value})"
+    ],
+    "description": "Create a map"
+  }
+}

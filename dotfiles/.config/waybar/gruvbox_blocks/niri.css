@@ -17,7 +17,6 @@
 #mpd,
 #idle_inhibitor,
 #mpris,
-#pulseaudio,
 #network,
 #power-profiles-daemon,
 #cpu,
@@ -88,7 +87,8 @@
     border: solid 2px #7daea3;
     color: #ebdbb2;
 }
-#pulseaudio,
+#plumber,
+#wireplumber,
 #cava {
     background-color: #1d2021;
     border: solid 2px #7daea3;

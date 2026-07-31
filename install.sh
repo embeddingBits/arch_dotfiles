@@ -20,7 +20,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PACKAGE_FILE="${SCRIPT_DIR}/packages.lst"
 STOW_DIRS=("dotfiles" "emacs" "nvim-config")
-SERVICES=("NetworkManager" "pipewire" "pipewire-pulse" "elogind")
+SERVICES=("NetworkManager" "pipewire" "alsa-pipewire" "elogind")
 REMOVE_SERVICES=("dhcpcd")
 USER_NAME="${SUDO_USER:-$(whoami)}"
 
@@ -102,7 +102,7 @@ stage_repos() {
 stage_packages() {
     local groups=("$@")
     if [[ ${#groups[@]} -eq 0 ]]; then
-        groups=("core" "network" "desktop" "tools" "app" "dev")
+        groups=("core" "network" "audio" "desktop" "tools" "app" "dev")
     fi
 
     info "Stage 3: Installing package groups: ${groups[*]}"

@@ -1,0 +1,276 @@
+{
+  "Start Template": {
+    "prefix": "start",
+    "body": [
+      "#include <stdio.h>",
+      "",
+      "int main(int argc, char **argv)",
+      "{",
+      "\tprintf(\"This is a sample code\");",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "Standard C main function boilerplate"
+  },
+  "Include System Library": {
+    "prefix": "incs",
+    "body": [
+      "#include <${1:stdio.h}>"
+    ],
+    "description": "#include <...>"
+  },
+  "Include Local Library": {
+    "prefix": "incl",
+    "body": [
+      "#include \"${1:header.h}\""
+    ],
+    "description": "#include \"...\""
+  },
+  "Define Macro": {
+    "prefix": "define",
+    "body": [
+      "#define ${1:NAME} ${2:value}"
+    ],
+    "description": "#define ..."
+  },
+  "Ifdef": {
+    "prefix": "ifdef",
+    "body": [
+      "#ifdef ${1:MACRO}",
+      "$0",
+      "#endif"
+    ],
+    "description": "#ifdef ... #endif"
+  },
+  "Main Function": {
+    "prefix": "main",
+    "body": [
+      "int main(${1:int argc, char **argv})",
+      "{",
+      "\t$0",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "int main(...)"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If conditional block"
+  },
+  "If Else": {
+    "prefix": "ife",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$2",
+      "} else {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If else conditional block"
+  },
+  "Else If": {
+    "prefix": "elif",
+    "body": [
+      "else if (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Else if conditional block"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (${1:int i = 0}; ${2:i < n}; ${3:i++}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Standard for loop"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "Do While Loop": {
+    "prefix": "dowhile",
+    "body": [
+      "do {",
+      "\t$0",
+      "} while (${1:condition});"
+    ],
+    "description": "Do while loop"
+  },
+  "Switch Statement": {
+    "prefix": "switch",
+    "body": [
+      "switch (${1:expr}) {",
+      "case ${2:value}:",
+      "\t$3",
+      "\tbreak;",
+      "default:",
+      "\t$0",
+      "\tbreak;",
+      "}"
+    ],
+    "description": "Switch statement"
+  },
+  "Case": {
+    "prefix": "case",
+    "body": [
+      "case ${1:value}:",
+      "\t$0",
+      "\tbreak;"
+    ],
+    "description": "Switch case"
+  },
+  "Break": {
+    "prefix": "br",
+    "body": [
+      "break;"
+    ],
+    "description": "break;"
+  },
+  "Continue": {
+    "prefix": "cont",
+    "body": [
+      "continue;"
+    ],
+    "description": "continue;"
+  },
+  "Ternary": {
+    "prefix": "tern",
+    "body": [
+      "${1:condition} ? ${2:a} : ${3:b}"
+    ],
+    "description": "Ternary operator"
+  },
+  "Struct": {
+    "prefix": "struct",
+    "body": [
+      "struct ${1:Name}",
+      "{",
+      "\t$0",
+      "};"
+    ],
+    "description": "Structure definition"
+  },
+  "Enum": {
+    "prefix": "enum",
+    "body": [
+      "enum ${1:Name}",
+      "{",
+      "\t${2:value}",
+      "};"
+    ],
+    "description": "Enumeration definition"
+  },
+  "Union": {
+    "prefix": "union",
+    "body": [
+      "union ${1:Name}",
+      "{",
+      "\t$0",
+      "};"
+    ],
+    "description": "Union definition"
+  },
+  "Typedef Struct": {
+    "prefix": "tdef",
+    "body": [
+      "typedef struct",
+      "{",
+      "\t$0",
+      "} ${1:Name};"
+    ],
+    "description": "Typedef struct"
+  },
+  "Malloc": {
+    "prefix": "malloc",
+    "body": [
+      "${1:ptr} = (${2:int} *)malloc(sizeof(${2:int}) * ${3:count});"
+    ],
+    "description": "Memory allocation"
+  },
+  "Free": {
+    "prefix": "free",
+    "body": [
+      "free(${1:ptr});"
+    ],
+    "description": "Free allocated memory"
+  },
+  "Sizeof": {
+    "prefix": "sizeof",
+    "body": [
+      "sizeof(${1:type})"
+    ],
+    "description": "sizeof()"
+  },
+  "Return": {
+    "prefix": "return",
+    "body": [
+      "return $0;"
+    ],
+    "description": "return ...;"
+  },
+  "Printf": {
+    "prefix": "printf",
+    "body": [
+      "printf(\"${1:%s}\\n\", ${2:args});"
+    ],
+    "description": "printf(...)"
+  },
+  "Scanf": {
+    "prefix": "scanf",
+    "body": [
+      "scanf(\"${1:%d}\", &${2:var});"
+    ],
+    "description": "scanf(...)"
+  },
+  "Fprintf": {
+    "prefix": "fprintf",
+    "body": [
+      "fprintf(${1:stderr}, \"${2:%s}\\n\", ${3:args});"
+    ],
+    "description": "fprintf(...)"
+  },
+  "Fopen": {
+    "prefix": "fopen",
+    "body": [
+      "FILE *${1:fp} = fopen(\"${2:file}\", \"${3:r}\");"
+    ],
+    "description": "fopen(...)"
+  },
+  "Fclose": {
+    "prefix": "fclose",
+    "body": [
+      "fclose(${1:fp});"
+    ],
+    "description": "fclose(...)"
+  },
+  "Pointer": {
+    "prefix": "ptr",
+    "body": [
+      "${1:Type} *${2:name};"
+    ],
+    "description": "Pointer declaration"
+  },
+  "Function": {
+    "prefix": "func",
+    "body": [
+      "${1:return_type} ${2:name}(${3:args})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Function definition"
+  }
+}

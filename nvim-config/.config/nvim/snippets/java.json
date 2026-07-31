@@ -1,0 +1,313 @@
+{
+  "Main Method": {
+    "prefix": "psvm",
+    "body": [
+      "public static void main(String[] args)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "public static void main(String[] args)"
+  },
+  "Print Line": {
+    "prefix": "sout",
+    "body": [
+      "System.out.println(${1:msg});"
+    ],
+    "description": "System.out.println(...)"
+  },
+  "Print Format": {
+    "prefix": "printf",
+    "body": [
+      "System.out.printf(\"${1:%s}\\n\", ${2:args});"
+    ],
+    "description": "System.out.printf(...)"
+  },
+  "Print Error": {
+    "prefix": "serr",
+    "body": [
+      "System.err.println(${1:msg});"
+    ],
+    "description": "System.err.println(...)"
+  },
+  "Class": {
+    "prefix": "class",
+    "body": [
+      "public class ${1:Name}",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Public class definition"
+  },
+  "Interface": {
+    "prefix": "interface",
+    "body": [
+      "public interface ${1:Name}",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Public interface definition"
+  },
+  "Extends": {
+    "prefix": "extends",
+    "body": [
+      "public class ${1:Name} extends ${2:Base}",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Class extends another class"
+  },
+  "Implements": {
+    "prefix": "implements",
+    "body": [
+      "public class ${1:Name} implements ${2:Interface}",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Class implements an interface"
+  },
+  "Abstract Class": {
+    "prefix": "abstract",
+    "body": [
+      "public abstract class ${1:Name}",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Abstract class definition"
+  },
+  "Enum": {
+    "prefix": "enum",
+    "body": [
+      "public enum ${1:Name}",
+      "{",
+      "\t${2:VALUE}",
+      "}"
+    ],
+    "description": "Enum definition"
+  },
+  "Method": {
+    "prefix": "method",
+    "body": [
+      "public ${1:return_type} ${2:method}(${3:args})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Public method"
+  },
+  "Getter": {
+    "prefix": "getter",
+    "body": [
+      "public ${1:Type} get${2:Name}()",
+      "{",
+      "\treturn this.${3:name};",
+      "}"
+    ],
+    "description": "Getter method"
+  },
+  "Setter": {
+    "prefix": "setter",
+    "body": [
+      "public void set${1:Name}(${2:Type} ${3:name})",
+      "{",
+      "\tthis.${3:name} = ${3:name};",
+      "}"
+    ],
+    "description": "Setter method"
+  },
+  "Constructor": {
+    "prefix": "cctor",
+    "body": [
+      "public ${1:ClassName}(${2:args})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Class constructor"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "If conditional block"
+  },
+  "If Else": {
+    "prefix": "ife",
+    "body": [
+      "if (${1:condition})",
+      "{",
+      "\t$2",
+      "} else",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "If else block"
+  },
+  "For Loop": {
+    "prefix": "fori",
+    "body": [
+      "for (int ${1:i} = 0; ${1:i} < ${2:n}; ${1:i}++)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Indexed for loop"
+  },
+  "For Each": {
+    "prefix": "foreach",
+    "body": [
+      "for (${1:Type} ${2:item} : ${3:collection})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Enhanced for loop"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "Do While Loop": {
+    "prefix": "dowhile",
+    "body": [
+      "do",
+      "{",
+      "\t$0",
+      "} while (${1:condition});"
+    ],
+    "description": "Do while loop"
+  },
+  "Switch": {
+    "prefix": "switch",
+    "body": [
+      "switch (${1:expr})",
+      "{",
+      "case ${2:value}:",
+      "\t$3",
+      "\tbreak;",
+      "default:",
+      "\t$0",
+      "\tbreak;",
+      "}"
+    ],
+    "description": "Switch statement"
+  },
+  "Try Catch": {
+    "prefix": "try",
+    "body": [
+      "try",
+      "{",
+      "\t$1",
+      "} catch (${2:Exception} ${3:e})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Try catch block"
+  },
+  "Try Finally": {
+    "prefix": "tryf",
+    "body": [
+      "try",
+      "{",
+      "\t$1",
+      "} finally",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Try finally block"
+  },
+  "Throw": {
+    "prefix": "throw",
+    "body": [
+      "throw new ${1:Exception}(\"${2:msg}\");"
+    ],
+    "description": "Throw exception"
+  },
+  "Throws": {
+    "prefix": "throws",
+    "body": [
+      "public ${1:return_type} ${2:method}(${3:args}) throws ${4:Exception}",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Method that throws an exception"
+  },
+  "New Object": {
+    "prefix": "new",
+    "body": [
+      "${1:Type} ${2:var} = new ${1:Type}(${3:args});"
+    ],
+    "description": "Instantiate a new object"
+  },
+  "Array": {
+    "prefix": "array",
+    "body": [
+      "${1:Type}[] ${2:arr} = new ${1:Type}[${3:n}];"
+    ],
+    "description": "Array declaration"
+  },
+  "Array List": {
+    "prefix": "arraylist",
+    "body": [
+      "List<${1:Type}> ${2:list} = new ArrayList<>();"
+    ],
+    "description": "ArrayList declaration"
+  },
+  "Hash Map": {
+    "prefix": "hashmap",
+    "body": [
+      "Map<${1:Key}, ${2:Value}> ${3:map} = new HashMap<>();"
+    ],
+    "description": "HashMap declaration"
+  },
+  "Scanner": {
+    "prefix": "sc",
+    "body": [
+      "Scanner ${1:sc} = new Scanner(System.in);"
+    ],
+    "description": "Scanner for stdin"
+  },
+  "Final": {
+    "prefix": "final",
+    "body": [
+      "final ${1:Type} ${2:var} = ${3:value};"
+    ],
+    "description": "Constant variable"
+  },
+  "Synchronized Method": {
+    "prefix": "sync",
+    "body": [
+      "public synchronized ${1:return_type} ${2:method}(${3:args})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Synchronized method"
+  },
+  "Ternary": {
+    "prefix": "tern",
+    "body": [
+      "${1:condition} ? ${2:a} : ${3:b}"
+    ],
+    "description": "Ternary operator"
+  }
+}
