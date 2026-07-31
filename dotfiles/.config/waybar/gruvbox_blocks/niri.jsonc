@@ -139,10 +139,10 @@
             "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
       },
       "wireplumber": {
-            "format": "<span color='#7daea3'>{icon}</span>  {volume}%",
-            "format-muted": "󰝟  {volume}%",
-            "format-bluetooth": "<span color='#7daea3'>{icon}</span> {volume}%",
-            "format-bluetooth-muted": "<span color='#ea6962'>󰂲 </span>{volume}%",
+            "format": "<span color='#7daea3'> {icon}</span>  {volume}% ",
+            "format-muted": " 󰝟  {volume}%",
+            "format-bluetooth": "<span color='#7daea3'>{icon}</span> {volume}% ",
+            "format-bluetooth-muted": "<span color='#ea6962'>󰂲 </span>{volume}% ",
             "format-source-muted": "󰝟 ",
             "format-icons": {
                   "headphone": "",
