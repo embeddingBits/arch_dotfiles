@@ -25,9 +25,9 @@ alias zb="zig build"
 alias upfor="uptime -p"
 
 # Pacman aliases
-alias pac="sudo pacman"
-alias pacref="sudo pacman -Syy"
-alias pacup="sudo pacman -Syyu"
+alias xi="sudo xbps-install"
+alias xr="sudo xbps-remove"
+alias xu="sudo xbps-install -Syu"
 
 # Tmux aliases
 alias tnew="tmux new -s"
