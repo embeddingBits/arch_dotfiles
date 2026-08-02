@@ -11,7 +11,7 @@ mesa-dri
 mesa-vaapi
 dbus
 elogind
-polkitd
+polkit
 wayland
 wayland-protocols
 wayland-utils
@@ -35,7 +35,6 @@ wireguard-tools
 
 @audio
 pipewire
-pipewire-pulse
 wireplumber
 alsa-pipewire
 libspa-bluetooth

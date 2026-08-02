@@ -44,7 +44,7 @@ return {
       {
             "hrsh7th/nvim-cmp",
             config = function()
-                  vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#b8bb26" })
+                  vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#d5c4a1" })
                   vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE", fg = "#d5c4a1" })
                   vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#458588", fg = "#0D1117" })
                   vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#83a598", bg = "NONE", bold = true })
@@ -85,10 +85,11 @@ return {
                         },
                         window = {
                               completion = cmp.config.window.bordered({
-                                    border = "rounded",
+                                    border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
                                     winhighlight = "Normal:Pmenu,FloatBorder:CmpBorder,NormalFloat:Pmenu,CursorLine:PmenuSel",
                               }),
                               documentation = cmp.config.window.bordered({
+                                    border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
                                     winhighlight = "Normal:Pmenu,FloatBorder:CmpBorder,NormalFloat:Pmenu",
                               }),
                         },

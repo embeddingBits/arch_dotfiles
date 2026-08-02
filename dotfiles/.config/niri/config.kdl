@@ -63,77 +63,77 @@ window-rule {
     open-floating true
 }
 
-window-rule {
-    match app-id="foot"
-    opacity 0.9
-    background-effect {
-        blur true
-    }
-}
-
-window-rule {
-    match app-id="emacs"
-    opacity 0.90
-    background-effect {
-        blur true
-    }
-}
-
-window-rule {
-    match app-id="zed"
-    opacity 0.90
-    background-effect {
-        blur true
-    }
-}
-
-window-rule {
-    match app-id="brave"
-    opacity 0.9
-    background-effect {
-        blur true
-    }
-}
-
-window-rule {
-    match app-id="org.mozilla.firefox"
-    opacity 0.85
-    background-effect {
-        blur true
-    }
-}
-
-window-rule {
-    match app-id="org.pwmt.zathura"
-    opacity 0.9
-    background-effect {
-        blur true
-    }
-}
-
-window-rule {
-    match app-id="foot"
-    opacity 0.85
-    background-effect {
-        blur true
-    }
-}
-
-layer-rule {
-    match namespace="^launcher$"
-    opacity 0.95
-    background-effect {
-        blur true
-    }
-}
-
-layer-rule {
-    match namespace="notifications"
-    opacity 0.95
-    background-effect {
-        blur true
-    }
-}
+//window-rule {
+//    match app-id="kitty"
+//    opacity 0.9
+//    background-effect {
+//        blur true
+//    }
+//}
+//
+//window-rule {
+//    match app-id="emacs"
+//    opacity 0.90
+//    background-effect {
+//        blur true
+//    }
+//}
+//
+//window-rule {
+//    match app-id="zed"
+//    opacity 0.90
+//    background-effect {
+//        blur true
+//    }
+//}
+//
+//window-rule {
+//    match app-id="brave"
+//    opacity 0.9
+//    background-effect {
+//        blur true
+//    }
+//}
+//
+//window-rule {
+//    match app-id="org.mozilla.firefox"
+//    opacity 0.85
+//    background-effect {
+//        blur true
+//    }
+//}
+//
+//window-rule {
+//    match app-id="org.pwmt.zathura"
+//    opacity 0.9
+//    background-effect {
+//        blur true
+//    }
+//}
+//
+//window-rule {
+//    match app-id="foot"
+//    opacity 0.85
+//    background-effect {
+//        blur true
+//    }
+//}
+//
+//layer-rule {
+//    match namespace="^launcher$"
+//    opacity 0.95
+//    background-effect {
+//        blur true
+//    }
+//}
+//
+//layer-rule {
+//    match namespace="notifications"
+//    opacity 0.95
+//    background-effect {
+//        blur true
+//    }
+//}
 
 window-rule {
     match app-id="feh"

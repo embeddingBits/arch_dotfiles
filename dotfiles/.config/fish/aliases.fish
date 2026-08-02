@@ -29,6 +29,10 @@ alias xi="sudo xbps-install"
 alias xr="sudo xbps-remove"
 alias xu="sudo xbps-install -Syu"
 
+# System
+alias shutdown="loginctl poweroff"
+alias reboot="sudo reboot"
+
 # Tmux aliases
 alias tnew="tmux new -s"
 alias tls="tmux ls"
