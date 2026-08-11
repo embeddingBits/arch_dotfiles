@@ -23,9 +23,15 @@
       br = branch
       lg = log --oneline --graph --decorate --all
 
-[url "git@github.com:"]
-      insteadOf = https://github.com/
+#[url "git@github.com:"]
+#      insteadOf = https://github.com/
+#
+#[url "git@codeberg.org:"]
+#      insteadOf = https://codeberg.org/
 
-[url "git@codeberg.org:"]
-      insteadOf = https://codeberg.org/
-
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

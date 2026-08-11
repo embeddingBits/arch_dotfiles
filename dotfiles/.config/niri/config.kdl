@@ -214,6 +214,6 @@ binds {
 
 spawn-at-startup "/home/ebits/.config/niri/autostart"
 spawn-at-startup "swaybg" "-i" "/home/ebits/Pictures/wallpapers/sushi.jpg"
-spawn-at-startup "waybar" "-c" "/home/ebits/.config/waybar/gruvbox_blocks/niri.jsonc" "-s" "/home/ebits/.config/waybar/gruvbox_blocks/niri.css"
+spawn-at-startup "waybar" "-c" "/home/ebits/.config/waybar/niri.jsonc" "-s" "/home/ebits/.config/waybar/niri.css"
 spawn-at-startup "fnott"
 spawn-at-startup "xwayland-satellite"
