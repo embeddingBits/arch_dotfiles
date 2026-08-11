@@ -8,7 +8,7 @@ input {
     touchpad {
         tap
     }
-    focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse 
 }
 
 output "eDP-1" { }
@@ -142,7 +142,7 @@ window-rule {
 
 binds {
 
-    Super+Q { spawn "foot"; }
+    Super+Q { spawn "ghostty"; }
     Super+Return { spawn "env" "GDK_BACKEND=wayland" "emacs"; }
     Super+R { spawn "fuzzel"; }
     Super+W { spawn "firefox"; }

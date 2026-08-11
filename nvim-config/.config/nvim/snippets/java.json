@@ -9,6 +9,19 @@
     ],
     "description": "public static void main(String[] args)"
   },
+  "Main Method": {
+    "prefix": "class_main",
+    "body": [
+      "public class Main {",
+      " ",
+      "\tpublic static void main(String[] args)",
+      "\t\t{",
+      "\t\t\t$0",
+      "\t\t}",
+      "}"
+    ],
+    "description": "public static void main(String[] args)"
+  },
   "Print Line": {
     "prefix": "sout",
     "body": [

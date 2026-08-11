@@ -11,12 +11,14 @@ window_padding_width 8 16
 update_check_interval 0
 shell_integration disabled
 
-font_size       14
-include current-theme.conf
+font_size       16
 
 # BEGIN_KITTY_FONTS
-font_family      family="IosevkaTerm Nerd Font"
-bold_font        family='IosevkaTerm Nerd Font' style=Bold
+font_family      family="ZedMono Nerd Font"
+bold_font        auto
 italic_font      auto
 bold_italic_font auto
 # END_KITTY_FONTS
+
+
+include current-theme.conf

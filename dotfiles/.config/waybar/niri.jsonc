@@ -80,7 +80,7 @@
             }
       }, 
       "clock": {
-            "tooltip-format": "󰥔 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "tooltip-format": "󰥔  <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "format": "<span color='#ea6962'>󰥔 </span>{:%a %d | %I:%M:%S %p}",
             "interval": 1
       },
@@ -89,7 +89,7 @@
             "tooltip": false
       },
       "memory": {
-            "format": "<span color='#E78A4E'>󰍛</span>{used: 0.2f} GB",
+            "format": "<span color='#E78A4E'>󰍛 </span>{used: 0.2f} GB",
             "interval": 1
       },
 
@@ -99,7 +99,7 @@
             "format-icons": ["", "", ""]
       },
       "backlight": {
-            "format": "<span color='#a9b665'>{icon}</span> {percent}%",
+            "format": "<span color='#a9b665'>{icon}</span>  {percent}%",
             "format-icons": ["", "", "", "", "", "", "", "", ""]
       },
       "battery": {
@@ -110,7 +110,7 @@
             "events": {
                   "on-discharging-warning": "notify-send -u critical 'Low Battery'"
             },
-            "format": "<span color='#D3869B'>{icon}</span> {capacity}%",
+            "format": "<span color='#D3869B'>{icon}  </span>{capacity}%",
             "format-full": "<span color='#d3869b'>{icon}</span> {capacity}%",
             "format-charging": "<span color='#d3869b'> </span>{capacity}%",
             "format-plugged": "<span color='#d3869b'></span>{capacity}% ",
@@ -132,7 +132,7 @@
       "network": {
             "interface": "wlo1",
             "interval": 5,
-            "format-wifi": "<span color='#D8A657'>{icon}</span> {essid}",
+            "format-wifi": "<span color='#D8A657'>{icon} </span> {essid}",
             "format-linked": "<span color='#D8A657'>{icon}</span> {essid}",
             "format-disconnected": "Disconnected ⚠",
             "format-alt": "{ifname}: {ipaddr}/{cidr}",

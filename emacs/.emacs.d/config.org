@@ -41,7 +41,7 @@
     (dashboard-vertically-center-content t)
 
     ;; Banner
-    (dashboard-startup-banner "~/Downloads/dashboard-1.jpeg")
+    (dashboard-startup-banner "~/Downloads/custom.txt")
     (dashboard-banner-logo-title "eBits Emacs")
 
     ;; Icons
@@ -131,23 +131,23 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-  (defvar +font-mono "JetBrainsMono Nerd Font Propo")
-  (defvar +font-variable "JetBrainsMono Nerd Font Propo")
+  (defvar +font-mono "Iosevka Nerd Font Propo")
+  (defvar +font-variable "Iosevka Nerd Font Propo")
 
   (when (member +font-mono (font-family-list))
     (set-face-attribute 'default nil
                         :family +font-mono
-                        :height 130
+                        :height 150
                         :weight 'semibold)
     (set-face-attribute 'fixed-pitch nil
                         :family +font-mono
-                        :height 130
+                        :height 150
                         :weight 'semibold))
 
   (when (member +font-variable (font-family-list))
     (set-face-attribute 'variable-pitch nil
                         :family +font-variable
-                        :height 130
+                        :height 150
                         :weight 'regular))
 #+end_src
 
@@ -390,86 +390,82 @@
 *** Snippets
 #+begin_src emacs-lisp
   (use-package yasnippet
-    :hook ((prog-mode . yas-minor-mode)
-           (org-mode  . yas-minor-mode))
+    :hook (prog-mode . yas-minor-mode)
     :config
-    ;; Correctly inherit classic snippets for tree-sitter modes
-    (add-hook 'c-ts-mode-hook      (lambda () (yas-activate-extra-mode 'c-mode)))
-    (add-hook 'c++-ts-mode-hook    (lambda ()
-                                     (yas-activate-extra-mode 'c++-mode)))
-    (add-hook 'python-ts-mode-hook (lambda () (yas-activate-extra-mode 'python-mode)))
-    (add-hook 'go-ts-mode-hook     (lambda () (yas-activate-extra-mode 'go-mode)))
     (yas-reload-all))
-
   (use-package yasnippet-snippets
     :after yasnippet)
 #+end_src
 
-*** Company (Completion Framework)
+*** Corfu Completion (yasnippet source only, prog-mode only)
 #+begin_src emacs-lisp
-  (use-package company
-    :demand t
-    :hook (prog-mode . company-mode)
-    :bind (:map company-active-map
-                ("<tab>"    . company-complete-selection)
-                ("C-n"      . company-select-next)
-                ("C-p"      . company-select-previous)
-                ("C-d"      . company-show-doc-buffer)
-                ("<escape>" . company-abort))
+  (use-package corfu
+    :hook (prog-mode . corfu-mode)
     :custom
-    (company-idle-delay 0.1)
-    (company-minimum-prefix-length 1)
-    (company-tooltip-limit 14)
-    (company-tooltip-align-annotations t)
-    (company-tooltip-flip-when-above t)
-    (company-require-match nil)
-    (company-selection-wrap-around t)
-    ;; Preserve casing from source buffer (important for camelCase code)
-    (company-dabbrev-downcase nil)
-    (company-dabbrev-ignore-case t)
+    (corfu-auto t)
+    (corfu-auto-delay 0.0)
+    (corfu-auto-prefix 1)
+    (corfu-cycle t)
+    (corfu-preselect 'prompt)
+    (corfu-quit-no-match 'separator)
+    (corfu-on-exact-match nil)
     :config
-    ;; Default backends for non-LSP buffers (eglot overrides these when active)
-    (setq company-backends
-          '((company-capf
-             company-yasnippet
-             company-dabbrev-code
-             company-keywords)
-            company-dabbrev
-            company-files)))
+    (keymap-unset corfu-map "RET")
+    
+    (defun my-corfu-insert-and-expand-snippet ()
+      "Insert candidate and immediately execute expansion if it is a template snippet."
+      (interactive)
+      (corfu-insert)
+      (yas-expand))
+
+    (keymap-set corfu-map "TAB" #'my-corfu-insert-and-expand-snippet)
+    (keymap-set corfu-map "<tab>" #'my-corfu-insert-and-expand-snippet))
+
+  (use-package cape
+    :ensure t)
+
+  (use-package yasnippet-capf
+    :ensure t
+    :after (corfu yasnippet cape)
+    :preface
+    (defun my-eglot-capf-setup ()
+      (setq-local completion-at-point-functions
+                  (list (cape-capf-super
+                         #'eglot-completion-at-point
+                         #'yasnippet-capf)))))
+
+  (with-eval-after-load 'eglot
+    (add-hook 'eglot-managed-mode-hook #'my-eglot-capf-setup))
+
+  (setq yas-trigger-key "<tab>")
 #+end_src
+
 *** Eglot LSP
 #+begin_src emacs-lisp
   (use-package eglot
-    :hook ((c-ts-mode      . eglot-ensure)
-           (c++-ts-mode    . eglot-ensure)
-           (typst-ts-mode  . eglot-ensure)
-           (python-ts-mode . eglot-ensure)
-           (go-ts-mode     . eglot-ensure))
+    :hook ((c-ts-mode     . eglot-ensure)
+           (c++-ts-mode   . eglot-ensure)
+           (zig-ts-mode   . eglot-ensure)
+           (typst-ts-mode . eglot-ensure)
+           (go-ts-mode    . eglot-ensure))
+    :custom
+    (eglot-sync-connect nil)
+    (eglot-connect-timeout 10)
+    (eglot-autoshutdown t)
+    (eglot-events-buffer-size 0)
+    (eglot-extend-to-xref nil)
+    (eglot-send-changes-idle-time 0.3)
+    (eglot-ignored-server-capabilities
+     '(:hoverProvider
+       :documentHighlightProvider
+       :documentFormattingProvider
+       :documentRangeFormattingProvider
+       :documentOnTypeFormattingProvider
+       :colorProvider
+       :foldingRangeProvider))
+    (eglot-stay-out-of '(yasnippet))
     :config
-    (setq eglot-autoshutdown t
-          eglot-events-buffer-size 0
-          eglot-extend-to-xref nil
-          eglot-ignored-server-capabilities
-          '(:hoverProvider
-            :documentHighlightProvider
-            :documentFormattingProvider
-            :documentRangeFormattingProvider
-            :documentOnTypeFormattingProvider
-            :colorProvider
-            :foldingRangeProvider)
-          eglot-stay-out-of '(yasnippet))
-
-    ;; Eglot resets company-backends to just (company-capf), dropping yasnippet.
-    ;; This hook re-injects yasnippet alongside capf using the :with grouping
-    ;; syntax so both LSP completions and snippets appear in the popup.
-    (defun my/eglot-company-backends ()
-      (setq-local company-backends
-                  '((company-capf :with company-yasnippet)
-                    company-dabbrev-code
-                    company-files)))
-
-    (add-hook 'eglot-managed-mode-hook #'my/eglot-company-backends)
-    (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1))))
+    (eglot-inlay-hints-mode -1))
 #+end_src
 
 ** Project & Version Control

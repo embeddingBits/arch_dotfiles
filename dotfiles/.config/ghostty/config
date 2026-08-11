@@ -11,20 +11,19 @@ window-padding-x = 15, 15
 window-padding-y = 15, 0
 window-padding-balance = true
 window-decoration = none
-gtk-single-instance = true
 
 # Misc
 confirm-close-surface = false
 shell-integration-features = no-cursor
 
 # Font Settings
-font-size = 14
+font-size = 16
 
-font-family = JetBrainsMono NF
+font-family = Iosevka NF
 font-style = semibold
-font-style-bold = medium
-font-style-italic = medium italic
-font-style-bold-italic = medium italic
+font-style-bold = bold
+font-style-italic = italic
+font-style-bold-italic = bold italic
 font-thicken = true
 
 # Theme
@@ -34,4 +33,3 @@ bold-is-bright = true
 # Shaders
 custom-shader = "shaders/cursor_sweep.glsl"
 custom-shader = "shaders/sonic_boom.glsl"
-
