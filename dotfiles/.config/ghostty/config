@@ -1,10 +1,10 @@
 # Background and Opacity
-background-opacity = 1
-background-blur = 1
+#background-opacity = 1
+#background-blur = 1
 
 # Cursor Settings
-cursor-style = block
-cursor-style-blink = false
+#cursor-style = block
+#cursor-style-blink = false
 
 # Window Decorations
 window-padding-x = 15, 15
@@ -19,9 +19,9 @@ shell-integration-features = no-cursor
 # Font Settings
 font-size = 16
 
-font-family = Iosevka NF
+font-family = IosevkaTerm NF
 font-style = semibold
-font-style-bold = bold
+font-style-bold = extrabold
 font-style-italic = italic
 font-style-bold-italic = bold italic
 font-thicken = true
@@ -31,5 +31,4 @@ theme = /home/ebits/.config/ghostty/themes/gruvbox-material.conf
 bold-is-bright = true
 
 # Shaders
-custom-shader = "shaders/cursor_sweep.glsl"
-custom-shader = "shaders/sonic_boom.glsl"
+custom-shader = "~/.config/ghostty/shaders/cursor_sweep.glsl"

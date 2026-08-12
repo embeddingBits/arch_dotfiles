@@ -1,414 +1,440 @@
 {
-  "Include System Library": {
-    "prefix": "incs",
-    "body": [
-      "#include <${1:iostream}>"
-    ],
-    "description": "#include <...>"
-  },
-  "Include Local Library": {
-    "prefix": "incl",
-    "body": [
-      "#include \"${1:header.h}\""
-    ],
-    "description": "#include \"...\""
-  },
-  "Include Iostream": {
-    "prefix": "incio",
-    "body": [
-      "#include <iostream>"
-    ],
-    "description": "#include <iostream>"
-  },
-  "Define Macro": {
-    "prefix": "define",
-    "body": [
-      "#define ${1:NAME} ${2:value}"
-    ],
-    "description": "#define ..."
-  },
-  "Ifdef": {
-    "prefix": "ifdef",
-    "body": [
-      "#ifdef ${1:MACRO}",
-      "$0",
-      "#endif"
-    ],
-    "description": "#ifdef ... #endif"
-  },
-  "Main Function": {
-    "prefix": "main",
-    "body": [
-      "int main(${1:int argc, char **argv})",
-      "{",
-      "\t$0",
-      "\treturn 0;",
-      "}"
-    ],
-    "description": "int main(...)"
-  },
-  "If Statement": {
-    "prefix": "if",
-    "body": [
-      "if (${1:condition}) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "If conditional block"
-  },
-  "If Else": {
-    "prefix": "ife",
-    "body": [
-      "if (${1:condition}) {",
-      "\t$2",
-      "} else {",
-      "\t$0",
-      "}"
-    ],
-    "description": "If else conditional block"
-  },
-  "Else If": {
-    "prefix": "elif",
-    "body": [
-      "else if (${1:condition}) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "Else if conditional block"
-  },
-  "For Loop": {
-    "prefix": "for",
-    "body": [
-      "for (${1:int i = 0}; ${2:i < n}; ${3:i++}) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "Standard for loop"
-  },
-  "While Loop": {
-    "prefix": "while",
-    "body": [
-      "while (${1:condition}) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "While loop"
-  },
-  "Do While Loop": {
-    "prefix": "dowhile",
-    "body": [
-      "do {",
-      "\t$0",
-      "} while (${1:condition});"
-    ],
-    "description": "Do while loop"
-  },
-  "Switch Statement": {
-    "prefix": "switch",
-    "body": [
-      "switch (${1:expr}) {",
-      "case ${2:value}:",
-      "\t$3",
-      "\tbreak;",
-      "default:",
-      "\t$0",
-      "\tbreak;",
-      "}"
-    ],
-    "description": "Switch statement"
-  },
-  "Case": {
-    "prefix": "case",
-    "body": [
-      "case ${1:value}:",
-      "\t$0",
-      "\tbreak;"
-    ],
-    "description": "Switch case"
-  },
-  "Break": {
-    "prefix": "br",
-    "body": [
-      "break;"
-    ],
-    "description": "break;"
-  },
-  "Continue": {
-    "prefix": "cont",
-    "body": [
-      "continue;"
-    ],
-    "description": "continue;"
-  },
-  "Ternary": {
-    "prefix": "tern",
-    "body": [
-      "${1:condition} ? ${2:a} : ${3:b}"
-    ],
-    "description": "Ternary operator"
-  },
-  "Struct": {
-    "prefix": "struct",
-    "body": [
-      "struct ${1:Name}",
-      "{",
-      "\t$0",
-      "};"
-    ],
-    "description": "Structure definition"
-  },
-  "Enum": {
-    "prefix": "enum",
-    "body": [
-      "enum ${1:Name}",
-      "{",
-      "\t${2:value}",
-      "};"
-    ],
-    "description": "Enumeration definition"
-  },
-  "Union": {
-    "prefix": "union",
-    "body": [
-      "union ${1:Name}",
-      "{",
-      "\t$0",
-      "};"
-    ],
-    "description": "Union definition"
-  },
-  "Typedef Struct": {
-    "prefix": "tdef",
-    "body": [
-      "typedef struct",
-      "{",
-      "\t$0",
-      "} ${1:Name};"
-    ],
-    "description": "Typedef struct"
-  },
-  "Malloc": {
-    "prefix": "malloc",
-    "body": [
-      "${1:ptr} = (${2:int} *)malloc(sizeof(${2:int}) * ${3:count});"
-    ],
-    "description": "Memory allocation"
-  },
-  "Sizeof": {
-    "prefix": "sizeof",
-    "body": [
-      "sizeof(${1:type})"
-    ],
-    "description": "sizeof()"
-  },
-  "Return": {
-    "prefix": "return",
-    "body": [
-      "return $0;"
-    ],
-    "description": "return ...;"
-  },
-  "Use Namespace Std": {
-    "prefix": "usingns",
-    "body": [
-      "using namespace std;"
-    ],
-    "description": "using namespace std;"
-  },
-  "Cout": {
-    "prefix": "cout",
-    "body": [
-      "std::cout << ${1:variable} << std::endl;"
-    ],
-    "description": "std::cout << ..."
-  },
-  "Cout Two": {
-    "prefix": "cout2",
-    "body": [
-      "std::cout << ${1:variable1} << \" \" << ${2:variable2} << std::endl;"
-    ],
-    "description": "std::cout << ... << ..."
-  },
-  "Cin": {
-    "prefix": "cin",
-    "body": [
-      "std::cin >> ${1:variable};"
-    ],
-    "description": "std::cin >> ..."
-  },
-  "Class": {
-    "prefix": "class",
-    "body": [
-      "class ${1:Name}",
-      "{",
-      "public:",
-      "\t${1:Name}(${2:/* args */});",
-      "\t~${1:Name}();",
-      "",
-      "private:",
-      "\t$0",
-      "};"
-    ],
-    "description": "Class definition"
-  },
-  "Constructor": {
-    "prefix": "cctor",
-    "body": [
-      "${1:ClassName}::${1:ClassName}(${2:/* args */})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Class constructor"
-  },
-  "Destructor": {
-    "prefix": "dtor",
-    "body": [
-      "${1:ClassName}::~${1:ClassName}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Class destructor"
-  },
-  "Template Function": {
-    "prefix": "tfunc",
-    "body": [
-      "template <typename ${1:T}>",
-      "${2:return_type} ${3:function}(${4:args})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Template function"
-  },
-  "Try Catch": {
-    "prefix": "try",
-    "body": [
-      "try {",
-      "\t$1",
-      "} catch (${2:const std::exception &e}) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "Try catch block"
-  },
-  "Vector": {
-    "prefix": "vector",
-    "body": [
-      "std::vector<${1:int}> ${2:vec};"
-    ],
-    "description": "std::vector declaration"
-  },
-  "Map": {
-    "prefix": "map",
-    "body": [
-      "std::map<${1:key}, ${2:value}> ${3:map};"
-    ],
-    "description": "std::map declaration"
-  },
-  "Range Based For": {
-    "prefix": "forrange",
-    "body": [
-      "for (auto &${1:item} : ${2:container}) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "Range based for loop"
-  },
-  "Lambda": {
-    "prefix": "lambda",
-    "body": [
-      "[${1:&}](${2:params}) {",
-      "\t$0",
-      "};"
-    ],
-    "description": "Lambda expression"
-  },
-  "New": {
-    "prefix": "new",
-    "body": [
-      "${1:Type} *${2:ptr} = new ${1:Type}(${3:args});"
-    ],
-    "description": "Dynamic allocation with new"
-  },
-  "Delete": {
-    "prefix": "del",
-    "body": [
-      "delete ${1:ptr};"
-    ],
-    "description": "Delete dynamically allocated object"
-  },
-  "Namespace": {
-    "prefix": "namespace",
-    "body": [
-      "namespace ${1:name}",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Namespace definition"
-  },
-  "String": {
-    "prefix": "string",
-    "body": [
-      "std::string ${1:name};"
-    ],
-    "description": "std::string declaration"
-  },
-  "Auto": {
-    "prefix": "auto",
-    "body": [
-      "auto ${1:var} = ${2:value};"
-    ],
-    "description": "Auto type deduction"
-  },
-  "Constexpr": {
-    "prefix": "constexpr",
-    "body": [
-      "constexpr auto ${1:var} = ${2:value};"
-    ],
-    "description": "Compile-time constant"
-  },
-  "Override": {
-    "prefix": "override",
-    "body": [
-      "${1:return_type} ${2:func}(${3:args}) override",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Virtual function override"
-  },
-  "Virtual": {
-    "prefix": "virtual",
-    "body": [
-      "virtual ${1:return_type} ${2:func}(${3:args})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Virtual member function"
-  },
-  "Friend": {
-    "prefix": "friend",
-    "body": [
-      "friend class ${1:Name};"
-    ],
-    "description": "Friend class declaration"
-  },
-  "Pointer": {
-    "prefix": "ptr",
-    "body": [
-      "${1:Type} *${2:name};"
-    ],
-    "description": "Pointer declaration"
-  },
-  "Reference": {
-    "prefix": "ref",
-    "body": [
-      "${1:Type} &${2:name} = ${3:other};"
-    ],
-    "description": "Reference declaration"
-  }
+      "Include System Library": {
+            "prefix": "incs",
+            "body": [
+                  "#include <${1:iostream}>"
+            ],
+            "description": "#include <...>"
+      },
+      "Include Local Library": {
+            "prefix": "incl",
+            "body": [
+                  "#include \"${1:header.h}\""
+            ],
+            "description": "#include \"...\""
+      },
+      "Include Iostream": {
+            "prefix": "incio",
+            "body": [
+                  "#include <iostream>"
+            ],
+            "description": "#include <iostream>"
+      },
+      "comp_coding": {
+            "prefix": "comp",
+            "body": [
+                  "#include <bits/stdc++.h>",
+                  "",
+                  "using namespace std;",
+                  "using vi = vector<int>;",
+                  "",
+                  "void solve() {",
+                        "    int n;",
+                        "    cin >> n;",
+                        "    // Your code here",
+                        "    $0",
+                        "}",
+                        "",
+                        "int main() {",
+                              "    ios::sync_with_stdio(false);",
+                              "    cin.tie(0);",
+                              "",
+                              "    int t;",
+                              "    cin >> t;",
+                              "    while (t--) solve();",
+                              "}"
+            ],
+            "description": "C++ Competitive Programming Template"
+      },
+      "Define Macro": {
+            "prefix": "define",
+            "body": [
+                  "#define ${1:NAME} ${2:value}"
+            ],
+            "description": "#define ..."
+      },
+      "Ifdef": {
+            "prefix": "ifdef",
+            "body": [
+                  "#ifdef ${1:MACRO}",
+                  "$0",
+                  "#endif"
+            ],
+            "description": "#ifdef ... #endif"
+      },
+      "Main Function": {
+            "prefix": "main",
+            "body": [
+                  "int main(${1:int argc, char **argv})",
+                  "{",
+                        "\t$0",
+                        "\treturn 0;",
+                        "}"
+            ],
+            "description": "int main(...)"
+      },
+      "If Statement": {
+            "prefix": "if",
+            "body": [
+                  "if (${1:condition}) {",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "If conditional block"
+      },
+      "If Else": {
+            "prefix": "ife",
+            "body": [
+                  "if (${1:condition}) {",
+                        "\t$2",
+                        "} else {",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "If else conditional block"
+      },
+      "Else If": {
+            "prefix": "elif",
+            "body": [
+                  "else if (${1:condition}) {",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Else if conditional block"
+      },
+      "For Loop": {
+            "prefix": "for",
+            "body": [
+                  "for (${1:int i = 0}; ${2:i < n}; ${3:i++}) {",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Standard for loop"
+      },
+      "While Loop": {
+            "prefix": "while",
+            "body": [
+                  "while (${1:condition}) {",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "While loop"
+      },
+      "Do While Loop": {
+            "prefix": "dowhile",
+            "body": [
+                  "do {",
+                        "\t$0",
+                        "} while (${1:condition});"
+            ],
+            "description": "Do while loop"
+      },
+      "Switch Statement": {
+            "prefix": "switch",
+            "body": [
+                  "switch (${1:expr}) {",
+                        "case ${2:value}:",
+                        "\t$3",
+                        "\tbreak;",
+                        "default:",
+                        "\t$0",
+                        "\tbreak;",
+                        "}"
+            ],
+            "description": "Switch statement"
+      },
+      "Case": {
+            "prefix": "case",
+            "body": [
+                  "case ${1:value}:",
+                  "\t$0",
+                  "\tbreak;"
+            ],
+            "description": "Switch case"
+      },
+      "Break": {
+            "prefix": "br",
+            "body": [
+                  "break;"
+            ],
+            "description": "break;"
+      },
+      "Continue": {
+            "prefix": "cont",
+            "body": [
+                  "continue;"
+            ],
+            "description": "continue;"
+      },
+      "Ternary": {
+            "prefix": "tern",
+            "body": [
+                  "${1:condition} ? ${2:a} : ${3:b}"
+            ],
+            "description": "Ternary operator"
+      },
+      "Struct": {
+            "prefix": "struct",
+            "body": [
+                  "struct ${1:Name}",
+                  "{",
+                        "\t$0",
+                        "};"
+            ],
+            "description": "Structure definition"
+      },
+      "Enum": {
+            "prefix": "enum",
+            "body": [
+                  "enum ${1:Name}",
+                  "{",
+                        "\t${2:value}",
+                        "};"
+            ],
+            "description": "Enumeration definition"
+      },
+      "Union": {
+            "prefix": "union",
+            "body": [
+                  "union ${1:Name}",
+                  "{",
+                        "\t$0",
+                        "};"
+            ],
+            "description": "Union definition"
+      },
+      "Typedef Struct": {
+            "prefix": "tdef",
+            "body": [
+                  "typedef struct",
+                  "{",
+                        "\t$0",
+                        "} ${1:Name};"
+            ],
+            "description": "Typedef struct"
+      },
+      "Malloc": {
+            "prefix": "malloc",
+            "body": [
+                  "${1:ptr} = (${2:int} *)malloc(sizeof(${2:int}) * ${3:count});"
+            ],
+            "description": "Memory allocation"
+      },
+      "Sizeof": {
+            "prefix": "sizeof",
+            "body": [
+                  "sizeof(${1:type})"
+            ],
+            "description": "sizeof()"
+      },
+      "Return": {
+            "prefix": "return",
+            "body": [
+                  "return $0;"
+            ],
+            "description": "return ...;"
+      },
+      "Use Namespace Std": {
+            "prefix": "usingns",
+            "body": [
+                  "using namespace std;"
+            ],
+            "description": "using namespace std;"
+      },
+      "Cout": {
+            "prefix": "cout",
+            "body": [
+                  "std::cout << ${1:variable} << std::endl;"
+            ],
+            "description": "std::cout << ..."
+      },
+      "Cout Two": {
+            "prefix": "cout2",
+            "body": [
+                  "std::cout << ${1:variable1} << \" \" << ${2:variable2} << std::endl;"
+            ],
+            "description": "std::cout << ... << ..."
+      },
+      "Cin": {
+            "prefix": "cin",
+            "body": [
+                  "std::cin >> ${1:variable};"
+            ],
+            "description": "std::cin >> ..."
+      },
+      "Class": {
+            "prefix": "class",
+            "body": [
+                  "class ${1:Name}",
+                  "{",
+                        "public:",
+                        "\t${1:Name}(${2:/* args */});",
+                        "\t~${1:Name}();",
+                        "",
+                        "private:",
+                        "\t$0",
+                        "};"
+            ],
+            "description": "Class definition"
+      },
+      "Constructor": {
+            "prefix": "cctor",
+            "body": [
+                  "${1:ClassName}::${1:ClassName}(${2:/* args */})",
+                  "{",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Class constructor"
+      },
+      "Destructor": {
+            "prefix": "dtor",
+            "body": [
+                  "${1:ClassName}::~${1:ClassName}()",
+                  "{",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Class destructor"
+      },
+      "Template Function": {
+            "prefix": "tfunc",
+            "body": [
+                  "template <typename ${1:T}>",
+                  "${2:return_type} ${3:function}(${4:args})",
+                  "{",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Template function"
+      },
+      "Try Catch": {
+            "prefix": "try",
+            "body": [
+                  "try {",
+                        "\t$1",
+                        "} catch (${2:const std::exception &e}) {",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Try catch block"
+      },
+      "Vector": {
+            "prefix": "vector",
+            "body": [
+                  "std::vector<${1:int}> ${2:vec};"
+            ],
+            "description": "std::vector declaration"
+      },
+      "Map": {
+            "prefix": "map",
+            "body": [
+                  "std::map<${1:key}, ${2:value}> ${3:map};"
+            ],
+            "description": "std::map declaration"
+      },
+      "Range Based For": {
+            "prefix": "forrange",
+            "body": [
+                  "for (auto &${1:item} : ${2:container}) {",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Range based for loop"
+      },
+      "Lambda": {
+            "prefix": "lambda",
+            "body": [
+                  "[${1:&}](${2:params}) {",
+                        "\t$0",
+                        "};"
+            ],
+            "description": "Lambda expression"
+      },
+      "New": {
+            "prefix": "new",
+            "body": [
+                  "${1:Type} *${2:ptr} = new ${1:Type}(${3:args});"
+            ],
+            "description": "Dynamic allocation with new"
+      },
+      "Delete": {
+            "prefix": "del",
+            "body": [
+                  "delete ${1:ptr};"
+            ],
+            "description": "Delete dynamically allocated object"
+      },
+      "Namespace": {
+            "prefix": "namespace",
+            "body": [
+                  "namespace ${1:name}",
+                  "{",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Namespace definition"
+      },
+      "String": {
+            "prefix": "string",
+            "body": [
+                  "std::string ${1:name};"
+            ],
+            "description": "std::string declaration"
+      },
+      "Auto": {
+            "prefix": "auto",
+            "body": [
+                  "auto ${1:var} = ${2:value};"
+            ],
+            "description": "Auto type deduction"
+      },
+      "Constexpr": {
+            "prefix": "constexpr",
+            "body": [
+                  "constexpr auto ${1:var} = ${2:value};"
+            ],
+            "description": "Compile-time constant"
+      },
+      "Override": {
+            "prefix": "override",
+            "body": [
+                  "${1:return_type} ${2:func}(${3:args}) override",
+                  "{",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Virtual function override"
+      },
+      "Virtual": {
+            "prefix": "virtual",
+            "body": [
+                  "virtual ${1:return_type} ${2:func}(${3:args})",
+                  "{",
+                        "\t$0",
+                        "}"
+            ],
+            "description": "Virtual member function"
+      },
+      "Friend": {
+            "prefix": "friend",
+            "body": [
+                  "friend class ${1:Name};"
+            ],
+            "description": "Friend class declaration"
+      },
+      "Pointer": {
+            "prefix": "ptr",
+            "body": [
+                  "${1:Type} *${2:name};"
+            ],
+            "description": "Pointer declaration"
+      },
+      "Reference": {
+            "prefix": "ref",
+            "body": [
+                  "${1:Type} &${2:name} = ${3:other};"
+            ],
+            "description": "Reference declaration"
+      }
 }
