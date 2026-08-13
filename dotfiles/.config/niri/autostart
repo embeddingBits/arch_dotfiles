@@ -24,3 +24,5 @@ for i in $(seq 1 50); do
   fi
   sleep 0.2
 done
+
+waybar -s ~/.config/waybar/niri.css -c ~/.config/waybar/niri.jsonc

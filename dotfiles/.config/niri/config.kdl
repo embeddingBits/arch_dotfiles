@@ -4,11 +4,10 @@ input {
     }
     mouse {
         accel-speed 0.0
-    }
+   }
     touchpad {
         tap
     }
-    focus-follows-mouse 
 }
 
 output "eDP-1" { }
@@ -44,7 +43,9 @@ window-rule {
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-animations { }
+animations { 
+      
+}
 
 // Window rules 
 window-rule {

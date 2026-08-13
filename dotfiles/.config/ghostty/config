@@ -17,14 +17,15 @@ confirm-close-surface = false
 shell-integration-features = no-cursor
 
 # Font Settings
-font-size = 16
+font-size = 15
 
-font-family = IosevkaTerm NF
+font-family = RecMonoLinear Nerd Font
 font-style = semibold
-font-style-bold = extrabold
+font-style-bold = bold
 font-style-italic = italic
 font-style-bold-italic = bold italic
 font-thicken = true
+font-thicken-strength = 255
 
 # Theme
 theme = /home/ebits/.config/ghostty/themes/gruvbox-material.conf

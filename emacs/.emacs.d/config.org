@@ -131,23 +131,23 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-  (defvar +font-mono "Iosevka Nerd Font Propo")
-  (defvar +font-variable "Iosevka Nerd Font Propo")
+  (defvar +font-mono "RecMonoLinear Nerd Font Propo")
+  (defvar +font-variable "RecMonoLinear Nerd Font Propo")
 
   (when (member +font-mono (font-family-list))
     (set-face-attribute 'default nil
                         :family +font-mono
-                        :height 150
-                        :weight 'semibold)
+                        :height 130
+                        :weight 'regular)
     (set-face-attribute 'fixed-pitch nil
                         :family +font-mono
-                        :height 150
-                        :weight 'semibold))
+                        :height 130
+                        :weight 'regular))
 
   (when (member +font-variable (font-family-list))
     (set-face-attribute 'variable-pitch nil
                         :family +font-variable
-                        :height 150
+                        :height 130
                         :weight 'regular))
 #+end_src
 

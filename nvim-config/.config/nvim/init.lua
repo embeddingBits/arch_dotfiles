@@ -43,3 +43,6 @@ vim.keymap.set("n", "<leader>tc", ":w | !typst compile % %:r.pdf<CR>")
 
 require("lazy").setup("plugins")
 
+require("notify").setup({
+  background_colour = "#000000",
+})
