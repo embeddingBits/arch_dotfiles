@@ -17,18 +17,17 @@ confirm-close-surface = false
 shell-integration-features = no-cursor
 
 # Font Settings
-font-size = 15
+font-size = 14
 
-font-family = RecMonoLinear Nerd Font
+font-family = RecMonoCasual Nerd Font
 font-style = semibold
 font-style-bold = bold
 font-style-italic = italic
 font-style-bold-italic = bold italic
 font-thicken = true
-font-thicken-strength = 255
 
 # Theme
-theme = /home/ebits/.config/ghostty/themes/gruvbox-material.conf
+theme = "/home/ebits/.config/ghostty/themes/gruvbox.conf" 
 bold-is-bright = true
 
 # Shaders

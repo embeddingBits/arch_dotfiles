@@ -1,5 +1,6 @@
 #+title: eBits Emacs
 
+* eBits Emacs
 ** UI Configuration
 *** Clean Interface
 #+begin_src emacs-lisp
@@ -131,8 +132,8 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-  (defvar +font-mono "RecMonoLinear Nerd Font Propo")
-  (defvar +font-variable "RecMonoLinear Nerd Font Propo")
+  (defvar +font-mono "RecMonoCasual Nerd Font Propo")
+  (defvar +font-variable "RecMonoCasual Nerd Font Propo")
 
   (when (member +font-mono (font-family-list))
     (set-face-attribute 'default nil
@@ -541,9 +542,9 @@
              (compose-region (match-beginning 1)
                              (match-end 1)
                              "•"))))))
-    (dolist (face '((org-level-1 . 1.3)
-                    (org-level-2 . 1.2)
-                    (org-level-3 . 1.1)
+    (dolist (face '((org-level-1 . 1.4)
+                    (org-level-2 . 1.3)
+                    (org-level-3 . 1.2)
                     (org-level-4 . 1.1)
                     (org-level-5 . 1.0)
                     (org-level-6 . 1.0)
@@ -598,7 +599,7 @@
 
   (setq-default org-display-custom-times t)
   (setq org-time-stamp-custom-formats
-        '(" <%d-%m-%Y %a>" . " <%d-%m-%Y %a %H:%M>"))
+        '("<%d-%m-%Y %a>" . "<%d-%m-%Y %a %H:%M>"))
 #+end_src
 
 *** Org Modern Styling
@@ -608,7 +609,7 @@
     :hook (org-mode . org-modern-mode)
     :config
     (setq org-modern-star 'replace
-          org-modern-replace-stars '("●" "○" "✸" "✿")
+          org-modern-replace-stars '("" "󰪥" "󰴈" "✿")
           org-modern-todo t
           org-modern-priority t
           org-modern-todo-faces
@@ -623,8 +624,117 @@
             (?C . (:foreground "#1d2021" :background "#d79921" :weight bold)))))
 #+end_src
 
+*** Org Agenda
+#+begin_src emacs-lisp
+  ;; --- Agenda files: everything under ~/TODO/ -----------------------------
+  (setq org-agenda-files (directory-files-recursively "~/TODO/" "\\.org$"))
+
+  ;; --- View preferences -----------------------------------------------------
+  (setq org-agenda-start-on-weekday nil) ; week starts on today
+  (setq org-agenda-span 7)
+  (setq org-agenda-show-current-time t)
+  (setq org-agenda-time-grid '((daily today require-timed)
+                               (800 1000 1200 1400 1600 1800 2000)
+                               "......" "----------------"))
+  (setq org-agenda-window-setup 'current-window)
+  (setq org-agenda-restore-windows-after-quit t)
+  (setq org-agenda-sticky t)
+  (setq org-agenda-entry-text-maxlines 2)
+  (setq org-agenda-start-with-log-mode '(closed clock))
+  (setq org-agenda-tags-column -80)
+
+  ;; Hide done items everywhere
+  (setq org-agenda-skip-deadline-if-done t)
+  (setq org-agenda-skip-scheduled-if-done t)
+  (setq org-agenda-skip-timestamp-if-done t)
+
+  (setq org-deadline-warning-days 7)
+
+  ;; Sorting: timed first, then deadlines, then scheduled, then priority
+  (setq org-agenda-sorting-strategy
+        '((agenda habit-down time-up deadline-up scheduled-up category-keep priority-down)
+          (todo priority-down category-keep)
+          (tags priority-down category-keep)
+          (search category-keep)))
+
+  ;; Track when tasks get done / moved around
+  (setq org-log-done 'time)
+  (setq org-log-into-drawer 'LOGBOOK)
+
+  ;; Todo faces in agenda buffers (matches org-modern colors)
+  (setq org-todo-keyword-faces
+        '(("TODO"      . (:foreground "#ea6962" :weight bold))
+          ("IN-PROG"   . (:foreground "#83a598" :weight bold))
+          ("WAITING"   . (:foreground "#d8a657" :weight bold))
+          ("DONE"      . (:foreground "#a9b665"))
+          ("CANCELLED" . (:foreground "#cc241d" :strike-through t))))
+
+  ;; Stuck projects: level-2 headings with no actionable subtask
+  (setq org-stuck-projects '("+LEVEL=2/-DONE" ("TODO" "IN-PROG" "WAITING") ("") ""))
+
+  ;; Refile into the top-level headings of any agenda file
+  (setq org-refile-targets '((org-agenda-files :maxlevel . 2)))
+
+  ;; Quick capture into an inbox
+  (setq org-default-notes-file "~/TODO/inbox.org")
+  (setq org-capture-templates
+        '(("t" "Todo" entry (file+headline "~/TODO/inbox.org" "Inbox")
+           "* TODO %?\n%U\n%a" :empty-lines 1)
+          ("n" "Note" entry (file+headline "~/TODO/inbox.org" "Inbox")
+           "* %? :note:\n%U\n%a" :empty-lines 1)))
+
+  ;; --- Custom agenda commands (M-x org-agenda <key> or SPC a <key>) ---------
+  (setq org-agenda-custom-commands
+        '(("a" "Today" agenda ""
+           ((org-agenda-span 1)
+            (org-agenda-overriding-header "Today's Agenda")))
+          ("w" "Week" agenda ""
+           ((org-agenda-span 7)
+            (org-agenda-overriding-header "This Week")))
+          ("t" "All TODOs" alltodo ""
+           ((org-agenda-overriding-header "All open TODOs")))
+          ("n" "Next actions" alltodo ""
+           ((org-agenda-skip-function
+             '(org-agenda-skip-entry-if 'scheduled 'deadline 'timestamp))
+            (org-agenda-overriding-header "Next actions (nothing scheduled)")))
+          ("d" "Deadlines" agenda ""
+           ((org-agenda-span 7)
+            (org-agenda-entry-types '(:deadline))
+            (org-agenda-overriding-header "Deadlines This Week")))
+          ("s" "Stuck projects" stuck "" nil)))
+
+  ;; --- Keybindings ----------------------------------------------------------
+  (global-set-key (kbd "C-c C-a") #'org-agenda)
+  (my/leader
+    "a"   '(:ignore t :wk "agenda")
+    "a a" '(org-agenda :wk "today")
+    "a w" '(org-agenda nil "w" :wk "week")
+    "a t" '(org-todo-list :wk "all todos")
+    "a n" '(org-agenda nil "n" :wk "next actions")
+    "a d" '(org-agenda nil "d" :wk "deadlines")
+    "a s" '(org-agenda nil "s" :wk "stuck projects")
+    "a c" '(org-capture :wk "capture"))
+#+end_src
+
 *** Org Roam
 #+begin_src emacs-lisp
+  (defun org-roam--fleet-subjects ()
+    "Return the subject directory names under fleet/."
+    (let ((dir (expand-file-name "fleet/" org-roam-directory)))
+      (if (not (file-directory-p dir))
+          (user-error "No fleet/ directory in %s" org-roam-directory)
+        (mapcar #'file-name-nondirectory
+                (cl-remove-if-not
+                 (lambda (f) (file-directory-p f))
+                 (directory-files dir t "^[^.].*"))))))
+
+  (defun subject (&rest _)
+    "Complete a subject choice from the fleet/ directories."
+    (or (plist-get org-roam-capture--info :subject)
+        (let ((choice (completing-read "Subject: " (org-roam--fleet-subjects))))
+          (plist-put org-roam-capture--info :subject choice)
+          choice)))
+
   (use-package org-roam
     :defer t
     :commands (org-roam-node-find
@@ -647,7 +757,7 @@
     (org-roam-capture-templates
      '(("c" "Concept" plain
         "#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${subject} concept\n\n%?"
-        :target (file+head "fleet/${college-personal}/${subject}/%<%Y-%m-%d>-${slug}.org"
+        :target (file+head "fleet/${subject}/%<%Y-%m-%d>-${slug}.org"
                            "#+title: ${title}\n"))
        ("p" "Papers" plain
         "#+created: %<%d-%m-%Y %a %H:%M>\n#+filetags: ${about} concept\n\n%?"
@@ -672,8 +782,6 @@
           org-roam-ui-follow nil
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))
-
-  (setq org-agenda-files (directory-files-recursively "~/Org-Notes/" "\\.org$"))
 #+end_src
 
 *** Org LaTeX

@@ -59,7 +59,8 @@
                   "firefox": "󰈹 Firefox",
                   "kitty": " Kitty",
                   "discord": "  Discord",
-                  "emacs": " Emacs"
+                  "emacs": " Emacs",
+                  "com.mitchellh.ghostty": "󰊠 Ghostty"
             }
       },
 

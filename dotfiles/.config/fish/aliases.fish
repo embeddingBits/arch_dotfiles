@@ -3,7 +3,7 @@ function fetch --wraps='fastfetch -c ~/.config/fastfetch/small.jsonc --logo-colo
 end
 
 function ls --wraps=exa --wraps='exa --icons' --description 'alias ls exa --icons'
-    eza --icons $argv
+    eza $argv --icons
 end
 
 function nv --wraps=nvim --description 'alias nv nvim'
