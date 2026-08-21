@@ -5,7 +5,7 @@
       address: "127.0.0.1:6600",
       password: None,
       theme: Some("gruvbox"),
-      cache_dir: None,
+      cache_dir: "/home/ebits/Music",
       lyrics_dir: "/home/ebits/Music/lyrics",
       on_song_change: None,
       volume_step: 5,
