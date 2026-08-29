@@ -1,0 +1,21 @@
+# Nebula shell — matugen template config
+# This file is merged into ~/.config/matugen/config.toml by the installer.
+# Add this block if it is not already present.
+
+[config]
+version_check = false
+
+# ── Nebula (Quickshell) ───────────────────────────────────────────────────────
+
+[templates.quickshell]
+input_path  = '~/.config/matugen/templates/quickshell-colors.json'
+output_path = '~/.cache/quickshell/colors.json'
+
+[templates.quickshell_music]
+input_path  = '~/.config/matugen/templates/quickshell-music-colors.json'
+output_path = '~/.cache/quickshell/music_colors.json'
+
+[templates.hyprland]
+input_path  = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook   = 'hyprctl reload'

@@ -1,0 +1,45 @@
+{
+    "primary": "{{colors.primary.default.hex}}",
+    "primaryText": "{{colors.on_primary.default.hex}}",
+    "primaryContainer": "{{colors.primary_container.default.hex}}",
+    "primaryContainerText": "{{colors.on_primary_container.default.hex}}",
+
+    "secondary": "{{colors.secondary.default.hex}}",
+    "secondaryText": "{{colors.on_secondary.default.hex}}",
+    "secondaryContainer": "{{colors.secondary_container.default.hex}}",
+    "secondaryContainerText": "{{colors.on_secondary_container.default.hex}}",
+
+    "tertiary": "{{colors.tertiary.default.hex}}",
+    "tertiaryText": "{{colors.on_tertiary.default.hex}}",
+    "tertiaryContainer": "{{colors.tertiary_container.default.hex}}",
+    "tertiaryContainerText": "{{colors.on_tertiary_container.default.hex}}",
+
+    "error": "{{colors.error.default.hex}}",
+    "errorText": "{{colors.on_error.default.hex}}",
+    "errorContainer": "{{colors.error_container.default.hex}}",
+    "errorContainerText": "{{colors.on_error_container.default.hex}}",
+
+    "surface": "{{colors.surface.default.hex}}",
+    "surfaceText": "{{colors.on_surface.default.hex}}",
+    "surfaceVariant": "{{colors.surface_variant.default.hex}}",
+    "surfaceVariantText": "{{colors.on_surface_variant.default.hex}}",
+
+    "outline": "{{colors.outline.default.hex}}",
+    "outlineVariant": "{{colors.outline_variant.default.hex}}",
+    "shadow": "{{colors.shadow.default.hex}}",
+    "scrim": "{{colors.scrim.default.hex}}",
+
+    "inverseSurface": "{{colors.inverse_surface.default.hex}}",
+    "inverseSurfaceText": "{{colors.inverse_on_surface.default.hex}}",
+    "inversePrimary": "{{colors.inverse_primary.default.hex}}",
+
+    "surfaceDim": "{{colors.surface_dim.default.hex}}",
+    "surfaceBright": "{{colors.surface_bright.default.hex}}",
+    "surfaceContainerLowest": "{{colors.surface_container_lowest.default.hex}}",
+    "surfaceContainerLow": "{{colors.surface_container_low.default.hex}}",
+    "surfaceContainer": "{{colors.surface_container.default.hex}}",
+    "surfaceContainerHigh": "{{colors.surface_container_high.default.hex}}",
+    "surfaceContainerHighest": "{{colors.surface_container_highest.default.hex}}",
+
+    "wallpaper": "{{image}}"
+}

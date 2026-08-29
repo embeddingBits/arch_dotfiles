@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "WfRecorderPlugin",
+            "lineNumber": 11,
+            "object": true,
+            "qualifiedClassName": "WfRecorderPlugin",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QQmlEngineExtensionPlugin"
+                }
+            ]
+        }
+    ],
+    "inputFile": "wfrecorderplugin_WfRecorderPlugin.cpp",
+    "outputRevision": 69
+}

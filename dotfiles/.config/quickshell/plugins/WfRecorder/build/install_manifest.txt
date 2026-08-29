@@ -1,0 +1,4 @@
+/home/steel/.local/lib/qt6/qml/WfRecorder/wfrecorderplugin_qml_module_dir_map.qrc
+/home/steel/.local/lib/qt6/qml/WfRecorder/qmldir
+/home/steel/.local/lib/qt6/qml/WfRecorder/wfrecorderplugin.qmltypes
+/home/steel/.local/lib/qt6/qml/WfRecorder/libwfrecorderplugin.so

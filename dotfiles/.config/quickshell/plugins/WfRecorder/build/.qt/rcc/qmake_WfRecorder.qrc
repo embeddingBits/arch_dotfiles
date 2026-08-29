@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/WfRecorder">
+    <file alias="qmldir">/home/steel/.config/quickshell/plugins/WfRecorder/build/WfRecorder/qmldir</file>
+  </qresource>
+</RCC>
+

@@ -5,9 +5,9 @@ set -x EDITOR nvim
 set -x TERMINAL footclient
 
 source ~/.config/fish/aliases.fish
+export PATH="/home/ebits/.local/bin:$PATH"
 zoxide init fish | source
 
-# SSH agent: one agent per login, key unlocked lazily on first git/ssh use
 if test -f "$HOME/.ssh/agent-env"
     set -gx SSH_AUTH_SOCK (sed -n 's/^SSH_AUTH_SOCK=\([^;]*\);.*/\1/p' "$HOME/.ssh/agent-env")
     set -gx SSH_AGENT_PID (sed -n 's/^SSH_AGENT_PID=\([^;]*\);.*/\1/p' "$HOME/.ssh/agent-env")
@@ -39,13 +39,16 @@ end
 export ZVM_INSTALL="$HOME/.zvm/self"
 export PATH="$PATH:$HOME/.zvm/bin:$ZVM_INSTALL"
 
-set -Ux PATH /opt/cuda/bin $PATH
-set -Ux LD_LIBRARY_PATH /opt/cuda/lib64 $LD_LIBRARY_PATH
 set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
 set -Ux GOPATH $HOME/.local/go
 set -Ux GOBIN  $HOME/.local/go/bin
 fish_add_path  $GOBIN
 
 # opencode
 fish_add_path /home/ebits/.opencode/bin
+fish_add_path /home/ebits/.kilo/bin
+export PATH="/home/ebits/.local/bin:$PATH"
+
+# Nebula shell
+set -gx NEBULA_VENV "/home/ebits/.local/state/quickshell/.venv"
+set -gx QML_IMPORT_PATH "$HOME/.local/lib/qt6/qml" $QML_IMPORT_PATH

@@ -1,0 +1,2 @@
+/home/steel/.config/quickshell/plugins/WfRecorder/build/wfrecorderplugin_autogen/include/../EWIEGA46WW/moc_wfrecorder.cpp.json
+/home/steel/.config/quickshell/plugins/WfRecorder/build/wfrecorderplugin_autogen/include/wfrecorderplugin_WfRecorderPlugin.moc.json

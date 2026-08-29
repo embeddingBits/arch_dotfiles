@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/steel/.config/quickshell/plugins/WfRecorder/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

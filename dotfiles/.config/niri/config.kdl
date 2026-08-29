@@ -34,10 +34,16 @@ layout {
     }
 }
 
-// Add this rule right below your layout block
 window-rule {
-    // This forces Niri to draw focus rings and borders *around* the window
-    // instead of a solid color block bleeding through your transparent blur.
+      geometry-corner-radius 12
+      clip-to-geometry true
+}
+
+window-rule {
+      opacity 0.85
+    background-effect {
+          blur true
+    }
     draw-border-with-background false
 }
 
@@ -54,6 +60,7 @@ window-rule {
 }
 
 blur {
+    on
     passes 3
     offset 3.5     
     saturation 1
@@ -63,70 +70,13 @@ window-rule {
     match app-id="nwg-look"
     open-floating true
 }
-
-//window-rule {
-//    match app-id="kitty"
-//    opacity 0.9
-//    background-effect {
-//        blur true
-//    }
-//}
-//
-//window-rule {
-//    match app-id="emacs"
-//    opacity 0.90
-//    background-effect {
-//        blur true
-//    }
-//}
-//
-//window-rule {
-//    match app-id="zed"
-//    opacity 0.90
-//    background-effect {
-//        blur true
-//    }
-//}
-//
-//window-rule {
-//    match app-id="brave"
-//    opacity 0.9
-//    background-effect {
-//        blur true
-//    }
-//}
-//
-//window-rule {
-//    match app-id="org.mozilla.firefox"
-//    opacity 0.85
-//    background-effect {
-//        blur true
-//    }
-//}
-//
-//window-rule {
-//    match app-id="org.pwmt.zathura"
-//    opacity 0.9
-//    background-effect {
-//        blur true
-//    }
-//}
-//
-//window-rule {
-//    match app-id="foot"
-//    opacity 0.85
-//    background-effect {
-//        blur true
-//    }
-//}
-//
-//layer-rule {
-//    match namespace="^launcher$"
-//    opacity 0.95
-//    background-effect {
-//        blur true
-//    }
-//}
+layer-rule {
+    match namespace="^launcher$"
+    opacity 0.95
+    background-effect {
+        blur true
+    }
+}
 //
 //layer-rule {
 //    match namespace="notifications"
@@ -145,7 +95,7 @@ binds {
 
     Super+Q { spawn "ghostty"; }
     Super+Return { spawn "env" "GDK_BACKEND=wayland" "emacs"; }
-    Super+R { spawn "fuzzel"; }
+    Super+R { spawn "qs" "ipc" "call" "appLauncher" "toggle"; }
     Super+W { spawn "firefox"; }
     Super+B { spawn "sh" "-c" "~/.config/fuzzel/fuzzel-bluetooth.sh"; }
     Super+U { spawn "sh" "-c" "~/.config/fuzzel/fuzzel-emoji.sh"; }
@@ -214,6 +164,7 @@ binds {
 
 
 spawn-at-startup "/home/ebits/.config/niri/autostart"
+spawn-at-startup "quickshell"
 spawn-at-startup "swaybg" "-i" "/home/ebits/Pictures/wallpapers/sushi.jpg"
 spawn-at-startup "fnott"
 spawn-at-startup "xwayland-satellite"

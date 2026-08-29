@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/WfRecorder">/home/steel/.config/quickshell/plugins/WfRecorder/build/WfRecorder</file>
+
+  </qresource>
+</RCC>

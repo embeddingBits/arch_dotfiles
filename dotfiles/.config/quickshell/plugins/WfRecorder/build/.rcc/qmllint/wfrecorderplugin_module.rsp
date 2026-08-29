@@ -1,0 +1,12 @@
+-I
+/home/steel/.config/quickshell/plugins/WfRecorder/build
+-I
+/home/steel/.config/quickshell/plugins/WfRecorder/build/WfRecorder
+-I
+/home/steel/.config/quickshell/plugins/WfRecorder/build
+-I
+/usr/lib/qt6/qml
+--resource
+/home/steel/.config/quickshell/plugins/WfRecorder/build/.qt/rcc/qmake_WfRecorder.qrc
+--module
+WfRecorder

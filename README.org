@@ -1,7 +1,7 @@
 #+startup: inlineimages
 
 * Software
-- *Distro*: [[https://voidlinux.org/][Void Linux]]
+- *Distro*: [[https://archlinux.org/][Arch Linux]]
 - *Window manager*: [[https://niri-wm.github.io/niri/index.html][Niri]]
 - *Top bar*: [[https://github.com/alexys/waybar][Waybar]]
 - *Terminal*: [[https://codeberg.org/dnkl/foot][foot]]
@@ -33,11 +33,11 @@ The =install.sh= script orchestrates a full reproducible bootstrap.
 #+end_src
 
 This runs all stages:
-1. System sync & update
-2. Non-free repositories
-3. Install all package groups from =packages.lst=
-4. Enable runit services (NetworkManager, pipewire)
-5. Add user to required groups (_pipewire, pulse)
+1. System sync & update (=pacman -Syu=)
+2. Multilib repository (=/etc/pacman.conf=)
+3. Install all package groups from =packages.lst= (=pacman -S= / AUR helper)
+4. Enable systemd services (NetworkManager, bluetooth, pipewire --user)
+5. Add user to required groups (input, video, audio, wheel)
 6. Stow dotfiles (dotfiles/, emacs/, nvim-config/)
 
 ** Selective install

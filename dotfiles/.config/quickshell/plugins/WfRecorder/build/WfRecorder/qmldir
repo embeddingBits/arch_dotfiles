@@ -1,0 +1,8 @@
+module WfRecorder
+linktarget wfrecorderplugin
+optional plugin wfrecorderplugin
+classname WfRecorderPlugin
+typeinfo wfrecorderplugin.qmltypes
+prefer :/WfRecorder/
+depends QtQuick
+

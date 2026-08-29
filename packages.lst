@@ -1,4 +1,4 @@
-# packages.lst - categorized package list for Void Linux
+# packages.lst - categorized package list for Arch Linux
 #
 # Usage: install.sh reads groups from here
 # Lines starting with # are comments.
@@ -6,16 +6,14 @@
 # Packages can be shared across groups.
 
 @core
-pam_rundir
-mesa-dri
-mesa-vaapi
+mesa
+libva-mesa-driver
 dbus
-elogind
 polkit
 wayland
 wayland-protocols
 wayland-utils
-pkg-config
+pkgconf
 brightnessctl
 libnotify
 xdg-utils
@@ -24,32 +22,35 @@ unzip
 unrar
 
 @repos
-void-repo-nonfree
-void-repo-multilib
-void-repo-multilib-nonfree
+# Arch uses pacman.conf to enable [multilib] - handled in install.sh stage 2.
+# No extra repository packages needed. Keep group for compatibility.
+# Uncomment multilib manually or let install.sh do it.
 
 @network
-NetworkManager
+networkmanager
 tailscale
 wireguard-tools
 
 @audio
 pipewire
+pipewire-alsa
+pipewire-pulse
+pipewire-jack
 wireplumber
-alsa-pipewire
-libspa-bluetooth
 pavucontrol
+bluez
+bluez-utils
 
 @desktop
 niri
 fuzzel
 fnott
-Waybar
+waybar
 kitty
 foot
 zathura
 tmux
-fish-shell
+fish
 starship
 nwg-look
 wlr-randr
@@ -59,6 +60,7 @@ wtype
 swaybg
 xdg-desktop-portal
 xdg-desktop-portal-gtk
+xdg-desktop-portal-gnome
 xwayland-satellite
 grim
 slurp
@@ -79,12 +81,12 @@ eza
 playerctl
 ffmpeg
 gparted
-mesa-demos
+mesa-utils
 
 @app
 telegram-desktop
 element-desktop
-obs
+obs-studio
 mpv
 firefox
 lutris
@@ -92,16 +94,16 @@ steam
 
 @dev
 neovim
-emacs-pgtk
-openjdk21
-libgcc
+emacs
+jdk21-openjdk
+gcc-libs
 gcc
 zig
 go
 make
 cmake
-python3
-python3-pip
+python
+python-pip
 typst
 podman
 podman-compose

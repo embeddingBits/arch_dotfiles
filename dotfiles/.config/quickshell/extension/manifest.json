@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "Quickshell Voice Bridge",
+  "version": "1.12.0",
+  "description": "Relays dictated prompts from the quickshell voice overlay into a claude.ai tab, and streams the reply back.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "voice-bridge@quickshell.local",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": [
+    "https://claude.ai/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://claude.ai/*"
+      ],
+      "js": [
+        "inject.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://claude.ai/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
