@@ -6,4 +6,22 @@ state
 sticker.sql
 fish_variables
 
+# SSH keys and sensitive files - never commit
+dotfiles/.ssh/git
+dotfiles/.ssh/git.pub
+dotfiles/.ssh/known_hosts
+dotfiles/.ssh/known_hosts.old
+dotfiles/.ssh/agent-env
+dotfiles/.ssh/agent/
+**/.ssh/git
+**/.ssh/git.pub
+**/.ssh/known_hosts*
+**/.ssh/agent-env
+**/.ssh/agent/
+**/.ssh/*.pub
+id_rsa
+id_ed25519
+*.pem
+*.key
+
 
