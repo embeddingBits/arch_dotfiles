@@ -32,10 +32,12 @@ ShellRoot {
 
     // ── underline colors per bar element (distinct) ──
     property color colUnderlineMenu: "#fabd2f"
+    property color colUnderlineActiveWindow: "#d5c4a1"
     property color colUnderlineWorkspaces: "#fe8019"
     property color colUnderlineClock: "#83a598"
     property color colUnderlineTray: "#a89984"
     property color colUnderlineAudio: "#8ec07c"
+    property color colUnderlineMemory: "#689d6a"
     property color colUnderlineNetwork: "#458588"
     property color colUnderlineBluetooth: "#d3869b"
     property color colUnderlineBattery: "#b8bb26"
@@ -190,6 +192,11 @@ ShellRoot {
 
     property var niriWorkspaces: []
     property var niriRaw: []
+    property string activeWindowTitle: ""
+    property string activeWindowAppId: ""
+    property real memUsedGB: 0
+    property real memTotalGB: 0
+    property string memUsedText: memUsedGB.toFixed(1) + "G"
     Process {
         id: niriProc
         command: ["niri", "msg", "-j", "workspaces"]
@@ -240,12 +247,27 @@ ShellRoot {
                     let cur=root.niriWorkspaces.slice();
                     for(let j=0;j<cur.length;j++) if(idxOccupied[cur[j].idx]) cur[j].occupied=true;
                     root.niriWorkspaces=cur;
+                    // active window title
+                    let focused=null;
+                    for(let i=0;i<wins.length;i++) if(wins[i] && wins[i].is_focused){ focused=wins[i]; break; }
+                    if(focused){
+                        root.activeWindowTitle=String(focused.title||focused.app_id||"");
+                        root.activeWindowAppId=String(focused.app_id||"");
+                    } else {
+                        // fallback: active_window_id from focused workspace
+                        let awId=null;
+                        for(let i=0;i<root.niriRaw.length;i++) if(root.niriRaw[i].is_focused) awId=root.niriRaw[i].active_window_id;
+                        let found=null;
+                        if(awId!==null) for(let i=0;i<wins.length;i++) if(wins[i].id===awId) found=wins[i];
+                        if(found){ root.activeWindowTitle=String(found.title||found.app_id||""); root.activeWindowAppId=String(found.app_id||""); }
+                        else { root.activeWindowTitle=""; root.activeWindowAppId=""; }
+                    }
                 }catch(e){}
             }
         }
     }
     Timer { id: niriPollTimer; interval: 700; running: true; repeat: true; onTriggered: { if(!niriProc.running) niriProc.running=true; if(!niriWindowsProc.running) niriWindowsProc.running=true; } }
-    Component.onCompleted: { niriProc.running=true; niriWindowsProc.running=true; }
+    Component.onCompleted: { niriProc.running=true; niriWindowsProc.running=true; if(!memProc.running) memProc.running=true; }
     Process {
         id: niriEventProc
         command: ["niri", "msg", "event-stream"]
@@ -260,6 +282,28 @@ ShellRoot {
             }
         }
     }
+
+    // ── memory usage polling (used GB) ──
+    Process {
+        id: memProc
+        command: ["bash","-c","awk '/MemTotal:/{t=$2} /MemAvailable:/{a=$2} END{printf \"%.0f %.0f\", (t-a), t}' /proc/meminfo"]
+        running: false
+        stdout: StdioCollector {
+            onStreamFinished: {
+                let s=String(text||"").trim();
+                if(!s) return;
+                let parts=s.split(/\s+/);
+                if(parts.length>=2){
+                    let usedKB=Number(parts[0]); let totalKB=Number(parts[1]);
+                    if(isFinite(usedKB) && isFinite(totalKB) && totalKB>0){
+                        root.memUsedGB=usedKB/1024/1024;
+                        root.memTotalGB=totalKB/1024/1024;
+                    }
+                }
+            }
+        }
+    }
+    Timer { id: memPollTimer; interval: 3000; running: true; repeat: true; onTriggered: if(!memProc.running) memProc.running=true }
 
     PwObjectTracker { objects: [Pipewire.defaultAudioSink, Pipewire.defaultAudioSource] }
 
@@ -319,6 +363,49 @@ ShellRoot {
                 }
 
                 Rectangle { Layout.preferredWidth: 1; Layout.preferredHeight: 18; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); opacity: 0.6 }
+
+                // ── active window (left of workspaces) ──
+                Item {
+                    id: activeWindowItem
+                    visible: root.activeWindowTitle !== ""
+                    Layout.preferredWidth: Math.min(activeWinText.implicitWidth + 32, 280)
+                    Layout.preferredHeight: 26
+                    Layout.maximumWidth: 280
+                    Rectangle {
+                        anchors.fill: parent
+                        radius: root.radius
+                        color: awMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+                    }
+                    RowLayout {
+                        anchors.fill: parent
+                        anchors.leftMargin: 6
+                        anchors.rightMargin: 6
+                        spacing: 6
+                        Text {
+                            text: "󰖲"
+                            font.family: root.fontFamily; font.pixelSize: root.iconFontSize; color: root.colMuted
+                            Layout.alignment: Qt.AlignVCenter
+                        }
+                        Text {
+                            id: activeWinText
+                            text: root.activeWindowTitle
+                            font.family: root.fontFamily; font.pixelSize: root.smallFontSize; font.weight: 500
+                            color: root.colFg
+                            elide: Text.ElideRight
+                            Layout.fillWidth: true
+                            Layout.alignment: Qt.AlignVCenter
+                            maximumLineCount: 1
+                        }
+                    }
+                    Rectangle {
+                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                        height: 2; radius: 1
+                        color: root.colUnderlineActiveWindow
+                        opacity: awMouse.containsMouse ? 1 : 0.9
+                    }
+                    MouseArea { id: awMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor }
+                }
+                Rectangle { visible: activeWindowItem.visible; Layout.preferredWidth: 1; Layout.preferredHeight: 16; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); opacity: 0.6 }
 
                 RowLayout {
                     spacing: 6
@@ -508,6 +595,57 @@ ShellRoot {
                             Pipewire.defaultAudioSink.audio.volume=Math.max(0,Math.min(1,v));
                             if(Pipewire.defaultAudioSink.audio.muted && v>0) Pipewire.defaultAudioSink.audio.muted=false;
                         }
+                    }
+                }
+
+                // ── memory used (between volume and wifi) ──
+                Item {
+                    id: memBtn
+                    Layout.preferredWidth: 78
+                    Layout.preferredHeight: 26
+                    Rectangle {
+                        anchors.fill: parent
+                        radius: root.radius
+                        color: memMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+                    }
+                    RowLayout {
+                        anchors.centerIn: parent
+                        anchors.verticalCenterOffset: -1
+                        spacing: 4
+                        Text {
+                            text: "󰍛"
+                            font.family: root.fontFamily; font.pixelSize: root.clockFontSize; color: root.colFg
+                            Layout.alignment: Qt.AlignVCenter
+                        }
+                        Text {
+                            text: root.memUsedText
+                            font.family: root.fontFamily; font.pixelSize: root.clockFontSize; font.weight: 600
+                            color: Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.90)
+                            Layout.alignment: Qt.AlignVCenter
+                        }
+                    }
+                    Rectangle {
+                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                        height: 2; radius: 1
+                        color: root.colUnderlineMemory
+                        opacity: memMouse.containsMouse ? 1 : 0.92
+                    }
+                    MouseArea {
+                        id: memMouse
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        cursorShape: Qt.PointingHandCursor
+                        onClicked: if(!memProc.running) memProc.running=true
+                    }
+                    ToolTip {
+                        visible: memMouse.containsMouse
+                        delay: 400
+                        text: root.memTotalGB>0 ? "RAM: "+root.memUsedGB.toFixed(1)+" / "+root.memTotalGB.toFixed(1)+" GB  ("+Math.round(root.memUsedGB/root.memTotalGB*100)+"%)" : "RAM: "+root.memUsedText
+                        contentItem: Text {
+                            text: memMouse.containsMouse ? (root.memTotalGB>0 ? "RAM: "+root.memUsedGB.toFixed(1)+" / "+root.memTotalGB.toFixed(1)+" GB  ("+Math.round(root.memUsedGB/root.memTotalGB*100)+"%)" : "RAM: "+root.memUsedText) : ""
+                            font.family: root.fontFamily; font.pixelSize: 10; color: root.colFg
+                        }
+                        background: Rectangle { color: root.colBg; border.color: root.colBorder; border.width: 1; radius: 4 }
                     }
                 }
 
@@ -801,82 +939,7 @@ ShellRoot {
                         }
                     }
                 }
-                // legend
-                Row {
-                    width: parent.width
-                    spacing: 6
-                    visible: true
-                    Text { text: "\u25CF  festival / event"; font.family: root.fontFamily; font.pixelSize: 9; color: Qt.darker(root.colFg,1.5); anchors.verticalCenter: parent.verticalCenter }
-                    Item { width: 6; height: 1 }
-                    Rectangle { width: 8; height: 8; radius: 4; color: root.colAccent; anchors.verticalCenter: parent.verticalCenter }
-                    Text { text: "today"; font.family: root.fontFamily; font.pixelSize: 9; color: Qt.darker(root.colFg,1.5); anchors.verticalCenter: parent.verticalCenter }
-                }
-                // upcoming events list
-                Rectangle { width: parent.width; height: 1; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.25) }
-                Column {
-                    width: parent.width; spacing: 6
-                    Text { text: "UPCOMING  \u25B8  NEXT "+upcomingRepeater.count+" EVENTS"; font.family: root.fontFamily; font.pixelSize: 10; font.letterSpacing: 1; font.bold: true; color: Qt.darker(root.colFg,1.3) }
-                    Repeater {
-                        id: upcomingRepeater
-                        model: root.upcomingEventsFromToday(6, 90)
-                        delegate: Rectangle {
-                            required property var modelData
-                            width: parent.width; height: 30; radius: 6
-                            color: upcomingMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.06) : "transparent"
-                            border.color: upcomingMouse.containsMouse ? Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.25) : "transparent"
-                            border.width: 1
-                            Row {
-                                anchors.left: parent.left; anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter
-                                anchors.leftMargin: 8; anchors.rightMargin: 8; spacing: 8
-                                Rectangle {
-                                    width: 36; height: 20; radius: 4
-                                    color: Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.14)
-                                    Text {
-                                        anchors.centerIn: parent
-                                        text: Qt.formatDate(modelData.date, "MMM d")
-                                        font.family: root.fontFamily; font.pixelSize: 9; font.weight: 600; color: root.colAccent
-                                    }
-                                }
-                                Column {
-                                    width: parent.width - 52
-                                    spacing: 1
-                                    Text {
-                                        text: modelData.events.join(" \u2022 ")
-                                        font.family: root.fontFamily; font.pixelSize: 11; font.weight: 500; color: root.colFg
-                                        elide: Text.ElideRight; width: parent.width
-                                    }
-                                    Text {
-                                        text: {
-                                            let d=modelData.date; let now=new Date(root.today.getFullYear(), root.today.getMonth(), root.today.getDate());
-                                            let diff=Math.round((d - now)/86400000);
-                                            if(diff===0) return "Today";
-                                            if(diff===1) return "Tomorrow";
-                                            return "In "+diff+" days  \u2022  "+Qt.formatDate(d, "dddd");
-                                        }
-                                        font.family: root.fontFamily; font.pixelSize: 9; color: Qt.darker(root.colFg,1.5)
-                                        elide: Text.ElideRight; width: parent.width
-                                    }
-                                }
-                            }
-                            MouseArea {
-                                id: upcomingMouse
-                                anchors.fill: parent
-                                hoverEnabled: true
-                                cursorShape: Qt.PointingHandCursor
-                                onClicked: {
-                                    root.calYear=modelData.date.getFullYear(); root.calMonth=modelData.date.getMonth();
-                                    root.calWeeks=root.monthGrid(root.calYear, root.calMonth, root.weekStart, root.todayKey);
-                                }
-                            }
-                        }
-                    }
-                    Text {
-                        visible: upcomingRepeater.count===0
-                        text: "No festivals in next 90 days"
-                        font.family: root.fontFamily; font.pixelSize: 10; color: Qt.darker(root.colFg,1.5); font.italic: true
-                    }
-                }
-                Text { width: parent.width; horizontalAlignment: Text.AlignHCenter; text: "Hover dot for details \u2022 Click upcoming to jump"; font.family: root.fontFamily; font.pixelSize: 9; color: Qt.darker(root.colFg,1.6) }
+
             }
             WheelHandler { onWheel: function(e){ if(e.angleDelta.y!==0) root.stepCalMonth(e.angleDelta.y>0?-1:1); } }
         }
@@ -939,7 +1002,7 @@ ShellRoot {
                                 }
                             }
                             Rectangle {
-                                Layout.preferredWidth: 22; Layout.preferredHeight: 22; radius: root.radius; color: volMuteMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08) : "transparent"; border.color: volMuteMouse.containsMouse ? root.colBorder : "transparent"; border.width: 1
+                                Layout.preferredWidth: 22; Layout.preferredHeight: 22; radius: root.radius; color: volMuteMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08) : "transparent"; border.color: volMuteMouse.containsMouse ? root.colBorderMuted : "transparent"; border.width: 1
                                 Text { anchors.centerIn: parent; text: Pipewire.defaultAudioSink?.audio?.muted ? "󰝟" : "󰝧"; font.family: root.fontFamily; font.pixelSize: 12; color: root.colFg }
                                 MouseArea { id: volMuteMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: if(Pipewire.defaultAudioSink?.audio) Pipewire.defaultAudioSink.audio.muted=!Pipewire.defaultAudioSink.audio.muted }
                             }
@@ -958,7 +1021,7 @@ ShellRoot {
                                 required property var modelData
                                 width: parent.width; height: 26; radius: root.radius
                                 color: sinkMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08) : (Pipewire.defaultAudioSink && modelData.id===Pipewire.defaultAudioSink.id ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.12) : "transparent")
-                                border.color: Pipewire.defaultAudioSink && modelData.id===Pipewire.defaultAudioSink.id ? root.colBorder : (sinkMouse.containsMouse ? root.colBorderMuted : "transparent")
+                                border.color: Pipewire.defaultAudioSink && modelData.id===Pipewire.defaultAudioSink.id ? root.colBorderMuted : (sinkMouse.containsMouse ? root.colBorderMuted : "transparent")
                                 border.width: 1
                                 Row {
                                     anchors.left: parent.left; anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter; anchors.leftMargin: 8; anchors.rightMargin: 8; spacing: 8
@@ -997,7 +1060,7 @@ ShellRoot {
                                 }
                             }
                             Rectangle {
-                                Layout.preferredWidth: 22; Layout.preferredHeight: 22; radius: root.radius; color: inMuteMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08) : "transparent"; border.color: inMuteMouse.containsMouse ? root.colBorder : "transparent"; border.width: 1
+                                Layout.preferredWidth: 22; Layout.preferredHeight: 22; radius: root.radius; color: inMuteMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08) : "transparent"; border.color: inMuteMouse.containsMouse ? root.colBorderMuted : "transparent"; border.width: 1
                                 Text { anchors.centerIn: parent; text: Pipewire.defaultAudioSource?.audio?.muted ? "󰍭" : "󰍬"; font.family: root.fontFamily; font.pixelSize: 12; color: root.colFg }
                                 MouseArea { id: inMuteMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: if(Pipewire.defaultAudioSource?.audio) Pipewire.defaultAudioSource.audio.muted=!Pipewire.defaultAudioSource.audio.muted }
                             }
@@ -1085,7 +1148,7 @@ ShellRoot {
                     Item { Layout.fillWidth: true; width: 20; height: 1 }
                     Rectangle {
                         width: 44; height: 22; radius: root.radius; color: Networking.wifiEnabled ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.18) : Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08)
-                        border.color: Networking.wifiEnabled ? root.colBorder : root.colBorderMuted; border.width: 1
+                        border.color: root.colBorderMuted; border.width: 1
                         Rectangle {
                             width: 16; height: 16; radius: root.radius; color: root.colFg
                             x: Networking.wifiEnabled ? parent.width - width - 3 : 3
@@ -1111,7 +1174,7 @@ ShellRoot {
                         }
                         delegate: Rectangle {
                             required property var modelData
-                            width: parent.width; height: 32; radius: root.radius; color: Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.10); border.color: root.colBorder; border.width: 1
+                            width: parent.width; height: 32; radius: root.radius; color: Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.10); border.color: root.colBorderMuted; border.width: 1
                             Row {
                                 anchors.left: parent.left; anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter; anchors.leftMargin: 10; anchors.rightMargin: 10; spacing: 8
                                 Text { text: "󰤨"; font.family: root.fontFamily; font.pixelSize: 13; color: root.colAccent; anchors.verticalCenter: parent.verticalCenter }
@@ -1134,7 +1197,7 @@ ShellRoot {
                             required property var modelData
                             width: parent.width; height: 28; radius: root.radius
                             color: wifiRowMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                            border.color: modelData.connected ? root.colBorder : (wifiRowMouse.containsMouse ? root.colBorderMuted : "transparent")
+                            border.color: modelData.connected ? root.colBorderMuted : (wifiRowMouse.containsMouse ? root.colBorderMuted : "transparent")
                             border.width: 1
                             Row {
                                 anchors.left: parent.left; anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter; anchors.leftMargin: 8; anchors.rightMargin: 8; spacing: 8
@@ -1178,12 +1241,12 @@ ShellRoot {
                 Row {
                     width: parent.width; spacing: 8
                     Rectangle {
-                        width: (parent.width-8)/2; height: 26; radius: root.radius; color: footWifiMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"; border.color: footWifiMouse.containsMouse ? root.colBorder : root.colBorderMuted; border.width: 1
+                        width: (parent.width-8)/2; height: 26; radius: root.radius; color: footWifiMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"; border.color: root.colBorderMuted; border.width: 1
                         Text { anchors.centerIn: parent; text: "󰑓 Refresh"; font.family: root.fontFamily; font.pixelSize: 11; color: root.colFg }
                         MouseArea { id: footWifiMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: if(root.wifiDev) root.wifiDev.scannerEnabled=true }
                     }
                     Rectangle {
-                        width: (parent.width-8)/2; height: 26; radius: root.radius; color: footWifi2Mouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"; border.color: footWifi2Mouse.containsMouse ? root.colBorder : root.colBorderMuted; border.width: 1
+                        width: (parent.width-8)/2; height: 26; radius: root.radius; color: footWifi2Mouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"; border.color: root.colBorderMuted; border.width: 1
                         Text { anchors.centerIn: parent; text: "󰖩 Settings"; font.family: root.fontFamily; font.pixelSize: 11; color: root.colFg }
                         MouseArea { id: footWifi2Mouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: Quickshell.execDetached(["bash","-c","nm-connection-editor &"]) }
                     }
@@ -1221,7 +1284,7 @@ ShellRoot {
                     Item { Layout.fillWidth: true; width: 20; height: 1 }
                     Rectangle {
                         width: 44; height: 22; radius: root.radius; color: root.btAdapter && root.btAdapter.enabled ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.18) : Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08)
-                        border.color: root.btAdapter && root.btAdapter.enabled ? root.colBorder : root.colBorderMuted; border.width: 1
+                        border.color: root.colBorderMuted; border.width: 1
                         Rectangle { width: 16; height: 16; radius: root.radius; color: root.colFg; x: root.btAdapter && root.btAdapter.enabled ? parent.width - width - 3 : 3; y: 3; Behavior on x { NumberAnimation{ duration:140; easing.type: Easing.OutCubic } } }
                         MouseArea { anchors.fill: parent; cursorShape: Qt.PointingHandCursor; onClicked: if(root.btAdapter) root.btAdapter.enabled=!root.btAdapter.enabled }
                     }
@@ -1242,7 +1305,7 @@ ShellRoot {
                         }
                         delegate: Rectangle {
                             required property var modelData
-                            width: parent.width; height: 32; radius: root.radius; color: Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.10); border.color: root.colBorder; border.width: 1
+                            width: parent.width; height: 32; radius: root.radius; color: Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.10); border.color: root.colBorderMuted; border.width: 1
                             Row {
                                 anchors.left: parent.left; anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter; anchors.leftMargin: 10; anchors.rightMargin: 10; spacing: 8
                                 Text { text: "󰂱"; font.family: root.fontFamily; font.pixelSize: 13; color: root.colAccent; anchors.verticalCenter: parent.verticalCenter }
@@ -1262,7 +1325,7 @@ ShellRoot {
                             required property var modelData
                             width: parent.width; height: 28; radius: root.radius
                             color: btRowMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                            border.color: modelData.connected ? root.colBorder : (btRowMouse.containsMouse ? root.colBorderMuted : "transparent")
+                            border.color: modelData.connected ? root.colBorderMuted : (btRowMouse.containsMouse ? root.colBorderMuted : "transparent")
                             border.width: 1
                             Row {
                                 anchors.left: parent.left; anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter; anchors.leftMargin: 8; anchors.rightMargin: 8; spacing: 8
@@ -1301,12 +1364,12 @@ ShellRoot {
                 Row {
                     width: parent.width; spacing: 8
                     Rectangle {
-                        width: (parent.width-8)/2; height: 26; radius: root.radius; color: footBtMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"; border.color: footBtMouse.containsMouse ? root.colBorder : root.colBorderMuted; border.width: 1
+                        width: (parent.width-8)/2; height: 26; radius: root.radius; color: footBtMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"; border.color: root.colBorderMuted; border.width: 1
                         Text { anchors.centerIn: parent; text: "󰂯 Scan"; font.family: root.fontFamily; font.pixelSize: 11; color: root.colFg }
                         MouseArea { id: footBtMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: if(root.btAdapter) root.btAdapter.discovering=!root.btAdapter.discovering }
                     }
                     Rectangle {
-                        width: (parent.width-8)/2; height: 26; radius: root.radius; color: footBt2Mouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"; border.color: footBt2Mouse.containsMouse ? root.colBorder : root.colBorderMuted; border.width: 1
+                        width: (parent.width-8)/2; height: 26; radius: root.radius; color: footBt2Mouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"; border.color: root.colBorderMuted; border.width: 1
                         Text { anchors.centerIn: parent; text: "󰂯 Settings"; font.family: root.fontFamily; font.pixelSize: 11; color: root.colFg }
                         MouseArea { id: footBt2Mouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: Quickshell.execDetached(["bash","-c","blueman-manager &"]) }
                     }
