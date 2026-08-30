@@ -16,7 +16,7 @@ Item {
 
     Text {
         anchors.centerIn: parent
-        text: "󰣇"
+        text: ""
         font.family: Theme.fontFamily
         font.pixelSize: Theme.barFontSize
         color: Theme.fg
