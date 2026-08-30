@@ -25,9 +25,10 @@ ShellRoot {
     property int barHeight: 38
     property string fontFamily: "JetBrainsMono Nerd Font"
     property string fontFamilyFallback: "JetBrainsMono Nerd Font"
-    property int clockFontSize: 15
-    property int iconFontSize: 14
-    property int smallFontSize: 12
+    property int barFontSize: 14
+    property int clockFontSize: barFontSize
+    property int iconFontSize: barFontSize
+    property int smallFontSize: barFontSize
     property int radius: 0
     property int radiusSmall: 0
 
@@ -527,7 +528,7 @@ ShellRoot {
                         color: menuMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08) : "transparent"
                         radius: root.radius
                     }
-                    Text { anchors.centerIn: parent; text: "󰣇"; font.family: root.fontFamily; font.pixelSize: root.clockFontSize; color: root.colFg }
+                    Text { anchors.centerIn: parent; text: "󰣇"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colFg }
                     Rectangle {
                         anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
                         height: 2; radius: 1
@@ -564,7 +565,7 @@ ShellRoot {
                                 anchors.verticalCenterOffset: -1
                                 text: wsDelegate.focused ? "󰝥" : String(wsDelegate.modelData.idx)
                                 font.family: root.fontFamily
-                                font.pixelSize: root.clockFontSize
+                                font.pixelSize: root.barFontSize
                                 font.weight: wsDelegate.focused ? 700 : 600
                                 color: wsDelegate.focused ? root.colAccent : (wsDelegate.occupied ? root.colFg : Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.55))
                                 opacity: wsDelegate.occupied || wsDelegate.focused ? 1 : 0.60
@@ -607,13 +608,13 @@ ShellRoot {
                         spacing: 6
                         Text {
                             text: "󰖲"
-                            font.family: root.fontFamily; font.pixelSize: root.iconFontSize; color: root.colMuted
+                            font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colMuted
                             Layout.alignment: Qt.AlignVCenter
                         }
                         Text {
                             id: activeWinText
                             text: root.activeWindowTitle
-                            font.family: root.fontFamily; font.pixelSize: root.smallFontSize; font.weight: 500
+                            font.family: root.fontFamily; font.pixelSize: root.barFontSize; font.weight: 500
                             color: root.colFg
                             elide: Text.ElideRight
                             Layout.fillWidth: true
@@ -653,7 +654,7 @@ ShellRoot {
                         color: root.colFg
                         font.family: root.fontFamily
                         font.weight: 700
-                        font.pixelSize: root.clockFontSize
+                        font.pixelSize: root.barFontSize
                         Layout.alignment: Qt.AlignVCenter
                         property date currentTime: new Date()
                         text: Qt.formatDateTime(currentTime, "dddd hh:mm:ss AP")
@@ -663,7 +664,7 @@ ShellRoot {
                         visible: root.nowPlayingText !== ""
                         text: "|"
                         font.family: root.fontFamily
-                        font.pixelSize: root.clockFontSize
+                        font.pixelSize: root.barFontSize
                         color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.6)
                         Layout.alignment: Qt.AlignVCenter
                     }
@@ -679,7 +680,7 @@ ShellRoot {
                             Text {
                                 text: root.nowPlayingIsPlaying ? "󰝚" : "󰏤"
                                 font.family: root.fontFamily
-                                font.pixelSize: root.smallFontSize
+                                font.pixelSize: root.barFontSize
                                 color: root.nowPlayingIsPlaying ? root.colAccent : root.colMuted
                                 Layout.alignment: Qt.AlignVCenter
                             }
@@ -687,7 +688,7 @@ ShellRoot {
                                 id: nowPlayingTextItem
                                 text: root.nowPlayingText
                                 font.family: root.fontFamily
-                                font.pixelSize: root.smallFontSize
+                                font.pixelSize: root.barFontSize
                                 font.weight: 500
                                 color: root.colFg
                                 elide: Text.ElideRight
@@ -770,122 +771,6 @@ ShellRoot {
                     Rectangle { Layout.preferredWidth: 1; Layout.preferredHeight: 16; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); visible: SystemTray.items.values.length>0 }
                 }
 
-                // ── running applications (left of volume) ──
-                RowLayout {
-                    id: appTray
-                    visible: root.filteredRunningApps.length > 0
-                    spacing: 2
-                    Repeater {
-                        model: root.filteredRunningApps
-                        delegate: Item {
-                            required property var modelData
-                            property string appId: String(modelData.appId || "")
-                            property bool isFocused: !!modelData.isFocused
-                            property var appWindows: modelData.windows || []
-                            property string combinedTitle: {
-                                let t = modelData.titles || [];
-                                if(t.length === 0) return "";
-                                return t.slice(0,3).join("\n");
-                            }
-                            Layout.preferredWidth: 28
-                            Layout.preferredHeight: 26
-                            Rectangle {
-                                anchors.fill: parent
-                                radius: root.radius
-                                color: appMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : (isFocused ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.12) : "transparent")
-                            }
-                            IconImage {
-                                id: appIcon
-                                anchors.centerIn: parent
-                                anchors.verticalCenterOffset: -1
-                                width: 18
-                                height: 18
-                                source: root.appIconName(appId)
-                                asynchronous: true
-                            }
-                            Text {
-                                visible: appIcon.source === "" || appIcon.status === Image.Error || appIcon.status === Image.Null
-                                anchors.centerIn: parent
-                                anchors.verticalCenterOffset: -1
-                                text: appId.length > 0 ? appId.charAt(0).toUpperCase() : "?"
-                                font.family: root.fontFamily
-                                font.pixelSize: 11
-                                font.weight: 700
-                                color: isFocused ? root.colAccent : root.colFg
-                            }
-                            Rectangle {
-                                visible: modelData.count > 1
-                                anchors.right: parent.right
-                                anchors.top: parent.top
-                                anchors.rightMargin: 1
-                                anchors.topMargin: 2
-                                width: countBadgeText.implicitWidth + 6
-                                height: 10
-                                radius: 5
-                                color: root.colAccent
-                                Text {
-                                    id: countBadgeText
-                                    anchors.centerIn: parent
-                                    text: String(modelData.count)
-                                    font.family: root.fontFamily
-                                    font.pixelSize: 7
-                                    font.weight: 700
-                                    color: root.colBg
-                                }
-                            }
-                            Rectangle {
-                                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                                height: isFocused ? 2.5 : 2
-                                radius: 1
-                                color: isFocused ? root.colUnderlineApps : Qt.rgba(root.colUnderlineApps.r, root.colUnderlineApps.g, root.colUnderlineApps.b, 0.45)
-                                opacity: appMouse.containsMouse || isFocused ? 1 : 0.8
-                            }
-                            MouseArea {
-                                id: appMouse
-                                anchors.fill: parent
-                                hoverEnabled: true
-                                cursorShape: Qt.PointingHandCursor
-                                acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
-                                onClicked: function(mouse){
-                                    if(mouse.button === Qt.MiddleButton){
-                                        root.closeGroupedApp(modelData, false);
-                                        return;
-                                    }
-                                    if(mouse.button === Qt.RightButton){
-                                        if(appWindows.length > 1){
-                                            let curIdx=-1;
-                                            for(let i=0;i<appWindows.length;i++) if(appWindows[i].is_focused) curIdx=i;
-                                            if(curIdx!==-1){
-                                                let nextIdx=(curIdx+1)%appWindows.length;
-                                                let nid=appWindows[nextIdx].id;
-                                                if(nid!==undefined) Quickshell.execDetached(["niri","msg","action","focus-window","--id", String(nid)]);
-                                            } else {
-                                                root.focusGroupedApp(modelData);
-                                            }
-                                        } else {
-                                            root.focusGroupedApp(modelData);
-                                        }
-                                        return;
-                                    }
-                                    root.focusGroupedApp(modelData);
-                                }
-                            }
-                            ToolTip {
-                                visible: appMouse.containsMouse
-                                delay: 400
-                                text: appId + (combinedTitle ? "\n" + combinedTitle : "") + (modelData.count>1 ? "  ("+modelData.count+" windows)" : "")
-                                contentItem: Text {
-                                    text: appMouse.containsMouse ? (appId + (combinedTitle ? "\n" + combinedTitle : "") + (modelData.count>1 ? "  ("+modelData.count+" windows)" : "")) : ""
-                                    font.family: root.fontFamily; font.pixelSize: 10; color: root.colFg
-                                    wrapMode: Text.Wrap
-                                }
-                                background: Rectangle { color: root.colBg; border.color: root.colBorder; border.width: 1; radius: 4 }
-                            }
-                        }
-                    }
-                    Rectangle { Layout.preferredWidth: 1; Layout.preferredHeight: 16; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); visible: root.filteredRunningApps.length>0 }
-                }
-
                 Item {
                     id: audioBtn
                     Layout.preferredWidth: 64
@@ -910,14 +795,14 @@ ShellRoot {
                                 return "󰕾";
                             }
                             font.family: root.fontFamily
-                            font.pixelSize: root.clockFontSize
+                            font.pixelSize: root.barFontSize
                             color: root.colFg
                             Layout.alignment: Qt.AlignVCenter
                         }
                         Text {
                             text: Math.round(audioBtn.vol*100) + "%"
                             font.family: root.fontFamily
-                            font.pixelSize: root.clockFontSize
+                            font.pixelSize: root.barFontSize
                             font.weight: 600
                             color: Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.90)
                             Layout.alignment: Qt.AlignVCenter
@@ -960,12 +845,12 @@ ShellRoot {
                         spacing: 4
                         Text {
                             text: "󰍛"
-                            font.family: root.fontFamily; font.pixelSize: root.clockFontSize; color: root.colFg
+                            font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colFg
                             Layout.alignment: Qt.AlignVCenter
                         }
                         Text {
                             text: root.memUsedText
-                            font.family: root.fontFamily; font.pixelSize: root.clockFontSize; font.weight: 600
+                            font.family: root.fontFamily; font.pixelSize: root.barFontSize; font.weight: 600
                             color: Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.90)
                             Layout.alignment: Qt.AlignVCenter
                         }
@@ -1020,7 +905,7 @@ ShellRoot {
                             return "󰤯";
                         }
                         font.family: root.fontFamily
-                        font.pixelSize: root.clockFontSize
+                        font.pixelSize: root.barFontSize
                         color: root.colFg
                     }
                     Rectangle {
@@ -1052,7 +937,7 @@ ShellRoot {
                             return "󰂯";
                         }
                         font.family: root.fontFamily
-                        font.pixelSize: root.clockFontSize
+                        font.pixelSize: root.barFontSize
                         color: root.colFg
                     }
                     Rectangle {
@@ -1092,11 +977,11 @@ ShellRoot {
                                 return "󰁺";
                             }
                             font.family: root.fontFamily
-                            font.pixelSize: root.clockFontSize
+                            font.pixelSize: root.barFontSize
                             color: battBtn.pct<0.2 && battBtn.devState!==1 ? "#cc241d" : root.colFg
                             Layout.alignment: Qt.AlignVCenter
                         }
-                        Text { text: Math.round(battBtn.pct*100)+"%"; font.family: root.fontFamily; font.pixelSize: root.clockFontSize; font.weight: 600; color: root.colFg; Layout.alignment: Qt.AlignVCenter }
+                        Text { text: Math.round(battBtn.pct*100)+"%"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; font.weight: 600; color: root.colFg; Layout.alignment: Qt.AlignVCenter }
                     }
                     Rectangle {
                         anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
@@ -1116,7 +1001,7 @@ ShellRoot {
                         radius: root.radius
                         color: powerMouse.containsMouse ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.12) : "transparent"
                     }
-                    Text { anchors.centerIn: parent; anchors.verticalCenterOffset: -1; text: "󰐥"; font.family: root.fontFamily; font.pixelSize: root.clockFontSize; color: powerMouse.containsMouse? root.colAccent : root.colFg }
+                    Text { anchors.centerIn: parent; anchors.verticalCenterOffset: -1; text: "󰐥"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: powerMouse.containsMouse? root.colAccent : root.colFg }
                     Rectangle {
                         anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
                         height: 2; radius: 1

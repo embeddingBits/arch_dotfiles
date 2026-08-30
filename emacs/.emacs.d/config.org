@@ -132,8 +132,8 @@
 
 *** Font Configuration
 #+begin_src emacs-lisp
-  (defvar +font-mono "RecMonoCasual Nerd Font Propo")
-  (defvar +font-variable "RecMonoCasual Nerd Font Propo")
+  (defvar +font-mono "JetBrainsMono Nerd Font Propo")
+  (defvar +font-variable "JetBrainsMono Nerd Font Propo")
 
   (when (member +font-mono (font-family-list))
     (set-face-attribute 'default nil

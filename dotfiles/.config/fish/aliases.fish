@@ -32,10 +32,6 @@ alias pacup="sudo pacman -Syu"
 # alias xr="yay -Rns"
 # alias xu="yay -Syu"
 
-# System
-alias shutdown="loginctl poweroff"
-alias reboot="sudo reboot"
-
 # Tmux aliases
 alias tnew="tmux new -s"
 alias tls="tmux ls"
