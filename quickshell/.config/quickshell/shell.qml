@@ -7,6 +7,7 @@ import Quickshell.Wayland
 import Quickshell.Services.Pipewire
 import Quickshell.Services.SystemTray
 import Quickshell.Services.UPower
+import Quickshell.Services.Mpris
 import Quickshell.Bluetooth
 import Quickshell.Networking
 import Quickshell.Widgets
@@ -197,6 +198,24 @@ ShellRoot {
     property real memUsedGB: 0
     property real memTotalGB: 0
     property string memUsedText: memUsedGB.toFixed(1) + "G"
+    // ── now playing (Mpris) ──
+    property var mprisPlayers: Mpris.players ? Mpris.players.values : []
+    property var activeMprisPlayer: {
+        for(let i=0;i<mprisPlayers.length;i++) if(mprisPlayers[i] && mprisPlayers[i].isPlaying) return mprisPlayers[i];
+        for(let i=0;i<mprisPlayers.length;i++) if(mprisPlayers[i] && mprisPlayers[i].trackTitle) return mprisPlayers[i];
+        return null;
+    }
+    property string nowPlayingText: {
+        let p=activeMprisPlayer;
+        if(!p) return "";
+        let t=p.trackTitle||"";
+        let a=p.trackArtist||p.trackArtists||"";
+        if(t && a) return a + " - " + t;
+        if(t) return t;
+        if(a) return a;
+        return p.identity||"";
+    }
+    property bool nowPlayingIsPlaying: activeMprisPlayer ? activeMprisPlayer.isPlaying : false
     Process {
         id: niriProc
         command: ["niri", "msg", "-j", "workspaces"]
@@ -266,7 +285,7 @@ ShellRoot {
             }
         }
     }
-    Timer { id: niriPollTimer; interval: 700; running: true; repeat: true; onTriggered: { if(!niriProc.running) niriProc.running=true; if(!niriWindowsProc.running) niriWindowsProc.running=true; } }
+    Timer { id: niriPollTimer; interval: 200; running: true; repeat: true; onTriggered: { if(!niriProc.running) niriProc.running=true; if(!niriWindowsProc.running) niriWindowsProc.running=true; } }
     Component.onCompleted: { niriProc.running=true; niriWindowsProc.running=true; if(!memProc.running) memProc.running=true; }
     Process {
         id: niriEventProc
@@ -275,7 +294,7 @@ ShellRoot {
         stdout: SplitParser {
             onRead: function(line){
                 let s=String(line||"");
-                if(s.indexOf("Workspaces changed")!==-1 || s.indexOf("Windows changed")!==-1){
+                if(s.indexOf("Workspace")!==-1 || s.indexOf("Window")!==-1){
                     if(!niriProc.running) niriProc.running=true;
                     if(!niriWindowsProc.running) niriWindowsProc.running=true;
                 }
@@ -364,49 +383,6 @@ ShellRoot {
 
                 Rectangle { Layout.preferredWidth: 1; Layout.preferredHeight: 18; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); opacity: 0.6 }
 
-                // ── active window (left of workspaces) ──
-                Item {
-                    id: activeWindowItem
-                    visible: root.activeWindowTitle !== ""
-                    Layout.preferredWidth: Math.min(activeWinText.implicitWidth + 32, 280)
-                    Layout.preferredHeight: 26
-                    Layout.maximumWidth: 280
-                    Rectangle {
-                        anchors.fill: parent
-                        radius: root.radius
-                        color: awMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                    }
-                    RowLayout {
-                        anchors.fill: parent
-                        anchors.leftMargin: 6
-                        anchors.rightMargin: 6
-                        spacing: 6
-                        Text {
-                            text: "󰖲"
-                            font.family: root.fontFamily; font.pixelSize: root.iconFontSize; color: root.colMuted
-                            Layout.alignment: Qt.AlignVCenter
-                        }
-                        Text {
-                            id: activeWinText
-                            text: root.activeWindowTitle
-                            font.family: root.fontFamily; font.pixelSize: root.smallFontSize; font.weight: 500
-                            color: root.colFg
-                            elide: Text.ElideRight
-                            Layout.fillWidth: true
-                            Layout.alignment: Qt.AlignVCenter
-                            maximumLineCount: 1
-                        }
-                    }
-                    Rectangle {
-                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                        height: 2; radius: 1
-                        color: root.colUnderlineActiveWindow
-                        opacity: awMouse.containsMouse ? 1 : 0.9
-                    }
-                    MouseArea { id: awMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor }
-                }
-                Rectangle { visible: activeWindowItem.visible; Layout.preferredWidth: 1; Layout.preferredHeight: 16; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); opacity: 0.6 }
-
                 RowLayout {
                     spacing: 6
                     Repeater {
@@ -454,12 +430,55 @@ ShellRoot {
                         }
                     }
                 }
+                Rectangle { visible: activeWindowItem.visible; Layout.preferredWidth: 1; Layout.preferredHeight: 16; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); opacity: 0.6 }
+
+                // ── active window (right of workspaces) ──
+                Item {
+                    id: activeWindowItem
+                    visible: root.activeWindowTitle !== ""
+                    Layout.preferredWidth: Math.min(activeWinText.implicitWidth + 32, 280)
+                    Layout.preferredHeight: 26
+                    Layout.maximumWidth: 280
+                    Rectangle {
+                        anchors.fill: parent
+                        radius: root.radius
+                        color: awMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+                    }
+                    RowLayout {
+                        anchors.fill: parent
+                        anchors.leftMargin: 6
+                        anchors.rightMargin: 6
+                        spacing: 6
+                        Text {
+                            text: "󰖲"
+                            font.family: root.fontFamily; font.pixelSize: root.iconFontSize; color: root.colMuted
+                            Layout.alignment: Qt.AlignVCenter
+                        }
+                        Text {
+                            id: activeWinText
+                            text: root.activeWindowTitle
+                            font.family: root.fontFamily; font.pixelSize: root.smallFontSize; font.weight: 500
+                            color: root.colFg
+                            elide: Text.ElideRight
+                            Layout.fillWidth: true
+                            Layout.alignment: Qt.AlignVCenter
+                            maximumLineCount: 1
+                        }
+                    }
+                    Rectangle {
+                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                        height: 2; radius: 1
+                        color: root.colUnderlineActiveWindow
+                        opacity: awMouse.containsMouse ? 1 : 0.9
+                    }
+                    MouseArea { id: awMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor }
+                }
             }
 
             Item {
                 id: centerSection
                 anchors.centerIn: parent
-                width: clock.implicitWidth + 28
+                width: centerRow.implicitWidth + 28
                 height: parent.height
                 Rectangle {
                     anchors.fill: parent
@@ -469,17 +488,59 @@ ShellRoot {
                     color: clockMouse.containsMouse || root.calendarOpen ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
                     // no border box
                 }
-                Text {
-                    id: clock
+                RowLayout {
+                    id: centerRow
                     anchors.centerIn: parent
-                    anchors.verticalCenterOffset: -1
-                    color: root.colFg
-                    font.family: root.fontFamily
-                    font.weight: 700
-                    font.pixelSize: root.clockFontSize
-                    property date currentTime: new Date()
-                    text: Qt.formatDateTime(currentTime, "dddd hh:mm:ss AP")
-                    Timer { interval: 1000; running: true; repeat: true; onTriggered: clock.currentTime = new Date() }
+                    spacing: 8
+                    Text {
+                        id: clock
+                        color: root.colFg
+                        font.family: root.fontFamily
+                        font.weight: 700
+                        font.pixelSize: root.clockFontSize
+                        Layout.alignment: Qt.AlignVCenter
+                        property date currentTime: new Date()
+                        text: Qt.formatDateTime(currentTime, "dddd hh:mm:ss AP")
+                        Timer { interval: 1000; running: true; repeat: true; onTriggered: clock.currentTime = new Date() }
+                    }
+                    Text {
+                        visible: root.nowPlayingText !== ""
+                        text: "|"
+                        font.family: root.fontFamily
+                        font.pixelSize: root.clockFontSize
+                        color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.6)
+                        Layout.alignment: Qt.AlignVCenter
+                    }
+                    Item {
+                        visible: root.nowPlayingText !== ""
+                        Layout.preferredWidth: nowPlayingRow.implicitWidth
+                        Layout.preferredHeight: 16
+                        Layout.alignment: Qt.AlignVCenter
+                        RowLayout {
+                            id: nowPlayingRow
+                            anchors.centerIn: parent
+                            spacing: 4
+                            Text {
+                                text: root.nowPlayingIsPlaying ? "󰝚" : "󰏤"
+                                font.family: root.fontFamily
+                                font.pixelSize: root.smallFontSize
+                                color: root.nowPlayingIsPlaying ? root.colAccent : root.colMuted
+                                Layout.alignment: Qt.AlignVCenter
+                            }
+                            Text {
+                                id: nowPlayingTextItem
+                                text: root.nowPlayingText
+                                font.family: root.fontFamily
+                                font.pixelSize: root.smallFontSize
+                                font.weight: 500
+                                color: root.colFg
+                                elide: Text.ElideRight
+                                Layout.maximumWidth: 260
+                                Layout.alignment: Qt.AlignVCenter
+                                maximumLineCount: 1
+                            }
+                        }
+                    }
                 }
                 Rectangle {
                     anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
@@ -493,7 +554,20 @@ ShellRoot {
                     anchors.fill: parent
                     hoverEnabled: true
                     cursorShape: Qt.PointingHandCursor
-                    onClicked: root.toggleCalendar()
+                    onClicked: function(mouse){
+                        if(root.nowPlayingText !== "" && root.activeMprisPlayer){
+                            let rowX=centerRow.x
+                            let clockRight=rowX + clock.implicitWidth + 12
+                            if(mouseX > clockRight){
+                                let p=root.activeMprisPlayer;
+                                if(p.canTogglePlaying) p.togglePlaying();
+                                else if(p.isPlaying) p.pause();
+                                else p.play();
+                                return;
+                            }
+                        }
+                        root.toggleCalendar();
+                    }
                 }
             }
 
