@@ -1,0 +1,2 @@
+;; Generated package description from typst-ts-mode.el  -*- mode: lisp-data; no-byte-compile: t -*-
+(define-package "typst-ts-mode" "0.12.2" "Tree Sitter support for Typst" '((emacs "29.1")) :commit "9e95d143e519600ea32c7a546ddb72fc349d17fc" :authors '(("Ziqi Yang" . "mr.meowking@anche.no")) :maintainer '(("Ziqi Yang" . "mr.meowking@anche.no") ("Huan Nguyen" . "nguyenthieuhuan@gmail.com")) :keywords '("typst" "languages" "tree-sitter") :url "https://codeberg.org/meow_king/typst-ts-mode")

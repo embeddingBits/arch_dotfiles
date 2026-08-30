@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_wfrecorderplugin_FILE /home/steel/.config/quickshell/plugins/WfRecorder/build/WfRecorder/libwfrecorderplugin.so)
-set(__QT_DEPLOY_TARGET_wfrecorderplugin_TYPE MODULE_LIBRARY)

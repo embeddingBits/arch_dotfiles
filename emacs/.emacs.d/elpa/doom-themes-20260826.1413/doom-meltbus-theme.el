@@ -1,0 +1,472 @@
+;;; doom-meltbus-theme.el --- a dark (mostly) monochromatic theme -*- lexical-binding: t; no-byte-compile: t; -*-
+;;
+;; Added: November 20, 2021 (#683)
+;; Author: spacefrogg <https://github.com/spacefrogg>
+;; Maintainer:
+;; Source: https://github.com/equinusocio/vsc-material-theme
+;;
+;;; Commentary:
+;;; Code:
+
+(require 'doom-themes)
+
+
+;;
+;;; Variables
+
+(defgroup doom-meltbus-theme nil
+  "Options for the `meltbus' theme."
+  :group 'doom-themes)
+
+(defcustom doom-meltbus-hl-line t
+  "If non-nil, highlight the current line with an underline."
+  :group 'doom-meltbus-theme
+  :type 'boolean)
+
+(defcustom doom-meltbus-uniform-font-size nil
+  "If non-nil, all faces use the basic font size."
+  :group 'doom-meltbus-theme
+  :type 'boolean)
+
+
+;;
+;;; Theme definition
+
+(def-doom-theme doom-meltbus
+  "A dark mostly monochromatic theme inspired by the eltbus theme.
+
+Colours are only used to distinguish states and priorities, and to
+highlight interactive elements."
+
+  ;;     default   256       16
+  ((bg '("black"    "black"  "black"))
+   (fg '("#dddddd" "#dddddd" "white"))
+
+   (bg-alt '("black"   "black"   "black"))
+   (fg-alt '("#dddddd" "#dddddd" "white"))
+
+   (base0 '("black"   "black"   "black"))
+   (base1 '("#111111" "#111111" "brightblack"))
+   (base2 '("#353535" "#333333" "brightblack"))
+   (base3 '("#464646" "#444444" "brightblack"))
+   (base4 '("#686868" "#666666" "brightblack"))
+   (base5 '("#8a8a8a" "#888888" "brightblack"))
+   (base6 '("#acacac" "#aaaaaa" "brightblack"))
+   (base7 '("#cecece" "#cccccc" "brightblack"))
+   (base8 '("#efefef" "#eeeeee" "white"))
+
+   (grey base4)
+   (red       '("#f88080" "#ff8888" "red"))
+   (dark-red  '("#b22222" "#bb2222" "red"))
+   (orange    '("#da8548" "#dd8844" "brightred"))
+   (green     '("#448844" "#448844" "green"))
+   (teal      '("#c0f860" "#aaffaa" "brightgreen"))
+   (yellow    '("#cdad00" "#ccaa00" "yellow"))
+   (blue      '("#87afff" "#88aaff" "brightblue"))
+   (dark-blue '("#6c8ccc" "#6688cc" "blue"))
+   (magenta   '("#db7093" "#ee6688" "brightmagenta"))
+   (violet    '("#a9a1e1" "#a9a1e1" "magenta"))
+   (cyan      '("#3fc3e5" "#33ccee" "brightcyan"))
+   (dark-cyan '("#5699af" "#5599ff" "cyan"))
+   (white     '("#ffffff" "#ffffff" "white"))
+
+   ;; faded colors for running text
+   (faded-red     '("#fac7c7" "#ffcccc" "red"))
+   (faded-blue    '("#abc7ff" "#aaccff" "brightblue"))
+   (faded-green   '("#7cab7c" "#77aa77" "green"))
+   (faded-yellow  '("#dcc54c" "#ddcc44" "yellow"))
+   (faded-magenta '("#e59ab3" "#ee99bb" "brightmagenta"))
+   (faded-cyan    '("#7de4ff" "#77eeff" "brightcyan"))
+
+   ;; "universal syntax classes"; *mandatory*
+   (highlight blue)
+   (vertical-bar base1)
+   (selection base3)
+   (builtin base5)
+   (comments base4)
+   (doc-comments base5)
+   (constants base5)
+   (functions fg)
+   (keywords fg)
+   (methods fg)
+   (operators base5)
+   (type base6)
+   (strings base6)
+   (variables fg)
+   (numbers fg)
+   (region base2)
+   (error       red)
+   (warning     orange)
+   (success     green)
+   (vc-modified orange)
+   (vc-added    faded-green)
+   (vc-deleted  faded-red)
+   (vc-conflict magenta)
+
+   ;; theme-local variables
+   (almost-invisible base3))
+
+  ;; Base theme face overrides
+  (((cursor &override) :background base7)
+   (region :inverse-video t)
+   (lazy-highlight :foreground base0 :background (doom-darken highlight 0.1))
+   (hl-line :underline doom-meltbus-hl-line)
+   ((link &override) :weight 'normal :underline 'unspecified :foreground highlight)
+   (link-visited :inherit 'link)
+   (minibuffer-prompt :foreground base5 :background base2 :weight 'bold)
+   (mode-line-emphasis :foreground fg :weight 'bold :distant-foreground bg)
+   (mode-line-highlight :foreground fg :weight 'bold :distant-foreground bg)
+   (mode-line-inactive :foreground base5)
+
+   ;;;; adoc
+   (adoc-align-face :inherit 'adoc-meta-face)
+   (adoc-anchor-face :inherit 'adoc-meta-face)
+   (adoc-attribute-face :inherit 'adoc-meta-face :slant 'italic)
+   (adoc-bold-face :inherit 'bold)
+   (adoc-code-face :inherit 'font-lock-string-face)
+   (adoc-emphasis-face :inherit 'italic)
+   (adoc-gen-face :foreground functions)
+   (adoc-language-info-face :inherit 'adoc-secondary-text-face)
+   (adoc-language-keyword-face :inherit 'adoc-secondary-text-face)
+   ((adoc-list-face &inherit org-list-dt))
+   ((adoc-markup-face &inherit org-code))
+   (adoc-meta-face :foreground constants)
+   (adoc-meta-hide-face :inherit 'adoc-meta-face)
+   (adoc-preprocessor-face :inherit 'adoc-secondary-text-face)
+   (adoc-secondary-text-face :foreground builtin)
+   ((adoc-table-face &inherit org-table))
+   ((adoc-title-0-face &inherit org-document-title))
+   ((adoc-title-1-face &inherit outline-1))
+   ((adoc-title-2-face &inherit outline-2))
+   ((adoc-title-3-face &inherit outline-3))
+   ((adoc-title-4-face &inherit outline-4))
+   ((adoc-title-5-face &inherit outline-5))
+   (adoc-value-face :inherit 'adoc-meta-face)
+   ((adoc-verbatim-face &inherit org-verbatim))
+   (adoc-warning-face :foreground warning)
+   ;;;; ansi-term <built-in>
+   ;; Fix bright black producing full black making some text unreadable.
+   (ansi-color-bright-black :foreground base3 :background base3)
+   ;;;; compilation <built-in>
+   (compilation-line-number :foreground fg :weight 'bold)
+   ;;;; coq
+   (coq-solve-tactics-face :foreground highlight)
+   ;;;; custom <built-in>
+   ((custom-button &override) :foreground highlight)
+   ((custom-button-unraised &override) :foreground comments)
+   ((custom-button-pressed-unraised &override) :background comments)
+   ((custom-button-pressed &override) :background highlight)
+   ((custom-button-mouse &override) :background highlight)
+   ((custom-variable-button &override) :foreground fg)
+   (custom-saved :inherit 'custom-state)
+   (custom-modified :inherit 'custom-changed)
+   (custom-variable-tag :foreground fg)
+   ((custom-visibility &override) :foreground fg)
+   (custom-group-tag :foreground base8 :weight 'bold)
+   (custom-group-tag-1 :foreground fg)
+   (custom-group-subtitle :foreground fg)
+   ((custom-invalid &override) :foreground error)
+   (custom-state :foreground green)
+   (custom-changed :foreground orange)
+   ;;;; diff <built-in>
+   (diff-added :foreground vc-added)
+   (diff-changed :foreground vc-modified)
+   (diff-header :foreground fg :weight 'bold)
+   (diff-hunk-header :foreground base7 :background base3)
+   (diff-file-header :foreground fg :background base3 :weight 'bold)
+   (diff-refine-added :foreground bg :background vc-added :distant-foreground fg)
+   (diff-refine-changed :foreground bg :background vc-modified :distant-foreground fg)
+   (diff-refine-removed :foreground bg :background vc-deleted :distant-foreground fg)
+   (diff-removed :foreground vc-deleted)
+   ;;;; dired <built-in>
+   (dired-header :foreground doc-comments :weight 'bold)
+   (dired-mark :foreground builtin)
+   (dired-marked :foreground orange :weight 'bold)
+   (dired-symlink :foreground doc-comments :weight 'bold)
+   ;;;; diredfl
+   (diredfl-deletion :inherit 'dired-mark)
+   (diredfl-deletion-file-name :inherit 'dired-flagged)
+   (diredfl-flag-mark :inherit 'dired-mark)
+   (diredfl-flag-mark-line :inherit 'dired-marked)
+   (diredfl-read-priv :foreground fg)
+   (diredfl-symlink :foreground cyan :weight 'bold)
+   (diredfl-date-time :foreground base6)
+   ;;;; doom-modeline
+   (doom-modeline-bar :background fg :foreground bg)
+   (doom-modeline-bar-inactive :background base4 :foreground bg)
+   (doom-modeline-info :foreground fg :weight 'bold)
+   (doom-modeline-lsp-running :inherit 'doom-modeline-info)
+   (doom-modeline-evil-insert-state :foreground green)
+   (doom-modeline-evil-emacs-state :foreground cyan)
+   (doom-modeline-evil-normal-state :foreground base5)
+   (doom-modeline-evil-visual-state :foreground white)
+   (doom-modeline-evil-operator-state :inherit 'doom-modeline-evil-visual-state)
+   ;;;; ediff <built-in>
+   (ediff-current-diff-A :background base2 :inherit 'diff-removed)
+   (ediff-current-diff-B :background base2 :inherit 'diff-added)
+   (ediff-current-diff-C :background base2 :inherit 'diff-changed)
+   (ediff-fine-diff-A :inherit 'diff-refine-removed)
+   (ediff-fine-diff-B :inherit 'diff-refine-added)
+   (ediff-fine-diff-C :inherit 'diff-refine-changed)
+   (ediff-even-diff-A :background base3)
+   (ediff-even-diff-B :background base3)
+   (ediff-even-diff-C :background base3)
+   (ediff-odd-diff-A :background base3)
+   (ediff-odd-diff-B :background base3)
+   (ediff-odd-diff-C :background base3)
+   ;;;; embark
+   (embark-target :underline t)
+   (embark-keybinding :foreground builtin)
+   ;;;; evil
+   ((evil-ex-substitute-replacement &override) :foreground cyan)
+   ;;;; evil-snipe
+   ((evil-snipe-first-match-face &override) :background bg)
+   ;;;; flycheck
+   (flycheck-error :underline `(:style wave :color ,error))
+   (flycheck-info :underline `(:style wave :color ,success))
+   (flycheck-warning :underline `(:style wave :color ,warning))
+   ;;;; flymake
+   (flymake-error :underline `(:style wave :color ,error))
+   (flymake-note :underline `(:style wave :color ,success))
+   (flymake-warning :underline `(:style wave :color ,warning))
+   ;;;; flx-ido
+   ((flx-highlight-face &override) :foreground highlight)
+   ;;;; git-commit (part of magit)
+   ((git-commit-keyword &override) :foreground keywords)
+   (git-commit-comment-branch-local :inherit 'magit-branch-local)
+   (git-commit-comment-branch-remote :inherit 'magit-branch-remote)
+   (git-commit-comment-detached :foreground warning)
+   (git-commit-comment-file :foreground doc-comments)
+   ;;;; magit
+   (magit-blame-hash :foreground fg)
+   (magit-blame-date :foreground base6)
+   (magit-blame-heading :inherit 'magit-log-author :background base3 :extend t)
+   (magit-branch-current :foreground fg :weight 'bold :underline t)
+   (magit-branch-local :foreground bg :background fg :weight 'bold :distant-foreground fg)
+   (magit-branch-remote :foreground fg :weight 'bold)
+   (magit-diff-added :inherit 'diff-added)
+   (magit-diff-added-highlight :inherit 'magit-diff-context-highlight :foreground vc-added)
+   (magit-diff-base :foreground (doom-darken orange 0.2))
+   (magit-diff-base-highlight :foreground orange)
+   (magit-diff-context-highlight :foreground base7 :background base1)
+   (magit-diff-file-heading-selection :inherit 'magit-diff-hunk-heading-selection)
+   (magit-diff-hunk-heading :inherit 'diff-hunk-header)
+   (magit-diff-hunk-heading-highlight :inherit 'diff-file-header)
+   (magit-diff-hunk-heading-selection :inherit 'magit-diff-hunk-heading-highlight :foreground base7)
+   (magit-diff-lines-heading :inherit 'magit-diff-hunk-heading-highlight)
+   (magit-diff-removed :inherit 'diff-removed)
+   (magit-diff-removed-highlight :inherit 'magit-diff-context-highlight :foreground vc-deleted)
+   (magit-diff-whitespace-warning :foreground bg :background vc-deleted)
+   (magit-diffstat-added :inherit 'diff-added)
+   (magit-diffstat-removed :inherit 'diff-removed)
+   (magit-header-line :background base2 :foreground base6 :weight 'bold :box `(:line-width 3 :color ,base2))
+   (magit-filename :foreground fg)
+   (magit-item-highlight :weight 'bold)
+   (magit-log-author :foreground fg)
+   (magit-log-date :foreground fg)
+   (magit-section-heading :weight 'bold :extend t)
+   (magit-section-highlight :background base1)
+   (magit-section-heading-selection :foreground base7 :weight 'bold)
+   (magit-tag :foreground vc-added)
+   ;;;; marginalia
+   ((marginalia-date &inherit diredfl-date-time))
+   (marginalia-documentation :foreground fg)
+   (marginalia-size :inherit 'marginalia-date)
+   ((marginalia-file-priv-no &inherit diredfl-no-priv))
+   ((marginalia-file-priv-dir &inherit diredfl-dir-priv))
+   ((marginalia-file-priv-exec &inherit diredfl-exec-priv))
+   ((marginalia-file-priv-link &inherit diredfl-link-priv))
+   ((marginalia-file-priv-rare &inherit diredfl-rare-priv))
+   ((marginalia-file-priv-rare &inherit diredfl-rare-priv))
+   ((marginalia-file-priv-read &inherit diredfl-read-priv))
+   ((marginalia-file-priv-other &inherit diredfl-other-priv))
+   ((marginalia-file-priv-write &inherit diredfl-write-priv))
+   ;;;; markdown <modes:markdown-mode,gfm-mode>
+   (markdown-header-face :inherit 'bold :foreground fg)
+   (markdown-metadata-key-face :foreground builtin)
+   (markdown-list-face :foreground builtin)
+   (markdown-link-face :foreground fg)
+   (markdown-url-face :inherit 'link)
+   (markdown-italic-face :inherit 'italic)
+   (markdown-bold-face :inherit 'bold)
+   ((markdown-blockquote-face &inherit org-quote))
+   ((markdown-code-face &inherit org-code))
+   ;;;; message <built-in>
+   (message-cited-text-1  :foreground base7 :background base2)
+   (message-cited-text-2 :foreground base5 :background base2)
+   (message-cited-text-3 :inherit 'message-cited-text-1)
+   (message-cited-text-4 :inherit 'message-cited-text-2)
+   (message-header-cc :foreground fg :background bg :weight 'bold)
+   (message-header-name :foreground base5)
+   (message-header-newsgroups :inherit 'message-cited-text)
+   (message-header-other :foreground almost-invisible)
+   (message-header-subject :inherit 'message-cited-text)
+   (message-header-to :inherit 'message-header-cc)
+   (message-header-xheader :inherit 'message-header-other)
+   (message-header-mml :inherit 'message-header-other)
+   (message-header-separator :foreground highlight)
+   ;;;; mu4e
+   (mu4e-header-face :foreground base4)
+   (mu4e-header-highlight-face :inherit 'hl-line)
+   (mu4e-thread-fold-face :inherit 'mu4e-header-face)
+   (mu4e-unread-face :foreground fg)
+   (mu4e-flagged-face :foreground yellow)
+   (mu4e-related-face :inherit 'mu4e-header-face :slant 'italic)
+   (mu4e-replied-face :foreground faded-blue)
+   ;;;; neotree
+   ((neo-vc-added-face &inherit treemacs-git-added-face))
+   ((neo-vc-conflict-face &inherit treemacs-git-conflict-face))
+   ((neo-vc-modified-face &inherit treemacs-git-modified-face))
+   (doom-neotree-data-file-face :foreground comments)
+   ;;;; notmuch
+   (notmuch-crypto-signature-bad :foreground error)
+   (notmuch-crypto-signature-good :foreground almost-invisible)
+   (notmuch-crypto-signature-unknown :foreground warning)
+   (notmuch-crypto-signature-good-key :foreground error)
+   (notmuch-crypto-decryption :foreground error)
+   (notmuch-message-summary-face :background base2)
+   (notmuch-search-matching-authros :foreground highlight)
+   (notmuch-tag-face :inherit 'message-header-separator)
+   (notmuch-tree-match-tag-face :inherit 'notmuch-tag-face)
+   (notmuch-tree-match-author-face :inherit 'notmuch-tree-match-tag-face)
+   ;;;; lsp-ui
+   (lsp-ui-peek-header :foreground base8 :background base3 :bold bold)
+   (lsp-ui-peek-highlight :inherit 'lsp-ui-peek-header :background base4 :foreground fg)
+   (lsp-ui-peek-list :background base2)
+   (lsp-ui-peek-peek :background bg)
+   (lsp-ui-peek-line-number :foreground fg)
+   (lsp-ui-peek-selection :foreground bg :background highlight :bold bold)
+   (lsp-ui-sideline-code-action :foreground base8)
+   (lsp-ui-sideline-current-symbol :inherit 'lsp-ui-sideline-code-action)
+   ;;;; org <built-in> <modes:org-mode>
+   (org-code :foreground doc-comments)
+   (org-date :inherit 'link)
+   (org-date-selected :inherit 'lazy-highlight)
+   (org-document-title :height (if doom-meltbus-uniform-font-size 1.0 1.7)
+                       :foreground (if doom-meltbus-uniform-font-size base8 doc-comments)
+                       :weight 'bold :slant 'normal)
+   (org-done :foreground success :weight 'bold)
+   (org-done-keyword-face :foreground success)
+   (org-drawer :foreground comments)
+   ((org-block &override) :foreground fg :background 'unspecified :weight 'normal :slant 'normal :underline 'unspecified :inverse-video 'unspecified)
+   ((org-block-begin-line &override) :foreground base5 :weight 'bold)
+   ((org-block-end-line &override):inherit 'org-block-begin-line)
+   (org-footnote :foreground doc-comments)
+   (org-formula :foreground doc-comments)
+   (org-list-dt :foreground base8 :weight 'bold)
+   ;; org-level-N inherits from outline-N
+   (org-property-value :foreground fg)
+   (org-table :foreground fg)
+   (org-todo :foreground error :weight 'bold)
+   (org-todo-keyword-face :foreground error)
+   (org-verbatim :inherit 'org-code)
+   ;;;; org-agenda <built-in>
+   (org-agenda-clocking :background base3)
+   ; (org-agenda-date :foreground fg)
+   ; (org-agenda-date-today :inherit 'default :bold bold :underline t)
+   ; (org-agenda-date-weekend :inherit 'default :foreground (doom-darken (face-foreground 'org-agenda-date) 0.3))
+   (org-scheduled-previously :foreground base6 :bold bold)
+   ;;;; org-journal <modes:org-journal-mode>
+   (org-journal-calendar-entry-face :foreground fg :slant 'italic :underline t)
+   (org-journal-calendar-scheduled-face :foreground bg :background fg :slant 'italic )
+   ;;;; org-ref
+   (org-ref-acronym-face :foreground red)
+   (org-ref-cite-face :foreground green)
+   (org-ref-glossary-face :foreground dark-red)
+   (org-ref-label-face :foreground blue)
+   (org-ref-ref-face :foreground teal)
+   (+org-todo-cancel :inherit '(font-lock-doc-face org-todo)) ; Subdue canceled TODOs
+   ;;;; outline
+   (outline-1 :height (if doom-meltbus-uniform-font-size 1.0 1.5)
+              :background base1 :weight 'bold)
+   (outline-2 :height (if doom-meltbus-uniform-font-size 1.0 1.4)
+              :foreground (if doom-meltbus-uniform-font-size (doom-darken fg 0.2) 'unspecified)
+              :background base1 :weight 'bold)
+   (outline-3 :height (if doom-meltbus-uniform-font-size 1.0 1.3)
+              :foreground (if doom-meltbus-uniform-font-size (doom-darken fg 0.3) 'unspecified)
+              :background base1 :weight 'bold)
+   (outline-4 :height (if doom-meltbus-uniform-font-size 1.0 1.2)
+              :foreground (if doom-meltbus-uniform-font-size (doom-darken fg 0.4) 'unspecified)
+              :background base1 :weight 'bold)
+   (outline-5 :height (if doom-meltbus-uniform-font-size 1.0 1.1)
+              :background base1
+              :weight (if doom-meltbus-uniform-font-size 'normal 'bold))
+   (outline-6 :height (if doom-meltbus-uniform-font-size 1.0 1.0)
+              :foreground (if doom-meltbus-uniform-font-size (doom-darken fg 0.2) 'unspecified)
+              :background base1
+              :weight (if doom-meltbus-uniform-font-size 'normal 'bold))
+   (outline-7 :height (if doom-meltbus-uniform-font-size 1.0 1.0)
+              :foreground (if doom-meltbus-uniform-font-size (doom-darken fg 0.3) 'unspecified)
+              :background base1 :weight 'normal)
+   (outline-8 :height (if doom-meltbus-uniform-font-size 1.0 1.0)
+              :foreground (if doom-meltbus-uniform-font-size (doom-darken fg 0.4) 'unspecified)
+              :background base1 :weight 'normal)
+   ;;;; pkgbuild-mode <modes:pkgbuild-mode>
+   (pkgbuild-error-face :underline `(:style wave :color ,error))
+   ;;;; popup
+   (popup-tip-face :inherit 'popup-face :foreground fg :background bg :bold bold :underline t)
+   ;;;; proof
+   (proof-boring-face :foreground comments)
+   (proof-debug-message-face :foreground doc-comments)
+   (proof-error-face :foreground error)
+   (proof-locked-face :background (doom-lighten base1 0.05))
+   (proof-queue-face :foreground warning)
+   (proof-warning-face :foreground warning)
+   (proof-script-highlight-error-face :foreground error :weight 'bold)
+   (proof-script-sticky-error-face :foreground error)
+   (proof-tactics-name-face :foreground builtin)
+   (proof-tacticals-name-face :foreground keywords :weight 'bold)
+   (proof-eager-annotation-face :foreground success)
+   ;;;; rainbow-delimiters
+   (rainbow-delimiters-depth-1-face :foreground green)
+   (rainbow-delimiters-depth-2-face :foreground dark-red)
+   (rainbow-delimiters-depth-3-face :foreground red)
+   (rainbow-delimiters-depth-4-face :inherit 'rainbow-delimiters-depth-1-face)
+   (rainbow-delimiters-depth-5-face :inherit 'rainbow-delimiters-depth-2-face)
+   (rainbow-delimiters-depth-6-face :inherit 'rainbow-delimiters-depth-3-face)
+   (rainbow-delimiters-depth-7-face :inherit 'rainbow-delimiters-depth-1-face)
+   (rainbow-delimiters-depth-8-face :inherit 'rainbow-delimiters-depth-2-face)
+   (rainbow-delimiters-depth-9-face :inherit 'rainbow-delimiters-depth-3-face)
+   (rainbow-delimiters-base-face :inherit 'default)
+   ;;;; smerge-tool
+   ((smerge-markers &inherit magit-diff-conflict-heading))
+   (smerge-lower :inherit 'diff-added)
+   (smerge-upper :inherit 'diff-removed)
+   (smerge-base :inherit 'diff-changed)
+   (smerge-refined-added :inherit 'diff-refine-added)
+   (smerge-refined-removed :inherit 'diff-refine-removed)
+   ;;;; treemacs
+   (treemacs-git-conflict-face :foreground vc-conflict)
+   (treemacs-git-modified-face :foreground vc-modified)
+   ;;;; vertico
+   ((vertico-current &inherit embark-target))
+   (vertico-group-title :inherit 'shadow)
+   ;;;; vterm
+   ((vterm-color-black &override) :background base0 :foreground base3)
+   ((vterm-color-red &override) :background red :foreground faded-red)
+   ((vterm-color-blue &override) :background blue :foreground faded-blue)
+   ((vterm-color-green &override) :background green :foreground faded-green)
+   ((vterm-color-yellow &override) :background yellow :foreground faded-yellow)
+   ((vterm-color-magenta &override) :background magenta :foreground faded-magenta)
+   ((vterm-color-cyan &override) :background cyan :foreground faded-cyan)
+   ((vterm-color-white &override) :background base7 :foreground base8)
+   (vterm-color-bright-black :foreground base3 :background base3)
+   (vterm-color-bright-red :foreground faded-red :background faded-red)
+   (vterm-color-bright-blue :foreground faded-blue :background faded-blue)
+   (vterm-color-bright-green :foreground faded-green :background faded-green)
+   (vterm-color-bright-yellow :foreground faded-yellow :background faded-yellow)
+   (vterm-color-bright-magenta :foreground faded-magenta :background faded-magenta)
+   (vterm-color-bright-cyan :foreground faded-cyan :background faded-cyan)
+   (vterm-color-bright-white :foreground base8 :background base8)
+   ;;;; wgrep
+   (wgrep-face :background base2)
+   ;;;; which-key
+   (which-key-key-face :foreground base5)
+   (which-key-group-description-face :foreground base5)
+   (which-key-command-description-face :foreground fg :weight 'bold)
+   (which-key-local-map-description-face :foreground fg))
+
+  ;; Base theme variable overrides
+  ())
+
+;;; doom-meltbus-theme.el ends here

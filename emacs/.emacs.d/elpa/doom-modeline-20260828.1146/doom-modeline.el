@@ -1,0 +1,318 @@
+;;; doom-modeline.el --- A minimal and modern mode-line -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2018-2026 Vincent Zhang
+
+;; Author: Vincent Zhang <seagle0128@gmail.com>
+;; Homepage: https://github.com/seagle0128/doom-modeline
+;; Package-Version: 20260828.1146
+;; Package-Revision: 6f911e982bdf
+;; Package-Requires: ((emacs "25.1") (compat "30.1.0.0") (nerd-icons "0.1.0") (shrink-path "0.3.1"))
+;; Keywords: faces mode-line
+
+;; This file is not part of GNU Emacs.
+
+;;
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
+;;
+
+;;; Commentary:
+;;
+;; This package offers a fancy and fast mode-line inspired by minimalism design.
+;;
+;; It's integrated into Doom Emacs (https://github.com/hlissner/doom-emacs) and
+;; Centaur Emacs (https://github.com/seagle0128/.emacs.d).
+;;
+;; The doom-modeline offers:
+;; - A match count panel (for anzu, iedit, multiple-cursors, symbol-overlay,
+;;   evil-search and evil-substitute)
+;; - An indicator for recording a macro
+;; - Current environment version (e.g. python, ruby, go, etc.) in the major-mode
+;; - A customizable mode-line height (see doom-modeline-height)
+;; - A minor modes segment which is compatible with minions
+;; - An error/warning count segment for flymake/flycheck
+;; - A workspace name segment for eyebrowse/tab-bar
+;; - A perspective name segment for persp-mode
+;; - A window number segment for winum and window-numbering
+;; - An indicator for modal editing state, including evil, overwrite, god, ryo
+;;   and xah-fly-keys, etc.
+;; - An indicator for battery status
+;; - An indicator for current input method
+;; - An indicator for debug state
+;; - An indicator for remote host
+;; - An indicator for LSP state with lsp-mode or eglot
+;; - An indicator for github notifications
+;; - An indicator for unread emails with mu4e-alert
+;; - An indicator for unread emails with gnus (basically builtin)
+;; - An indicator for irc notifications with circe, rcirc or erc.
+;; - An indicator for buffer position which is compatible with nyan-mode or poke-line
+;; - An indicator for party parrot
+;; - An indicator for PDF page number with pdf-tools
+;; - An indicator for markdown/org previews with grip
+;; - Truncated file name, file icon, buffer state and project name in buffer
+;;   information segment, which is compatible with project, find-file-in-project
+;;   and projectile
+;; - New mode-line for Info-mode buffers
+;; - New package mode-line for paradox
+;; - New mode-line for helm buffers
+;; - New mode-line for git-timemachine buffers
+;;
+;; Installation:
+;; From melpa, `M-x package-install RET doom-modeline RET`.
+;; In `init.el`,
+;; (require 'doom-modeline)
+;; (doom-modeline-mode 1)
+;; or
+;; (use-package doom-modeline
+;;   :ensure t
+;;   :init (doom-modeline-mode 1))
+;;
+
+;;; Code:
+
+(require 'doom-modeline-core)
+(require 'doom-modeline-segments)
+
+
+;;
+;; Mode lines
+;;
+
+(doom-modeline-def-modeline 'main
+  '(eldoc bar window-state workspace-name window-number modals matches follow buffer-info remote-host buffer-position word-count parrot selection-info)
+  '(compilation objed-state misc-info project-name persp-name battery grip irc mu4e gnus github debug repl lsp spell minor-modes input-method indent-info buffer-encoding major-mode process vcs check time))
+
+(doom-modeline-def-modeline 'minimal
+  '(bar window-number modals matches buffer-info-simple)
+  '(media-info major-mode time))
+
+(doom-modeline-def-modeline 'special
+  '(eldoc bar window-state window-number modals matches buffer-info remote-host buffer-position word-count parrot selection-info)
+  '(compilation objed-state misc-info battery irc-buffers debug minor-modes input-method indent-info buffer-encoding major-mode process time))
+
+(doom-modeline-def-modeline 'project
+  '(bar window-number modals buffer-default-directory remote-host buffer-position)
+  '(compilation misc-info battery irc mu4e gnus github debug minor-modes input-method major-mode process time))
+
+(doom-modeline-def-modeline 'dashboard
+  '(bar window-number modals buffer-default-directory-simple remote-host)
+  '(compilation misc-info battery irc mu4e gnus github debug minor-modes input-method major-mode process time))
+
+(doom-modeline-def-modeline 'vcs
+  '(bar window-state window-number modals matches buffer-info remote-host buffer-position parrot selection-info)
+  '(compilation misc-info battery irc mu4e gnus github debug minor-modes buffer-encoding major-mode process time))
+
+(doom-modeline-def-modeline 'package
+  '(bar window-number modals matches package buffer-position parrot)
+  '(compilation misc-info major-mode process time))
+
+(doom-modeline-def-modeline 'info
+  '(bar window-number modals matches buffer-info info-nodes buffer-position parrot selection-info)
+  '(compilation misc-info buffer-encoding major-mode time))
+
+(doom-modeline-def-modeline 'media
+  '(bar window-number modals buffer-size buffer-info)
+  '(compilation misc-info media-info major-mode process vcs time))
+
+(doom-modeline-def-modeline 'message
+  '(eldoc bar window-state window-number modals matches buffer-info-simple buffer-position word-count parrot selection-info)
+  '(compilation objed-state misc-info battery debug minor-modes input-method indent-info buffer-encoding major-mode time))
+
+(doom-modeline-def-modeline 'pdf
+  '(bar window-number modals matches buffer-info pdf-pages reader-pages)
+  '(compilation misc-info major-mode process vcs time))
+
+(doom-modeline-def-modeline 'org-src
+  '(eldoc bar window-state window-number modals matches buffer-info buffer-position word-count parrot selection-info)
+  '(compilation objed-state misc-info debug lsp minor-modes input-method indent-info buffer-encoding major-mode process check time))
+
+(doom-modeline-def-modeline 'helm
+  '(bar helm-buffer-id helm-number helm-follow helm-prefix-argument)
+  '(helm-help time))
+
+(doom-modeline-def-modeline 'git-timemachine
+  '(eldoc bar window-number modals matches git-timemachine buffer-position word-count parrot selection-info)
+  '(misc-info minor-modes indent-info buffer-encoding major-mode time))
+
+(doom-modeline-def-modeline 'calculator
+  '(window-number modals matches calc buffer-position)
+  '(misc-info minor-modes major-mode process))
+
+(doom-modeline-def-modeline 'speedbar
+  '(bar " " major-mode)
+  '(speedbar-info))
+
+
+;;
+;; Interfaces
+;;
+
+;;;###autoload
+(defun doom-modeline-set-main-modeline (&optional default)
+  "Set main mode-line.
+If DEFAULT is non-nil, set the default mode-line for all buffers."
+  (doom-modeline-set-modeline 'main default))
+
+
+;;
+;; Minor mode
+;;
+
+;; Suppress warnings
+(defvar 2C-mode-line-format)
+(defvar flymake-mode-line-format)
+(defvar helm-ag-show-status-function)
+(defvar speedbar-buffer)
+(declare-function helm-display-mode-line "ext:helm-core")
+(declare-function speedbar-set-mode-line-format "speedbar")
+
+(defvar doom-modeline-mode-map (make-sparse-keymap))
+
+(defvar doom-modeline-mode-alist
+  '((message-mode         . message)
+    (git-commit-mode      . message)
+    (magit-mode           . vcs)
+    (dashboard-mode       . dashboard)
+    (Info-mode            . info)
+    (image-mode           . media)
+    (pdf-view-mode        . pdf)
+    (reader-mode          . pdf)
+    (org-src-mode         . org-src)
+    (package-menu-mode    . package)
+    (paradox-menu-mode    . package)
+    (xwidget-webkit-mode  . minimal)
+    (calc-mode            . calculator)
+    (calc-trail-mode      . calculator)
+    (circe-mode           . special)
+    (erc-mode             . special)
+    (rcirc-mode           . special)
+    (speedbar-mode        . speedbar))
+  "Alist of major modes and mode-lines.")
+
+(defun doom-modeline-auto-set-modeline ()
+  "Set mode-line base on major-mode."
+  (catch 'found
+    (dolist (x doom-modeline-mode-alist)
+      (when (derived-mode-p (car x))
+        (doom-modeline-set-modeline (cdr x))
+        (throw 'found x)))))
+
+(defun doom-modeline-set-speebar-modeline (&rest _)
+  "Set speedbar mode-line."
+  (when (and (bound-and-true-p speedbar-buffer)
+             (buffer-live-p speedbar-buffer))
+    (with-current-buffer speedbar-buffer
+      (doom-modeline-set-modeline 'speedbar))))
+
+(defun doom-modeline-set-git-timemachine-modeline (&rest _)
+  "Set `git-timmachie' mode-line."
+  (doom-modeline-set-modeline 'git-timemachine))
+
+(defun doom-modeline-set-helm-modeline (&rest _)
+  "Set `helm' mode-line."
+  (doom-modeline-set-modeline 'helm))
+
+;;;###autoload
+(define-minor-mode doom-modeline-mode
+  "Toggle `doom-modeline' on or off."
+  :group 'doom-modeline
+  :global t
+  :lighter nil
+  :keymap doom-modeline-mode-map
+  (if doom-modeline-mode
+      (progn
+        (doom-modeline-refresh-bars)        ; Create bars
+        (doom-modeline-set-main-modeline t) ; Set default mode-line
+
+        ;; Apply to all existing buffers.
+        (dolist (buf (buffer-list))
+          (with-current-buffer buf
+            (when (and mode-line-format
+                       (not (doom-modeline-auto-set-modeline)))
+              (doom-modeline-set-main-modeline))))
+
+        ;; For flymake
+        (setq flymake-mode-line-format nil) ; remove the lighter of minor mode
+
+        ;; For Eldoc
+        (setq eldoc-message-function #'doom-modeline-eldoc-minibuffer-message)
+
+        ;; For two-column editing
+        (setq 2C-mode-line-format (doom-modeline 'special))
+
+        ;; For window
+        (if (boundp 'after-focus-change-function)
+            (add-function :after after-focus-change-function #'doom-modeline-focus-change)
+          (with-no-warnings
+            (add-hook 'focus-in-hook #'doom-modeline-set-selected-window)
+            (add-hook 'focus-out-hook #'doom-modeline-unset-selected-window)))
+        (add-hook 'window-selection-change-functions #'doom-modeline-set-selected-window)
+
+        ;; Automatically set mode-lines
+        (add-hook 'after-change-major-mode-hook #'doom-modeline-auto-set-modeline)
+
+        ;; Setup font height cache
+        (add-hook 'after-setting-font-hook #'doom-modeline--reset-font-height-cache)
+
+        ;; Special handles
+        (advice-add #'speedbar-set-mode-line-format :override #'doom-modeline-set-speebar-modeline)
+
+        (add-hook 'git-timemachine-mode-hook #'doom-modeline-set-git-timemachine-modeline)
+
+        (advice-add #'helm-display-mode-line :after #'doom-modeline-set-helm-modeline)
+        (setq helm-ag-show-status-function #'doom-modeline-set-helm-modeline))
+    (progn
+      ;; Restore mode-line
+      (let ((original-format (doom-modeline--original-value 'mode-line-format)))
+        (setq-default mode-line-format original-format)
+        (dolist (buf (buffer-list))
+          (with-current-buffer buf
+            (when mode-line-format
+              (setq mode-line-format original-format)))))
+
+      ;; For flymake
+      (setq flymake-mode-line-format (doom-modeline--original-value 'flymake-mode-line-format))
+
+      ;; For Eldoc
+      (setq eldoc-message-function #'eldoc-minibuffer-message)
+
+      ;; For two-column editing
+      (setq 2C-mode-line-format (doom-modeline--original-value '2C-mode-line-format))
+
+      ;; Cleanup
+      ;; For window
+      (if (boundp 'after-focus-change-function)
+          (remove-function after-focus-change-function #'doom-modeline-focus-change)
+        (with-no-warnings
+          (remove-hook 'focus-in-hook #'doom-modeline-set-selected-window)
+          (remove-hook 'focus-out-hook #'doom-modeline-unset-selected-window)))
+      (remove-hook 'window-selection-change-functions #'doom-modeline-set-selected-window)
+
+      ;; For major modes
+      (remove-hook 'after-change-major-mode-hook #'doom-modeline-auto-set-modeline)
+
+      ;; For font height cache
+      (remove-hook 'after-setting-font-hook #'doom-modeline--reset-font-height-cache)
+
+      ;; For special handles
+      (advice-remove #'speedbar-set-mode-line-format #'doom-modeline-set-speebar-modeline)
+      (and (fboundp 'speedbar-set-mode-line-format) (speedbar-set-mode-line-format)) ; reset speedbar
+
+      (remove-hook 'git-timemachine-mode-hook #'doom-modeline-set-git-timemachine-modeline)
+
+      (advice-remove #'helm-display-mode-line #'doom-modeline-set-helm-modeline)
+      (setq helm-ag-show-status-function (default-value 'helm-ag-show-status-function)))))
+
+(provide 'doom-modeline)
+
+;;; doom-modeline.el ends here
