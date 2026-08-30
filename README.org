@@ -3,7 +3,7 @@
 * Software
 - *Distro*: [[https://archlinux.org/][Arch Linux]]
 - *Window manager*: [[https://niri-wm.github.io/niri/index.html][Niri]]
-- *Top bar*: [[https://github.com/alexys/waybar][Waybar]]
+- *Top bar*: [[https://quickshell.org][Quickshell]]
 - *Terminal*: [[https://codeberg.org/dnkl/foot][foot]]
 - *Text editor*: [[https://www.gnu.org/software/emacs/][Emacs]] and [[https://neovim.io/][Neovim]]
 - *Application Launcher*: [[https://codeberg.org/dnkl/fuzzel][Fuzzel]]
@@ -12,10 +12,11 @@
 - *Spotify*: [[https://github.com/spicetify][Spicetify]]
 - *Discord*: [[https://betterdiscord.app][Discord]]
 
+Currently, most of my quickshell config is under heavy WIP :)
+
 * Gruvbox Rice
 [[./images/river_terminal.png]]
 [[./images/river_main.png]]
-[[./images/river_emacs.png]]
 [[./images/river_nvim.png]]
 [[./images/river_discord.png]]
 
