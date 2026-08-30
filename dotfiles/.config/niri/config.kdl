@@ -34,10 +34,10 @@ layout {
     }
 }
 
-window-rule {
-      geometry-corner-radius 12
-      clip-to-geometry true
-}
+//window-rule {
+//      geometry-corner-radius 12
+//      clip-to-geometry true
+//}
 
 window-rule {
       opacity 0.85
@@ -93,9 +93,9 @@ window-rule {
 
 binds {
 
-    Super+Q { spawn "ghostty"; }
+    Super+Q { spawn "foot"; }
     Super+Return { spawn "env" "GDK_BACKEND=wayland" "emacs"; }
-    Super+R { spawn "qs" "ipc" "call" "appLauncher" "toggle"; }
+    Super+R { spawn "fuzzel"; }
     Super+W { spawn "firefox"; }
     Super+B { spawn "sh" "-c" "~/.config/fuzzel/fuzzel-bluetooth.sh"; }
     Super+U { spawn "sh" "-c" "~/.config/fuzzel/fuzzel-emoji.sh"; }

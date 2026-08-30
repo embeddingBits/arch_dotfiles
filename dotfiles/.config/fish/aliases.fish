@@ -25,9 +25,8 @@ alias zb="zig build"
 alias upfor="uptime -p"
 
 # Pacman aliases (Arch)
-alias xi="sudo pacman -S"
-alias xr="sudo pacman -Rns"
-alias xu="sudo pacman -Syu"
+alias pac="sudo pacman"
+alias pacup="sudo pacman -Syu"
 # AUR helper (uncomment if using yay/paru)
 # alias xi="yay -S"
 # alias xr="yay -Rns"
