@@ -1,0 +1,72 @@
+{
+    "height": 38,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 8,
+    "padding-left": 8,
+    "padding-right": 8,
+    "modules-left": [
+        "custom/launcher",
+        "niri/workspaces",
+        "niri/window",
+        "mpris"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "bluetooth",
+        "network",
+        "memory",
+        "backlight",
+        "battery"
+        "custom/power"
+    ],
+    "clock": {
+        "format": "dddd hh:mm:ss AP",
+        "show-mpris": true
+    },
+    "mpris": {
+        "format": "{artist} - {title}",
+        "max-length": 40
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 2
+    },
+    "wireplumber": {
+        "show-percentage": true
+    },
+    "memory": {
+        "interval": 500
+    },
+    "network": {
+        "format-wifi": "󰤨",
+        "format-disconnected": "󰤯"
+    },
+    "bluetooth": {},
+    "battery": {
+        "format": "{capacity}%"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}%"
+    },
+    "custom/launcher": {
+        "icon": "",
+        "on-click": "fuzzel"
+    },
+    "custom/power": {
+        "icon": "󰐥",
+        "on-click": "wlogout"
+    },
+    "niri/workspaces": {
+        "format": "{index}"
+    },
+    "niri/window": {
+        "max-length": 280
+    }
+}

@@ -1,4 +1,5 @@
 input {
+    focus-follows-mouse
     keyboard {
         xkb { }
     }
@@ -163,7 +164,7 @@ binds {
 }
 
 
-spawn-at-startup "quickshell"
+spawn-at-startup "qs"
 spawn-at-startup "swaybg" "-i" "/home/ebits/Pictures/wallpapers/sushi.jpg"
 spawn-at-startup "fnott"
 spawn-at-startup "xwayland-satellite"

@@ -32,6 +32,681 @@ ShellRoot {
     property int radius: 0
     property int radiusSmall: 0
 
+    // ── Waybar-like manifest (config/bar.json) ──
+    FileView {
+        id: barManifestFile
+        path: Qt.resolvedUrl("./config/bar.json")
+        watchChanges: true
+        onFileChanged: reload()
+        blockLoading: true
+    }
+    property string _barManifestText: barManifestFile.loaded ? barManifestFile.text() : ""
+    function _stripJsonComments(s) {
+        if (!s) return s
+        let out = s.replace(/\/\/[^\n]*\n/g, "\n")
+        out = out.replace(/\/\*[\s\S]*?\*\//g, "")
+        out = out.replace(/,\s*([}\]])/g, "$1")
+        return out
+    }
+    property var _defaultBarManifest: ({
+        "height": barHeight,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-left": 0,
+        "margin-right": 0,
+        "spacing": 8,
+        "padding-left": 8,
+        "padding-right": 8,
+        "modules-left": ["custom/launcher", "niri/workspaces", "niri/window"],
+        "modules-center": ["clock"],
+        "modules-right": ["tray", "wireplumber", "memory", "network", "bluetooth", "battery", "custom/power"]
+    })
+    property var barManifest: {
+        try {
+            if (!_barManifestText || _barManifestText.trim() === "") return _defaultBarManifest
+            let cleaned = _stripJsonComments(_barManifestText)
+            let parsed = JSON.parse(cleaned)
+            for (let k in _defaultBarManifest) if (!(k in parsed)) parsed[k] = _defaultBarManifest[k]
+            return parsed
+        } catch (e) {
+            console.warn("[Bar] manifest parse failed:", e)
+            return _defaultBarManifest
+        }
+    }
+    property var barModulesLeft: barManifest["modules-left"] ?? _defaultBarManifest["modules-left"]
+    property var barModulesCenter: barManifest["modules-center"] ?? _defaultBarManifest["modules-center"]
+    property var barModulesRight: barManifest["modules-right"] ?? _defaultBarManifest["modules-right"]
+    function _normalizeBarModule(name) {
+        let n = String(name||"").trim()
+        let low = n.toLowerCase()
+        if (low === "custom/launcher" || low === "launcher") return "custom/launcher"
+        if (low === "niri/workspaces" || low === "workspaces") return "niri/workspaces"
+        if (low === "niri/window" || low === "window" || low === "active-window") return "niri/window"
+        if (low === "clock") return "clock"
+        if (low === "mpris" || low === "mpris#media") return "mpris"
+        if (low === "wireplumber" || low === "pulseaudio" || low === "audio") return "wireplumber"
+        if (low === "memory") return "memory"
+        if (low === "network") return "network"
+        if (low === "bluetooth") return "bluetooth"
+        if (low === "battery") return "battery"
+        if (low === "tray" || low === "system-tray") return "tray"
+        if (low === "custom/power" || low === "power") return "custom/power"
+        if (low === "custom/separator" || low === "separator") return "custom/separator"
+        if (low === "backlight") return "backlight"
+        if (low.startsWith("custom/")) return low
+        return low
+    }
+    function _prefWidthForBarModule(m) {
+        let n = _normalizeBarModule(m)
+        if (n === "wireplumber") return 64
+        if (n === "memory") return 78
+        if (n === "battery") return 58
+        if (n === "custom/power") return 30
+        if (n === "custom/launcher") return 28
+        if (n === "network") return 28
+        if (n === "bluetooth") return 28
+        if (n === "custom/separator") return 1
+        return -1
+    }
+    function _compForBarModule(m) {
+        let n = _normalizeBarModule(m)
+        if (n === "custom/launcher") return _launcherComp
+        if (n === "niri/workspaces") return _workspacesComp
+        if (n === "niri/window") return _windowComp
+        if (n === "clock") return _clockComp
+        if (n === "mpris") return _mprisComp
+        if (n === "wireplumber") return _audioComp
+        if (n === "memory") return _memComp
+        if (n === "network") return _networkComp
+        if (n === "bluetooth") return _btComp
+        if (n === "battery") return _battComp
+        if (n === "tray") return _trayComp
+        if (n === "custom/power") return _powerComp
+        if (n === "custom/separator") return _sepComp
+        if (n === "backlight") return _backlightComp
+        return _unknownComp
+    }
+
+    // ── Bar module Components (for dynamic manifest) ──
+    Component {
+        id: _launcherComp
+        Item {
+            width: 28; height: 26
+            Rectangle {
+                anchors.fill: parent
+                color: _launcherMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08) : "transparent"
+                radius: root.radius
+            }
+            Text { anchors.centerIn: parent; text: "󰣇"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colFg }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineMenu
+                opacity: _launcherMouse.containsMouse ? 1.0 : 0.95
+            }
+            MouseArea { id: _launcherMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: Quickshell.execDetached(["bash","-c","rofi -show drun &"]) }
+        }
+    }
+    Component {
+        id: _workspacesComp
+        RowLayout {
+            spacing: 6
+            Repeater {
+                model: root.niriWorkspaces
+                delegate: Item {
+                    id: wsDelegate
+                    required property var modelData
+                    property bool focused: modelData.is_focused
+                    property bool occupied: modelData.occupied
+                    Layout.preferredWidth: wsDelegate.focused ? 30 : 26
+                    Layout.preferredHeight: 26
+                    Rectangle {
+                        anchors.fill: parent
+                        radius: root.radius
+                        color: wsMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08)
+                             : wsDelegate.focused ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.10)
+                             : "transparent"
+                    }
+                    Text {
+                        anchors.centerIn: parent
+                        anchors.verticalCenterOffset: -1
+                        text: wsDelegate.focused ? "󰝥" : String(wsDelegate.modelData.idx)
+                        font.family: root.fontFamily
+                        font.pixelSize: root.barFontSize
+                        font.weight: wsDelegate.focused ? 700 : 600
+                        color: wsDelegate.focused ? root.colAccent : (wsDelegate.occupied ? root.colFg : Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.55))
+                        opacity: wsDelegate.occupied || wsDelegate.focused ? 1 : 0.60
+                    }
+                    Rectangle {
+                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                        height: wsDelegate.focused ? 2.5 : 2
+                        radius: 1
+                        color: wsDelegate.focused ? root.colUnderlineWorkspaces : (wsDelegate.occupied ? Qt.rgba(root.colUnderlineWorkspaces.r, root.colUnderlineWorkspaces.g, root.colUnderlineWorkspaces.b, 0.85) : Qt.rgba(root.colUnderlineWorkspaces.r, root.colUnderlineWorkspaces.g, root.colUnderlineWorkspaces.b, 0.35))
+                        opacity: wsMouse.containsMouse ? 1 : 0.9
+                    }
+                    MouseArea {
+                        id: wsMouse
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        cursorShape: Qt.PointingHandCursor
+                        onClicked: Quickshell.execDetached(["niri","msg","action","focus-workspace", String(wsDelegate.modelData.idx)])
+                    }
+                }
+            }
+        }
+    }
+    Component {
+        id: _windowComp
+        Item {
+            visible: root.activeWindowTitle !== ""
+            implicitWidth: Math.min(activeWinText.implicitWidth + 32, 280)
+            implicitHeight: 26
+            width: implicitWidth; height: 26
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: awMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+            }
+            RowLayout {
+                anchors.fill: parent
+                anchors.leftMargin: 6
+                anchors.rightMargin: 6
+                spacing: 6
+                Text {
+                    text: "󰖲"
+                    font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colMuted
+                    Layout.alignment: Qt.AlignVCenter
+                }
+                Text {
+                    id: activeWinText
+                    text: root.activeWindowTitle
+                    font.family: root.fontFamily; font.pixelSize: root.barFontSize; font.weight: 500
+                    color: root.colFg
+                    elide: Text.ElideRight
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignVCenter
+                    maximumLineCount: 1
+                }
+            }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineActiveWindow
+                opacity: awMouse.containsMouse ? 1 : 0.9
+            }
+            MouseArea { id: awMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor }
+        }
+    }
+    Component {
+        id: _clockComp
+        Item {
+            // CenterClock combined with mpris; width dynamic
+            implicitWidth: _clockRow.implicitWidth + 28
+            implicitHeight: 26
+            width: implicitWidth; height: 26
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: clkMouse.containsMouse || root.calendarOpen ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+            }
+            RowLayout {
+                id: _clockRow
+                anchors.centerIn: parent
+                spacing: 8
+                Text {
+                    id: _clk
+                    color: root.colFg
+                    font.family: root.fontFamily
+                    font.weight: 700
+                    font.pixelSize: root.barFontSize
+                    Layout.alignment: Qt.AlignVCenter
+                    property date currentTime: new Date()
+                    text: Qt.formatDateTime(currentTime, "dddd hh:mm:ss AP")
+                    Timer { interval: 1000; running: true; repeat: true; onTriggered: _clk.currentTime = new Date() }
+                }
+                Text {
+                    visible: root.nowPlayingText !== ""
+                    text: "|"
+                    font.family: root.fontFamily
+                    font.pixelSize: root.barFontSize
+                    color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.6)
+                    Layout.alignment: Qt.AlignVCenter
+                }
+                Item {
+                    visible: root.nowPlayingText !== ""
+                    Layout.preferredWidth: _nowRow.implicitWidth
+                    Layout.preferredHeight: 16
+                    Layout.alignment: Qt.AlignVCenter
+                    RowLayout {
+                        id: _nowRow
+                        anchors.centerIn: parent
+                        spacing: 4
+                        Text {
+                            text: root.nowPlayingIsPlaying ? "󰝚" : "󰏤"
+                            font.family: root.fontFamily
+                            font.pixelSize: root.barFontSize
+                            color: root.nowPlayingIsPlaying ? root.colAccent : root.colMuted
+                            Layout.alignment: Qt.AlignVCenter
+                        }
+                        Text {
+                            text: root.nowPlayingText
+                            font.family: root.fontFamily
+                            font.pixelSize: root.barFontSize
+                            font.weight: 500
+                            color: root.colFg
+                            elide: Text.ElideRight
+                            Layout.maximumWidth: 260
+                            Layout.alignment: Qt.AlignVCenter
+                            maximumLineCount: 1
+                        }
+                    }
+                }
+            }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineClock
+                opacity: clkMouse.containsMouse || root.calendarOpen ? 1 : 0.92
+            }
+            MouseArea {
+                id: clkMouse
+                anchors.fill: parent
+                hoverEnabled: true
+                cursorShape: Qt.PointingHandCursor
+                onClicked: function(mouse){
+                    if(root.nowPlayingText !== "" && root.activeMprisPlayer){
+                        let rowX=_clockRow.x
+                        let clockRight=rowX + _clk.implicitWidth + 12
+                        if(mouseX > clockRight){
+                            let p=root.activeMprisPlayer;
+                            if(p.canTogglePlaying) p.togglePlaying();
+                            else if(p.isPlaying) p.pause();
+                            else p.play();
+                            return;
+                        }
+                    }
+                    root.toggleCalendar();
+                }
+            }
+        }
+    }
+    Component {
+        id: _mprisComp
+        Item {
+            visible: root.nowPlayingText !== ""
+            implicitWidth: _mprisRow2.implicitWidth + 16
+            implicitHeight: 26
+            width: implicitWidth; height: 26
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: _mprisMouse2.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+            }
+            RowLayout {
+                id: _mprisRow2
+                anchors.centerIn: parent
+                spacing: 4
+                Text {
+                    text: root.nowPlayingIsPlaying ? "󰝚" : "󰏤"
+                    font.family: root.fontFamily
+                    font.pixelSize: root.barFontSize
+                    color: root.nowPlayingIsPlaying ? root.colAccent : root.colMuted
+                    Layout.alignment: Qt.AlignVCenter
+                }
+                Text {
+                    text: root.nowPlayingText
+                    font.family: root.fontFamily
+                    font.pixelSize: root.barFontSize
+                    font.weight: 500
+                    color: root.colFg
+                    elide: Text.ElideRight
+                    Layout.maximumWidth: 260
+                    Layout.alignment: Qt.AlignVCenter
+                    maximumLineCount: 1
+                }
+            }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineClock
+                opacity: _mprisMouse2.containsMouse ? 1 : 0.92
+            }
+            MouseArea {
+                id: _mprisMouse2
+                anchors.fill: parent
+                hoverEnabled: true
+                cursorShape: Qt.PointingHandCursor
+                onClicked: {
+                    let p = root.activeMprisPlayer;
+                    if (!p) return;
+                    if (p.canTogglePlaying) p.togglePlaying();
+                    else if (p.isPlaying) p.pause();
+                    else p.play();
+                }
+            }
+        }
+    }
+    Component {
+        id: _audioComp
+        Item {
+            implicitWidth: 64; implicitHeight: 26
+            width: 64; height: 26
+            property real vol: Pipewire.defaultAudioSink?.audio?.volume ?? 0
+            property bool muted: Pipewire.defaultAudioSink?.audio?.muted ?? false
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: _audioMouse.containsMouse || root.volumePopupOpen ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+            }
+            RowLayout {
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: -1
+                spacing: 4
+                Text {
+                    text: {
+                        if (!Pipewire.defaultAudioSink?.audio) return "󰖁";
+                        if (parent.parent.muted || parent.parent.vol===0) return "󰝟";
+                        if (parent.parent.vol < 0.33) return "󰕿";
+                        if (parent.parent.vol < 0.66) return "󰖀";
+                        return "󰕾";
+                    }
+                    font.family: root.fontFamily
+                    font.pixelSize: root.barFontSize
+                    color: root.colFg
+                    Layout.alignment: Qt.AlignVCenter
+                }
+                Text {
+                    text: Math.round(parent.parent.vol*100) + "%"
+                    font.family: root.fontFamily
+                    font.pixelSize: root.barFontSize
+                    font.weight: 600
+                    color: Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.90)
+                    Layout.alignment: Qt.AlignVCenter
+                }
+            }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineAudio
+                opacity: _audioMouse.containsMouse || root.volumePopupOpen ? 1 : 0.92
+            }
+            MouseArea {
+                id: _audioMouse
+                anchors.fill: parent
+                hoverEnabled: true
+                cursorShape: Qt.PointingHandCursor
+                onClicked: root.toggleVolume()
+                onWheel: function(wheel){
+                    if(!Pipewire.defaultAudioSink?.audio) return;
+                    let s=0.05; let v=Pipewire.defaultAudioSink.audio.volume + (wheel.angleDelta.y>0?s:-s);
+                    Pipewire.defaultAudioSink.audio.volume=Math.max(0,Math.min(1,v));
+                    if(Pipewire.defaultAudioSink.audio.muted && v>0) Pipewire.defaultAudioSink.audio.muted=false;
+                }
+            }
+        }
+    }
+    Component {
+        id: _memComp
+        Item {
+            implicitWidth: 78; implicitHeight: 26
+            width: 78; height: 26
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: _memMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+            }
+            RowLayout {
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: -1
+                spacing: 4
+                Text {
+                    text: "󰍛"
+                    font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colFg
+                    Layout.alignment: Qt.AlignVCenter
+                }
+                Text {
+                    text: root.memUsedText
+                    font.family: root.fontFamily; font.pixelSize: root.barFontSize; font.weight: 600
+                    color: Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.90)
+                    Layout.alignment: Qt.AlignVCenter
+                }
+            }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineMemory
+                opacity: _memMouse.containsMouse ? 1 : 0.92
+            }
+            MouseArea {
+                id: _memMouse
+                anchors.fill: parent
+                hoverEnabled: true
+                cursorShape: Qt.PointingHandCursor
+                onClicked: if(!memProc.running) memProc.running=true
+            }
+        }
+    }
+    Component {
+        id: _networkComp
+        Item {
+            width: 28; height: 26
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: _netMouse.containsMouse || root.wifiPopupOpen ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+            }
+            Text {
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: -1
+                text: {
+                    let d=root.wifiDev;
+                    if(!d) return "󰤯";
+                    if(!Networking.wifiEnabled) return "󰤮";
+                    for(let i=0;i<root.wifiNets.length;i++) if(root.wifiNets[i] && root.wifiNets[i].connected) {
+                        let s=root.wifiNets[i].signalStrength||0;
+                        if(s>0.66) return "󰤨";
+                        if(s>0.33) return "󰤥";
+                        return "󰤢";
+                    }
+                    return "󰤯";
+                }
+                font.family: root.fontFamily
+                font.pixelSize: root.barFontSize
+                color: root.colFg
+            }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineNetwork
+                opacity: _netMouse.containsMouse || root.wifiPopupOpen ? 1 : 0.92
+            }
+            MouseArea { id: _netMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: root.toggleWifi() }
+        }
+    }
+    Component {
+        id: _btComp
+        Item {
+            width: 28; height: 26
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: _btMouse.containsMouse || root.bluetoothPopupOpen ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+            }
+            Text {
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: -1
+                text: {
+                    let a=root.btAdapter;
+                    if(!a) return "󰂯";
+                    if(!a.enabled) return "󰂲";
+                    for(let i=0;i<root.btDevices.length;i++) if(root.btDevices[i] && root.btDevices[i].connected) return "󰂱";
+                    return "󰂯";
+                }
+                font.family: root.fontFamily
+                font.pixelSize: root.barFontSize
+                color: root.colFg
+            }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineBluetooth
+                opacity: _btMouse.containsMouse || root.bluetoothPopupOpen ? 1 : 0.92
+            }
+            MouseArea { id: _btMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: root.toggleBluetooth() }
+        }
+    }
+    Component {
+        id: _battComp
+        Item {
+            visible: UPower.displayDevice && UPower.displayDevice.isPresent && UPower.displayDevice.isLaptopBattery
+            implicitWidth: 58; implicitHeight: 26
+            width: 58; height: 26
+            property real pct: (UPower.displayDevice?.percentage ?? 0)
+            property int devState: (UPower.displayDevice?.state ?? 0)
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: _battMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+            }
+            RowLayout {
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: -1
+                spacing: 4
+                Text {
+                    text: {
+                        let p=parent.parent.pct*100; let ch=parent.parent.devState===1;
+                        if(ch) return "󰂄";
+                        if(p>90) return "󰁹";
+                        if(p>70) return "󰂀";
+                        if(p>50) return "󰁿";
+                        if(p>30) return "󰁾";
+                        if(p>15) return "󰁼";
+                        return "󰁺";
+                    }
+                    font.family: root.fontFamily
+                    font.pixelSize: root.barFontSize
+                    color: parent.parent.pct<0.2 && parent.parent.devState!==1 ? "#cc241d" : root.colFg
+                    Layout.alignment: Qt.AlignVCenter
+                }
+                Text { text: Math.round(parent.parent.pct*100)+"%"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; font.weight: 600; color: root.colFg; Layout.alignment: Qt.AlignVCenter }
+            }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineBattery
+                opacity: _battMouse.containsMouse ? 1 : 0.92
+            }
+            MouseArea { id: _battMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor }
+        }
+    }
+    Component {
+        id: _trayComp
+        RowLayout {
+            spacing: 2
+            Repeater {
+                model: SystemTray.items
+                delegate: Item {
+                    required property var modelData
+                    Layout.preferredWidth: 24
+                    Layout.preferredHeight: 26
+                    Rectangle {
+                        anchors.fill: parent
+                        radius: root.radius
+                        color: trayMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+                    }
+                    IconImage { anchors.centerIn: parent; anchors.verticalCenterOffset: -1; width: 16; height: 16; source: modelData.icon; asynchronous: true }
+                    Rectangle {
+                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                        height: 2; radius: 1
+                        color: root.colUnderlineTray
+                        opacity: trayMouse.containsMouse ? 1 : 0.85
+                    }
+                    MouseArea {
+                        id: trayMouse
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        cursorShape: Qt.PointingHandCursor
+                        acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
+                        onClicked: function(mouse){
+                            if(mouse.button===Qt.LeftButton) modelData.activate();
+                            else if(mouse.button===Qt.RightButton && modelData.hasMenu) modelData.display(Qt.point(width/2,height));
+                        }
+                    }
+                }
+            }
+        }
+    }
+    Component {
+        id: _powerComp
+        Item {
+            width: 30; height: 26
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: _powMouse.containsMouse ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.12) : "transparent"
+            }
+            Text { anchors.centerIn: parent; anchors.verticalCenterOffset: -1; text: "󰐥"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: _powMouse.containsMouse? root.colAccent : root.colFg }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlinePower
+                opacity: _powMouse.containsMouse ? 1 : 0.92
+            }
+            MouseArea { id: _powMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: Quickshell.execDetached(["bash","-c","wlogout &"]) }
+        }
+    }
+    Component {
+        id: _sepComp
+        Rectangle {
+            width: 1; height: 16
+            color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35)
+            opacity: 0.6
+        }
+    }
+    Component {
+        id: _backlightComp
+        Item {
+            width: 28; height: 26
+            Rectangle {
+                anchors.fill: parent
+                radius: root.radius
+                color: _blMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
+            }
+            Text {
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: -1
+                text: "󰃠"
+                font.family: root.fontFamily
+                font.pixelSize: root.barFontSize
+                color: root.colFg
+            }
+            Rectangle {
+                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                height: 2; radius: 1
+                color: root.colUnderlineNetwork
+                opacity: _blMouse.containsMouse ? 1 : 0.92
+            }
+            MouseArea { id: _blMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor }
+        }
+    }
+    Component {
+        id: _unknownComp
+        Item {
+            property string modName: ""
+            width: _unkText.implicitWidth + 12; height: 26
+            Rectangle { anchors.fill: parent; radius: root.radius; color: Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.05) }
+            Text {
+                id: _unkText
+                anchors.centerIn: parent
+                text: modName
+                font.family: root.fontFamily
+                font.pixelSize: 10
+                color: root.colMuted
+            }
+            Rectangle { anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom; height: 2; radius: 1; color: root.colMuted; opacity: 0.5 }
+        }
+    }
+
     // ── underline colors per bar element (distinct) ──
     property color colUnderlineMenu: "#fabd2f"
     property color colUnderlineActiveWindow: "#d5c4a1"
@@ -495,7 +1170,13 @@ ShellRoot {
     PanelWindow {
         id: bar
         anchors { left: true; right: true; top: true }
-        implicitHeight: root.barHeight
+        margins {
+            top: barManifest["margin-top"] ?? barManifest["margin"] ?? 0
+            bottom: barManifest["margin-bottom"] ?? barManifest["margin"] ?? 0
+            left: barManifest["margin-left"] ?? barManifest["margin"] ?? 0
+            right: barManifest["margin-right"] ?? barManifest["margin"] ?? 0
+        }
+        implicitHeight: barManifest["height"] ?? root.barHeight
         color: root.colBg
 
         Rectangle {
@@ -503,512 +1184,77 @@ ShellRoot {
             color: root.colBg
             border.color: "transparent"
             border.width: 0
-            // thin bottom separator (no box)
             Rectangle { anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom; height: 1; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.25) }
         }
 
         Item {
             id: barContent
             anchors.fill: parent
-            anchors.leftMargin: 8
-            anchors.rightMargin: 8
+            anchors.leftMargin: barManifest["padding-left"] ?? barManifest["padding"] ?? 8
+            anchors.rightMargin: barManifest["padding-right"] ?? barManifest["padding"] ?? 8
 
+            // ── Left (dynamic) ──
             RowLayout {
                 id: leftSection
                 anchors.left: parent.left
                 anchors.verticalCenter: parent.verticalCenter
-                spacing: 8
-
-                Item {
-                    id: menuBtn
-                    Layout.preferredWidth: 28
-                    Layout.preferredHeight: 26
-                    Rectangle {
-                        anchors.fill: parent
-                        color: menuMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08) : "transparent"
-                        radius: root.radius
+                spacing: barManifest["spacing"] ?? 8
+                Repeater {
+                    model: root.barModulesLeft
+                    delegate: Loader {
+                        required property var modelData
+                        property string mod: String(modelData)
+                        Layout.preferredWidth: root._prefWidthForBarModule(mod)
+                        Layout.preferredHeight: 26
+                        Layout.alignment: Qt.AlignVCenter
+                        sourceComponent: root._compForBarModule(mod)
+                        onLoaded: if (item && item.hasOwnProperty("modName")) item.modName = mod
                     }
-                    Text { anchors.centerIn: parent; text: "󰣇"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colFg }
-                    Rectangle {
-                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                        height: 2; radius: 1
-                        color: root.colUnderlineMenu
-                        opacity: menuMouse.containsMouse ? 1.0 : 0.95
-                    }
-                    MouseArea { id: menuMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: Quickshell.execDetached(["bash","-c","rofi -show drun &"]) }
-                }
-
-                Rectangle { Layout.preferredWidth: 1; Layout.preferredHeight: 18; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); opacity: 0.6 }
-
-                RowLayout {
-                    spacing: 6
-                    Repeater {
-                        id: wsRepeater
-                        model: root.niriWorkspaces
-                        delegate: Item {
-                            id: wsDelegate
-                            required property var modelData
-                            property bool focused: modelData.is_focused
-                            property bool occupied: modelData.occupied
-                            Layout.preferredWidth: wsDelegate.focused ? 30 : 26
-                            Layout.preferredHeight: 26
-                            Rectangle {
-                                anchors.fill: parent
-                                radius: root.radius
-                                color: wsMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08)
-                                     : wsDelegate.focused ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.10)
-                                     : "transparent"
-                                // no border
-                            }
-                            Text {
-                                anchors.centerIn: parent
-                                anchors.verticalCenterOffset: -1
-                                text: wsDelegate.focused ? "󰝥" : String(wsDelegate.modelData.idx)
-                                font.family: root.fontFamily
-                                font.pixelSize: root.barFontSize
-                                font.weight: wsDelegate.focused ? 700 : 600
-                                color: wsDelegate.focused ? root.colAccent : (wsDelegate.occupied ? root.colFg : Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.55))
-                                opacity: wsDelegate.occupied || wsDelegate.focused ? 1 : 0.60
-                            }
-                            Rectangle {
-                                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                                height: wsDelegate.focused ? 2.5 : 2
-                                radius: 1
-                                color: wsDelegate.focused ? root.colUnderlineWorkspaces : (wsDelegate.occupied ? Qt.rgba(root.colUnderlineWorkspaces.r, root.colUnderlineWorkspaces.g, root.colUnderlineWorkspaces.b, 0.85) : Qt.rgba(root.colUnderlineWorkspaces.r, root.colUnderlineWorkspaces.g, root.colUnderlineWorkspaces.b, 0.35))
-                                opacity: wsMouse.containsMouse ? 1 : 0.9
-                            }
-                            MouseArea {
-                                id: wsMouse
-                                anchors.fill: parent
-                                hoverEnabled: true
-                                cursorShape: Qt.PointingHandCursor
-                                onClicked: Quickshell.execDetached(["niri","msg","action","focus-workspace", String(wsDelegate.modelData.idx)])
-                            }
-                        }
-                    }
-                }
-                Rectangle { visible: activeWindowItem.visible; Layout.preferredWidth: 1; Layout.preferredHeight: 16; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); opacity: 0.6 }
-
-                // ── active window (right of workspaces) ──
-                Item {
-                    id: activeWindowItem
-                    visible: root.activeWindowTitle !== ""
-                    Layout.preferredWidth: Math.min(activeWinText.implicitWidth + 32, 280)
-                    Layout.preferredHeight: 26
-                    Layout.maximumWidth: 280
-                    Rectangle {
-                        anchors.fill: parent
-                        radius: root.radius
-                        color: awMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                    }
-                    RowLayout {
-                        anchors.fill: parent
-                        anchors.leftMargin: 6
-                        anchors.rightMargin: 6
-                        spacing: 6
-                        Text {
-                            text: "󰖲"
-                            font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colMuted
-                            Layout.alignment: Qt.AlignVCenter
-                        }
-                        Text {
-                            id: activeWinText
-                            text: root.activeWindowTitle
-                            font.family: root.fontFamily; font.pixelSize: root.barFontSize; font.weight: 500
-                            color: root.colFg
-                            elide: Text.ElideRight
-                            Layout.fillWidth: true
-                            Layout.alignment: Qt.AlignVCenter
-                            maximumLineCount: 1
-                        }
-                    }
-                    Rectangle {
-                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                        height: 2; radius: 1
-                        color: root.colUnderlineActiveWindow
-                        opacity: awMouse.containsMouse ? 1 : 0.9
-                    }
-                    MouseArea { id: awMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor }
                 }
             }
 
+            // ── Center (dynamic, centered) ──
             Item {
                 id: centerSection
                 anchors.centerIn: parent
-                width: centerRow.implicitWidth + 28
+                width: centerRow.implicitWidth
                 height: parent.height
-                Rectangle {
-                    anchors.fill: parent
-                    anchors.topMargin: 4
-                    anchors.bottomMargin: 4
-                    radius: root.radius
-                    color: clockMouse.containsMouse || root.calendarOpen ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                    // no border box
-                }
                 RowLayout {
                     id: centerRow
                     anchors.centerIn: parent
-                    spacing: 8
-                    Text {
-                        id: clock
-                        color: root.colFg
-                        font.family: root.fontFamily
-                        font.weight: 700
-                        font.pixelSize: root.barFontSize
-                        Layout.alignment: Qt.AlignVCenter
-                        property date currentTime: new Date()
-                        text: Qt.formatDateTime(currentTime, "dddd hh:mm:ss AP")
-                        Timer { interval: 1000; running: true; repeat: true; onTriggered: clock.currentTime = new Date() }
-                    }
-                    Text {
-                        visible: root.nowPlayingText !== ""
-                        text: "|"
-                        font.family: root.fontFamily
-                        font.pixelSize: root.barFontSize
-                        color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.6)
-                        Layout.alignment: Qt.AlignVCenter
-                    }
-                    Item {
-                        visible: root.nowPlayingText !== ""
-                        Layout.preferredWidth: nowPlayingRow.implicitWidth
-                        Layout.preferredHeight: 16
-                        Layout.alignment: Qt.AlignVCenter
-                        RowLayout {
-                            id: nowPlayingRow
-                            anchors.centerIn: parent
-                            spacing: 4
-                            Text {
-                                text: root.nowPlayingIsPlaying ? "󰝚" : "󰏤"
-                                font.family: root.fontFamily
-                                font.pixelSize: root.barFontSize
-                                color: root.nowPlayingIsPlaying ? root.colAccent : root.colMuted
-                                Layout.alignment: Qt.AlignVCenter
-                            }
-                            Text {
-                                id: nowPlayingTextItem
-                                text: root.nowPlayingText
-                                font.family: root.fontFamily
-                                font.pixelSize: root.barFontSize
-                                font.weight: 500
-                                color: root.colFg
-                                elide: Text.ElideRight
-                                Layout.maximumWidth: 260
-                                Layout.alignment: Qt.AlignVCenter
-                                maximumLineCount: 1
-                            }
+                    spacing: barManifest["spacing"] ?? 8
+                    Repeater {
+                        model: root.barModulesCenter
+                        delegate: Loader {
+                            required property var modelData
+                            property string mod: String(modelData)
+                            Layout.preferredWidth: root._prefWidthForBarModule(mod)
+                            Layout.preferredHeight: 26
+                            Layout.alignment: Qt.AlignVCenter
+                            sourceComponent: root._compForBarModule(mod)
+                            onLoaded: if (item && item.hasOwnProperty("modName")) item.modName = mod
                         }
-                    }
-                }
-                Rectangle {
-                    anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                    anchors.bottomMargin: 4
-                    height: 2; radius: 1
-                    color: root.colUnderlineClock
-                    opacity: clockMouse.containsMouse || root.calendarOpen ? 1 : 0.92
-                }
-                MouseArea {
-                    id: clockMouse
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    cursorShape: Qt.PointingHandCursor
-                    onClicked: function(mouse){
-                        if(root.nowPlayingText !== "" && root.activeMprisPlayer){
-                            let rowX=centerRow.x
-                            let clockRight=rowX + clock.implicitWidth + 12
-                            if(mouseX > clockRight){
-                                let p=root.activeMprisPlayer;
-                                if(p.canTogglePlaying) p.togglePlaying();
-                                else if(p.isPlaying) p.pause();
-                                else p.play();
-                                return;
-                            }
-                        }
-                        root.toggleCalendar();
                     }
                 }
             }
 
+            // ── Right (dynamic) ──
             RowLayout {
                 id: rightSection
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
-                spacing: 8
-
-                RowLayout {
-                    visible: SystemTray.items.values.length > 0
-                    spacing: 2
-                    Repeater {
-                        model: SystemTray.items
-                        delegate: Item {
-                            required property var modelData
-                            Layout.preferredWidth: 24
-                            Layout.preferredHeight: 26
-                            Rectangle {
-                                anchors.fill: parent
-                                radius: root.radius
-                                color: trayMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                            }
-                            IconImage { anchors.centerIn: parent; anchors.verticalCenterOffset: -1; width: 16; height: 16; source: modelData.icon; asynchronous: true }
-                            Rectangle {
-                                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                                height: 2; radius: 1
-                                color: root.colUnderlineTray
-                                opacity: trayMouse.containsMouse ? 1 : 0.85
-                            }
-                            MouseArea {
-                                id: trayMouse
-                                anchors.fill: parent
-                                hoverEnabled: true
-                                cursorShape: Qt.PointingHandCursor
-                                acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
-                                onClicked: function(mouse){
-                                    if(mouse.button===Qt.LeftButton) modelData.activate();
-                                    else if(mouse.button===Qt.RightButton && modelData.hasMenu) modelData.display(Qt.point(width/2,height));
-                                }
-                            }
-                        }
+                spacing: barManifest["spacing"] ?? 8
+                Repeater {
+                    model: root.barModulesRight
+                    delegate: Loader {
+                        required property var modelData
+                        property string mod: String(modelData)
+                        Layout.preferredWidth: root._prefWidthForBarModule(mod)
+                        Layout.preferredHeight: 26
+                        Layout.alignment: Qt.AlignVCenter
+                        sourceComponent: root._compForBarModule(mod)
+                        onLoaded: if (item && item.hasOwnProperty("modName")) item.modName = mod
                     }
-                    Rectangle { Layout.preferredWidth: 1; Layout.preferredHeight: 16; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); visible: SystemTray.items.values.length>0 }
-                }
-
-                Item {
-                    id: audioBtn
-                    Layout.preferredWidth: 64
-                    Layout.preferredHeight: 26
-                    property real vol: Pipewire.defaultAudioSink?.audio?.volume ?? 0
-                    property bool muted: Pipewire.defaultAudioSink?.audio?.muted ?? false
-                    Rectangle {
-                        anchors.fill: parent
-                        radius: root.radius
-                        color: audioMouse.containsMouse || root.volumePopupOpen ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                    }
-                    RowLayout {
-                        anchors.centerIn: parent
-                        anchors.verticalCenterOffset: -1
-                        spacing: 4
-                        Text {
-                            text: {
-                                if (!Pipewire.defaultAudioSink?.audio) return "󰖁";
-                                if (audioBtn.muted || audioBtn.vol===0) return "󰝟";
-                                if (audioBtn.vol < 0.33) return "󰕿";
-                                if (audioBtn.vol < 0.66) return "󰖀";
-                                return "󰕾";
-                            }
-                            font.family: root.fontFamily
-                            font.pixelSize: root.barFontSize
-                            color: root.colFg
-                            Layout.alignment: Qt.AlignVCenter
-                        }
-                        Text {
-                            text: Math.round(audioBtn.vol*100) + "%"
-                            font.family: root.fontFamily
-                            font.pixelSize: root.barFontSize
-                            font.weight: 600
-                            color: Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.90)
-                            Layout.alignment: Qt.AlignVCenter
-                        }
-                    }
-                    Rectangle {
-                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                        height: 2; radius: 1
-                        color: root.colUnderlineAudio
-                        opacity: audioMouse.containsMouse || root.volumePopupOpen ? 1 : 0.92
-                    }
-                    MouseArea {
-                        id: audioMouse
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.PointingHandCursor
-                        onClicked: root.toggleVolume()
-                        onWheel: function(wheel){
-                            if(!Pipewire.defaultAudioSink?.audio) return;
-                            let s=0.05; let v=Pipewire.defaultAudioSink.audio.volume + (wheel.angleDelta.y>0?s:-s);
-                            Pipewire.defaultAudioSink.audio.volume=Math.max(0,Math.min(1,v));
-                            if(Pipewire.defaultAudioSink.audio.muted && v>0) Pipewire.defaultAudioSink.audio.muted=false;
-                        }
-                    }
-                }
-
-                // ── memory used (between volume and wifi) ──
-                Item {
-                    id: memBtn
-                    Layout.preferredWidth: 78
-                    Layout.preferredHeight: 26
-                    Rectangle {
-                        anchors.fill: parent
-                        radius: root.radius
-                        color: memMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                    }
-                    RowLayout {
-                        anchors.centerIn: parent
-                        anchors.verticalCenterOffset: -1
-                        spacing: 4
-                        Text {
-                            text: "󰍛"
-                            font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colFg
-                            Layout.alignment: Qt.AlignVCenter
-                        }
-                        Text {
-                            text: root.memUsedText
-                            font.family: root.fontFamily; font.pixelSize: root.barFontSize; font.weight: 600
-                            color: Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.90)
-                            Layout.alignment: Qt.AlignVCenter
-                        }
-                    }
-                    Rectangle {
-                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                        height: 2; radius: 1
-                        color: root.colUnderlineMemory
-                        opacity: memMouse.containsMouse ? 1 : 0.92
-                    }
-                    MouseArea {
-                        id: memMouse
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.PointingHandCursor
-                        onClicked: if(!memProc.running) memProc.running=true
-                    }
-                    ToolTip {
-                        visible: memMouse.containsMouse
-                        delay: 400
-                        text: root.memTotalGB>0 ? "RAM: "+root.memUsedGB.toFixed(1)+" / "+root.memTotalGB.toFixed(1)+" GB  ("+Math.round(root.memUsedGB/root.memTotalGB*100)+"%)" : "RAM: "+root.memUsedText
-                        contentItem: Text {
-                            text: memMouse.containsMouse ? (root.memTotalGB>0 ? "RAM: "+root.memUsedGB.toFixed(1)+" / "+root.memTotalGB.toFixed(1)+" GB  ("+Math.round(root.memUsedGB/root.memTotalGB*100)+"%)" : "RAM: "+root.memUsedText) : ""
-                            font.family: root.fontFamily; font.pixelSize: 10; color: root.colFg
-                        }
-                        background: Rectangle { color: root.colBg; border.color: root.colBorder; border.width: 1; radius: 4 }
-                    }
-                }
-
-                Item {
-                    id: networkBtn
-                    Layout.preferredWidth: 28
-                    Layout.preferredHeight: 26
-                    Rectangle {
-                        anchors.fill: parent
-                        radius: root.radius
-                        color: netMouse.containsMouse || root.wifiPopupOpen ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                    }
-                    Text {
-                        anchors.centerIn: parent
-                        anchors.verticalCenterOffset: -1
-                        text: {
-                            let d=root.wifiDev;
-                            if(!d) return "󰤯";
-                            if(!Networking.wifiEnabled) return "󰤮";
-                            for(let i=0;i<root.wifiNets.length;i++) if(root.wifiNets[i] && root.wifiNets[i].connected) {
-                                let s=root.wifiNets[i].signalStrength||0;
-                                if(s>0.66) return "󰤨";
-                                if(s>0.33) return "󰤥";
-                                return "󰤢";
-                            }
-                            return "󰤯";
-                        }
-                        font.family: root.fontFamily
-                        font.pixelSize: root.barFontSize
-                        color: root.colFg
-                    }
-                    Rectangle {
-                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                        height: 2; radius: 1
-                        color: root.colUnderlineNetwork
-                        opacity: netMouse.containsMouse || root.wifiPopupOpen ? 1 : 0.92
-                    }
-                    MouseArea { id: netMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: root.toggleWifi() }
-                }
-
-                Item {
-                    id: bluetoothBtn
-                    Layout.preferredWidth: 28
-                    Layout.preferredHeight: 26
-                    Rectangle {
-                        anchors.fill: parent
-                        radius: root.radius
-                        color: btMouse.containsMouse || root.bluetoothPopupOpen ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                    }
-                    Text {
-                        anchors.centerIn: parent
-                        anchors.verticalCenterOffset: -1
-                        text: {
-                            let a=root.btAdapter;
-                            if(!a) return "󰂯";
-                            if(!a.enabled) return "󰂲";
-                            for(let i=0;i<root.btDevices.length;i++) if(root.btDevices[i] && root.btDevices[i].connected) return "󰂱";
-                            return "󰂯";
-                        }
-                        font.family: root.fontFamily
-                        font.pixelSize: root.barFontSize
-                        color: root.colFg
-                    }
-                    Rectangle {
-                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                        height: 2; radius: 1
-                        color: root.colUnderlineBluetooth
-                        opacity: btMouse.containsMouse || root.bluetoothPopupOpen ? 1 : 0.92
-                    }
-                    MouseArea { id: btMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: root.toggleBluetooth() }
-                }
-
-                Item {
-                    id: battBtn
-                    visible: UPower.displayDevice && UPower.displayDevice.isPresent && UPower.displayDevice.isLaptopBattery
-                    Layout.preferredWidth: 58
-                    Layout.preferredHeight: 26
-                    property real pct: (UPower.displayDevice?.percentage ?? 0)
-                    property int devState: (UPower.displayDevice?.state ?? 0)
-                    Rectangle {
-                        anchors.fill: parent
-                        radius: root.radius
-                        color: battMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : "transparent"
-                    }
-                    RowLayout {
-                        anchors.centerIn: parent
-                        anchors.verticalCenterOffset: -1
-                        spacing: 4
-                        Text {
-                            text: {
-                                let p=battBtn.pct*100; let ch=battBtn.devState===1;
-                                if(ch) return "󰂄";
-                                if(p>90) return "󰁹";
-                                if(p>70) return "󰂀";
-                                if(p>50) return "󰁿";
-                                if(p>30) return "󰁾";
-                                if(p>15) return "󰁼";
-                                return "󰁺";
-                            }
-                            font.family: root.fontFamily
-                            font.pixelSize: root.barFontSize
-                            color: battBtn.pct<0.2 && battBtn.devState!==1 ? "#cc241d" : root.colFg
-                            Layout.alignment: Qt.AlignVCenter
-                        }
-                        Text { text: Math.round(battBtn.pct*100)+"%"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; font.weight: 600; color: root.colFg; Layout.alignment: Qt.AlignVCenter }
-                    }
-                    Rectangle {
-                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                        height: 2; radius: 1
-                        color: root.colUnderlineBattery
-                        opacity: battMouse.containsMouse ? 1 : 0.92
-                    }
-                    MouseArea { id: battMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor }
-                }
-
-                Item {
-                    id: powerBtn
-                    Layout.preferredWidth: 30
-                    Layout.preferredHeight: 26
-                    Rectangle {
-                        anchors.fill: parent
-                        radius: root.radius
-                        color: powerMouse.containsMouse ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.12) : "transparent"
-                    }
-                    Text { anchors.centerIn: parent; anchors.verticalCenterOffset: -1; text: "󰐥"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: powerMouse.containsMouse? root.colAccent : root.colFg }
-                    Rectangle {
-                        anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-                        height: 2; radius: 1
-                        color: root.colUnderlinePower
-                        opacity: powerMouse.containsMouse ? 1 : 0.92
-                    }
-                    MouseArea { id: powerMouse; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: Quickshell.execDetached(["bash","-c","wlogout &"]) }
                 }
             }
         }
