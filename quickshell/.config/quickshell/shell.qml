@@ -43,6 +43,7 @@ ShellRoot {
     property color colUnderlineBluetooth: "#d3869b"
     property color colUnderlineBattery: "#b8bb26"
     property color colUnderlinePower: "#fb4934"
+    property color colUnderlineApps: "#b16286"
 
     property bool calendarOpen: false
     property date today: new Date()
@@ -193,6 +194,160 @@ ShellRoot {
 
     property var niriWorkspaces: []
     property var niriRaw: []
+    property var niriWindows: []
+    property var groupedRunningApps: {
+        let map = {};
+        let order = [];
+        for (let i = 0; i < niriWindows.length; i++) {
+            let w = niriWindows[i];
+            if (!w) continue;
+            let rawAid = String(w.app_id || w.appId || "unknown");
+            if (rawAid === "" || rawAid === "unknown") rawAid = w.title ? String(w.title).split(" ")[0] : "unknown";
+            let low = rawAid.toLowerCase();
+            let key = low;
+            let displayId = rawAid;
+            // canonicalize allowed apps to avoid duplicate icons for same logical app
+            if(low.indexOf("spotify") !== -1){ key = "spotify"; displayId = "spotify"; }
+            else if(low.indexOf("telegram") !== -1){ key = "telegram"; displayId = "telegram"; }
+            else if(low.indexOf("vesktop") !== -1 || low.indexOf("discord") !== -1){ key = "vesktop"; displayId = "vesktop"; }
+            else { key = low; displayId = rawAid; }
+            if (!map[key]) {
+                map[key] = { key: key, appId: displayId, count: 0, windows: [], isFocused: false, titles: [], lastFocused: 0 };
+                order.push(key);
+            }
+            map[key].count++;
+            map[key].windows.push(w);
+            if (w.is_focused) map[key].isFocused = true;
+            if (w.title) map[key].titles.push(String(w.title));
+            let ts = 0;
+            if (w.focus_timestamp) {
+                let s = Number(w.focus_timestamp.secs) || 0;
+                let n = Number(w.focus_timestamp.nanos) || 0;
+                ts = s * 1000000000 + n;
+            }
+            if (ts > map[key].lastFocused) map[key].lastFocused = ts;
+        }
+        let out = [];
+        for (let i = 0; i < order.length; i++) out.push(map[order[i]]);
+        out.sort((a,b) => b.lastFocused - a.lastFocused);
+        return out;
+    }
+    // filtered to only show selected persistent apps (spotify, telegram, vesktop/discord)
+    property var allowedAppIds: ["spotify", "telegram", "vesktop", "discord"]
+    property var filteredRunningApps: {
+        let filtered = [];
+        for(let i=0;i<groupedRunningApps.length;i++){
+            let entry = groupedRunningApps[i];
+            let low = String(entry.appId||"").toLowerCase();
+            for(let j=0;j<allowedAppIds.length;j++){
+                if(low.indexOf(allowedAppIds[j]) !== -1){
+                    filtered.push(entry);
+                    break;
+                }
+                // also check titles for fallback (e.g. web apps where app_id is generic)
+                // but keep strict to appId for now
+            }
+        }
+        return filtered;
+    }
+    function appIconName(appId){
+        let aid = String(appId||"");
+        if(!aid) return "";
+        let lower = aid.toLowerCase();
+        // explicit icon candidates for allowed apps
+        let candidates = [];
+        if(lower.indexOf("spotify") !== -1){
+            candidates = ["spotify-launcher","spotify","spotify-client"];
+        } else if(lower.indexOf("telegram") !== -1){
+            candidates = ["org.telegram.desktop","telegram","telegram-desktop"];
+        } else if(lower.indexOf("vesktop") !== -1){
+            candidates = ["vesktop","discord","Discord"];
+        } else if(lower.indexOf("discord") !== -1){
+            candidates = ["discord","vesktop","Discord"];
+        }
+        for(let i=0;i<candidates.length;i++){
+            let cand = candidates[i];
+            if(Quickshell.hasThemeIcon && Quickshell.hasThemeIcon(cand)){
+                let p = Quickshell.iconPath(cand, "");
+                if(p && p !== "") return p;
+            }
+            let e = DesktopEntries.heuristicLookup(cand);
+            if(e && e.icon){
+                let pp = Quickshell.iconPath(e.icon, "");
+                if(pp && pp !== "") return pp;
+            }
+        }
+        let entry = DesktopEntries.heuristicLookup(aid);
+        if(entry && entry.icon){
+            let p = Quickshell.iconPath(entry.icon, "");
+            if(p && p !== "") return p;
+        }
+        if(lower !== aid){
+            let e2 = DesktopEntries.heuristicLookup(lower);
+            if(e2 && e2.icon){
+                let p2 = Quickshell.iconPath(e2.icon, "");
+                if(p2 && p2 !== "") return p2;
+            }
+        }
+        if(Quickshell.hasThemeIcon && Quickshell.hasThemeIcon(aid)){
+            let p3 = Quickshell.iconPath(aid, "");
+            if(p3 && p3 !== "") return p3;
+        }
+        if(Quickshell.hasThemeIcon && Quickshell.hasThemeIcon(lower)){
+            let p4 = Quickshell.iconPath(lower, "");
+            if(p4 && p4 !== "") return p4;
+        }
+        // try raw candidates without has check as last resort
+        for(let i=0;i<candidates.length;i++){
+            let p = Quickshell.iconPath(candidates[i], "");
+            if(p && p !== "" && p.indexOf("NOTFOUND")===-1) return p;
+        }
+        let fallback = Quickshell.iconPath("application-x-executable", "");
+        if(fallback && fallback !== "") return fallback;
+        return "";
+    }
+    function focusGroupedApp(group){
+        if(!group || !group.windows || group.windows.length===0) return;
+        let wins = group.windows;
+        if(wins.length===1){
+            let nid = wins[0].id;
+            if(nid!==undefined) Quickshell.execDetached(["niri","msg","action","focus-window","--id", String(nid)]);
+            return;
+        }
+        let focusedIdx = -1;
+        for(let i=0;i<wins.length;i++) if(wins[i].is_focused) focusedIdx=i;
+        if(focusedIdx!==-1){
+            let nextIdx = (focusedIdx+1)%wins.length;
+            let nid = wins[nextIdx].id;
+            if(nid!==undefined) Quickshell.execDetached(["niri","msg","action","focus-window","--id", String(nid)]);
+        } else {
+            let best = wins[0];
+            let bestTs = -1;
+            for(let i=0;i<wins.length;i++){
+                let w=wins[i];
+                let ts = w.focus_timestamp ? (Number(w.focus_timestamp.secs)||0)*1000000000 + (Number(w.focus_timestamp.nanos)||0) : 0;
+                if(ts>bestTs){ bestTs=ts; best=w; }
+            }
+            if(best && best.id!==undefined) Quickshell.execDetached(["niri","msg","action","focus-window","--id", String(best.id)]);
+        }
+    }
+    function closeGroupedApp(group, onlyFocused){
+        if(!group || !group.windows || group.windows.length===0) return;
+        let wins = group.windows;
+        let target = null;
+        if(onlyFocused){
+            for(let i=0;i<wins.length;i++) if(wins[i].is_focused){ target=wins[i]; break; }
+        }
+        if(!target){
+            let bestTs=-1;
+            for(let i=0;i<wins.length;i++){
+                let w=wins[i];
+                let ts = w.focus_timestamp ? (Number(w.focus_timestamp.secs)||0)*1000000000 + (Number(w.focus_timestamp.nanos)||0) : 0;
+                if(ts>bestTs){ bestTs=ts; target=w; }
+            }
+        }
+        if(target && target.id!==undefined) Quickshell.execDetached(["niri","msg","action","close-window","--id", String(target.id)]);
+    }
     property string activeWindowTitle: ""
     property string activeWindowAppId: ""
     property real memUsedGB: 0
@@ -257,6 +412,7 @@ ShellRoot {
                 try{
                     let wins=JSON.parse(t);
                     if(!Array.isArray(wins)) return;
+                    root.niriWindows=wins;
                     let occupiedSet={};
                     for(let i=0;i<wins.length;i++) occupiedSet[wins[i].workspace_id]=true;
                     let idToIdx={};
@@ -612,6 +768,122 @@ ShellRoot {
                         }
                     }
                     Rectangle { Layout.preferredWidth: 1; Layout.preferredHeight: 16; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); visible: SystemTray.items.values.length>0 }
+                }
+
+                // ── running applications (left of volume) ──
+                RowLayout {
+                    id: appTray
+                    visible: root.filteredRunningApps.length > 0
+                    spacing: 2
+                    Repeater {
+                        model: root.filteredRunningApps
+                        delegate: Item {
+                            required property var modelData
+                            property string appId: String(modelData.appId || "")
+                            property bool isFocused: !!modelData.isFocused
+                            property var appWindows: modelData.windows || []
+                            property string combinedTitle: {
+                                let t = modelData.titles || [];
+                                if(t.length === 0) return "";
+                                return t.slice(0,3).join("\n");
+                            }
+                            Layout.preferredWidth: 28
+                            Layout.preferredHeight: 26
+                            Rectangle {
+                                anchors.fill: parent
+                                radius: root.radius
+                                color: appMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.07) : (isFocused ? Qt.rgba(root.colAccent.r, root.colAccent.g, root.colAccent.b, 0.12) : "transparent")
+                            }
+                            IconImage {
+                                id: appIcon
+                                anchors.centerIn: parent
+                                anchors.verticalCenterOffset: -1
+                                width: 18
+                                height: 18
+                                source: root.appIconName(appId)
+                                asynchronous: true
+                            }
+                            Text {
+                                visible: appIcon.source === "" || appIcon.status === Image.Error || appIcon.status === Image.Null
+                                anchors.centerIn: parent
+                                anchors.verticalCenterOffset: -1
+                                text: appId.length > 0 ? appId.charAt(0).toUpperCase() : "?"
+                                font.family: root.fontFamily
+                                font.pixelSize: 11
+                                font.weight: 700
+                                color: isFocused ? root.colAccent : root.colFg
+                            }
+                            Rectangle {
+                                visible: modelData.count > 1
+                                anchors.right: parent.right
+                                anchors.top: parent.top
+                                anchors.rightMargin: 1
+                                anchors.topMargin: 2
+                                width: countBadgeText.implicitWidth + 6
+                                height: 10
+                                radius: 5
+                                color: root.colAccent
+                                Text {
+                                    id: countBadgeText
+                                    anchors.centerIn: parent
+                                    text: String(modelData.count)
+                                    font.family: root.fontFamily
+                                    font.pixelSize: 7
+                                    font.weight: 700
+                                    color: root.colBg
+                                }
+                            }
+                            Rectangle {
+                                anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
+                                height: isFocused ? 2.5 : 2
+                                radius: 1
+                                color: isFocused ? root.colUnderlineApps : Qt.rgba(root.colUnderlineApps.r, root.colUnderlineApps.g, root.colUnderlineApps.b, 0.45)
+                                opacity: appMouse.containsMouse || isFocused ? 1 : 0.8
+                            }
+                            MouseArea {
+                                id: appMouse
+                                anchors.fill: parent
+                                hoverEnabled: true
+                                cursorShape: Qt.PointingHandCursor
+                                acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
+                                onClicked: function(mouse){
+                                    if(mouse.button === Qt.MiddleButton){
+                                        root.closeGroupedApp(modelData, false);
+                                        return;
+                                    }
+                                    if(mouse.button === Qt.RightButton){
+                                        if(appWindows.length > 1){
+                                            let curIdx=-1;
+                                            for(let i=0;i<appWindows.length;i++) if(appWindows[i].is_focused) curIdx=i;
+                                            if(curIdx!==-1){
+                                                let nextIdx=(curIdx+1)%appWindows.length;
+                                                let nid=appWindows[nextIdx].id;
+                                                if(nid!==undefined) Quickshell.execDetached(["niri","msg","action","focus-window","--id", String(nid)]);
+                                            } else {
+                                                root.focusGroupedApp(modelData);
+                                            }
+                                        } else {
+                                            root.focusGroupedApp(modelData);
+                                        }
+                                        return;
+                                    }
+                                    root.focusGroupedApp(modelData);
+                                }
+                            }
+                            ToolTip {
+                                visible: appMouse.containsMouse
+                                delay: 400
+                                text: appId + (combinedTitle ? "\n" + combinedTitle : "") + (modelData.count>1 ? "  ("+modelData.count+" windows)" : "")
+                                contentItem: Text {
+                                    text: appMouse.containsMouse ? (appId + (combinedTitle ? "\n" + combinedTitle : "") + (modelData.count>1 ? "  ("+modelData.count+" windows)" : "")) : ""
+                                    font.family: root.fontFamily; font.pixelSize: 10; color: root.colFg
+                                    wrapMode: Text.Wrap
+                                }
+                                background: Rectangle { color: root.colBg; border.color: root.colBorder; border.width: 1; radius: 4 }
+                            }
+                        }
+                    }
+                    Rectangle { Layout.preferredWidth: 1; Layout.preferredHeight: 16; color: Qt.rgba(root.colMuted.r, root.colMuted.g, root.colMuted.b, 0.35); visible: root.filteredRunningApps.length>0 }
                 }
 
                 Item {

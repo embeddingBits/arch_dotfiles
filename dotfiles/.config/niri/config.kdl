@@ -163,7 +163,6 @@ binds {
 }
 
 
-spawn-at-startup "/home/ebits/.config/niri/autostart"
 spawn-at-startup "quickshell"
 spawn-at-startup "swaybg" "-i" "/home/ebits/Pictures/wallpapers/sushi.jpg"
 spawn-at-startup "fnott"
