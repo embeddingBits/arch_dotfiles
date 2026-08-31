@@ -137,7 +137,7 @@ ShellRoot {
                 color: _launcherMouse.containsMouse ? Qt.rgba(root.colFg.r, root.colFg.g, root.colFg.b, 0.08) : "transparent"
                 radius: root.radius
             }
-            Text { anchors.centerIn: parent; text: "󰣇"; font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colFg }
+            Text { anchors.centerIn: parent; text: ""; font.family: root.fontFamily; font.pixelSize: root.barFontSize; color: root.colFg }
             Rectangle {
                 anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
                 height: 2; radius: 1

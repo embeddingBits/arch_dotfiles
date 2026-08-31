@@ -1,17 +1,16 @@
 {
-    "height": 38,
+    "height": 45,
     "margin-top": 0,
     "margin-bottom": 0,
     "margin-left": 0,
     "margin-right": 0,
-    "spacing": 8,
+    "spacing": 7,
     "padding-left": 8,
     "padding-right": 8,
     "modules-left": [
         "custom/launcher",
         "niri/workspaces",
-        "niri/window",
-        "mpris"
+        "niri/window"
     ],
     "modules-center": [
         "clock"
@@ -19,10 +18,10 @@
     "modules-right": [
         "tray",
         "bluetooth",
+        "wireplumber",
         "network",
         "memory",
-        "backlight",
-        "battery"
+        "battery",
         "custom/power"
     ],
     "clock": {
